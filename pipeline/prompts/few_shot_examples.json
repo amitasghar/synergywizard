@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "entity_slug": "volcanic_fissure",
+      "display_name": "Volcanic Fissure",
+      "entity_type": "skill",
+      "class_tags": ["warrior"],
+      "mechanic_tags": ["slam", "fire", "aoe", "ground_effect"],
+      "damage_tags": ["fire", "physical"],
+      "description": "Slam the ground, unleashing a fissure of molten rock that erupts in waves."
+    },
+    "output": {
+      "entity_slug": "volcanic_fissure",
+      "mechanic_tags": ["slam", "fire", "aoe", "ground_effect", "duration"],
+      "damage_tags": ["fire", "physical"],
+      "creates": ["molten_fissure"],
+      "triggered_by": [],
+      "synergizes_with": [
+        {"entity_id": "stampede", "reason": "Stampede's aftershock repeatedly triggers the fissure along the slam line.", "interaction_type": "direct"},
+        {"entity_id": "earthquake", "reason": "Both leave persistent ground effects that overlap in AoE.", "interaction_type": "extended"}
+      ],
+      "recommended_supports": ["upheaval_support", "fire_infusion_support"],
+      "relevant_passives": ["aftershocks_notable"],
+      "conversions_available": [
+        {"from": "fire", "to": "lightning", "requires": "lightning conversion support"},
+        {"from": "fire", "to": "cold", "requires": "cold conversion support"}
+      ]
+    }
+  }
+]
