@@ -1,0 +1,47 @@
+[
+  {
+    "entity_slug": "volcanic_fissure",
+    "display_name": "Volcanic Fissure",
+    "entity_type": "skill",
+    "class_tags": ["warrior"],
+    "mechanic_tags": ["slam", "fire", "aoe", "ground_effect"],
+    "damage_tags": ["fire", "physical"],
+    "description": "Slam the ground, unleashing a fissure of molten rock that erupts in waves."
+  },
+  {
+    "entity_slug": "stampede",
+    "display_name": "Stampede",
+    "entity_type": "skill",
+    "class_tags": ["warrior"],
+    "mechanic_tags": ["slam", "aoe", "movement"],
+    "damage_tags": ["physical"],
+    "description": "Charge forward, knocking enemies aside and slamming the ground at the end."
+  },
+  {
+    "entity_slug": "shockwave_totem",
+    "display_name": "Shockwave Totem",
+    "entity_type": "skill",
+    "class_tags": ["warrior"],
+    "mechanic_tags": ["totem", "slam", "aoe"],
+    "damage_tags": ["physical"],
+    "description": "Summons a totem that repeatedly slams the ground."
+  },
+  {
+    "entity_slug": "earthquake",
+    "display_name": "Earthquake",
+    "entity_type": "skill",
+    "class_tags": ["warrior"],
+    "mechanic_tags": ["slam", "aoe", "duration", "ground_effect"],
+    "damage_tags": ["physical"],
+    "description": "Slam the ground to create an aftershock after a delay."
+  },
+  {
+    "entity_slug": "leap_slam",
+    "display_name": "Leap Slam",
+    "entity_type": "skill",
+    "class_tags": ["warrior"],
+    "mechanic_tags": ["slam", "aoe", "movement", "melee"],
+    "damage_tags": ["physical"],
+    "description": "Leap into the air, crashing down with a slam that damages enemies near your landing."
+  }
+]
