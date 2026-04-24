@@ -1,0 +1,7 @@
+{{Skill
+|name         = Volcanic Fissure
+|class        = Warrior
+|skill_tags   = slam, fire, aoe, ground_effect
+|damage_types = fire, physical
+|description  = Slam the ground, unleashing a fissure of molten rock that erupts in waves.
+}}
