@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Pipeline runtime artifacts
+pipeline/artifacts/
+pipeline/last_known_version.json.bak
+pipeline/PathOfBuilding/
+
+# Node / Netlify
+node_modules/
+.netlify/
+dist/
+
+# Editor
+.vscode/
+.idea/
