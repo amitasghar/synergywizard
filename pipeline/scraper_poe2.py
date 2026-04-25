@@ -199,10 +199,11 @@ def _pob_only_entities(pob_data: dict) -> list[dict]:
             mapped = POB_TYPE_MAP.get(pob_key)
             if mapped:
                 mech.append(mapped)
+        entity_type = "support" if name.lower().endswith(" support") else "skill"
         entities.append({
             "entity_slug": slugify(name, separator="_"),
             "display_name": name,
-            "entity_type": "skill",
+            "entity_type": entity_type,
             "class_tags": [],
             "mechanic_tags": sorted(set(mech)),
             "damage_tags": [],

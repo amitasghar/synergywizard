@@ -54,6 +54,10 @@ def main() -> int:
         e for e in entities
         if e["entity_slug"] in changed_set and e.get("mechanic_tags")
     ]
+    to_write_basic = [
+        e for e in entities
+        if e["entity_slug"] in changed_set and not e.get("mechanic_tags")
+    ]
     # Bypass cost guard on first run OR while still completing initial population
     bulk_mode = len(db_hashes) == 0 or len(to_index) > len(db_hashes)
     if not bulk_mode:
@@ -63,12 +67,23 @@ def main() -> int:
             sys.stderr.write(f"ABORT: {exc}\n")
             return 1
     else:
-        print(f"Bulk mode — indexing {len(to_index)} entities ({len(db_hashes)} already in DB)")
+        print(f"Bulk mode — indexing {len(to_index)} entities, writing {len(to_write_basic)} basic ({len(db_hashes)} already in DB)")
 
     # 6. Index + write incrementally (each entity committed immediately)
     conn = db_writer.connect()
     edges_pending: list[tuple[dict, list]] = []
     try:
+        # Write entities without mechanic_tags directly (no AI enrichment needed)
+        for entity in to_write_basic:
+            db_writer.upsert_entity(
+                conn, entity,
+                patch_version=patch_version,
+                content_hash_value=hasher.content_hash(entity),
+                raw_ai_output=None,
+            )
+        conn.commit()
+        print(f"Wrote {len(to_write_basic)} basic entities")
+
         for i, entity in enumerate(to_index, 1):
             try:
                 ai = indexer.index_one(entity)
