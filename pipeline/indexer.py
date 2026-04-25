@@ -18,7 +18,8 @@ ALLOWED_MECHANIC_TAGS = {
     "slam", "fire", "cold", "lightning", "physical", "chaos", "aoe", "duration",
     "projectile", "melee", "totem", "trap", "mine", "minion", "channelling",
     "movement", "travel", "warcry", "trigger", "ground_effect", "debuff", "buff",
-    "charge", "stance", "brand",
+    "charge", "stance", "brand", "aura", "hex", "mark", "herald", "guard",
+    "blink", "spell", "attack", "bow", "crossbow", "shield", "strike",
 }
 ALLOWED_DAMAGE_TAGS = {"fire", "cold", "lightning", "physical", "chaos"}
 ALLOWED_INTERACTION_TYPES = {"direct", "extended", "conditional"}
@@ -54,18 +55,25 @@ def validate_output(payload: dict) -> None:
     mech = set(payload.get("mechanic_tags", []))
     bad_mech = mech - ALLOWED_MECHANIC_TAGS
     if bad_mech:
-        raise ValueError(f"Unknown mechanic_tags: {sorted(bad_mech)}")
+        print(f"WARNING: filtering unknown mechanic_tags: {sorted(bad_mech)}", file=sys.stderr)
+        payload["mechanic_tags"] = sorted(mech - bad_mech)
 
     dmg = set(payload.get("damage_tags", []))
     bad_dmg = dmg - ALLOWED_DAMAGE_TAGS
     if bad_dmg:
-        raise ValueError(f"Unknown damage_tags: {sorted(bad_dmg)}")
+        print(f"WARNING: filtering unknown damage_tags: {sorted(bad_dmg)}", file=sys.stderr)
+        payload["damage_tags"] = sorted(dmg - bad_dmg)
 
+    valid_edges = []
     for edge in payload.get("synergizes_with", []):
         if edge.get("interaction_type") not in ALLOWED_INTERACTION_TYPES:
-            raise ValueError(f"Bad interaction_type: {edge.get('interaction_type')}")
+            print(f"WARNING: dropping edge with bad interaction_type: {edge.get('interaction_type')}", file=sys.stderr)
+            continue
         if not edge.get("entity_id"):
-            raise ValueError("synergizes_with entry missing entity_id")
+            print("WARNING: dropping edge missing entity_id", file=sys.stderr)
+            continue
+        valid_edges.append(edge)
+    payload["synergizes_with"] = valid_edges
 
 
 def index_one(entity: dict) -> dict:
