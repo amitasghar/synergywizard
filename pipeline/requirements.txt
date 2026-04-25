@@ -4,4 +4,5 @@ psycopg2-binary==2.9.10
 beautifulsoup4==4.12.3
 mwparserfromhell==0.6.6
 python-slugify==8.0.4
+fastembed==0.8.0
 pytest==8.3.3
