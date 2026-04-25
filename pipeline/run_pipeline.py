@@ -6,7 +6,7 @@ import json
 import os
 import sys
 
-from pipeline import blobs_backup, db_writer, hasher, indexer, patch_detector, scraper_poe2
+from pipeline import blobs_backup, db_writer, embedder, hasher, indexer, patch_detector, scraper_poe2
 
 
 def fetch_db_hashes(conn) -> dict[str, str]:
@@ -90,6 +90,12 @@ def main() -> int:
                 raw_ai_output=ai,
             )
             conn.commit()
+            try:
+                vec = embedder.embed_entity(merged)
+                db_writer.update_embedding(conn, merged["entity_slug"], vec)
+                conn.commit()
+            except Exception as exc:
+                sys.stderr.write(f"WARNING: embedding failed for {merged['entity_slug']}: {exc}\n")
             edges_pending.append((entity["entity_slug"], ai.get("synergizes_with", [])))
             print(f"[{i}/{len(to_index)}] saved {entity['entity_slug']}")
 
@@ -106,6 +112,16 @@ def main() -> int:
                                       interaction_type=edge.get("interaction_type", "direct"),
                                       reason=edge.get("reason", ""))
         conn.commit()
+        # Rebuild IVFFlat index after populating embeddings (index trains on actual data)
+        try:
+            conn.autocommit = True
+            with conn.cursor() as cur:
+                cur.execute("REINDEX INDEX CONCURRENTLY entities_embedding_idx;")
+            conn.autocommit = False
+            print("Embedding index rebuilt")
+        except Exception as exc:
+            conn.autocommit = False
+            sys.stderr.write(f"WARNING: index rebuild failed: {exc}\n")
     finally:
         conn.close()
 
