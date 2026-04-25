@@ -22,7 +22,7 @@ CATEGORIES = {
     "support": "Category:Support_skill_gems",
     "passive": "Category:Passive_skills",
 }
-POB_REPO = "https://github.com/PathOfBuildingCommunity/PathOfBuilding.git"
+POB_REPO = "https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2.git"
 POB_DIR = Path(__file__).parent / "PathOfBuilding"
 REQUEST_DELAY_SECONDS = 1.0
 

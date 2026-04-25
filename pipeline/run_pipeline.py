@@ -48,13 +48,17 @@ def main() -> int:
     changed_slugs = hasher.diff(entities, db_hashes)
     print(f"{len(changed_slugs)} entities changed")
 
-    # 5. Cost guard + index
+    # 5. Cost guard + index (bypass on first run when DB is empty)
     to_index = [e for e in entities if e["entity_slug"] in set(changed_slugs)]
-    try:
-        indexer.check_cost_guard(to_index)
-    except indexer.CostGuardError as exc:
-        sys.stderr.write(f"ABORT: {exc}\n")
-        return 1
+    first_run = len(db_hashes) == 0
+    if not first_run:
+        try:
+            indexer.check_cost_guard(to_index)
+        except indexer.CostGuardError as exc:
+            sys.stderr.write(f"ABORT: {exc}\n")
+            return 1
+    else:
+        print(f"First run detected — skipping cost guard to index all {len(to_index)} entities")
     indexed = indexer.index_many(to_index)
 
     # 6. Write
