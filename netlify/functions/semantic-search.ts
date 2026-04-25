@@ -24,15 +24,26 @@ export default async function handler(req: Request, _ctx: Context): Promise<Resp
   const { vector, limit } = parsed.data;
   const vecLiteral = `[${vector.join(",")}]`;
 
-  const rows = await sqlClient`
-    SELECT entity_slug, display_name, entity_type,
-           mechanic_tags, damage_tags, class_tags,
-           1 - (embedding <=> ${vecLiteral}::vector) AS similarity
-    FROM entities
-    WHERE game = 'poe2' AND embedding IS NOT NULL
-    ORDER BY embedding <=> ${vecLiteral}::vector
-    LIMIT ${limit}
-  `;
-
+  let rows: Record<string, unknown>[];
+  try {
+    rows = await sqlClient`
+      WITH base AS (
+        SELECT entity_slug, display_name, entity_type,
+               mechanic_tags, damage_tags, class_tags,
+               embedding <=> ${vecLiteral}::vector AS dist
+        FROM entities
+        WHERE game = 'poe2' AND embedding IS NOT NULL
+      )
+      SELECT entity_slug, display_name, entity_type,
+             mechanic_tags, damage_tags, class_tags,
+             1 - dist AS similarity
+      FROM base
+      ORDER BY dist
+      LIMIT ${limit}
+    `;
+  } catch (err) {
+    console.error("semantic-search DB error:", err);
+    return json({ error: "Search unavailable" }, { status: 503, cache: false });
+  }
   return json(rows, { cache: false });
 }

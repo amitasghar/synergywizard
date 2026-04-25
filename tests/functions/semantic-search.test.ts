@@ -1,6 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect } from "vitest";
 import { semanticSearchBodySchema } from "../../netlify/functions/_lib/validators.ts";
-import { badRequest } from "../../netlify/functions/_lib/response.ts";
 
 // Test schema validation directly (same pattern as search.test.ts)
 describe("semanticSearchBodySchema", () => {

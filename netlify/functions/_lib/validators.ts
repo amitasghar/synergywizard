@@ -22,6 +22,6 @@ export const extendBodySchema = z.object({
 });
 
 export const semanticSearchBodySchema = z.object({
-  vector: z.array(z.number()).length(384),
+  vector: z.array(z.number().finite()).length(384),
   limit: z.number().int().min(1).max(20).default(10),
 });
