@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { SearchTab } from "./SearchTab.tsx";
 import { BrowseTab } from "./BrowseTab.tsx";
+import { NaturalSearchBar } from "./NaturalSearchBar.tsx";
 
-type Tab = "search" | "browse";
+type Tab = "search" | "browse" | "ask";
 
 export function LeftPanel(): React.ReactElement {
   const [tab, setTab] = useState<Tab>("search");
@@ -21,8 +22,14 @@ export function LeftPanel(): React.ReactElement {
           data-testid="tab-browse"
           className={`flex-1 px-3 py-1 rounded text-sm ${tab === "browse" ? "bg-accent text-background" : "border border-white/15 text-white/70"}`}
         >Browse</button>
+        <button
+          type="button"
+          onClick={() => setTab("ask")}
+          data-testid="tab-ask"
+          className={`flex-1 px-3 py-1 rounded text-sm ${tab === "ask" ? "bg-accent text-background" : "border border-white/15 text-white/70"}`}
+        >Ask</button>
       </div>
-      {tab === "search" ? <SearchTab /> : <BrowseTab />}
+      {tab === "search" ? <SearchTab /> : tab === "browse" ? <BrowseTab /> : <NaturalSearchBar />}
     </aside>
   );
 }
