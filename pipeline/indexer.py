@@ -23,7 +23,7 @@ ALLOWED_MECHANIC_TAGS = {
 ALLOWED_DAMAGE_TAGS = {"fire", "cold", "lightning", "physical", "chaos"}
 ALLOWED_INTERACTION_TYPES = {"direct", "extended", "conditional"}
 
-MODEL = "claude-sonnet-4-5-20250929"
+MODEL = "claude-sonnet-4-6"
 MAX_TOKENS = 1500
 
 _client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""))
