@@ -28,10 +28,13 @@ class DetectionResult:
 
 
 def fetch_ggg_version() -> str:
-    resp = requests.get(GGG_CDN_URL, headers={"User-Agent": USER_AGENT}, timeout=15)
-    resp.raise_for_status()
-    text = resp.text.strip()
-    return text.splitlines()[0].strip() if text else ""
+    try:
+        resp = requests.get(GGG_CDN_URL, headers={"User-Agent": USER_AGENT}, timeout=15)
+        resp.raise_for_status()
+        text = resp.text.strip()
+        return text.splitlines()[0].strip() if text else ""
+    except Exception:
+        return ""
 
 
 def fetch_steam_latest_gid() -> str:
