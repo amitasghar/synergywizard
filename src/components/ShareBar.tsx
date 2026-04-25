@@ -4,8 +4,6 @@ import { useStore } from "../state/store.ts";
 import { encodeStateToUrl } from "../state/url.ts";
 import { toJson, toMarkdown, toPlainText } from "../export/formats.ts";
 
-const KOFI_URL = "https://ko-fi.com/YOUR_KOFI_USERNAME";
-
 function triggerDownload(content: string, filename: string, mime: string): void {
   const blob = new Blob([content], { type: mime });
   const url = URL.createObjectURL(blob);
@@ -78,14 +76,6 @@ export function ShareBar(): React.ReactElement {
           </div>
         </details>
       </div>
-      <a
-        href={KOFI_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="ml-auto px-3 py-1 rounded border border-accent/50 text-accent text-sm hover:bg-accent/10"
-      >
-        ♥ Support
-      </a>
     </section>
   );
 }
