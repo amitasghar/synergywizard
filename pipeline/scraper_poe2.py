@@ -187,19 +187,53 @@ def load_all_pob_data(skills_dir: Path) -> dict:
     return combined
 
 
+def _pob_only_entities(pob_data: dict) -> list[dict]:
+    """Build minimal entities from POB data alone when wiki is unavailable."""
+    entities: list[dict] = []
+    for _skill_id, row in pob_data.items():
+        name = row.get("name", "").strip()
+        if not name:
+            continue
+        mech: list[str] = []
+        for pob_key in row.get("skill_types", []):
+            mapped = POB_TYPE_MAP.get(pob_key)
+            if mapped:
+                mech.append(mapped)
+        entities.append({
+            "entity_slug": slugify(name, separator="_"),
+            "display_name": name,
+            "entity_type": "skill",
+            "class_tags": [],
+            "mechanic_tags": sorted(set(mech)),
+            "damage_tags": [],
+            "description": "",
+        })
+    seen: set[str] = set()
+    unique: list[dict] = []
+    for e in entities:
+        if e["entity_slug"] not in seen:
+            seen.add(e["entity_slug"])
+            unique.append(e)
+    return unique
+
+
 def scrape_all() -> list[dict]:
     pob_skills_dir = ensure_pob_repo()
     pob_data = load_all_pob_data(pob_skills_dir)
-    entities: list[dict] = []
 
-    for entity_type, category in CATEGORIES.items():
-        for title in fetch_category_members(category):
-            wikitext = fetch_page_wikitext(title)
-            entity = parse_wiki_infobox(title, wikitext)
-            entity["entity_type"] = entity_type
-            entity = merge_sources(entity, pob_data)
-            entities.append(entity)
-    return entities
+    try:
+        entities: list[dict] = []
+        for entity_type, category in CATEGORIES.items():
+            for title in fetch_category_members(category):
+                wikitext = fetch_page_wikitext(title)
+                entity = parse_wiki_infobox(title, wikitext)
+                entity["entity_type"] = entity_type
+                entity = merge_sources(entity, pob_data)
+                entities.append(entity)
+        return entities
+    except Exception as exc:
+        print(f"Wiki scrape failed ({exc}), falling back to POB-only mode", file=sys.stderr)
+        return _pob_only_entities(pob_data)
 
 
 def main() -> int:
