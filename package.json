@@ -22,6 +22,7 @@
   "dependencies": {
     "@netlify/functions": "^3.0.0",
     "@netlify/neon": "^0.1.0",
+    "@xenova/transformers": "^2.17.2",
     "drizzle-orm": "^0.36.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -30,12 +31,14 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.48.0",
+    "@testing-library/react": "^16.0.0",
     "@types/node": "^20.12.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.0",
     "autoprefixer": "^10.4.20",
     "drizzle-kit": "^0.28.0",
+    "jsdom": "^25.0.0",
     "netlify-cli": "^17.0.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",

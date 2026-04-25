@@ -48,3 +48,18 @@ def test_upsert_edge_issues_insert_on_conflict():
     sql_called = cursor.execute.call_args_list[0][0][0]
     assert "INSERT INTO synergy_edges" in sql_called
     assert "ON CONFLICT" in sql_called
+
+
+def test_update_embedding_formats_vector_correctly():
+    conn = MagicMock()
+    cur = MagicMock()
+    conn.cursor.return_value.__enter__.return_value = cur
+
+    from pipeline.db_writer import update_embedding
+    update_embedding(conn, "volcanic_fissure", [0.1, 0.2, 0.3])
+
+    call_args = cur.execute.call_args[0]
+    sql, params = call_args
+    assert "[0.1,0.2,0.3]" in params[0]
+    assert params[1] == "poe2"
+    assert params[2] == "volcanic_fissure"

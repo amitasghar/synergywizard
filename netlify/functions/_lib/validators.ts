@@ -20,3 +20,8 @@ export const extendBodySchema = z.object({
   mechanic_tags: z.array(z.string().min(1).max(40)).min(1).max(20),
   exclude_ids: z.array(z.string().uuid()).max(8).default([]),
 });
+
+export const semanticSearchBodySchema = z.object({
+  vector: z.array(z.number().finite()).length(384),
+  limit: z.number().int().min(1).max(20).default(10),
+});

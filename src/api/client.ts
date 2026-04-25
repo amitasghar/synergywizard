@@ -1,4 +1,4 @@
-import type { AnalysisResult, Entity, ExtendResult } from "../types.ts";
+import type { AnalysisResult, Entity, ExtendResult, SemanticSearchResult } from "../types.ts";
 
 async function request<T>(input: RequestInfo, init?: RequestInit): Promise<T> {
   const res = await fetch(input, init);
@@ -26,6 +26,13 @@ export const api = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
+    });
+  },
+  async semanticSearch(vector: number[]): Promise<SemanticSearchResult[]> {
+    return request<SemanticSearchResult[]>("/api/semantic-search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ vector }),
     });
   },
 };

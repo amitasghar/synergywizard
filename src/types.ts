@@ -47,3 +47,13 @@ export interface ExtendResult {
   supports: Entity[];
   passives: Entity[];
 }
+
+export interface SemanticSearchResult {
+  entity_slug: string;
+  display_name: string;
+  entity_type: "skill" | "support" | "passive";
+  mechanic_tags: string[];
+  damage_tags: string[];
+  class_tags: string[];
+  similarity: number;
+}

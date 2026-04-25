@@ -52,6 +52,11 @@ ON CONFLICT (from_entity_id, to_entity_id) DO UPDATE SET
 
 LOOKUP_SQL = "SELECT id FROM entities WHERE game = %s AND entity_slug = %s;"
 
+UPDATE_EMBEDDING_SQL = """
+UPDATE entities SET embedding = %s::vector
+WHERE game = %s AND entity_slug = %s;
+"""
+
 
 def connect() -> psycopg2.extensions.connection:
     url = os.environ["NETLIFY_DATABASE_URL"]
@@ -118,6 +123,12 @@ def lookup_id(conn, slug: str, game: str = "poe2") -> str | None:
         cur.execute(LOOKUP_SQL, (game, slug))
         row = cur.fetchone()
     return str(row[0]) if row else None
+
+
+def update_embedding(conn, slug: str, embedding: list[float], game: str = "poe2") -> None:
+    vec_str = "[" + ",".join(str(v) for v in embedding) + "]"
+    with conn.cursor() as cur:
+        cur.execute(UPDATE_EMBEDDING_SQL, (vec_str, game, slug))
 
 
 def write_all(scraped: list[dict], indexed: list[dict], patch_version: str) -> None:
