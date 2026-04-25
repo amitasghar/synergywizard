@@ -26,6 +26,12 @@ jobs:
           cache: 'pip'
           cache-dependency-path: 'pipeline/requirements.txt'
 
+      - name: Cache fastembed models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/fastembed
+          key: fastembed-minilm-${{ runner.os }}
+
       - name: Install deps
         run: pip install -r pipeline/requirements.txt
 
