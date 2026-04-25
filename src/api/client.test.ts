@@ -45,4 +45,22 @@ describe("api client", () => {
     expect(body.mechanic_tags).toEqual(["slam"]);
     fetchSpy.mockRestore();
   });
+
+  it("semanticSearch posts vector and returns results", async () => {
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(
+        JSON.stringify([{ entity_slug: "volcanic-fissure", display_name: "Volcanic Fissure", entity_type: "skill", mechanic_tags: ["slam"], damage_tags: ["fire"], class_tags: [], similarity: 0.92 }]),
+        { status: 200 }
+      ),
+    );
+    const vec = Array.from({ length: 384 }, () => 0.1);
+    const results = await api.semanticSearch(vec);
+    expect(results[0].entity_slug).toBe("volcanic-fissure");
+    expect(results[0].similarity).toBe(0.92);
+    const init = fetchSpy.mock.calls[0][1] as RequestInit;
+    expect(init.method).toBe("POST");
+    const body = JSON.parse(String(init.body));
+    expect(body.vector).toHaveLength(384);
+    fetchSpy.mockRestore();
+  });
 });
