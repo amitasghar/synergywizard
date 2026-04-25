@@ -53,13 +53,13 @@ def test_upsert_edge_issues_insert_on_conflict():
 def test_update_embedding_formats_vector_correctly():
     conn = MagicMock()
     cur = MagicMock()
-    conn.cursor.return_value.__enter__ = lambda s: cur
-    conn.cursor.return_value.__exit__ = MagicMock(return_value=False)
+    conn.cursor.return_value.__enter__.return_value = cur
 
     from pipeline.db_writer import update_embedding
     update_embedding(conn, "volcanic_fissure", [0.1, 0.2, 0.3])
 
     call_args = cur.execute.call_args[0]
-    assert "[0.1,0.2,0.3]" in call_args[1][0]
-    assert call_args[1][1] == "poe2"
-    assert call_args[1][2] == "volcanic_fissure"
+    sql, params = call_args
+    assert "[0.1,0.2,0.3]" in params[0]
+    assert params[1] == "poe2"
+    assert params[2] == "volcanic_fissure"

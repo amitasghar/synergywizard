@@ -95,6 +95,7 @@ def main() -> int:
                 db_writer.update_embedding(conn, merged["entity_slug"], vec)
                 conn.commit()
             except Exception as exc:
+                conn.rollback()
                 sys.stderr.write(f"WARNING: embedding failed for {merged['entity_slug']}: {exc}\n")
             edges_pending.append((entity["entity_slug"], ai.get("synergizes_with", [])))
             print(f"[{i}/{len(to_index)}] saved {entity['entity_slug']}")
