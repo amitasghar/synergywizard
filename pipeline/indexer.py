@@ -87,7 +87,6 @@ def index_one(entity: dict) -> dict:
 
 def index_many(entities: Iterable[dict]) -> list[dict]:
     entities_list = list(entities)
-    check_cost_guard(entities_list)
     results: list[dict] = []
     for entity in entities_list:
         results.append(index_one(entity))
