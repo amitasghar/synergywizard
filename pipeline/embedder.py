@@ -23,11 +23,12 @@ def embed_text(text: str) -> list[float]:
 
 
 def embed_entity(entity: dict) -> list[float]:
-    parts = [entity.get("display_name", "")]
+    parts = [p for p in [entity.get("display_name", "")] if p]
     parts += entity.get("mechanic_tags", [])
     parts += entity.get("damage_tags", [])
     desc = entity.get("description", "")
     if desc:
         parts.append(desc)
-    text = " ".join(parts)
-    return embed_text(text)
+    if not parts:
+        raise ValueError(f"Entity has no embeddable text: {entity.get('entity_slug', '<unknown>')}")
+    return embed_text(" ".join(parts))
