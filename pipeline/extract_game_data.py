@@ -285,3 +285,102 @@ def extract_passives(index) -> list[dict]:
             seen.add(e["entity_slug"])
             unique.append(e)
     return unique
+
+
+SEED_PATH = Path(__file__).parent / "data" / "poe2_seed.json"
+
+
+def pob_enrich(entities: list[dict]) -> list[dict]:
+    """Reuse POB mechanic_tag enrichment from scraper_poe2."""
+    from pipeline.scraper_poe2 import ensure_pob_repo, load_all_pob_data, merge_sources
+
+    pob_skills_dir = ensure_pob_repo()
+    pob_data = load_all_pob_data(pob_skills_dir)
+    return [merge_sources(e, pob_data) for e in entities]
+
+
+def extract_all(poe2_dir: Path, output_path: Path) -> None:
+    """Full extraction pipeline — reads bundles, enriches with POB, writes seed."""
+    ooz_path = find_ooz(poe2_dir)
+    print(f"Using ooz: {ooz_path}")
+
+    print("Opening bundle index...")
+    index = open_bundle_index(poe2_dir, ooz_path)
+
+    print("Extracting SkillGems.dat64...")
+    skill_entities = extract_skill_gems(index)
+    print(f"  Found {len(skill_entities)} skill/support gems")
+
+    print("Enriching with ActiveSkills.dat64...")
+    skill_entities = enrich_with_active_skills(index, skill_entities)
+
+    print("Extracting PassiveSkills.dat64...")
+    passive_entities = extract_passives(index)
+    print(f"  Found {len(passive_entities)} passives")
+
+    all_entities = skill_entities + passive_entities
+
+    print("Enriching mechanic_tags from POB...")
+    all_entities = pob_enrich(all_entities)
+
+    skills = [e for e in all_entities if e["entity_type"] == "skill"]
+    supports = [e for e in all_entities if e["entity_type"] == "support"]
+    passives = [e for e in all_entities if e["entity_type"] == "passive"]
+
+    seed = {
+        "extracted_at": datetime.now(tz=timezone.utc).isoformat(),
+        "patch_version": "unknown",
+        "entity_counts": {
+            "skill": len(skills),
+            "support": len(supports),
+            "passive": len(passives),
+        },
+        "entities": all_entities,
+    }
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(seed, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Seed written to {output_path}")
+    print(f"  skills: {len(skills)}, supports: {len(supports)}, passives: {len(passives)}")
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Extract PoE2 game data into poe2_seed.json")
+    parser.add_argument(
+        "--poe2-dir",
+        default=os.environ.get("POE2_DIR", r"F:\SteamLibrary\steamapps\common\Path of Exile 2"),
+        help="Path to PoE2 installation directory",
+    )
+    parser.add_argument(
+        "--output",
+        default=str(SEED_PATH),
+        help="Output path for poe2_seed.json",
+    )
+    parser.add_argument(
+        "--patch-version",
+        default="",
+        help="PoE2 patch version string (e.g. 3.25.0)",
+    )
+    args = parser.parse_args()
+
+    poe2_dir = Path(args.poe2_dir)
+    if not poe2_dir.exists():
+        print(f"ERROR: PoE2 directory not found: {poe2_dir}", file=sys.stderr)
+        return 1
+
+    try:
+        extract_all(poe2_dir, Path(args.output))
+        if args.patch_version:
+            data = json.loads(Path(args.output).read_text(encoding="utf-8"))
+            data["patch_version"] = args.patch_version
+            Path(args.output).write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+            print(f"Patch version set to {args.patch_version}")
+    except FileNotFoundError as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
+        return 1
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
