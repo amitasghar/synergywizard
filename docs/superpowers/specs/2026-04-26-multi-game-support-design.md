@@ -8,7 +8,6 @@ Restructure SynergyWizard into a multi-game platform where each game has its own
 
 - Only games with a local installation are supported; data extraction always reads local game files
 - Game experiences are completely independent: no cross-game search, no shared filters
-- PoE2 behavior stays identical after the restructure (rename/move only, no UX changes)
 - D4 extractor is deferred until after the upcoming expansion drops
 
 ---
@@ -22,13 +21,28 @@ Each game gets its own table with game-specific columns. No shared `entities` ta
 - Drop the `game` column (redundant in a game-specific table)
 - The pgvector `embedding` column and index move with the table
 
-**`poe2_entities` schema (unchanged columns, just renamed table):**
+**`poe2_entities` schema:**
 ```sql
 ALTER TABLE entities RENAME TO poe2_entities;
 ALTER TABLE poe2_entities DROP COLUMN game;
+ALTER TABLE poe2_entities ADD COLUMN weapon_tags TEXT[] DEFAULT '{}';
 -- recreate index if needed
 CREATE INDEX ON poe2_entities USING hnsw (embedding vector_cosine_ops);
 ```
+
+`weapon_tags` is new — populated for active skills and supports with the weapon type they require (e.g. `["mace"]`, `["bow"]`, `["staff", "wand"]`). Skills with no weapon restriction have `weapon_tags = '{}'`.
+
+`class_tags` is kept for passives: each passive belongs to a class or ascendancy (e.g. `["warrior"]`, `["titan"]`). Active skill gems always have `class_tags = '{}'`.
+
+**PoE2 classes and ascendancies:**
+- Warrior → Titan, Warbringer
+- Ranger → Deadeye, Pathfinder
+- Witch → Infernalist, Blood Mage
+- Sorceress → Stormweaver, Chronomancer
+- Mercenary → Witchhunter, Gemling Legionnaire
+- Monk → Invoker, Acolyte of Chayula
+
+**Data extraction note:** Weapon restriction data may come from a separate dat file (e.g. `ItemClasses.dat64` or a weapon type field on `ActiveSkills.dat64`). This needs to be verified during implementation. The current `SKILL_TYPE_TO_MECHANIC` mapping already handles `Bow` and `Shield`; remaining weapon types (`Mace`, `Sword`, `Axe`, `Staff`, `Wand`, `Crossbow`) need to be added and moved to `weapon_tags` instead.
 
 **Future game example (`d4_entities`):**
 ```sql
@@ -95,7 +109,7 @@ src/
       LeftPanel.tsx           # moved from components/LeftPanel.tsx (unchanged)
       RightPanel.tsx          # moved from components/RightPanel.tsx (unchanged)
       NaturalSearchBar.tsx    # moved from components/NaturalSearchBar.tsx
-      SearchFilters.tsx       # poe2-specific: class, mechanic, damage tag filters
+      SearchFilters.tsx       # poe2-specific filters: weapon type (skills), class/ascendancy (passives), mechanic tags
     d4/                       # empty dir for now
   App.tsx                     # renders GameSelector + active game's component tree
   api.ts                      # updated: game-prefixed API methods
@@ -146,6 +160,11 @@ TABLE_NAME = "poe2_entities"
 SEED_PATH = Path(__file__).parent.parent.parent / "data" / "poe2_seed.json"
 VALID_MECHANIC_TAGS = {"slam", "fire", "aoe", ...}
 VALID_DAMAGE_TAGS = {"fire", "cold", "lightning", "physical", "chaos"}
+VALID_WEAPON_TAGS = {"mace", "bow", "staff", "sword", "axe", "wand", "crossbow", "shield"}
+VALID_CLASS_TAGS = {"warrior", "ranger", "witch", "sorceress", "mercenary", "monk",
+                    "titan", "warbringer", "deadeye", "pathfinder", "infernalist",
+                    "blood_mage", "stormweaver", "chronomancer", "witchhunter",
+                    "gemling_legionnaire", "invoker", "acolyte_of_chayula"}
 ENTITY_TYPES = {"skill", "support", "passive"}
 ```
 
@@ -169,8 +188,7 @@ Adding a new game = adding a new card. No conditional logic for existing games.
 ## What Does Not Change
 
 - PoE2 seed file location (`pipeline/data/poe2_seed.json`)
-- PoE2 entity schema (same fields, same values)
-- PoE2 UX (identical after move to `poe2/` directory)
+- PoE2 core entity fields (entity_slug, display_name, entity_type, mechanic_tags, damage_tags, description)
 - Netlify build process
 - pgvector embedding model (384-dim, `Xenova/all-MiniLM-L6-v2`)
 - Claude enrichment logic in `indexer.py`
