@@ -70,3 +70,216 @@ def map_skill_types(type_names: list[str]) -> tuple[list[str], list[str]]:
         if name in SKILL_TYPE_TO_DAMAGE:
             damage.add(SKILL_TYPE_TO_DAMAGE[name])
     return sorted(mechanic), sorted(damage)
+
+
+def find_ooz(poe2_dir: Path) -> Path:
+    """Find ooz.dll for PyPoE bundle decompression.
+
+    Note: PyPoE uses the 'ooz' Python package (ooz.pyd) which is installed as a
+    dependency — no manual DLL path is needed. This function is kept for
+    compatibility and returns a sentinel path; the actual decompression is handled
+    by the ooz Python extension automatically.
+    """
+    candidates = [
+        poe2_dir / "ooz64.dll",
+        poe2_dir / "ooz.dll",
+        Path(__file__).parent / "bin" / "ooz64.dll",
+        Path(__file__).parent / "bin" / "ooz.dll",
+    ]
+    for path in candidates:
+        if path.exists():
+            return path
+    # The ooz Python package handles decompression internally; a DLL is not required.
+    # Return a dummy sentinel so callers don't need to change their interface.
+    try:
+        import ooz  # noqa: F401 — verify the package is installed
+    except ImportError as exc:
+        raise FileNotFoundError(
+            "ooz Python package not installed and no ooz.dll found.\n"
+            "Run: pip install ooz\n"
+            "Or download: https://github.com/zao/ooz/releases/download/v0.2.4/bun-0.2.4-x64-Release.zip"
+        ) from exc
+    return Path("ooz_python_package")  # sentinel — not used for file I/O
+
+
+def open_bundle_index(poe2_dir: Path, ooz_path: Path):  # ooz_path kept for API compatibility
+    """Open the PoE2 bundle index and return a RelationalReader for dat extraction.
+
+    Uses PyPoE's FileSystem abstraction which handles bundle loading on demand.
+    The ooz_path argument is accepted for API compatibility but is not used —
+    the 'ooz' Python package handles decompression automatically.
+    """
+    from PyPoE.poe.file.file_system import FileSystem
+    from PyPoE.poe.file.dat import RelationalReader
+    from PyPoE.poe.file.specification.data import poe2
+
+    index_path = poe2_dir / "Bundles2" / "_.index.bin"
+    if not index_path.exists():
+        raise FileNotFoundError(f"Bundle index not found: {index_path}")
+
+    fs = FileSystem(root_path=str(poe2_dir))
+    if fs.index is None:
+        raise RuntimeError(f"PyPoE could not load bundle index from {poe2_dir}")
+
+    rr = RelationalReader(
+        path_or_file_system=fs,
+        specification=poe2.specification,
+        raise_error_on_missing_relation=False,
+        read_options={"x64": True},
+    )
+    return rr
+
+
+def read_dat(index, dat_name: str) -> list:
+    """Extract and parse a .dat64 file via the bundle index RelationalReader.
+
+    Parameters
+    ----------
+    index:
+        RelationalReader returned by open_bundle_index().
+    dat_name:
+        File name like 'SkillGems.dat64' (without path prefix).
+
+    Returns
+    -------
+    list of DatRecord rows — access fields by string key, e.g. row['Name'].
+    """
+    # RelationalReader.__getitem__ accepts 'SkillGems.dat64' and auto-prefixes
+    # 'Data/Balance/' for PoE2.
+    reader = index[dat_name]
+    return reader.table_data
+
+
+def extract_skill_gems(index) -> list[dict]:
+    """Parse SkillGems.dat64 → list of skill/support entities.
+
+    Field names discovered from live smoke test:
+    - BaseItemType: DatRecord with 'Name' field (resolved foreign key)
+    - GemType: int — 0 = active skill, >0 = support gem
+    - IsVaalVariant: bool — skip vaal variants (duplicates)
+    """
+    rows = read_dat(index, "SkillGems.dat64")
+    entities: list[dict] = []
+    for row in rows:
+        try:
+            # Skip vaal variants — they duplicate the base gem name
+            if row["IsVaalVariant"]:
+                continue
+
+            base_item = row["BaseItemType"]
+            if not base_item:
+                continue
+            name = base_item["Name"]
+            if not name or not str(name).strip():
+                continue
+
+            # GemType: 0 = active skill, 1/2 = support gem variants
+            is_support = int(row["GemType"]) != 0
+            entity_type = "support" if is_support else "skill"
+
+            entities.append({
+                "entity_slug": slugify(name, separator="_"),
+                "display_name": name,
+                "entity_type": entity_type,
+                "class_tags": [],
+                "mechanic_tags": [],
+                "damage_tags": [],
+                "description": "",
+            })
+        except (KeyError, AttributeError, TypeError):
+            continue
+    return entities
+
+
+def enrich_with_active_skills(index, entities: list[dict]) -> list[dict]:
+    """Parse ActiveSkills.dat64 and enrich matching entities with mechanic/damage tags.
+
+    Field names discovered from live smoke test:
+    - DisplayedName: str skill name
+    - ActiveSkillTypes: list of DatRecords, each with 'Id' field (e.g. 'Attack', 'Spell')
+    - Description: str
+    """
+    rows = read_dat(index, "ActiveSkills.dat64")
+
+    active_map: dict[str, dict] = {}
+    for row in rows:
+        try:
+            name = row["DisplayedName"]
+            if not name:
+                continue
+
+            # ActiveSkillTypes is a list of DatRecords; each has an 'Id' string field
+            skill_types = row["ActiveSkillTypes"] or []
+            type_names: list[str] = []
+            for st in skill_types:
+                try:
+                    if isinstance(st, str):
+                        type_names.append(st)
+                    elif hasattr(st, "__getitem__"):
+                        type_names.append(str(st["Id"]))
+                    elif hasattr(st, "Id"):
+                        type_names.append(str(st.Id))
+                except (KeyError, AttributeError):
+                    pass
+
+            mechanic, damage = map_skill_types(type_names)
+            desc = row["Description"] or ""
+            active_map[name.lower()] = {
+                "mechanic_tags": mechanic,
+                "damage_tags": damage,
+                "description": str(desc),
+            }
+        except (KeyError, AttributeError, TypeError):
+            continue
+
+    enriched = []
+    for entity in entities:
+        key = entity["display_name"].lower()
+        if key in active_map:
+            merged = dict(entity)
+            merged["mechanic_tags"] = active_map[key]["mechanic_tags"]
+            merged["damage_tags"] = active_map[key]["damage_tags"]
+            merged["description"] = active_map[key]["description"]
+            enriched.append(merged)
+        else:
+            enriched.append(entity)
+    return enriched
+
+
+def extract_passives(index) -> list[dict]:
+    """Parse PassiveSkills.dat64 → list of passive entities.
+
+    Field names discovered from live smoke test:
+    - Name: str passive name (may be empty for icon-only nodes)
+    - FlavourText: str flavour/description text
+    """
+    rows = read_dat(index, "PassiveSkills.dat64")
+    entities: list[dict] = []
+    for row in rows:
+        try:
+            name = row["Name"]
+            if not name or not str(name).strip():
+                continue
+            name = str(name).strip()
+
+            desc = row["FlavourText"] or ""
+
+            entities.append({
+                "entity_slug": slugify(name, separator="_"),
+                "display_name": name,
+                "entity_type": "passive",
+                "class_tags": [],
+                "mechanic_tags": [],
+                "damage_tags": [],
+                "description": str(desc),
+            })
+        except (KeyError, AttributeError, TypeError):
+            continue
+
+    seen: set[str] = set()
+    unique: list[dict] = []
+    for e in entities:
+        if e["entity_slug"] not in seen:
+            seen.add(e["entity_slug"])
+            unique.append(e)
+    return unique
