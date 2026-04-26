@@ -291,7 +291,11 @@ SEED_PATH = Path(__file__).parent / "data" / "poe2_seed.json"
 
 
 def pob_enrich(entities: list[dict]) -> list[dict]:
-    """Reuse POB mechanic_tag enrichment from scraper_poe2."""
+    """Reuse POB mechanic_tag enrichment from scraper_poe2.
+
+    Imports are deferred — scraper_poe2 imports requests/mwparserfromhell and
+    triggers ensure_pob_repo() (git clone/pull) at call time, not module load.
+    """
     from pipeline.scraper_poe2 import ensure_pob_repo, load_all_pob_data, merge_sources
 
     pob_skills_dir = ensure_pob_repo()
@@ -321,7 +325,10 @@ def extract_all(poe2_dir: Path, output_path: Path) -> None:
     all_entities = skill_entities + passive_entities
 
     print("Enriching mechanic_tags from POB...")
-    all_entities = pob_enrich(all_entities)
+    try:
+        all_entities = pob_enrich(all_entities)
+    except Exception as exc:
+        print(f"WARNING: POB enrichment failed ({exc}), writing seed without POB tags", file=sys.stderr)
 
     skills = [e for e in all_entities if e["entity_type"] == "skill"]
     supports = [e for e in all_entities if e["entity_type"] == "support"]
@@ -349,7 +356,7 @@ def main() -> int:
     parser.add_argument(
         "--poe2-dir",
         default=os.environ.get("POE2_DIR", r"F:\SteamLibrary\steamapps\common\Path of Exile 2"),
-        help="Path to PoE2 installation directory",
+        help="Path to PoE2 installation directory (env: POE2_DIR; hardcoded fallback is local-dev only)",
     )
     parser.add_argument(
         "--output",
@@ -375,8 +382,11 @@ def main() -> int:
             data["patch_version"] = args.patch_version
             Path(args.output).write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
             print(f"Patch version set to {args.patch_version}")
-    except FileNotFoundError as exc:
+    except (FileNotFoundError, RuntimeError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
+        return 1
+    except Exception as exc:
+        print(f"FATAL: {exc}", file=sys.stderr)
         return 1
 
     return 0
