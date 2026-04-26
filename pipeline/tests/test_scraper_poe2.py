@@ -78,7 +78,6 @@ def test_scrape_all_uses_seed_when_present(tmp_path):
         patch("pipeline.scraper_poe2.ensure_pob_repo", return_value=tmp_path),
         patch("pipeline.scraper_poe2.load_all_pob_data", return_value=pob_data),
     ):
-        from pipeline import scraper_poe2
         entities = scraper_poe2.scrape_all()
 
     assert len(entities) == 1
@@ -88,6 +87,5 @@ def test_scrape_all_uses_seed_when_present(tmp_path):
 
 def test_load_from_seed_returns_none_when_missing(tmp_path):
     with patch("pipeline.scraper_poe2.SEED_PATH", tmp_path / "nonexistent.json"):
-        from pipeline import scraper_poe2
         result = scraper_poe2.load_from_seed()
     assert result is None

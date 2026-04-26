@@ -61,9 +61,13 @@ def load_from_seed() -> list[dict] | None:
     except Exception as exc:
         print(f"Warning: seed file unreadable ({exc}), skipping", file=sys.stderr)
         return None
+    entities = data.get("entities")
+    if not entities:
+        print("Warning: seed file has no entities, skipping", file=sys.stderr)
+        return None
     counts = data.get("entity_counts", {})
     print(f"Using seed file: {counts} (extracted {data.get('extracted_at', 'unknown')})")
-    return data["entities"]
+    return entities
 
 
 def _get(url: str, params: dict | None = None) -> dict:
