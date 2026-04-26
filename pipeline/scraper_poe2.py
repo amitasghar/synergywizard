@@ -50,6 +50,25 @@ POB_TYPE_MAP = {
     "Brand": "brand",
 }
 
+SEED_PATH = Path(__file__).parent / "data" / "poe2_seed.json"
+
+
+def load_from_seed() -> list[dict] | None:
+    if not SEED_PATH.exists():
+        return None
+    try:
+        data = json.loads(SEED_PATH.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"Warning: seed file unreadable ({exc}), skipping", file=sys.stderr)
+        return None
+    entities = data.get("entities")
+    if not entities:
+        print("Warning: seed file has no entities, skipping", file=sys.stderr)
+        return None
+    counts = data.get("entity_counts", {})
+    print(f"Using seed file: {counts} (extracted {data.get('extracted_at', 'unknown')})")
+    return entities
+
 
 def _get(url: str, params: dict | None = None) -> dict:
     resp = requests.get(
@@ -222,6 +241,12 @@ def scrape_all() -> list[dict]:
     pob_skills_dir = ensure_pob_repo()
     pob_data = load_all_pob_data(pob_skills_dir)
 
+    # Priority 1: committed seed file (game data extraction)
+    seed_entities = load_from_seed()
+    if seed_entities:
+        return [merge_sources(e, pob_data) for e in seed_entities]
+
+    # Priority 2: wiki (may come back someday)
     try:
         entities: list[dict] = []
         for entity_type, category in CATEGORIES.items():
@@ -234,7 +259,9 @@ def scrape_all() -> list[dict]:
         return entities
     except Exception as exc:
         print(f"Wiki scrape failed ({exc}), falling back to POB-only mode", file=sys.stderr)
-        return _pob_only_entities(pob_data)
+
+    # Priority 3: POB-only fallback
+    return _pob_only_entities(pob_data)
 
 
 def main() -> int:

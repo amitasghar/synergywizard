@@ -1,4 +1,7 @@
+import json
+import tempfile
 from pathlib import Path
+from unittest.mock import patch
 
 from pipeline import scraper_poe2
 
@@ -46,3 +49,43 @@ def test_merge_sources_combines_wiki_and_pob():
     merged = scraper_poe2.merge_sources(wiki, pob)
     assert "areaspell" in merged["mechanic_tags"] or "aoe" in merged["mechanic_tags"]
     assert merged["entity_slug"] == "volcanic_fissure"
+
+
+def test_scrape_all_uses_seed_when_present(tmp_path):
+    seed = {
+        "extracted_at": "2026-04-25T00:00:00+00:00",
+        "patch_version": "3.25.0",
+        "entity_counts": {"skill": 1, "support": 0, "passive": 0},
+        "entities": [
+            {
+                "entity_slug": "arc",
+                "display_name": "Arc",
+                "entity_type": "skill",
+                "class_tags": [],
+                "mechanic_tags": ["lightning", "aoe"],
+                "damage_tags": ["lightning"],
+                "description": "Releases a beam of lightning",
+            }
+        ],
+    }
+    seed_file = tmp_path / "poe2_seed.json"
+    seed_file.write_text(json.dumps(seed), encoding="utf-8")
+
+    pob_data: dict = {}
+
+    with (
+        patch("pipeline.scraper_poe2.SEED_PATH", seed_file),
+        patch("pipeline.scraper_poe2.ensure_pob_repo", return_value=tmp_path),
+        patch("pipeline.scraper_poe2.load_all_pob_data", return_value=pob_data),
+    ):
+        entities = scraper_poe2.scrape_all()
+
+    assert len(entities) == 1
+    assert entities[0]["entity_slug"] == "arc"
+    assert "lightning" in entities[0]["mechanic_tags"]
+
+
+def test_load_from_seed_returns_none_when_missing(tmp_path):
+    with patch("pipeline.scraper_poe2.SEED_PATH", tmp_path / "nonexistent.json"):
+        result = scraper_poe2.load_from_seed()
+    assert result is None

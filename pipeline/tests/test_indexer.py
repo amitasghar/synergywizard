@@ -51,11 +51,9 @@ def test_cost_guard_passes_under_threshold():
     indexer.check_cost_guard([{"entity_slug": "a"}], threshold=50)
 
 
-def test_validate_output_rejects_bad_tag():
+def test_validate_output_filters_bad_tag():
     bad = dict(FAKE_CLAUDE_JSON)
     bad["mechanic_tags"] = ["slam", "made_up_tag"]
-    try:
-        indexer.validate_output(bad)
-        assert False, "expected ValueError"
-    except ValueError as exc:
-        assert "made_up_tag" in str(exc)
+    indexer.validate_output(bad)
+    assert bad["mechanic_tags"] == ["slam"]
+    assert "made_up_tag" not in bad["mechanic_tags"]
