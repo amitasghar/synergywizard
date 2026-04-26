@@ -10,6 +10,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from slugify import slugify
+from PyPoE.poe.file.file_system import FileSystem
+from PyPoE.poe.file.dat import RelationalReader
+from PyPoE.poe.file.specification.data import poe2 as poe2_spec
 
 # Mechanic tags from PoE2 ActiveSkillType enum names
 SKILL_TYPE_TO_MECHANIC: dict[str, str] = {
@@ -102,17 +105,13 @@ def find_ooz(poe2_dir: Path) -> Path:
     return Path("ooz_python_package")  # sentinel — not used for file I/O
 
 
-def open_bundle_index(poe2_dir: Path, ooz_path: Path):  # ooz_path kept for API compatibility
+def open_bundle_index(poe2_dir: Path, ooz_path: Path) -> RelationalReader:  # ooz_path kept for API compatibility
     """Open the PoE2 bundle index and return a RelationalReader for dat extraction.
 
     Uses PyPoE's FileSystem abstraction which handles bundle loading on demand.
     The ooz_path argument is accepted for API compatibility but is not used —
     the 'ooz' Python package handles decompression automatically.
     """
-    from PyPoE.poe.file.file_system import FileSystem
-    from PyPoE.poe.file.dat import RelationalReader
-    from PyPoE.poe.file.specification.data import poe2
-
     index_path = poe2_dir / "Bundles2" / "_.index.bin"
     if not index_path.exists():
         raise FileNotFoundError(f"Bundle index not found: {index_path}")
@@ -123,14 +122,14 @@ def open_bundle_index(poe2_dir: Path, ooz_path: Path):  # ooz_path kept for API 
 
     rr = RelationalReader(
         path_or_file_system=fs,
-        specification=poe2.specification,
+        specification=poe2_spec.specification,
         raise_error_on_missing_relation=False,
         read_options={"x64": True},
     )
     return rr
 
 
-def read_dat(index, dat_name: str) -> list:
+def read_dat(index: RelationalReader, dat_name: str) -> list[dict]:
     """Extract and parse a .dat64 file via the bundle index RelationalReader.
 
     Parameters
@@ -157,6 +156,9 @@ def extract_skill_gems(index) -> list[dict]:
     - BaseItemType: DatRecord with 'Name' field (resolved foreign key)
     - GemType: int — 0 = active skill, >0 = support gem
     - IsVaalVariant: bool — skip vaal variants (duplicates)
+
+    Note: PoE2 SkillGems.dat64 has no CharacterClass field — class restrictions
+    do not exist at the gem data level in PoE2, so class_tags is always [].
     """
     rows = read_dat(index, "SkillGems.dat64")
     entities: list[dict] = []
