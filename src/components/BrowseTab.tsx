@@ -4,12 +4,15 @@ import { useStore } from "../state/store.ts";
 import type { Entity } from "../types.ts";
 import { EntityCard } from "./EntityCard.tsx";
 
-const CLASSES = ["any", "warrior", "ranger", "sorceress", "witch", "monk", "mercenary"];
+// Weapon types for skills/supports. Only "bow" has data currently;
+// others will populate once the extractor adds weapon_tags to the seed.
+const WEAPONS = ["any", "bow", "crossbow", "mace", "flail", "axe", "sword", "dagger", "spear", "staff", "wand", "shield", "unarmed"];
 const TYPES = ["any", "skill", "support", "passive"];
-const TAGS = ["any", "slam", "fire", "cold", "lightning", "aoe", "duration", "projectile", "movement", "minion"];
+// Tags drawn from actual mechanic_tags in the seed, highest-count first.
+const TAGS = ["any", "aoe", "attack", "spell", "melee", "duration", "projectile", "fire", "lightning", "physical", "cold", "minion", "slam", "warcry", "aura", "movement", "herald", "channelling", "totem", "trap"];
 
 export function BrowseTab(): React.ReactElement {
-  const [klass, setKlass] = useState("any");
+  const [weapon, setWeapon] = useState("any");
   const [type, setType] = useState("any");
   const [tag, setTag] = useState("any");
   const [results, setResults] = useState<Entity[]>([]);
@@ -19,19 +22,20 @@ export function BrowseTab(): React.ReactElement {
     let cancelled = false;
     api.search({
       game: "poe2",
-      class: klass === "any" ? undefined : klass,
-      type: type === "any" ? undefined : (type as any),
-      tag: tag === "any" ? undefined : tag,
-    }).then((rows) => { if (!cancelled) setResults(rows); });
+      weapons: weapon === "any" ? undefined : [weapon],
+      types: type === "any" ? undefined : [type],
+      mechanics: tag === "any" ? undefined : [tag],
+    }).then((rows) => { if (!cancelled) setResults(rows); })
+      .catch(() => { if (!cancelled) setResults([]); });
     return () => { cancelled = true; };
-  }, [klass, type, tag]);
+  }, [weapon, type, tag]);
 
   return (
     <div className="flex flex-col gap-2">
       <div className="grid grid-cols-3 gap-2 text-xs">
-        <label>Class
-          <select data-testid="browse-class" value={klass} onChange={(e) => setKlass(e.target.value)} className="block w-full bg-background border border-white/15 rounded px-1 py-0.5">
-            {CLASSES.map((c) => <option key={c} value={c}>{c}</option>)}
+        <label>Weapon
+          <select data-testid="browse-weapon" value={weapon} onChange={(e) => setWeapon(e.target.value)} className="block w-full bg-background border border-white/15 rounded px-1 py-0.5">
+            {WEAPONS.map((w) => <option key={w} value={w}>{w}</option>)}
           </select>
         </label>
         <label>Type

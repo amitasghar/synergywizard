@@ -1,5 +1,5 @@
 import { describe, expect, it, vi, beforeAll, afterEach } from "vitest";
-import { api } from "./client.ts";
+import { api, buildSearchUrl } from "./client.ts";
 
 describe("api client", () => {
   beforeAll(() => {
@@ -44,6 +44,20 @@ describe("api client", () => {
     const body = JSON.parse(String((fetchSpy.mock.calls[0][1] as RequestInit).body));
     expect(body.mechanic_tags).toEqual(["slam"]);
     fetchSpy.mockRestore();
+  });
+
+  it("encodes multi-value filter params as comma-separated strings", () => {
+    const url = buildSearchUrl({
+      game: "poe2",
+      damages: ["fire", "cold"],
+      mechanics: ["slam", "melee"],
+      weapons: ["mace"],
+      types: ["skill"],
+    });
+    expect(url).toContain("damages=fire%2Ccold");
+    expect(url).toContain("mechanics=slam%2Cmelee");
+    expect(url).toContain("weapons=mace");
+    expect(url).toContain("types=skill");
   });
 
   it("semanticSearch posts vector and returns results", async () => {

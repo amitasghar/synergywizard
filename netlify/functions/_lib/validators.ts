@@ -5,9 +5,15 @@ export const gameSchema = z.enum(["poe2"]);
 export const searchQuerySchema = z.object({
   game: gameSchema,
   q: z.string().trim().min(1).max(100).optional(),
-  class: z.string().trim().min(1).max(40).optional(),
+  // Legacy single-value params kept for URL hydration compat — new UI uses array params below.
   type: z.enum(["skill", "support", "passive"]).optional(),
+  weapon: z.string().trim().min(1).max(40).optional(),
   tag: z.string().trim().min(1).max(40).optional(),
+  // Multi-value params: comma-separated tag lists, e.g. "fire,cold"
+  damages: z.string().trim().max(200).optional(),
+  mechanics: z.string().trim().max(200).optional(),
+  weapons: z.string().trim().max(200).optional(),
+  types: z.string().trim().max(200).optional(),
 });
 
 export const analyzeBodySchema = z.object({

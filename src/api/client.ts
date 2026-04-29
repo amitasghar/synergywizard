@@ -6,13 +6,29 @@ async function request<T>(input: RequestInfo, init?: RequestInit): Promise<T> {
   return res.json() as Promise<T>;
 }
 
+export interface SearchParams {
+  game: "poe2";
+  q?: string;
+  damages?: string[];
+  mechanics?: string[];
+  weapons?: string[];
+  types?: string[];
+}
+
+export function buildSearchUrl(params: SearchParams): string {
+  const url = new URL("/api/search", window.location.origin);
+  url.searchParams.set("game", params.game);
+  if (params.q) url.searchParams.set("q", params.q);
+  if (params.damages?.length) url.searchParams.set("damages", params.damages.join(","));
+  if (params.mechanics?.length) url.searchParams.set("mechanics", params.mechanics.join(","));
+  if (params.weapons?.length) url.searchParams.set("weapons", params.weapons.join(","));
+  if (params.types?.length) url.searchParams.set("types", params.types.join(","));
+  return url.toString();
+}
+
 export const api = {
-  async search(params: { game: "poe2"; q?: string; class?: string; type?: string; tag?: string }): Promise<Entity[]> {
-    const url = new URL("/api/search", window.location.origin);
-    Object.entries(params).forEach(([k, v]) => {
-      if (v !== undefined && v !== "") url.searchParams.set(k, String(v));
-    });
-    return request<Entity[]>(url.toString());
+  async search(params: SearchParams): Promise<Entity[]> {
+    return request<Entity[]>(buildSearchUrl(params));
   },
   async analyze(body: { game: "poe2"; entity_ids: string[] }): Promise<AnalysisResult> {
     return request<AnalysisResult>("/api/analyze", {
