@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { api } from "../api/client.ts";
+import { useEmbedder } from "../hooks/useEmbedder.ts";
 import { useStore } from "../state/store.ts";
 import type { Entity, SemanticSearchResult } from "../types.ts";
 
@@ -27,6 +28,7 @@ export function AskTab(): React.ReactElement {
   const [input, setInput]       = useState("");
   const [searching, setSearching] = useState(false);
   const [error, setError]       = useState("");
+  const { status, embed }       = useEmbedder();
   const selected                = useStore((s) => s.selectedEntities);
   const insertEntityAt          = useStore((s) => s.insertEntityAt);
   const bottomRef               = useRef<HTMLDivElement>(null);
@@ -47,7 +49,8 @@ export function AskTab(): React.ReactElement {
     setError("");
 
     try {
-      const hits = await api.semanticSearch(buildContext + query);
+      const vector = await embed(buildContext + query);
+      const hits   = await api.semanticSearch(vector);
       const entities = hits.map(resultToEntity);
       const summary =
         entities.length
@@ -69,7 +72,8 @@ export function AskTab(): React.ReactElement {
     }
   }
 
-  const placeholderText = searching ? "Searching…" : 'Ask anything — "show me fire slams"…';
+  const placeholderText =
+    status === "loading" ? "Loading model (first time only)…" : 'Ask anything — "show me fire slams"…';
 
   return (
     <div className="flex flex-col h-full">

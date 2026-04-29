@@ -44,11 +44,11 @@ export const api = {
       body: JSON.stringify(body),
     });
   },
-  async semanticSearch(text: string): Promise<SemanticSearchResult[]> {
+  async semanticSearch(vector: number[]): Promise<SemanticSearchResult[]> {
     return request<SemanticSearchResult[]>("/api/semantic-search", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text }),
+      body: JSON.stringify({ vector }),
     });
   },
 };

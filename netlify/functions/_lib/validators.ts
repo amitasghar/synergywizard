@@ -28,6 +28,6 @@ export const extendBodySchema = z.object({
 });
 
 export const semanticSearchBodySchema = z.object({
-  text: z.string().trim().min(1).max(500),
+  vector: z.array(z.number()).min(1).max(1024),
   limit: z.number().int().min(1).max(20).default(10),
 });

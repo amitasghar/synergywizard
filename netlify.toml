@@ -5,7 +5,6 @@
 
 [functions]
   node_bundler = "esbuild"
-  external_node_modules = ["@xenova/transformers", "onnxruntime-node", "onnxruntime-web", "sharp"]
 
 [[redirects]]
   from = "/admin"
