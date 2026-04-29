@@ -38,7 +38,7 @@ A persistent scrollable sidebar of tag chip groups. Clicking a chip toggles it o
 |---|---|
 | **Damage Type** | fire, cold, lightning, physical, chaos |
 | **Action** | attack, spell, channelled |
-| **Style** | melee, slam, projectile, aoe, movement, minion, totem, warcry, aura, herald, trap |
+| **Style** | melee, slam, projectile, aoe, movement, duration, minion, warcry, aura, herald, mark |
 | **Weapon** | mace, sword, axe, dagger, spear, staff, bow, crossbow, wand, unarmed, shield |
 | **Type** | skill, support, passive |
 
@@ -50,6 +50,14 @@ A persistent scrollable sidebar of tag chip groups. Clicking a chip toggles it o
 - other → standard muted chip
 
 **"Clear all filters"** link at the bottom of the sidebar resets all chip selections.
+
+### Known extractor gaps
+
+The following tags are confirmed real PoE2 gem tags (visible on poe2db.tw and the PoE2 wiki) but are not yet present in `poe2_seed.json` because `SKILL_TYPE_TO_MECHANIC` in `extract_game_data.py` has no mapping for them:
+
+`strike`, `nova`, `totem`, `trap`, `curse`, `stance`, `blink`
+
+`totem` and `trap` were in an earlier version of the Style group but removed because they return 0 results today. `strike` is particularly important (single-target melee attacks like Heavy Strike) and should be added to the Style group once the extractor is updated. These tags should be added to the extractor in a follow-up task.
 
 ### Data mapping
 - Damage Type chips filter on `damage_tags` DB column
