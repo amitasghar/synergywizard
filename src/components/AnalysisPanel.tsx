@@ -5,7 +5,11 @@ import { ConversionPanel } from "./ConversionPanel.tsx";
 import { ExtendPanel } from "./ExtendPanel.tsx";
 import { ShareBar } from "./ShareBar.tsx";
 
-export function AnalysisPanel(): React.ReactElement | null {
+interface AnalysisPanelProps {
+  className?: string;
+}
+
+export function AnalysisPanel({ className = "" }: AnalysisPanelProps): React.ReactElement | null {
   const analysis = useStore((s) => s.analysisResult);
   const baseline = useStore((s) => s.baselineAnalysis);
 
@@ -21,14 +25,14 @@ export function AnalysisPanel(): React.ReactElement | null {
 
   if (!analysis) {
     return (
-      <section className="flex-1 p-4 text-white/40 italic">
+      <section className={`flex-1 p-4 text-white/40 italic ${className}`}>
         Select at least two entities and hit Analyze.
       </section>
     );
   }
 
   return (
-    <section className="flex-1 p-4 overflow-y-auto space-y-4">
+    <section className={`flex-1 p-4 overflow-y-auto space-y-4 ${className}`}>
       <InteractionList analysis={analysis} highlightNew={highlightNew} />
       <ConversionPanel />
       <ExtendPanel />

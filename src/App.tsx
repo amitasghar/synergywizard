@@ -1,18 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import { Header } from "./components/Header.tsx";
-import { LeftPanel } from "./components/LeftPanel.tsx";
-import { ActiveTray } from "./components/ActiveTray.tsx";
+import { FilterSidebar } from "./components/FilterSidebar.tsx";
+import { CenterPanel } from "./components/CenterPanel.tsx";
+import { SandboxPanel } from "./components/SandboxPanel.tsx";
 import { AnalysisPanel } from "./components/AnalysisPanel.tsx";
 import { api } from "./api/client.ts";
 import { useStore } from "./state/store.ts";
 import { decodeStateFromUrl } from "./state/url.ts";
 
 export default function App(): React.ReactElement {
-  const addEntity = useStore((s) => s.addEntity);
-  const setAnalysis = useStore((s) => s.setAnalysis);
-  const setBaseline = useStore((s) => s.setBaseline);
+  const addEntity    = useStore((s) => s.addEntity);
+  const setAnalysis  = useStore((s) => s.setAnalysis);
+  const setBaseline  = useStore((s) => s.setBaseline);
   const setConversion = useStore((s) => s.setConversion);
-  const hydrated = useRef(false);
+  const hydrated     = useRef(false);
 
   useEffect(() => {
     if (hydrated.current) return;
@@ -24,9 +25,9 @@ export default function App(): React.ReactElement {
       const entities = await Promise.all(
         state.slugs.map((slug) => api.search({ game: "poe2", q: slug })),
       );
-      const flat = entities.flat();
+      const flat   = entities.flat();
       const bySlug = new Map(flat.map((e) => [e.entity_slug, e]));
-      const toAdd = state.slugs
+      const toAdd  = state.slugs
         .map((slug) => bySlug.get(slug.replace(/-/g, "_")) ?? bySlug.get(slug))
         .filter((e): e is NonNullable<typeof e> => !!e);
       toAdd.forEach((e) => addEntity(e));
@@ -37,7 +38,11 @@ export default function App(): React.ReactElement {
         setBaseline(result);
 
         if (state.conversion) {
-          const entity = toAdd.find((e) => e.entity_slug === state.conversion!.slug.replace(/-/g, "_") || e.entity_slug === state.conversion!.slug);
+          const entity = toAdd.find(
+            (e) =>
+              e.entity_slug === state.conversion!.slug.replace(/-/g, "_") ||
+              e.entity_slug === state.conversion!.slug,
+          );
           if (entity) {
             setConversion({ entityId: entity.id, from: state.conversion.from, to: state.conversion.to });
           }
@@ -49,10 +54,14 @@ export default function App(): React.ReactElement {
   return (
     <div className="h-full flex flex-col">
       <Header game="poe2" />
-      <ActiveTray />
       <div className="flex-1 flex overflow-hidden">
-        <LeftPanel />
-        <AnalysisPanel />
+        <FilterSidebar />
+        <CenterPanel />
+        {/* Right panel: sandbox on top, analysis scrolls below */}
+        <div className="w-[270px] min-w-[270px] flex flex-col overflow-hidden">
+          <SandboxPanel />
+          <AnalysisPanel className="border-t border-white/10" />
+        </div>
       </div>
     </div>
   );
