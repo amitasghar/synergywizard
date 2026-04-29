@@ -13,6 +13,7 @@ export const entities = pgTable(
     classTags: text("class_tags").array().notNull().default(sql`'{}'::text[]`),
     mechanicTags: text("mechanic_tags").array().notNull().default(sql`'{}'::text[]`),
     damageTags: text("damage_tags").array().notNull().default(sql`'{}'::text[]`),
+    weaponTags: text("weapon_tags").array().notNull().default(sql`'{}'::text[]`),
     creates: text("creates").array().notNull().default(sql`'{}'::text[]`),
     triggeredBy: text("triggered_by").array().notNull().default(sql`'{}'::text[]`),
     conversionsAvailable: jsonb("conversions_available").notNull().default(sql`'[]'::jsonb`),
