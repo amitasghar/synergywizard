@@ -42,7 +42,13 @@ export default async function handler(req: Request, _ctx: Context): Promise<Resp
   const damageArr = parseArr(damages);
   const mechanicArr = parseArr(mechanics);
   const weaponArr = parseArr(weapons);
-  const typeArr = parseArr(types);
+  // Expand "passive" to include all passive subtypes so the sidebar filter
+  // still matches keystone/mastery/ascendancy nodes.
+  const PASSIVE_SUBTYPES = ["passive", "keystone", "mastery", "ascendancy"];
+  const rawTypeArr = parseArr(types);
+  const typeArr = rawTypeArr
+    ? [...new Set(rawTypeArr.flatMap((t) => (t === "passive" ? PASSIVE_SUBTYPES : [t])))]
+    : undefined;
 
   let rows: Record<string, unknown>[];
 

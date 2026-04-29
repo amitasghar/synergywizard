@@ -10,6 +10,25 @@ export const config: Config = {
 
 const sqlClient = neon();
 
+// Module-level pipeline cache so warm invocations skip model loading.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let _pipeline: ((text: string, opts: object) => Promise<{ data: Float32Array }>) | any = null;
+
+async function getEmbedding(text: string): Promise<number[]> {
+  if (!_pipeline) {
+    // Dynamic import keeps esbuild from analysing the WASM internals at bundle time.
+    const { pipeline, env } = await import("@xenova/transformers");
+    // onnxruntime-node is available — use it instead of WASM.
+    env.backends.onnx.wasm.numThreads = 1;
+    _pipeline = (await pipeline(
+      "feature-extraction",
+      "Xenova/all-MiniLM-L6-v2",
+    )) as typeof _pipeline;
+  }
+  const output = await _pipeline!(text, { pooling: "mean", normalize: true });
+  return Array.from(output.data);
+}
+
 export default async function handler(req: Request, _ctx: Context): Promise<Response> {
   let body: unknown;
   try {
@@ -21,7 +40,16 @@ export default async function handler(req: Request, _ctx: Context): Promise<Resp
   const parsed = semanticSearchBodySchema.safeParse(body);
   if (!parsed.success) return badRequest(parsed.error.message);
 
-  const { vector, limit } = parsed.data;
+  const { text, limit } = parsed.data;
+
+  let vector: number[];
+  try {
+    vector = await getEmbedding(text);
+  } catch (err) {
+    console.error("embedding error:", err);
+    return json({ error: "Embedding unavailable" }, { status: 503, cache: false });
+  }
+
   const vecLiteral = `[${vector.join(",")}]`;
 
   let rows: Record<string, unknown>[];

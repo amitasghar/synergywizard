@@ -403,6 +403,33 @@ def _format_passive_stat(stat_id: str, val: int) -> str:
     return f"{sign}{val} {label}"
 
 
+def _passive_subtype(row) -> str:
+    """Determine subtype label for a PassiveSkills.dat64 row.
+
+    Priority: keystone > mastery hub > ascendancy > passive (default).
+    """
+    try:
+        if row["IsKeystone"]:
+            return "keystone"
+    except (KeyError, TypeError):
+        pass
+    try:
+        if row["MasteryGroup"]:
+            return "mastery"
+    except (KeyError, TypeError):
+        pass
+    for asc_field in ("Ascendancy", "AscendancyKey"):
+        try:
+            asc = row[asc_field]
+            if asc is not None:
+                asc_id = getattr(asc, "Id", None) or str(asc)
+                if asc_id and asc_id not in ("None", "0", ""):
+                    return "ascendancy"
+        except (KeyError, TypeError, AttributeError):
+            pass
+    return "passive"
+
+
 def extract_passives(index) -> list[dict]:
     """Parse PassiveSkills.dat64 → list of passive entities.
 
@@ -476,10 +503,12 @@ def extract_passives(index) -> list[dict]:
             if not desc:
                 desc = str(row["FlavourText"] or "")
 
+            entity_type = _passive_subtype(row)
+
             entities.append({
                 "entity_slug": slugify(name, separator="_"),
                 "display_name": name,
-                "entity_type": "passive",
+                "entity_type": entity_type,
                 "class_tags": [],
                 "mechanic_tags": [],
                 "damage_tags": [],
@@ -544,9 +573,10 @@ def extract_all(poe2_dir: Path, output_path: Path) -> None:
     except Exception as exc:
         print(f"WARNING: POB enrichment failed ({exc}), writing seed without POB tags", file=sys.stderr)
 
+    PASSIVE_SUBTYPES = {"passive", "keystone", "mastery", "ascendancy"}
     skills = [e for e in all_entities if e["entity_type"] == "skill"]
     supports = [e for e in all_entities if e["entity_type"] == "support"]
-    passives = [e for e in all_entities if e["entity_type"] == "passive"]
+    passives = [e for e in all_entities if e["entity_type"] in PASSIVE_SUBTYPES]
 
     seed = {
         "extracted_at": datetime.now(tz=timezone.utc).isoformat(),

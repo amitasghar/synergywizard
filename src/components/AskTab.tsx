@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { api } from "../api/client.ts";
-import { useEmbedder } from "../hooks/useEmbedder.ts";
 import { useStore } from "../state/store.ts";
 import type { Entity, SemanticSearchResult } from "../types.ts";
 
@@ -28,7 +27,6 @@ export function AskTab(): React.ReactElement {
   const [input, setInput]       = useState("");
   const [searching, setSearching] = useState(false);
   const [error, setError]       = useState("");
-  const { status, embed }       = useEmbedder();
   const selected                = useStore((s) => s.selectedEntities);
   const insertEntityAt          = useStore((s) => s.insertEntityAt);
   const bottomRef               = useRef<HTMLDivElement>(null);
@@ -49,8 +47,7 @@ export function AskTab(): React.ReactElement {
     setError("");
 
     try {
-      const vector = await embed(buildContext + query);
-      const hits   = await api.semanticSearch(vector);
+      const hits = await api.semanticSearch(buildContext + query);
       const entities = hits.map(resultToEntity);
       const summary =
         entities.length
@@ -63,7 +60,8 @@ export function AskTab(): React.ReactElement {
         results: entities.slice(0, 8),
       };
       setMessages((prev) => [...prev, assistantMsg]);
-    } catch {
+    } catch (err) {
+      console.error("Ask AI error:", err);
       setError("Search failed. Try again.");
     } finally {
       setSearching(false);
@@ -71,8 +69,7 @@ export function AskTab(): React.ReactElement {
     }
   }
 
-  const placeholderText =
-    status === "loading" ? "Loading model (first time only)…" : 'Ask anything — "show me fire slams"…';
+  const placeholderText = searching ? "Searching…" : 'Ask anything — "show me fire slams"…';
 
   return (
     <div className="flex flex-col h-full">
@@ -141,13 +138,12 @@ export function AskTab(): React.ReactElement {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={placeholderText}
-          disabled={status === "error"}
           data-testid="ask-input"
           className="flex-1 bg-white/5 border border-white/10 rounded px-2 py-1.5 text-sm text-white placeholder-white/25 focus:outline-none focus:border-accent/50"
         />
         <button
           type="submit"
-          disabled={searching || !input.trim() || status === "error"}
+          disabled={searching || !input.trim()}
           data-testid="ask-submit"
           className="px-3 py-1.5 rounded bg-accent text-background text-sm font-medium disabled:opacity-40"
         >

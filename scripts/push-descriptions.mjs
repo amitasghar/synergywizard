@@ -25,11 +25,13 @@ for (let i = 0; i < entities.length; i += BATCH) {
   await Promise.all(batch.map(async (e) => {
     const desc = e.description ?? "";
     const weaponTags = e.weapon_tags ?? [];
+    const entityType = e.entity_type ?? "passive";
     try {
       await sql`
         UPDATE entities
         SET description = ${desc},
-            weapon_tags = ${weaponTags}
+            weapon_tags = ${weaponTags},
+            entity_type = ${entityType}
         WHERE game = 'poe2' AND entity_slug = ${e.entity_slug}
       `;
       updated++;

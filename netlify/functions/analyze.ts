@@ -74,17 +74,34 @@ export default async function handler(req: Request, _ctx: Context): Promise<Resp
     (e) => e.interaction_type === "extended" || !selectedSet.has(e.to_entity_id) || !selectedSet.has(e.from_entity_id),
   );
 
+  // Fetch stubs for any entity referenced in edges but not in the selected set,
+  // so the client can show display names instead of raw UUIDs.
+  const knownIds = new Set(entities.map((e) => e.id));
+  const extraIds = unique(
+    [...directInteractions, ...extendedInteractions].flatMap((e) => [e.from_entity_id, e.to_entity_id])
+  ).filter((id) => !knownIds.has(id));
+
+  if (extraIds.length > 0) {
+    const extraEntities = (await sqlClient`
+      SELECT id, entity_type, entity_slug, display_name, mechanic_tags,
+             damage_tags, recommended_supports, relevant_passives, conversions_available
+      FROM entities
+      WHERE game = ${game} AND id = ANY(${extraIds}::uuid[]);
+    `) as EntityRow[];
+    entities.push(...extraEntities);
+  }
+
   const edgePairs = new Set(directInteractions.map((e) => `${e.from_entity_id}->${e.to_entity_id}`));
   const loopDetected = directInteractions.some(
     (e) => edgePairs.has(`${e.to_entity_id}->${e.from_entity_id}`),
   );
 
-  const allDamageTags = unique(entities.flatMap((e) => e.damage_tags));
-  const allSupports = unique(entities.flatMap((e) => e.recommended_supports));
-  const allPassives = unique(entities.flatMap((e) => e.relevant_passives));
+  const allDamageTags = unique(entities.filter((e) => selectedSet.has(e.id)).flatMap((e) => e.damage_tags));
+  const allSupports = unique(entities.filter((e) => selectedSet.has(e.id)).flatMap((e) => e.recommended_supports));
+  const allPassives = unique(entities.filter((e) => selectedSet.has(e.id)).flatMap((e) => e.relevant_passives));
 
   const conversionOptions = entities
-    .filter((e) => (e.conversions_available ?? []).length > 0)
+    .filter((e) => selectedSet.has(e.id) && (e.conversions_available ?? []).length > 0)
     .map((e) => ({
       entity_id: e.id,
       display_name: e.display_name,

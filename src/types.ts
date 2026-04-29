@@ -1,4 +1,4 @@
-export type EntityType = "skill" | "support" | "passive";
+export type EntityType = "skill" | "support" | "passive" | "keystone" | "mastery" | "ascendancy";
 
 export interface Entity {
   id: string;
@@ -60,7 +60,7 @@ export interface SemanticSearchResult {
   id: string;
   entity_slug: string;
   display_name: string;
-  entity_type: "skill" | "support" | "passive";
+  entity_type: EntityType;
   mechanic_tags: string[];
   damage_tags: string[];
   class_tags: string[];

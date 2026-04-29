@@ -1,5 +1,5 @@
 {
-  "extracted_at": "2026-04-29T20:53:21.254261+00:00",
+  "extracted_at": "2026-04-29T21:02:46.061161+00:00",
   "patch_version": "unknown",
   "entity_counts": {
     "skill": 363,
@@ -12537,7 +12537,7 @@
     {
       "entity_slug": "crystalline_resistance",
       "display_name": "Crystalline Resistance",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -12547,7 +12547,7 @@
     {
       "entity_slug": "gem_enthusiast",
       "display_name": "Gem Enthusiast",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -12597,7 +12597,7 @@
     {
       "entity_slug": "crystallised_immunities",
       "display_name": "Crystallised Immunities",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -12637,7 +12637,7 @@
     {
       "entity_slug": "beef",
       "display_name": "Beef",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -12647,7 +12647,7 @@
     {
       "entity_slug": "brute_strength",
       "display_name": "Brute Strength",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -12667,7 +12667,7 @@
     {
       "entity_slug": "proficiency",
       "display_name": "Proficiency",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -12677,7 +12677,7 @@
     {
       "entity_slug": "ingenuity",
       "display_name": "Ingenuity",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -13030,7 +13030,7 @@
     {
       "entity_slug": "master_fletcher",
       "display_name": "Master Fletcher",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -13040,7 +13040,7 @@
     {
       "entity_slug": "feathered_fletching",
       "display_name": "Feathered Fletching",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -13050,7 +13050,7 @@
     {
       "entity_slug": "sniper",
       "display_name": "Sniper",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -13060,7 +13060,7 @@
     {
       "entity_slug": "pierce_the_heart",
       "display_name": "Pierce the Heart",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -13080,7 +13080,7 @@
     {
       "entity_slug": "quick_fingers",
       "display_name": "Quick Fingers",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -13320,7 +13320,7 @@
     {
       "entity_slug": "resolute_reprisal",
       "display_name": "Resolute Reprisal",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -13420,7 +13420,7 @@
     {
       "entity_slug": "lay_siege",
       "display_name": "Lay Siege",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -13440,7 +13440,7 @@
     {
       "entity_slug": "greatest_defence",
       "display_name": "Greatest Defence",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -13510,7 +13510,7 @@
     {
       "entity_slug": "defensive_reflexes",
       "display_name": "Defensive Reflexes",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14110,7 +14110,7 @@
     {
       "entity_slug": "warding_fetish",
       "display_name": "Warding Fetish",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14130,7 +14130,7 @@
     {
       "entity_slug": "dreamcatcher",
       "display_name": "Dreamcatcher",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14180,7 +14180,7 @@
     {
       "entity_slug": "versatile_arms",
       "display_name": "Versatile Arms",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14210,7 +14210,7 @@
     {
       "entity_slug": "push_the_advantage",
       "display_name": "Push the Advantage",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14240,7 +14240,7 @@
     {
       "entity_slug": "coated_arms",
       "display_name": "Coated Arms",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14440,7 +14440,7 @@
     {
       "entity_slug": "projectile_bulwark",
       "display_name": "Projectile Bulwark",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14460,7 +14460,7 @@
     {
       "entity_slug": "heavy_armour",
       "display_name": "Heavy Armour",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14470,7 +14470,7 @@
     {
       "entity_slug": "made_to_last",
       "display_name": "Made to Last",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14490,7 +14490,7 @@
     {
       "entity_slug": "impenetrable_shell",
       "display_name": "Impenetrable Shell",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14520,7 +14520,7 @@
     {
       "entity_slug": "chillproof",
       "display_name": "Chillproof",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14540,7 +14540,7 @@
     {
       "entity_slug": "shockproof",
       "display_name": "Shockproof",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14550,7 +14550,7 @@
     {
       "entity_slug": "tempered_defences",
       "display_name": "Tempered Defences",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14630,7 +14630,7 @@
     {
       "entity_slug": "freedom_of_movement",
       "display_name": "Freedom of Movement",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14640,7 +14640,7 @@
     {
       "entity_slug": "escape_velocity",
       "display_name": "Escape Velocity",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14650,7 +14650,7 @@
     {
       "entity_slug": "enhanced_reflexes",
       "display_name": "Enhanced Reflexes",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14660,7 +14660,7 @@
     {
       "entity_slug": "beastial_skin",
       "display_name": "Beastial Skin",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14670,7 +14670,7 @@
     {
       "entity_slug": "afterimage",
       "display_name": "Afterimage",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14750,7 +14750,7 @@
     {
       "entity_slug": "patient_barrier",
       "display_name": "Patient Barrier",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14840,7 +14840,7 @@
     {
       "entity_slug": "defiance",
       "display_name": "Defiance",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14870,7 +14870,7 @@
     {
       "entity_slug": "comforted_heart",
       "display_name": "Comforted Heart",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14880,7 +14880,7 @@
     {
       "entity_slug": "feel_no_pain",
       "display_name": "Feel no Pain",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -14980,7 +14980,7 @@
     {
       "entity_slug": "mindful_awareness",
       "display_name": "Mindful Awareness",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15160,7 +15160,7 @@
     {
       "entity_slug": "prism_guard",
       "display_name": "Prism Guard",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15220,7 +15220,7 @@
     {
       "entity_slug": "natural_immunity",
       "display_name": "Natural Immunity",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15425,7 +15425,7 @@
     {
       "entity_slug": "hunker_down",
       "display_name": "Hunker Down",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15435,7 +15435,7 @@
     {
       "entity_slug": "towering_shield",
       "display_name": "Towering Shield",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15455,7 +15455,7 @@
     {
       "entity_slug": "swift_blocking",
       "display_name": "Swift Blocking",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15515,7 +15515,7 @@
     {
       "entity_slug": "swift_interruption",
       "display_name": "Swift Interruption",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15595,7 +15595,7 @@
     {
       "entity_slug": "glancing_deflection",
       "display_name": "Glancing Deflection",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15605,7 +15605,7 @@
     {
       "entity_slug": "brush_off",
       "display_name": "Brush Off",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15625,7 +15625,7 @@
     {
       "entity_slug": "enduring_deflection",
       "display_name": "Enduring Deflection",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15635,7 +15635,7 @@
     {
       "entity_slug": "avoiding_deflection",
       "display_name": "Avoiding Deflection",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15645,7 +15645,7 @@
     {
       "entity_slug": "energising_deflection",
       "display_name": "Energising Deflection",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15665,7 +15665,7 @@
     {
       "entity_slug": "staunch_deflection",
       "display_name": "Staunch Deflection",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15675,7 +15675,7 @@
     {
       "entity_slug": "trained_deflection",
       "display_name": "Trained Deflection",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15695,7 +15695,7 @@
     {
       "entity_slug": "mending_deflection",
       "display_name": "Mending Deflection",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15755,7 +15755,7 @@
     {
       "entity_slug": "unbreaking",
       "display_name": "Unbreaking",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15775,7 +15775,7 @@
     {
       "entity_slug": "wary_dodging",
       "display_name": "Wary Dodging",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -15955,7 +15955,7 @@
     {
       "entity_slug": "deft_recovery",
       "display_name": "Deft Recovery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16155,7 +16155,7 @@
     {
       "entity_slug": "electrocution",
       "display_name": "Electrocution",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16165,7 +16165,7 @@
     {
       "entity_slug": "coursing_energy",
       "display_name": "Coursing Energy",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16185,7 +16185,7 @@
     {
       "entity_slug": "electrocuting_exposure",
       "display_name": "Electrocuting Exposure",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16205,7 +16205,7 @@
     {
       "entity_slug": "mass_rejuvenation",
       "display_name": "Mass Rejuvenation",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16285,7 +16285,7 @@
     {
       "entity_slug": "hale_heart",
       "display_name": "Hale Heart",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16365,7 +16365,7 @@
     {
       "entity_slug": "bloodthirsty",
       "display_name": "Bloodthirsty",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16625,7 +16625,7 @@
     {
       "entity_slug": "reinvigoration",
       "display_name": "Reinvigoration",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16695,7 +16695,7 @@
     {
       "entity_slug": "heavy_drinker",
       "display_name": "Heavy Drinker",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16765,7 +16765,7 @@
     {
       "entity_slug": "fortified_brews",
       "display_name": "Fortified Brews",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -16855,7 +16855,7 @@
     {
       "entity_slug": "savouring",
       "display_name": "Savouring",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17055,7 +17055,7 @@
     {
       "entity_slug": "sundering",
       "display_name": "Sundering",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17195,7 +17195,7 @@
     {
       "entity_slug": "decisive_retreat",
       "display_name": "Decisive Retreat",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17255,7 +17255,7 @@
     {
       "entity_slug": "blurred_motion",
       "display_name": "Blurred Motion",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17315,7 +17315,7 @@
     {
       "entity_slug": "mass_hysteria",
       "display_name": "Mass Hysteria",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17325,7 +17325,7 @@
     {
       "entity_slug": "falcon_technique",
       "display_name": "Falcon Technique",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17385,7 +17385,7 @@
     {
       "entity_slug": "blood_rush",
       "display_name": "Blood Rush",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17545,7 +17545,7 @@
     {
       "entity_slug": "titanic",
       "display_name": "Titanic",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17555,7 +17555,7 @@
     {
       "entity_slug": "cranial_impact",
       "display_name": "Cranial Impact",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17655,7 +17655,7 @@
     {
       "entity_slug": "prolonged_fury",
       "display_name": "Prolonged Fury",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17675,7 +17675,7 @@
     {
       "entity_slug": "unforgiving",
       "display_name": "Unforgiving",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17685,7 +17685,7 @@
     {
       "entity_slug": "vengeful_fury",
       "display_name": "Vengeful Fury",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17695,7 +17695,7 @@
     {
       "entity_slug": "sudden_infuriation",
       "display_name": "Sudden Infuriation",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17795,7 +17795,7 @@
     {
       "entity_slug": "deep_wounds",
       "display_name": "Deep Wounds",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17805,7 +17805,7 @@
     {
       "entity_slug": "bloodletting",
       "display_name": "Bloodletting",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17835,7 +17835,7 @@
     {
       "entity_slug": "perfectly_placed_knife",
       "display_name": "Perfectly Placed Knife",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17845,7 +17845,7 @@
     {
       "entity_slug": "aggravation",
       "display_name": "Aggravation",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17865,7 +17865,7 @@
     {
       "entity_slug": "bleeding_out",
       "display_name": "Bleeding Out",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17875,7 +17875,7 @@
     {
       "entity_slug": "incision",
       "display_name": "Incision",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17895,7 +17895,7 @@
     {
       "entity_slug": "rusted_pins",
       "display_name": "Rusted Pins",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -17915,7 +17915,7 @@
     {
       "entity_slug": "staggering_wounds",
       "display_name": "Staggering Wounds",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18075,7 +18075,7 @@
     {
       "entity_slug": "chill_effect",
       "display_name": "Chill Effect",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18095,7 +18095,7 @@
     {
       "entity_slug": "perpetual_freeze",
       "display_name": "Perpetual Freeze",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18115,7 +18115,7 @@
     {
       "entity_slug": "cold_coat",
       "display_name": "Cold Coat",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18175,7 +18175,7 @@
     {
       "entity_slug": "branching_bolts",
       "display_name": "Branching Bolts",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18185,7 +18185,7 @@
     {
       "entity_slug": "frazzled",
       "display_name": "Frazzled",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18205,7 +18205,7 @@
     {
       "entity_slug": "general_electric",
       "display_name": "General Electric",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18215,7 +18215,7 @@
     {
       "entity_slug": "drenched",
       "display_name": "Drenched",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18235,7 +18235,7 @@
     {
       "entity_slug": "rattled",
       "display_name": "Rattled",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18245,7 +18245,7 @@
     {
       "entity_slug": "harmonic_generator",
       "display_name": "Harmonic Generator",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18265,7 +18265,7 @@
     {
       "entity_slug": "conductive_embrace",
       "display_name": "Conductive Embrace",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18315,7 +18315,7 @@
     {
       "entity_slug": "escalating_toxins",
       "display_name": "Escalating Toxins",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18325,7 +18325,7 @@
     {
       "entity_slug": "building_toxins",
       "display_name": "Building Toxins",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18335,7 +18335,7 @@
     {
       "entity_slug": "crippling_toxins",
       "display_name": "Crippling Toxins",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18355,7 +18355,7 @@
     {
       "entity_slug": "lasting_toxins",
       "display_name": "Lasting Toxins",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18375,7 +18375,7 @@
     {
       "entity_slug": "stacking_toxins",
       "display_name": "Stacking Toxins",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18385,7 +18385,7 @@
     {
       "entity_slug": "toxic_tolerance",
       "display_name": "Toxic Tolerance",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18445,7 +18445,7 @@
     {
       "entity_slug": "frenetic",
       "display_name": "Frenetic",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18455,7 +18455,7 @@
     {
       "entity_slug": "savagery",
       "display_name": "Savagery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18465,7 +18465,7 @@
     {
       "entity_slug": "fervour",
       "display_name": "Fervour",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18495,7 +18495,7 @@
     {
       "entity_slug": "endurance",
       "display_name": "Endurance",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18505,7 +18505,7 @@
     {
       "entity_slug": "guts",
       "display_name": "Guts",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18515,7 +18515,7 @@
     {
       "entity_slug": "grit",
       "display_name": "Grit",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18545,7 +18545,7 @@
     {
       "entity_slug": "flare",
       "display_name": "Flare",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18575,7 +18575,7 @@
     {
       "entity_slug": "lust_for_power",
       "display_name": "Lust for Power",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18585,7 +18585,7 @@
     {
       "entity_slug": "overflowing_power",
       "display_name": "Overflowing Power",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18595,7 +18595,7 @@
     {
       "entity_slug": "the_power_within",
       "display_name": "The Power Within",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18625,7 +18625,7 @@
     {
       "entity_slug": "well_of_power",
       "display_name": "Well of Power",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -18645,7 +18645,7 @@
     {
       "entity_slug": "infusion_of_power",
       "display_name": "Infusion of Power",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -19425,7 +19425,7 @@
     {
       "entity_slug": "at_your_command",
       "display_name": "At your Command",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -19445,7 +19445,7 @@
     {
       "entity_slug": "among_the_hordes",
       "display_name": "Among the Hordes",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -19615,7 +19615,7 @@
     {
       "entity_slug": "regenerative_flesh",
       "display_name": "Regenerative Flesh",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -19645,7 +19645,7 @@
     {
       "entity_slug": "reformed_barrier",
       "display_name": "Reformed Barrier",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -19655,7 +19655,7 @@
     {
       "entity_slug": "expendable_army",
       "display_name": "Expendable Army",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -19705,7 +19705,7 @@
     {
       "entity_slug": "gigantic_following",
       "display_name": "Gigantic Following",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -19755,7 +19755,7 @@
     {
       "entity_slug": "anticipation",
       "display_name": "Anticipation",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -19785,7 +19785,7 @@
     {
       "entity_slug": "potent_incantation",
       "display_name": "Potent Incantation",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -20155,7 +20155,7 @@
     {
       "entity_slug": "opportunist",
       "display_name": "Opportunist",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -20165,7 +20165,7 @@
     {
       "entity_slug": "last_stand",
       "display_name": "Last Stand",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -20405,7 +20405,7 @@
     {
       "entity_slug": "unleash_fire",
       "display_name": "Unleash Fire",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -20475,7 +20475,7 @@
     {
       "entity_slug": "split_shot",
       "display_name": "Split Shot",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -20625,7 +20625,7 @@
     {
       "entity_slug": "burn_away",
       "display_name": "Burn Away",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -20635,7 +20635,7 @@
     {
       "entity_slug": "echoing_flames",
       "display_name": "Echoing Flames",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -20917,7 +20917,7 @@
     {
       "entity_slug": "unbothering_cold",
       "display_name": "Unbothering Cold",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -20997,7 +20997,7 @@
     {
       "entity_slug": "echoing_frost",
       "display_name": "Echoing Frost",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21037,7 +21037,7 @@
     {
       "entity_slug": "biting_frost",
       "display_name": "Biting Frost",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21057,7 +21057,7 @@
     {
       "entity_slug": "deep_freeze",
       "display_name": "Deep Freeze",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21077,7 +21077,7 @@
     {
       "entity_slug": "hail",
       "display_name": "Hail",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21127,7 +21127,7 @@
     {
       "entity_slug": "pure_power",
       "display_name": "Pure Power",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21157,7 +21157,7 @@
     {
       "entity_slug": "power_conduction",
       "display_name": "Power Conduction",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21167,7 +21167,7 @@
     {
       "entity_slug": "wild_storm",
       "display_name": "Wild Storm",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21187,7 +21187,7 @@
     {
       "entity_slug": "flash_storm",
       "display_name": "Flash Storm",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21197,7 +21197,7 @@
     {
       "entity_slug": "thunderstruck",
       "display_name": "Thunderstruck",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21207,7 +21207,7 @@
     {
       "entity_slug": "spreading_shocks",
       "display_name": "Spreading Shocks",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21217,7 +21217,7 @@
     {
       "entity_slug": "endless_circuit",
       "display_name": "Endless Circuit",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21227,7 +21227,7 @@
     {
       "entity_slug": "lightning_quick",
       "display_name": "Lightning Quick",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21237,7 +21237,7 @@
     {
       "entity_slug": "echoing_thunder",
       "display_name": "Echoing Thunder",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21257,7 +21257,7 @@
     {
       "entity_slug": "alternating_current",
       "display_name": "Alternating Current",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21307,7 +21307,7 @@
     {
       "entity_slug": "electric_blood",
       "display_name": "Electric Blood",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21387,7 +21387,7 @@
     {
       "entity_slug": "dark_entries",
       "display_name": "Dark Entries",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21447,7 +21447,7 @@
     {
       "entity_slug": "lingering_horror",
       "display_name": "Lingering Horror",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21642,7 +21642,7 @@
     {
       "entity_slug": "tempered_mind",
       "display_name": "Tempered Mind",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21672,7 +21672,7 @@
     {
       "entity_slug": "material_solidification",
       "display_name": "Material Solidification",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21712,7 +21712,7 @@
     {
       "entity_slug": "endured_suffering",
       "display_name": "Endured Suffering",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21932,7 +21932,7 @@
     {
       "entity_slug": "harness_the_elements",
       "display_name": "Harness the Elements",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -21962,7 +21962,7 @@
     {
       "entity_slug": "overexposure",
       "display_name": "Overexposure",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22032,7 +22032,7 @@
     {
       "entity_slug": "stripped_defences",
       "display_name": "Stripped Defences",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22092,7 +22092,7 @@
     {
       "entity_slug": "sturdy_mind",
       "display_name": "Sturdy Mind",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22162,7 +22162,7 @@
     {
       "entity_slug": "adverse_growth",
       "display_name": "Adverse Growth",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22172,7 +22172,7 @@
     {
       "entity_slug": "soul_bloom",
       "display_name": "Soul Bloom",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22262,7 +22262,7 @@
     {
       "entity_slug": "arcane_blossom",
       "display_name": "Arcane Blossom",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22302,7 +22302,7 @@
     {
       "entity_slug": "touch_the_arcane",
       "display_name": "Touch the Arcane",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22412,7 +22412,7 @@
     {
       "entity_slug": "price_of_freedom",
       "display_name": "Price of Freedom",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22432,7 +22432,7 @@
     {
       "entity_slug": "suffusion",
       "display_name": "Suffusion",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22442,7 +22442,7 @@
     {
       "entity_slug": "siphon",
       "display_name": "Siphon",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22562,7 +22562,7 @@
     {
       "entity_slug": "finesse",
       "display_name": "Finesse",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22572,7 +22572,7 @@
     {
       "entity_slug": "determined_precision",
       "display_name": "Determined Precision",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22602,7 +22602,7 @@
     {
       "entity_slug": "falcon_dive",
       "display_name": "Falcon Dive",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22662,7 +22662,7 @@
     {
       "entity_slug": "pinpoint_shot",
       "display_name": "Pinpoint Shot",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22682,7 +22682,7 @@
     {
       "entity_slug": "precision_salvo",
       "display_name": "Precision Salvo",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22692,7 +22692,7 @@
     {
       "entity_slug": "nimble_strength",
       "display_name": "Nimble Strength",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22702,7 +22702,7 @@
     {
       "entity_slug": "strike_true",
       "display_name": "Strike True",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22785,7 +22785,7 @@
     {
       "entity_slug": "doomsayer",
       "display_name": "Doomsayer",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -22895,7 +22895,7 @@
     {
       "entity_slug": "lone_warrior",
       "display_name": "Lone Warrior",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -23875,7 +23875,7 @@
     {
       "entity_slug": "finality",
       "display_name": "Finality",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -23885,7 +23885,7 @@
     {
       "entity_slug": "hidden_reserves",
       "display_name": "Hidden Reserves",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -23895,7 +23895,7 @@
     {
       "entity_slug": "mental_perseverance",
       "display_name": "Mental Perseverance",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -23905,7 +23905,7 @@
     {
       "entity_slug": "inner_self",
       "display_name": "Inner Self",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -23985,7 +23985,7 @@
     {
       "entity_slug": "nourishing_ally",
       "display_name": "Nourishing Ally",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24045,7 +24045,7 @@
     {
       "entity_slug": "unyielding",
       "display_name": "Unyielding",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24085,7 +24085,7 @@
     {
       "entity_slug": "time_manipulation",
       "display_name": "Time Manipulation",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24115,7 +24115,7 @@
     {
       "entity_slug": "hindered_capabilities",
       "display_name": "Hindered Capabilities",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24385,7 +24385,7 @@
     {
       "entity_slug": "acceleration",
       "display_name": "Acceleration",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24395,7 +24395,7 @@
     {
       "entity_slug": "adrenaline_rush",
       "display_name": "Adrenaline Rush",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24505,7 +24505,7 @@
     {
       "entity_slug": "tribal_fury",
       "display_name": "Tribal Fury",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24515,7 +24515,7 @@
     {
       "entity_slug": "splitting_ground",
       "display_name": "Splitting Ground",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24715,7 +24715,7 @@
     {
       "entity_slug": "psychic_fragmentation",
       "display_name": "Psychic Fragmentation",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24755,7 +24755,7 @@
     {
       "entity_slug": "radial_force",
       "display_name": "Radial Force",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24895,7 +24895,7 @@
     {
       "entity_slug": "stupefy",
       "display_name": "Stupefy",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -24995,7 +24995,7 @@
     {
       "entity_slug": "dizzying_hits",
       "display_name": "Dizzying Hits",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25085,7 +25085,7 @@
     {
       "entity_slug": "thornhide",
       "display_name": "Thornhide",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25235,7 +25235,7 @@
     {
       "entity_slug": "bannerman",
       "display_name": "Bannerman",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25265,7 +25265,7 @@
     {
       "entity_slug": "reinforced_rallying",
       "display_name": "Reinforced Rallying",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25275,7 +25275,7 @@
     {
       "entity_slug": "rallying_icon",
       "display_name": "Rallying Icon",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25375,7 +25375,7 @@
     {
       "entity_slug": "aftershocks",
       "display_name": "Aftershocks",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25385,7 +25385,7 @@
     {
       "entity_slug": "behemoth",
       "display_name": "Behemoth",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25425,7 +25425,7 @@
     {
       "entity_slug": "hold_focus",
       "display_name": "Hold Focus",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25515,7 +25515,7 @@
     {
       "entity_slug": "unsight",
       "display_name": "Unsight",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25625,7 +25625,7 @@
     {
       "entity_slug": "utmost_offering",
       "display_name": "Utmost Offering",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25685,7 +25685,7 @@
     {
       "entity_slug": "exploit",
       "display_name": "Exploit",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25735,7 +25735,7 @@
     {
       "entity_slug": "stand_and_deliver",
       "display_name": "Stand and Deliver",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25745,7 +25745,7 @@
     {
       "entity_slug": "death_from_afar",
       "display_name": "Death from Afar",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -25775,7 +25775,7 @@
     {
       "entity_slug": "sling_shots",
       "display_name": "Sling Shots",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26125,7 +26125,7 @@
     {
       "entity_slug": "exposed_to_the_inferno",
       "display_name": "Exposed to the Inferno",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26245,7 +26245,7 @@
     {
       "entity_slug": "overload",
       "display_name": "Overload",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26255,7 +26255,7 @@
     {
       "entity_slug": "exposed_to_the_storm",
       "display_name": "Exposed to the Storm",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26295,7 +26295,7 @@
     {
       "entity_slug": "electric_amplification",
       "display_name": "Electric Amplification",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26305,7 +26305,7 @@
     {
       "entity_slug": "lightning_rod",
       "display_name": "Lightning Rod",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -26319,7 +26319,7 @@
     {
       "entity_slug": "electrotherapy",
       "display_name": "Electrotherapy",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26379,7 +26379,7 @@
     {
       "entity_slug": "chakra_of_breathing",
       "display_name": "Chakra of Breathing",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26409,7 +26409,7 @@
     {
       "entity_slug": "distant_dreamer",
       "display_name": "Distant Dreamer",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26429,7 +26429,7 @@
     {
       "entity_slug": "evocational_practitioner",
       "display_name": "Evocational Practitioner",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26449,7 +26449,7 @@
     {
       "entity_slug": "chakra_of_thought",
       "display_name": "Chakra of Thought",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26459,7 +26459,7 @@
     {
       "entity_slug": "chakra_of_sight",
       "display_name": "Chakra of Sight",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26469,7 +26469,7 @@
     {
       "entity_slug": "chakra_of_life",
       "display_name": "Chakra of Life",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26499,7 +26499,7 @@
     {
       "entity_slug": "chakra_of_elements",
       "display_name": "Chakra of Elements",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26509,7 +26509,7 @@
     {
       "entity_slug": "chakra_of_stability",
       "display_name": "Chakra of Stability",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26619,7 +26619,7 @@
     {
       "entity_slug": "the_molten_one_s_gift",
       "display_name": "The Molten One's Gift",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26629,7 +26629,7 @@
     {
       "entity_slug": "passthrough_rounds",
       "display_name": "Passthrough Rounds",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26639,7 +26639,7 @@
     {
       "entity_slug": "breakage",
       "display_name": "Breakage",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26669,7 +26669,7 @@
     {
       "entity_slug": "cruel_methods",
       "display_name": "Cruel Methods",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26679,7 +26679,7 @@
     {
       "entity_slug": "eroding_chains",
       "display_name": "Eroding Chains",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26749,7 +26749,7 @@
     {
       "entity_slug": "multitasking",
       "display_name": "Multitasking",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26779,7 +26779,7 @@
     {
       "entity_slug": "deterioration",
       "display_name": "Deterioration",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26829,7 +26829,7 @@
     {
       "entity_slug": "fast_acting_toxins",
       "display_name": "Fast Acting Toxins",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26839,7 +26839,7 @@
     {
       "entity_slug": "wasting",
       "display_name": "Wasting",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26849,7 +26849,7 @@
     {
       "entity_slug": "intense_dose",
       "display_name": "Intense Dose",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26879,7 +26879,7 @@
     {
       "entity_slug": "nature_s_bite",
       "display_name": "Nature's Bite",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26909,7 +26909,7 @@
     {
       "entity_slug": "master_fletching",
       "display_name": "Master Fletching",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -26919,7 +26919,7 @@
     {
       "entity_slug": "wrapped_quiver",
       "display_name": "Wrapped Quiver",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27039,7 +27039,7 @@
     {
       "entity_slug": "pin_their_motivation",
       "display_name": "Pin their Motivation",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27059,7 +27059,7 @@
     {
       "entity_slug": "pin_and_run",
       "display_name": "Pin and Run",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27069,7 +27069,7 @@
     {
       "entity_slug": "lockdown",
       "display_name": "Lockdown",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27079,7 +27079,7 @@
     {
       "entity_slug": "primal_protection",
       "display_name": "Primal Protection",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27089,7 +27089,7 @@
     {
       "entity_slug": "vale_shelter",
       "display_name": "Vale Shelter",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27099,7 +27099,7 @@
     {
       "entity_slug": "thicket_warding",
       "display_name": "Thicket Warding",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27669,7 +27669,7 @@
     {
       "entity_slug": "precise_volatility",
       "display_name": "Precise Volatility",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27849,7 +27849,7 @@
     {
       "entity_slug": "momentum",
       "display_name": "Momentum",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27859,7 +27859,7 @@
     {
       "entity_slug": "light_on_your_feet",
       "display_name": "Light on your Feet",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27889,7 +27889,7 @@
     {
       "entity_slug": "spray_and_pray",
       "display_name": "Spray and Pray",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -27899,7 +27899,7 @@
     {
       "entity_slug": "run_and_gun",
       "display_name": "Run and Gun",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28019,7 +28019,7 @@
     {
       "entity_slug": "trained_turrets",
       "display_name": "Trained Turrets",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28029,7 +28029,7 @@
     {
       "entity_slug": "artillery_strike",
       "display_name": "Artillery Strike",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28039,7 +28039,7 @@
     {
       "entity_slug": "fortified_location",
       "display_name": "Fortified Location",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28049,7 +28049,7 @@
     {
       "entity_slug": "kept_at_bay",
       "display_name": "Kept at Bay",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28189,7 +28189,7 @@
     {
       "entity_slug": "remnant_attraction",
       "display_name": "Remnant Attraction",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28209,7 +28209,7 @@
     {
       "entity_slug": "secrets_of_the_orb",
       "display_name": "Secrets of the Orb",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28289,7 +28289,7 @@
     {
       "entity_slug": "the_great_boar",
       "display_name": "The Great Boar",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28339,7 +28339,7 @@
     {
       "entity_slug": "the_fabled_stag",
       "display_name": "The Fabled Stag",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28369,7 +28369,7 @@
     {
       "entity_slug": "the_frenzied_bear",
       "display_name": "The Frenzied Bear",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28389,7 +28389,7 @@
     {
       "entity_slug": "the_raging_ox",
       "display_name": "The Raging Ox",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28399,7 +28399,7 @@
     {
       "entity_slug": "the_wild_cat",
       "display_name": "The Wild Cat",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28419,7 +28419,7 @@
     {
       "entity_slug": "the_noble_wolf",
       "display_name": "The Noble Wolf",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28439,7 +28439,7 @@
     {
       "entity_slug": "the_winter_owl",
       "display_name": "The Winter Owl",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28459,7 +28459,7 @@
     {
       "entity_slug": "the_howling_primate",
       "display_name": "The Howling Primate",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28479,7 +28479,7 @@
     {
       "entity_slug": "the_ancient_serpent",
       "display_name": "The Ancient Serpent",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28519,7 +28519,7 @@
     {
       "entity_slug": "marathon_runner",
       "display_name": "Marathon Runner",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28529,7 +28529,7 @@
     {
       "entity_slug": "agile_sprinter",
       "display_name": "Agile Sprinter",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28599,7 +28599,7 @@
     {
       "entity_slug": "draiocht_cleansing",
       "display_name": "Draiocht Cleansing",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28769,7 +28769,7 @@
     {
       "entity_slug": "totem_mastery",
       "display_name": "Totem Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28799,7 +28799,7 @@
     {
       "entity_slug": "lightning_mastery",
       "display_name": "Lightning Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28819,7 +28819,7 @@
     {
       "entity_slug": "damage_mastery",
       "display_name": "Damage Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28849,7 +28849,7 @@
     {
       "entity_slug": "bow_mastery",
       "display_name": "Bow Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28869,7 +28869,7 @@
     {
       "entity_slug": "critical_mastery",
       "display_name": "Critical Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28889,7 +28889,7 @@
     {
       "entity_slug": "thorns_mastery",
       "display_name": "Thorns Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28909,7 +28909,7 @@
     {
       "entity_slug": "movement_mastery",
       "display_name": "Movement Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28919,7 +28919,7 @@
     {
       "entity_slug": "physical_mastery",
       "display_name": "Physical Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28959,7 +28959,7 @@
     {
       "entity_slug": "invocation_mastery",
       "display_name": "Invocation Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28979,7 +28979,7 @@
     {
       "entity_slug": "elemental_mastery",
       "display_name": "Elemental Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -28999,7 +28999,7 @@
     {
       "entity_slug": "poison_mastery",
       "display_name": "Poison Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29029,7 +29029,7 @@
     {
       "entity_slug": "bleed_mastery",
       "display_name": "Bleed Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29049,7 +29049,7 @@
     {
       "entity_slug": "minion_mastery",
       "display_name": "Minion Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29089,7 +29089,7 @@
     {
       "entity_slug": "life_mastery",
       "display_name": "Life Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29139,7 +29139,7 @@
     {
       "entity_slug": "armour_and_energy_shield_mastery",
       "display_name": "Armour and Energy Shield Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29169,7 +29169,7 @@
     {
       "entity_slug": "armour_mastery",
       "display_name": "Armour Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29339,7 +29339,7 @@
     {
       "entity_slug": "gift_of_the_plains",
       "display_name": "Gift of the Plains",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29359,7 +29359,7 @@
     {
       "entity_slug": "prize_of_the_hunt",
       "display_name": "Prize of the Hunt",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29379,7 +29379,7 @@
     {
       "entity_slug": "strength_of_the_deep",
       "display_name": "Strength of the Deep",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29399,7 +29399,7 @@
     {
       "entity_slug": "powerful_casting",
       "display_name": "Powerful Casting",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29419,7 +29419,7 @@
     {
       "entity_slug": "night_s_bite",
       "display_name": "Night's Bite",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29439,7 +29439,7 @@
     {
       "entity_slug": "exhaust_all_power",
       "display_name": "Exhaust All Power",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29469,7 +29469,7 @@
     {
       "entity_slug": "meditative_focus",
       "display_name": "Meditative Focus",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29539,7 +29539,7 @@
     {
       "entity_slug": "hidden_forms",
       "display_name": "Hidden Forms",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29559,7 +29559,7 @@
     {
       "entity_slug": "comradery",
       "display_name": "Comradery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29569,7 +29569,7 @@
     {
       "entity_slug": "anger_management",
       "display_name": "Anger Management",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29599,7 +29599,7 @@
     {
       "entity_slug": "resolute_technique",
       "display_name": "Resolute Technique",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29609,7 +29609,7 @@
     {
       "entity_slug": "giant_s_blood",
       "display_name": "Giant's Blood",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29619,7 +29619,7 @@
     {
       "entity_slug": "unwavering_stance",
       "display_name": "Unwavering Stance",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29629,7 +29629,7 @@
     {
       "entity_slug": "avatar_of_fire",
       "display_name": "Avatar of Fire",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29639,7 +29639,7 @@
     {
       "entity_slug": "blood_magic",
       "display_name": "Blood Magic",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29649,7 +29649,7 @@
     {
       "entity_slug": "zealot_s_oath",
       "display_name": "Zealot's Oath",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29659,7 +29659,7 @@
     {
       "entity_slug": "ancestral_bond",
       "display_name": "Ancestral Bond",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29669,7 +29669,7 @@
     {
       "entity_slug": "pain_attunement",
       "display_name": "Pain Attunement",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29679,7 +29679,7 @@
     {
       "entity_slug": "chaos_inoculation",
       "display_name": "Chaos Inoculation",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29689,7 +29689,7 @@
     {
       "entity_slug": "eldritch_battery",
       "display_name": "Eldritch Battery",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29699,7 +29699,7 @@
     {
       "entity_slug": "mind_over_matter",
       "display_name": "Mind Over Matter",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29709,7 +29709,7 @@
     {
       "entity_slug": "whispers_of_doom",
       "display_name": "Whispers of Doom",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29719,7 +29719,7 @@
     {
       "entity_slug": "necromantic_talisman",
       "display_name": "Necromantic Talisman",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29729,7 +29729,7 @@
     {
       "entity_slug": "conduit",
       "display_name": "Conduit",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29739,7 +29739,7 @@
     {
       "entity_slug": "resonance",
       "display_name": "Resonance",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29749,7 +29749,7 @@
     {
       "entity_slug": "eternal_youth",
       "display_name": "Eternal Youth",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29759,7 +29759,7 @@
     {
       "entity_slug": "primal_hunger",
       "display_name": "Primal Hunger",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29769,7 +29769,7 @@
     {
       "entity_slug": "dance_with_death",
       "display_name": "Dance with Death",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29779,7 +29779,7 @@
     {
       "entity_slug": "heartstopper",
       "display_name": "Heartstopper",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29789,7 +29789,7 @@
     {
       "entity_slug": "oasis",
       "display_name": "Oasis",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29799,7 +29799,7 @@
     {
       "entity_slug": "vaal_pact",
       "display_name": "Vaal Pact",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29809,7 +29809,7 @@
     {
       "entity_slug": "iron_reflexes",
       "display_name": "Iron Reflexes",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29819,7 +29819,7 @@
     {
       "entity_slug": "glancing_blows",
       "display_name": "Glancing Blows",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29829,7 +29829,7 @@
     {
       "entity_slug": "elemental_equilibrium",
       "display_name": "Elemental Equilibrium",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29839,7 +29839,7 @@
     {
       "entity_slug": "bulwark",
       "display_name": "Bulwark",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29849,7 +29849,7 @@
     {
       "entity_slug": "crimson_assault",
       "display_name": "Crimson Assault",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29859,7 +29859,7 @@
     {
       "entity_slug": "trusted_kinship",
       "display_name": "Trusted Kinship",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29869,7 +29869,7 @@
     {
       "entity_slug": "hollow_palm_technique",
       "display_name": "Hollow Palm Technique",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29879,7 +29879,7 @@
     {
       "entity_slug": "blackflame_covenant",
       "display_name": "Blackflame Covenant",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29889,7 +29889,7 @@
     {
       "entity_slug": "ritual_cadence",
       "display_name": "Ritual Cadence",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29899,7 +29899,7 @@
     {
       "entity_slug": "chimeral_blood",
       "display_name": "Chimeral Blood",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29909,7 +29909,7 @@
     {
       "entity_slug": "scarred_faith",
       "display_name": "Scarred Faith",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29919,7 +29919,7 @@
     {
       "entity_slug": "lord_of_the_wilds",
       "display_name": "Lord of the Wilds",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29929,7 +29929,7 @@
     {
       "entity_slug": "wildsurge_incantation",
       "display_name": "Wildsurge Incantation",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29939,7 +29939,7 @@
     {
       "entity_slug": "attack_mastery",
       "display_name": "Attack Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29949,7 +29949,7 @@
     {
       "entity_slug": "warlord",
       "display_name": "Warlord",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29959,7 +29959,7 @@
     {
       "entity_slug": "berserker",
       "display_name": "Berserker",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29969,7 +29969,7 @@
     {
       "entity_slug": "chieftain",
       "display_name": "Chieftain",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29979,7 +29979,7 @@
     {
       "entity_slug": "titan",
       "display_name": "Titan",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29989,7 +29989,7 @@
     {
       "entity_slug": "brute",
       "display_name": "Brute",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -29999,7 +29999,7 @@
     {
       "entity_slug": "smith_of_kitava",
       "display_name": "Smith of Kitava",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30009,7 +30009,7 @@
     {
       "entity_slug": "deadeye",
       "display_name": "Deadeye",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30019,7 +30019,7 @@
     {
       "entity_slug": "arcane_archer",
       "display_name": "Arcane Archer",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30029,7 +30029,7 @@
     {
       "entity_slug": "pathfinder",
       "display_name": "Pathfinder",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30039,7 +30039,7 @@
     {
       "entity_slug": "amazon",
       "display_name": "Amazon",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30049,7 +30049,7 @@
     {
       "entity_slug": "beastmaster",
       "display_name": "Beastmaster",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30059,7 +30059,7 @@
     {
       "entity_slug": "ritualist",
       "display_name": "Ritualist",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30069,7 +30069,7 @@
     {
       "entity_slug": "infernalist",
       "display_name": "Infernalist",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30079,7 +30079,7 @@
     {
       "entity_slug": "blood_mage",
       "display_name": "Blood Mage",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30089,7 +30089,7 @@
     {
       "entity_slug": "necromancer",
       "display_name": "Necromancer",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30099,7 +30099,7 @@
     {
       "entity_slug": "stormweaver",
       "display_name": "Stormweaver",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30109,7 +30109,7 @@
     {
       "entity_slug": "chronomancer",
       "display_name": "Chronomancer",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30119,7 +30119,7 @@
     {
       "entity_slug": "disciple_of_varashta",
       "display_name": "Disciple of Varashta",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30129,7 +30129,7 @@
     {
       "entity_slug": "deathmarked",
       "display_name": "Deathmarked",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30139,7 +30139,7 @@
     {
       "entity_slug": "gladiator",
       "display_name": "Gladiator",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30149,7 +30149,7 @@
     {
       "entity_slug": "champion",
       "display_name": "Champion",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30159,7 +30159,7 @@
     {
       "entity_slug": "tactician",
       "display_name": "Tactician",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30169,7 +30169,7 @@
     {
       "entity_slug": "witchhunter",
       "display_name": "Witchhunter",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30179,7 +30179,7 @@
     {
       "entity_slug": "gambler",
       "display_name": "Gambler",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30189,7 +30189,7 @@
     {
       "entity_slug": "inquisitor",
       "display_name": "Inquisitor",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30199,7 +30199,7 @@
     {
       "entity_slug": "heretic",
       "display_name": "Heretic",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30209,7 +30209,7 @@
     {
       "entity_slug": "guardian",
       "display_name": "Guardian",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30219,7 +30219,7 @@
     {
       "entity_slug": "assassin",
       "display_name": "Assassin",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30229,7 +30229,7 @@
     {
       "entity_slug": "phantom",
       "display_name": "Phantom",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30239,7 +30239,7 @@
     {
       "entity_slug": "saboteur",
       "display_name": "Saboteur",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30249,7 +30249,7 @@
     {
       "entity_slug": "martial_artist",
       "display_name": "Martial Artist",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30259,7 +30259,7 @@
     {
       "entity_slug": "master_of_the_elements",
       "display_name": "Master of the Elements",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30269,7 +30269,7 @@
     {
       "entity_slug": "acolyte_of_chayula",
       "display_name": "Acolyte of Chayula",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30279,7 +30279,7 @@
     {
       "entity_slug": "slam_area_of_effect",
       "display_name": "Slam Area of Effect",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30289,7 +30289,7 @@
     {
       "entity_slug": "earthbreaker",
       "display_name": "Earthbreaker",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30299,7 +30299,7 @@
     {
       "entity_slug": "ancestral_empowerment",
       "display_name": "Ancestral Empowerment",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30309,7 +30309,7 @@
     {
       "entity_slug": "mountain_splitter",
       "display_name": "Mountain Splitter",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30319,7 +30319,7 @@
     {
       "entity_slug": "crushing_impacts",
       "display_name": "Crushing Impacts",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30329,7 +30329,7 @@
     {
       "entity_slug": "hulking_form",
       "display_name": "Hulking Form",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30339,7 +30339,7 @@
     {
       "entity_slug": "colossal_capacity",
       "display_name": "Colossal Capacity",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30349,7 +30349,7 @@
     {
       "entity_slug": "mysterious_lineage",
       "display_name": "Mysterious Lineage",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30359,7 +30359,7 @@
     {
       "entity_slug": "stone_skin",
       "display_name": "Stone Skin",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30369,7 +30369,7 @@
     {
       "entity_slug": "anvil_s_weight",
       "display_name": "Anvil's Weight",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30379,7 +30379,7 @@
     {
       "entity_slug": "imploding_impacts",
       "display_name": "Imploding Impacts",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30389,7 +30389,7 @@
     {
       "entity_slug": "jade_heritage",
       "display_name": "Jade Heritage",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30399,7 +30399,7 @@
     {
       "entity_slug": "warcaller_s_bellow",
       "display_name": "Warcaller's Bellow",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30409,7 +30409,7 @@
     {
       "entity_slug": "answered_call",
       "display_name": "Answered Call",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30419,7 +30419,7 @@
     {
       "entity_slug": "wooden_wall",
       "display_name": "Wooden Wall",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30429,7 +30429,7 @@
     {
       "entity_slug": "renly_s_training",
       "display_name": "Renly's Training",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30439,7 +30439,7 @@
     {
       "entity_slug": "turtle_charm",
       "display_name": "Turtle Charm",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30449,7 +30449,7 @@
     {
       "entity_slug": "heat_of_the_forge",
       "display_name": "Heat of the Forge",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30459,7 +30459,7 @@
     {
       "entity_slug": "living_weapon",
       "display_name": "Living Weapon",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30469,7 +30469,7 @@
     {
       "entity_slug": "against_the_anvil",
       "display_name": "Against the Anvil",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30479,7 +30479,7 @@
     {
       "entity_slug": "coal_stoker",
       "display_name": "Coal Stoker",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30489,7 +30489,7 @@
     {
       "entity_slug": "forged_in_flame",
       "display_name": "Forged in Flame",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30499,7 +30499,7 @@
     {
       "entity_slug": "smith_s_masterwork",
       "display_name": "Smith's Masterwork",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30509,7 +30509,7 @@
     {
       "entity_slug": "tantalum_alloy",
       "display_name": "Tantalum Alloy",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30519,7 +30519,7 @@
     {
       "entity_slug": "kitavan_imprint",
       "display_name": "Kitavan Imprint",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30529,7 +30529,7 @@
     {
       "entity_slug": "spiked_plates",
       "display_name": "Spiked Plates",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30539,7 +30539,7 @@
     {
       "entity_slug": "support_straps",
       "display_name": "Support Straps",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30549,7 +30549,7 @@
     {
       "entity_slug": "kitavan_engraving",
       "display_name": "Kitavan Engraving",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30559,7 +30559,7 @@
     {
       "entity_slug": "tribute_to_utula",
       "display_name": "Tribute to Utula",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30569,7 +30569,7 @@
     {
       "entity_slug": "leather_bindings",
       "display_name": "Leather Bindings",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30579,7 +30579,7 @@
     {
       "entity_slug": "flowing_metal",
       "display_name": "Flowing Metal",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30589,7 +30589,7 @@
     {
       "entity_slug": "molten_symbol",
       "display_name": "Molten Symbol",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30599,7 +30599,7 @@
     {
       "entity_slug": "internal_layer",
       "display_name": "Internal Layer",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30609,7 +30609,7 @@
     {
       "entity_slug": "dedication_to_kitava",
       "display_name": "Dedication to Kitava",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30619,7 +30619,7 @@
     {
       "entity_slug": "heatproofing",
       "display_name": "Heatproofing",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30629,7 +30629,7 @@
     {
       "entity_slug": "life",
       "display_name": "Life",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30639,7 +30639,7 @@
     {
       "entity_slug": "mana",
       "display_name": "Mana",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30649,7 +30649,7 @@
     {
       "entity_slug": "beidat_s_gaze",
       "display_name": "Beidat's Gaze",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30659,7 +30659,7 @@
     {
       "entity_slug": "beidat_s_hand",
       "display_name": "Beidat's Hand",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30669,7 +30669,7 @@
     {
       "entity_slug": "beidat_s_will",
       "display_name": "Beidat's Will",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30679,7 +30679,7 @@
     {
       "entity_slug": "altered_flesh",
       "display_name": "Altered Flesh",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30689,7 +30689,7 @@
     {
       "entity_slug": "demonic_possession",
       "display_name": "Demonic Possession",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30699,7 +30699,7 @@
     {
       "entity_slug": "mastered_darkness",
       "display_name": "Mastered Darkness",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30709,7 +30709,7 @@
     {
       "entity_slug": "pyromantic_pact",
       "display_name": "Pyromantic Pact",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30719,7 +30719,7 @@
     {
       "entity_slug": "bringer_of_flame",
       "display_name": "Bringer of Flame",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30729,7 +30729,7 @@
     {
       "entity_slug": "grinning_immolation",
       "display_name": "Grinning Immolation",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30739,7 +30739,7 @@
     {
       "entity_slug": "loyal_hellhound",
       "display_name": "Loyal Hellhound",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30749,7 +30749,7 @@
     {
       "entity_slug": "seething_body",
       "display_name": "Seething Body",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30759,7 +30759,7 @@
     {
       "entity_slug": "bleed_on_critical_chance",
       "display_name": "Bleed on Critical Chance",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30769,7 +30769,7 @@
     {
       "entity_slug": "gore_spike",
       "display_name": "Gore Spike",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30779,7 +30779,7 @@
     {
       "entity_slug": "sunder_the_flesh",
       "display_name": "Sunder the Flesh",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30789,7 +30789,7 @@
     {
       "entity_slug": "sanguimancy",
       "display_name": "Sanguimancy",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30799,7 +30799,7 @@
     {
       "entity_slug": "blood_barbs",
       "display_name": "Blood Barbs",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30809,7 +30809,7 @@
     {
       "entity_slug": "whispers_of_the_flesh",
       "display_name": "Whispers of the Flesh",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30819,7 +30819,7 @@
     {
       "entity_slug": "vitality_siphon",
       "display_name": "Vitality Siphon",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30829,7 +30829,7 @@
     {
       "entity_slug": "grasping_wounds",
       "display_name": "Grasping Wounds",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30839,7 +30839,7 @@
     {
       "entity_slug": "crimson_power",
       "display_name": "Crimson Power",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30849,7 +30849,7 @@
     {
       "entity_slug": "sanguine_tides",
       "display_name": "Sanguine Tides",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30859,7 +30859,7 @@
     {
       "entity_slug": "crystalline_phylactery",
       "display_name": "Crystalline Phylactery",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30869,7 +30869,7 @@
     {
       "entity_slug": "rupture_the_soul",
       "display_name": "Rupture the Soul",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30879,7 +30879,7 @@
     {
       "entity_slug": "necromantic_conduit",
       "display_name": "Necromantic Conduit",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30889,7 +30889,7 @@
     {
       "entity_slug": "blackened_heart",
       "display_name": "Blackened Heart",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30899,7 +30899,7 @@
     {
       "entity_slug": "soulless_form",
       "display_name": "Soulless Form",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30909,7 +30909,7 @@
     {
       "entity_slug": "eternal_life",
       "display_name": "Eternal Life",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30919,7 +30919,7 @@
     {
       "entity_slug": "price_of_power",
       "display_name": "Price of Power",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30929,7 +30929,7 @@
     {
       "entity_slug": "eldritch_empowerment",
       "display_name": "Eldritch Empowerment",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30939,7 +30939,7 @@
     {
       "entity_slug": "incessant_cacophony",
       "display_name": "Incessant Cacophony",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30949,7 +30949,7 @@
     {
       "entity_slug": "rupture_the_flesh",
       "display_name": "Rupture the Flesh",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30959,7 +30959,7 @@
     {
       "entity_slug": "umbral_well",
       "display_name": "Umbral Well",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30969,7 +30969,7 @@
     {
       "entity_slug": "unwilling_offering",
       "display_name": "Unwilling Offering",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30979,7 +30979,7 @@
     {
       "entity_slug": "steward_of_kulemak",
       "display_name": "Steward of Kulemak",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -30999,7 +30999,7 @@
     {
       "entity_slug": "chill_duration",
       "display_name": "Chill Duration",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31009,7 +31009,7 @@
     {
       "entity_slug": "remnant_range",
       "display_name": "Remnant Range",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31019,7 +31019,7 @@
     {
       "entity_slug": "constant_gale",
       "display_name": "Constant Gale",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31029,7 +31029,7 @@
     {
       "entity_slug": "force_of_will",
       "display_name": "Force of Will",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31039,7 +31039,7 @@
     {
       "entity_slug": "tempest_caller",
       "display_name": "Tempest Caller",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31049,7 +31049,7 @@
     {
       "entity_slug": "multiplying_squalls",
       "display_name": "Multiplying Squalls",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31059,7 +31059,7 @@
     {
       "entity_slug": "strike_twice",
       "display_name": "Strike Twice",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31069,7 +31069,7 @@
     {
       "entity_slug": "shaper_of_storms",
       "display_name": "Shaper of Storms",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31079,7 +31079,7 @@
     {
       "entity_slug": "heavy_snows",
       "display_name": "Heavy Snows",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31089,7 +31089,7 @@
     {
       "entity_slug": "shaper_of_winter",
       "display_name": "Shaper of Winter",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31099,7 +31099,7 @@
     {
       "entity_slug": "storm_s_recollection",
       "display_name": "Storm's Recollection",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31109,7 +31109,7 @@
     {
       "entity_slug": "refracted_infusion",
       "display_name": "Refracted Infusion",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31119,7 +31119,7 @@
     {
       "entity_slug": "buff_expiry_rate",
       "display_name": "Buff Expiry Rate",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31129,7 +31129,7 @@
     {
       "entity_slug": "curse_delay",
       "display_name": "Curse Delay",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31139,7 +31139,7 @@
     {
       "entity_slug": "cast_speed_and_area_of_effect",
       "display_name": "Cast Speed and Area of Effect",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31149,7 +31149,7 @@
     {
       "entity_slug": "footprints_in_the_sand",
       "display_name": "Footprints in the Sand",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31159,7 +31159,7 @@
     {
       "entity_slug": "ultimate_command",
       "display_name": "Ultimate Command",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31169,7 +31169,7 @@
     {
       "entity_slug": "inevitability",
       "display_name": "Inevitability",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31179,7 +31179,7 @@
     {
       "entity_slug": "the_rapid_river",
       "display_name": "The Rapid River",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31189,7 +31189,7 @@
     {
       "entity_slug": "now_and_again",
       "display_name": "Now and Again",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31199,7 +31199,7 @@
     {
       "entity_slug": "unbound_encore",
       "display_name": "Unbound Encore",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31209,7 +31209,7 @@
     {
       "entity_slug": "apex_of_the_moment",
       "display_name": "Apex of the Moment",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31219,7 +31219,7 @@
     {
       "entity_slug": "quicksand_hourglass",
       "display_name": "Quicksand Hourglass",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31229,7 +31229,7 @@
     {
       "entity_slug": "sacred_rituals",
       "display_name": "Sacred Rituals",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31239,7 +31239,7 @@
     {
       "entity_slug": "the_fourth_teaching",
       "display_name": "The Fourth Teaching",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31249,7 +31249,7 @@
     {
       "entity_slug": "varashta_s_intuition",
       "display_name": "Varashta's Intuition",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31259,7 +31259,7 @@
     {
       "entity_slug": "tale_woman_s_attunement",
       "display_name": "Tale Woman's Attunement",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31269,7 +31269,7 @@
     {
       "entity_slug": "instruments_of_power",
       "display_name": "Instruments of Power",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31279,7 +31279,7 @@
     {
       "entity_slug": "baryanic_leylines",
       "display_name": "Baryanic Leylines",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31289,7 +31289,7 @@
     {
       "entity_slug": "barya_of_navira",
       "display_name": "Barya of Navira",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31299,7 +31299,7 @@
     {
       "entity_slug": "barya_of_kelari",
       "display_name": "Barya of Kelari",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31309,7 +31309,7 @@
     {
       "entity_slug": "barya_of_ruzhan",
       "display_name": "Barya of Ruzhan",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31319,7 +31319,7 @@
     {
       "entity_slug": "navira_s_fracturing",
       "display_name": "Navira's Fracturing",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -31332,7 +31332,7 @@
     {
       "entity_slug": "navira_s_well",
       "display_name": "Navira's Well",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31342,7 +31342,7 @@
     {
       "entity_slug": "navira_s_oasis",
       "display_name": "Navira's Oasis",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -31355,7 +31355,7 @@
     {
       "entity_slug": "kelari_s_deception",
       "display_name": "Kelari's Deception",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -31368,7 +31368,7 @@
     {
       "entity_slug": "kelari_s_judgment",
       "display_name": "Kelari's Judgment",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -31381,7 +31381,7 @@
     {
       "entity_slug": "kelari_s_malediction",
       "display_name": "Kelari's Malediction",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "duration",
@@ -31394,7 +31394,7 @@
     {
       "entity_slug": "ruzhan_s_trap",
       "display_name": "Ruzhan's Trap",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -31409,7 +31409,7 @@
     {
       "entity_slug": "ruzhan_s_reckoning",
       "display_name": "Ruzhan's Reckoning",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -31422,7 +31422,7 @@
     {
       "entity_slug": "ruzhan_s_fury",
       "display_name": "Ruzhan's Fury",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -31436,7 +31436,7 @@
     {
       "entity_slug": "a_solid_plan",
       "display_name": "A Solid Plan",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31446,7 +31446,7 @@
     {
       "entity_slug": "watch_how_i_do_it",
       "display_name": "Watch How I Do It",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31456,7 +31456,7 @@
     {
       "entity_slug": "whoever_pays_best",
       "display_name": "Whoever Pays Best",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31466,7 +31466,7 @@
     {
       "entity_slug": "suppressing_fire",
       "display_name": "Suppressing Fire",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31476,7 +31476,7 @@
     {
       "entity_slug": "right_where_we_want_them",
       "display_name": "Right Where We Want Them",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31486,7 +31486,7 @@
     {
       "entity_slug": "polish_that_gear",
       "display_name": "Polish That Gear",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31496,7 +31496,7 @@
     {
       "entity_slug": "stay_light_use_cover",
       "display_name": "Stay Light, Use Cover",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31506,7 +31506,7 @@
     {
       "entity_slug": "cannons_ready",
       "display_name": "Cannons, Ready!",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31516,7 +31516,7 @@
     {
       "entity_slug": "unleash_hell",
       "display_name": "Unleash Hell!",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31526,7 +31526,7 @@
     {
       "entity_slug": "strategic_embankments",
       "display_name": "Strategic Embankments",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31536,7 +31536,7 @@
     {
       "entity_slug": "damage_vs_low_life_enemies",
       "display_name": "Damage vs Low Life Enemies",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31546,7 +31546,7 @@
     {
       "entity_slug": "pitiless_killer",
       "display_name": "Pitiless Killer",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31556,7 +31556,7 @@
     {
       "entity_slug": "judge_jury_and_executioner",
       "display_name": "Judge, Jury, and Executioner",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31566,7 +31566,7 @@
     {
       "entity_slug": "witchbane",
       "display_name": "Witchbane",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31576,7 +31576,7 @@
     {
       "entity_slug": "no_mercy",
       "display_name": "No Mercy",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31586,7 +31586,7 @@
     {
       "entity_slug": "obsessive_rituals",
       "display_name": "Obsessive Rituals",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31596,7 +31596,7 @@
     {
       "entity_slug": "ceremonial_ablution",
       "display_name": "Ceremonial Ablution",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31606,7 +31606,7 @@
     {
       "entity_slug": "zealous_inquisition",
       "display_name": "Zealous Inquisition",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31616,7 +31616,7 @@
     {
       "entity_slug": "weapon_master",
       "display_name": "Weapon Master",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31626,7 +31626,7 @@
     {
       "entity_slug": "skill_gem_quality",
       "display_name": "Skill Gem Quality",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31636,7 +31636,7 @@
     {
       "entity_slug": "attributes",
       "display_name": "Attributes",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31646,7 +31646,7 @@
     {
       "entity_slug": "crystalline_potential",
       "display_name": "Crystalline Potential",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31656,7 +31656,7 @@
     {
       "entity_slug": "implanted_gems",
       "display_name": "Implanted Gems",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31666,7 +31666,7 @@
     {
       "entity_slug": "bolstering_implants",
       "display_name": "Bolstering Implants",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31676,7 +31676,7 @@
     {
       "entity_slug": "motoric_implants",
       "display_name": "Motoric Implants",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31686,7 +31686,7 @@
     {
       "entity_slug": "neurological_implants",
       "display_name": "Neurological Implants",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31696,7 +31696,7 @@
     {
       "entity_slug": "gem_studded",
       "display_name": "Gem Studded",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31706,7 +31706,7 @@
     {
       "entity_slug": "advanced_thaumaturgy",
       "display_name": "Advanced Thaumaturgy",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31716,7 +31716,7 @@
     {
       "entity_slug": "enhanced_effectiveness",
       "display_name": "Enhanced Effectiveness",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31726,7 +31726,7 @@
     {
       "entity_slug": "adaptive_capability",
       "display_name": "Adaptive Capability",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31736,7 +31736,7 @@
     {
       "entity_slug": "integrated_efficiency",
       "display_name": "Integrated Efficiency",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31746,7 +31746,7 @@
     {
       "entity_slug": "thaumaturgical_infusion",
       "display_name": "Thaumaturgical Infusion",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31756,7 +31756,7 @@
     {
       "entity_slug": "passive_point",
       "display_name": "Passive Point",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31766,7 +31766,7 @@
     {
       "entity_slug": "critical_damage_bonus_on_you",
       "display_name": "Critical Damage Bonus on You",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31776,7 +31776,7 @@
     {
       "entity_slug": "critical_hit_chance",
       "display_name": "Critical Hit Chance",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31786,7 +31786,7 @@
     {
       "entity_slug": "entwined_realities",
       "display_name": "Entwined Realities",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31796,7 +31796,7 @@
     {
       "entity_slug": "the_unseen_path",
       "display_name": "The Unseen Path",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31806,7 +31806,7 @@
     {
       "entity_slug": "harmony_within",
       "display_name": "Harmony Within",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31816,7 +31816,7 @@
     {
       "entity_slug": "converging_paths",
       "display_name": "Converging Paths",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31826,7 +31826,7 @@
     {
       "entity_slug": "fateful_vision",
       "display_name": "Fateful Vision",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31836,7 +31836,7 @@
     {
       "entity_slug": "unnamed_heartwood",
       "display_name": "Unnamed Heartwood",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31846,7 +31846,7 @@
     {
       "entity_slug": "the_lesser_harm",
       "display_name": "The Lesser Harm",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31856,7 +31856,7 @@
     {
       "entity_slug": "forced_outcome",
       "display_name": "Forced Outcome",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31866,7 +31866,7 @@
     {
       "entity_slug": "turning_of_the_seasons",
       "display_name": "Turning of the Seasons",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31876,7 +31876,7 @@
     {
       "entity_slug": "bringer_of_the_apocalypse",
       "display_name": "Bringer of the Apocalypse",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31886,7 +31886,7 @@
     {
       "entity_slug": "druidic_champion",
       "display_name": "Druidic Champion",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31896,7 +31896,7 @@
     {
       "entity_slug": "reactive_growth",
       "display_name": "Reactive Growth",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31906,7 +31906,7 @@
     {
       "entity_slug": "avatar_of_evolution",
       "display_name": "Avatar of Evolution",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31916,7 +31916,7 @@
     {
       "entity_slug": "furious_wellspring",
       "display_name": "Furious Wellspring",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31926,7 +31926,7 @@
     {
       "entity_slug": "sacred_flow",
       "display_name": "Sacred Flow",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31936,7 +31936,7 @@
     {
       "entity_slug": "wisdom_of_the_maji",
       "display_name": "Wisdom of the Maji",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31946,7 +31946,7 @@
     {
       "entity_slug": "energy_shield_recharge_rate",
       "display_name": "Energy Shield Recharge Rate",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31956,7 +31956,7 @@
     {
       "entity_slug": "lead_me_through_grace",
       "display_name": "Lead me through Grace...",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31966,7 +31966,7 @@
     {
       "entity_slug": "and_protect_me_from_harm",
       "display_name": "...and Protect me from Harm",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31976,7 +31976,7 @@
     {
       "entity_slug": "i_am_the_thunder",
       "display_name": "I am the Thunder...",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31986,7 +31986,7 @@
     {
       "entity_slug": "i_am_the_blizzard",
       "display_name": "I am the Blizzard...",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -31996,7 +31996,7 @@
     {
       "entity_slug": "and_i_shall_rage",
       "display_name": "...and I Shall Rage",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32006,7 +32006,7 @@
     {
       "entity_slug": "sunder_my_enemies",
       "display_name": "Sunder my Enemies...",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32016,7 +32016,7 @@
     {
       "entity_slug": "and_scatter_them_to_the_winds",
       "display_name": "...and Scatter Them to the Winds",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32026,7 +32026,7 @@
     {
       "entity_slug": "faith_is_a_choice",
       "display_name": "Faith is a Choice",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32036,7 +32036,7 @@
     {
       "entity_slug": "the_soul_springs_eternal",
       "display_name": "The Soul Springs Eternal",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32046,7 +32046,7 @@
     {
       "entity_slug": "volatility",
       "display_name": "Volatility",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32056,7 +32056,7 @@
     {
       "entity_slug": "leech",
       "display_name": "Leech",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32066,7 +32066,7 @@
     {
       "entity_slug": "darkness",
       "display_name": "Darkness",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32076,7 +32076,7 @@
     {
       "entity_slug": "damage_as_chaos",
       "display_name": "Damage as Chaos",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32086,7 +32086,7 @@
     {
       "entity_slug": "inner_turmoil",
       "display_name": "Inner Turmoil",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32096,7 +32096,7 @@
     {
       "entity_slug": "unravelling",
       "display_name": "Unravelling",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32106,7 +32106,7 @@
     {
       "entity_slug": "sap_of_nightmares",
       "display_name": "Sap of Nightmares",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32116,7 +32116,7 @@
     {
       "entity_slug": "chayula_s_gift",
       "display_name": "Chayula's Gift",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32126,7 +32126,7 @@
     {
       "entity_slug": "waking_dream",
       "display_name": "Waking Dream",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32136,7 +32136,7 @@
     {
       "entity_slug": "choice_of_power",
       "display_name": "Choice of Power",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32146,7 +32146,7 @@
     {
       "entity_slug": "embrace_the_darkness",
       "display_name": "Embrace the Darkness",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32156,7 +32156,7 @@
     {
       "entity_slug": "grasp_of_the_void",
       "display_name": "Grasp of the Void",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32166,7 +32166,7 @@
     {
       "entity_slug": "deepening_shadows",
       "display_name": "Deepening Shadows",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32176,7 +32176,7 @@
     {
       "entity_slug": "choice_of_mana",
       "display_name": "Choice of Mana",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32186,7 +32186,7 @@
     {
       "entity_slug": "choice_of_life",
       "display_name": "Choice of Life",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32196,7 +32196,7 @@
     {
       "entity_slug": "lucid_dreaming",
       "display_name": "Lucid Dreaming",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32206,7 +32206,7 @@
     {
       "entity_slug": "endless_munitions",
       "display_name": "Endless Munitions",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32216,7 +32216,7 @@
     {
       "entity_slug": "far_shot",
       "display_name": "Far Shot",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32226,7 +32226,7 @@
     {
       "entity_slug": "point_blank",
       "display_name": "Point Blank",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32236,7 +32236,7 @@
     {
       "entity_slug": "projectile_proximity_specialisation",
       "display_name": "Projectile Proximity Specialisation",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32246,7 +32246,7 @@
     {
       "entity_slug": "gathering_winds",
       "display_name": "Gathering Winds",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32256,7 +32256,7 @@
     {
       "entity_slug": "mirage_deadeye",
       "display_name": "Mirage Deadeye",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32266,7 +32266,7 @@
     {
       "entity_slug": "avidity",
       "display_name": "Avidity",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32276,7 +32276,7 @@
     {
       "entity_slug": "thrilling_chase",
       "display_name": "Thrilling Chase",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32286,7 +32286,7 @@
     {
       "entity_slug": "called_shots",
       "display_name": "Called Shots",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe"
@@ -32298,7 +32298,7 @@
     {
       "entity_slug": "bullseye",
       "display_name": "Bullseye",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32308,7 +32308,7 @@
     {
       "entity_slug": "poison_effect",
       "display_name": "Poison Effect",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32318,7 +32318,7 @@
     {
       "entity_slug": "passive_points",
       "display_name": "Passive Points",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32328,7 +32328,7 @@
     {
       "entity_slug": "running_assault",
       "display_name": "Running Assault",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32338,7 +32338,7 @@
     {
       "entity_slug": "relentless_pursuit",
       "display_name": "Relentless Pursuit",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32348,7 +32348,7 @@
     {
       "entity_slug": "contagious_contamination",
       "display_name": "Contagious Contamination",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32358,7 +32358,7 @@
     {
       "entity_slug": "overwhelming_toxicity",
       "display_name": "Overwhelming Toxicity",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32368,7 +32368,7 @@
     {
       "entity_slug": "sustainable_practices",
       "display_name": "Sustainable Practices",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32378,7 +32378,7 @@
     {
       "entity_slug": "enduring_elixirs",
       "display_name": "Enduring Elixirs",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32388,7 +32388,7 @@
     {
       "entity_slug": "brew_concoction",
       "display_name": "Brew Concoction",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32398,7 +32398,7 @@
     {
       "entity_slug": "explosive_concoction",
       "display_name": "Explosive Concoction",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -32412,7 +32412,7 @@
     {
       "entity_slug": "shattering_concoction",
       "display_name": "Shattering Concoction",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -32426,7 +32426,7 @@
     {
       "entity_slug": "fulminating_concoction",
       "display_name": "Fulminating Concoction",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -32440,7 +32440,7 @@
     {
       "entity_slug": "acidic_concoction",
       "display_name": "Acidic Concoction",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -32454,7 +32454,7 @@
     {
       "entity_slug": "bleeding_concoction",
       "display_name": "Bleeding Concoction",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -32468,7 +32468,7 @@
     {
       "entity_slug": "path_seeker",
       "display_name": "Path Seeker",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32478,7 +32478,7 @@
     {
       "entity_slug": "path_of_the_sorceress",
       "display_name": "Path of the Sorceress",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32488,7 +32488,7 @@
     {
       "entity_slug": "thawing_campfire",
       "display_name": "Thawing Campfire",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32498,7 +32498,7 @@
     {
       "entity_slug": "path_of_the_warrior",
       "display_name": "Path of the Warrior",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32508,7 +32508,7 @@
     {
       "entity_slug": "traveller_s_wisdom",
       "display_name": "Traveller's Wisdom",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32518,7 +32518,7 @@
     {
       "entity_slug": "critical_strike",
       "display_name": "Critical Strike",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32528,7 +32528,7 @@
     {
       "entity_slug": "penetrate",
       "display_name": "Penetrate",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32538,7 +32538,7 @@
     {
       "entity_slug": "predatory_instinct",
       "display_name": "Predatory Instinct",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32548,7 +32548,7 @@
     {
       "entity_slug": "in_for_the_kill",
       "display_name": "In for the Kill",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32558,7 +32558,7 @@
     {
       "entity_slug": "surging_avatar",
       "display_name": "Surging Avatar",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32568,7 +32568,7 @@
     {
       "entity_slug": "elemental_surge",
       "display_name": "Elemental Surge",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [
         "aoe",
@@ -32583,7 +32583,7 @@
     {
       "entity_slug": "azmeri_brew",
       "display_name": "Azmeri Brew",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32593,7 +32593,7 @@
     {
       "entity_slug": "stalking_panther",
       "display_name": "Stalking Panther",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32603,7 +32603,7 @@
     {
       "entity_slug": "mystic_harvest",
       "display_name": "Mystic Harvest",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32613,7 +32613,7 @@
     {
       "entity_slug": "reduced_mana",
       "display_name": "Reduced Mana",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32623,7 +32623,7 @@
     {
       "entity_slug": "reduced_spirit",
       "display_name": "Reduced Spirit",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32633,7 +32633,7 @@
     {
       "entity_slug": "reduced_resistances",
       "display_name": "Reduced Resistances",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32643,7 +32643,7 @@
     {
       "entity_slug": "life_recovery_rate",
       "display_name": "Life Recovery Rate",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32653,7 +32653,7 @@
     {
       "entity_slug": "mystic_attunement",
       "display_name": "Mystic Attunement",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32663,7 +32663,7 @@
     {
       "entity_slug": "unfurled_finger",
       "display_name": "Unfurled Finger",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32673,7 +32673,7 @@
     {
       "entity_slug": "intricate_sigils",
       "display_name": "Intricate Sigils",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32683,7 +32683,7 @@
     {
       "entity_slug": "mind_phylacteries",
       "display_name": "Mind Phylacteries",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32693,7 +32693,7 @@
     {
       "entity_slug": "wildwood_persistence",
       "display_name": "Wildwood Persistence",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32703,7 +32703,7 @@
     {
       "entity_slug": "corrupted_lifeforce",
       "display_name": "Corrupted Lifeforce",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32713,7 +32713,7 @@
     {
       "entity_slug": "as_the_whispers_demand",
       "display_name": "As the Whispers Demand",
-      "entity_type": "passive",
+      "entity_type": "ascendancy",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32973,7 +32973,7 @@
     {
       "entity_slug": "accuracy_mastery",
       "display_name": "Accuracy Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32983,7 +32983,7 @@
     {
       "entity_slug": "fortify_mastery",
       "display_name": "Fortify Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -32993,7 +32993,7 @@
     {
       "entity_slug": "spell_suppression_mastery",
       "display_name": "Spell Suppression Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33003,7 +33003,7 @@
     {
       "entity_slug": "impale_mastery",
       "display_name": "Impale Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33013,7 +33013,7 @@
     {
       "entity_slug": "blind_mastery",
       "display_name": "Blind Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33023,7 +33023,7 @@
     {
       "entity_slug": "flask_mastery",
       "display_name": "Flask Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33033,7 +33033,7 @@
     {
       "entity_slug": "leech_mastery",
       "display_name": "Leech Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33043,7 +33043,7 @@
     {
       "entity_slug": "axe_mastery",
       "display_name": "Axe Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33053,7 +33053,7 @@
     {
       "entity_slug": "bleeding_mastery",
       "display_name": "Bleeding Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33063,7 +33063,7 @@
     {
       "entity_slug": "block_mastery",
       "display_name": "Block Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33073,7 +33073,7 @@
     {
       "entity_slug": "projectile_mastery",
       "display_name": "Projectile Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33083,7 +33083,7 @@
     {
       "entity_slug": "brand_mastery",
       "display_name": "Brand Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33093,7 +33093,7 @@
     {
       "entity_slug": "caster_mastery",
       "display_name": "Caster Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33103,7 +33103,7 @@
     {
       "entity_slug": "chaos_mastery",
       "display_name": "Chaos Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33113,7 +33113,7 @@
     {
       "entity_slug": "charge_mastery",
       "display_name": "Charge Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33123,7 +33123,7 @@
     {
       "entity_slug": "claw_mastery",
       "display_name": "Claw Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33133,7 +33133,7 @@
     {
       "entity_slug": "cold_mastery",
       "display_name": "Cold Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33143,7 +33143,7 @@
     {
       "entity_slug": "curse_mastery",
       "display_name": "Curse Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33153,7 +33153,7 @@
     {
       "entity_slug": "mark_mastery",
       "display_name": "Mark Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33163,7 +33163,7 @@
     {
       "entity_slug": "link_mastery",
       "display_name": "Link Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33173,7 +33173,7 @@
     {
       "entity_slug": "dagger_mastery",
       "display_name": "Dagger Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33183,7 +33183,7 @@
     {
       "entity_slug": "recovery_mastery",
       "display_name": "Recovery Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33193,7 +33193,7 @@
     {
       "entity_slug": "damage_over_time_mastery",
       "display_name": "Damage Over Time Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33203,7 +33203,7 @@
     {
       "entity_slug": "dual_wielding_mastery",
       "display_name": "Dual Wielding Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33213,7 +33213,7 @@
     {
       "entity_slug": "buckler_mastery",
       "display_name": "Buckler Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33223,7 +33223,7 @@
     {
       "entity_slug": "duration_mastery",
       "display_name": "Duration Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33233,7 +33233,7 @@
     {
       "entity_slug": "energy_shield_mastery",
       "display_name": "Energy Shield Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33243,7 +33243,7 @@
     {
       "entity_slug": "evasion_and_energy_shield_mastery",
       "display_name": "Evasion and Energy Shield Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33253,7 +33253,7 @@
     {
       "entity_slug": "evasion_mastery",
       "display_name": "Evasion Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33263,7 +33263,7 @@
     {
       "entity_slug": "armour_and_evasion_mastery",
       "display_name": "Armour and Evasion Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33273,7 +33273,7 @@
     {
       "entity_slug": "fire_mastery",
       "display_name": "Fire Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33283,7 +33283,7 @@
     {
       "entity_slug": "mace_mastery",
       "display_name": "Mace Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33293,7 +33293,7 @@
     {
       "entity_slug": "mana_mastery",
       "display_name": "Mana Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33303,7 +33303,7 @@
     {
       "entity_slug": "mine_mastery",
       "display_name": "Mine Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33313,7 +33313,7 @@
     {
       "entity_slug": "minion_offence_mastery",
       "display_name": "Minion Offence Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33323,7 +33323,7 @@
     {
       "entity_slug": "minion_defence_mastery",
       "display_name": "Minion Defence Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33333,7 +33333,7 @@
     {
       "entity_slug": "reservation_mastery",
       "display_name": "Reservation Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33343,7 +33343,7 @@
     {
       "entity_slug": "shield_mastery",
       "display_name": "Shield Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33353,7 +33353,7 @@
     {
       "entity_slug": "staff_mastery",
       "display_name": "Staff Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33363,7 +33363,7 @@
     {
       "entity_slug": "sword_mastery",
       "display_name": "Sword Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33373,7 +33373,7 @@
     {
       "entity_slug": "trap_mastery",
       "display_name": "Trap Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33383,7 +33383,7 @@
     {
       "entity_slug": "two_hand_mastery",
       "display_name": "Two Hand Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33393,7 +33393,7 @@
     {
       "entity_slug": "wand_mastery",
       "display_name": "Wand Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33403,7 +33403,7 @@
     {
       "entity_slug": "warcry_mastery",
       "display_name": "Warcry Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33413,7 +33413,7 @@
     {
       "entity_slug": "attributes_mastery",
       "display_name": "Attributes Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33423,7 +33423,7 @@
     {
       "entity_slug": "resistance_and_ailment_protection_mastery",
       "display_name": "Resistance and Ailment Protection Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33433,7 +33433,7 @@
     {
       "entity_slug": "companion_mastery",
       "display_name": "Companion Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33443,7 +33443,7 @@
     {
       "entity_slug": "infusion_mastery",
       "display_name": "Infusion Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33453,7 +33453,7 @@
     {
       "entity_slug": "spear_mastery",
       "display_name": "Spear Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33463,7 +33463,7 @@
     {
       "entity_slug": "banner_mastery",
       "display_name": "Banner Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33473,7 +33473,7 @@
     {
       "entity_slug": "aura_mastery",
       "display_name": "Aura Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33483,7 +33483,7 @@
     {
       "entity_slug": "chaos_resistance_mastery",
       "display_name": "Chaos Resistance Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33493,7 +33493,7 @@
     {
       "entity_slug": "channelling_mastery",
       "display_name": "Channelling Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33503,7 +33503,7 @@
     {
       "entity_slug": "charms_mastery",
       "display_name": "Charms Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33513,7 +33513,7 @@
     {
       "entity_slug": "cold_resistance_mastery",
       "display_name": "Cold Resistance Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33523,7 +33523,7 @@
     {
       "entity_slug": "crossbow_mastery",
       "display_name": "Crossbow Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33533,7 +33533,7 @@
     {
       "entity_slug": "endurance_charge_mastery",
       "display_name": "Endurance Charge Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33543,7 +33543,7 @@
     {
       "entity_slug": "fire_resistance_mastery",
       "display_name": "Fire Resistance Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33553,7 +33553,7 @@
     {
       "entity_slug": "flail_mastery",
       "display_name": "Flail Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33563,7 +33563,7 @@
     {
       "entity_slug": "frenzy_charge_mastery",
       "display_name": "Frenzy Charge Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33573,7 +33573,7 @@
     {
       "entity_slug": "herald_mastery",
       "display_name": "Herald Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33583,7 +33583,7 @@
     {
       "entity_slug": "lightning_resistance_mastery",
       "display_name": "Lightning Resistance Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33593,7 +33593,7 @@
     {
       "entity_slug": "power_charge_mastery",
       "display_name": "Power Charge Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33603,7 +33603,7 @@
     {
       "entity_slug": "quarterstaff_mastery",
       "display_name": "Quarterstaff Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33613,7 +33613,7 @@
     {
       "entity_slug": "rage_mastery",
       "display_name": "Rage Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33623,7 +33623,7 @@
     {
       "entity_slug": "shapeshifting_mastery",
       "display_name": "Shapeshifting Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33633,7 +33633,7 @@
     {
       "entity_slug": "spirit_mastery",
       "display_name": "Spirit Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -33643,7 +33643,7 @@
     {
       "entity_slug": "trigger_mastery",
       "display_name": "Trigger Mastery",
-      "entity_type": "passive",
+      "entity_type": "mastery",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -34293,7 +34293,7 @@
     {
       "entity_slug": "corrupted_infusion",
       "display_name": "Corrupted Infusion",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -34303,7 +34303,7 @@
     {
       "entity_slug": "unstable_energies",
       "display_name": "Unstable Energies",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],
@@ -34313,7 +34313,7 @@
     {
       "entity_slug": "ecological_shift",
       "display_name": "Ecological Shift",
-      "entity_type": "passive",
+      "entity_type": "keystone",
       "class_tags": [],
       "mechanic_tags": [],
       "damage_tags": [],

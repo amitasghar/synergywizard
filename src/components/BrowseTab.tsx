@@ -42,9 +42,12 @@ interface ResultRowProps {
 }
 
 const TYPE_STYLES: Record<string, { bg: string; text: string }> = {
-  skill:   { bg: "bg-[#3d0e0e]", text: "text-[#e74c3c]" },
-  support: { bg: "bg-[#0d1f3d]", text: "text-[#5dade2]" },
-  passive: { bg: "bg-white/5",   text: "text-white/40"  },
+  skill:       { bg: "bg-[#3d0e0e]",   text: "text-[#e74c3c]" },
+  support:     { bg: "bg-[#0d1f3d]",   text: "text-[#5dade2]" },
+  passive:     { bg: "bg-white/5",     text: "text-white/40"  },
+  keystone:    { bg: "bg-[#1a1000]",   text: "text-[#d4a017]" },
+  mastery:     { bg: "bg-[#0d1a0d]",   text: "text-[#4caf50]" },
+  ascendancy:  { bg: "bg-[#1a0d2e]",   text: "text-[#9b59b6]" },
 };
 
 function TypeBadge({ type }: { type: string }): React.ReactElement {

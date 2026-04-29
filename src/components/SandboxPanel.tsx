@@ -78,17 +78,18 @@ export function SandboxPanel(): React.ReactElement {
         </div>
 
         <div className="grid grid-cols-2 gap-2">
-          {slots.map((entity, slotIdx) => (
-            <div
-              key={slotIdx}
-              onDragOver={(e) => handleSlotDragOver(e, slotIdx)}
-              onDragLeave={handleSlotDragLeave}
-              onDrop={(e) => handleSlotDrop(e, slotIdx)}
-              className={`min-h-[68px] rounded transition-colors ${
-                dropTarget === slotIdx ? "ring-1 ring-accent/60 bg-accent/5" : ""
-              }`}
-            >
-              {entity ? (
+          {slots.map((entity, slotIdx) => {
+            if (!entity) return null;
+            return (
+              <div
+                key={slotIdx}
+                onDragOver={(e) => handleSlotDragOver(e, slotIdx)}
+                onDragLeave={handleSlotDragLeave}
+                onDrop={(e) => handleSlotDrop(e, slotIdx)}
+                className={`rounded transition-colors ${
+                  dropTarget === slotIdx ? "ring-1 ring-accent/60 bg-accent/5" : ""
+                }`}
+              >
                 <SandboxCard
                   entity={entity}
                   index={slotIdx}
@@ -96,16 +97,25 @@ export function SandboxPanel(): React.ReactElement {
                   onDragStart={() => {}}
                   onDragEnd={() => setDropTarget(null)}
                 />
-              ) : (
-                <div
-                  className="h-full min-h-[68px] border border-dashed border-white/10 rounded flex items-center justify-center text-white/20 text-lg hover:border-white/25 hover:text-white/35 cursor-pointer transition-colors"
-                  onClick={() => document.getElementById("browse-search")?.focus()}
-                >
-                  +
-                </div>
-              )}
+              </div>
+            );
+          })}
+          {/* Single drop target for the next empty slot */}
+          {selected.length < MAX_TRAY && (
+            <div
+              onDragOver={(e) => handleSlotDragOver(e, selected.length)}
+              onDragLeave={handleSlotDragLeave}
+              onDrop={(e) => handleSlotDrop(e, selected.length)}
+              onClick={() => document.getElementById("browse-search")?.focus()}
+              className={`min-h-[40px] border border-dashed rounded flex items-center justify-center text-lg cursor-pointer transition-colors ${
+                dropTarget === selected.length
+                  ? "ring-1 ring-accent/60 bg-accent/5 border-accent/40 text-accent/60"
+                  : "border-white/10 text-white/20 hover:border-white/25 hover:text-white/35"
+              }`}
+            >
+              +
             </div>
-          ))}
+          )}
         </div>
 
         <button
