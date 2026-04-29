@@ -8,7 +8,7 @@ import { EntityCard } from "./EntityCard.tsx";
 
 function resultToEntity(r: SemanticSearchResult): Entity {
   return {
-    id: r.entity_slug,
+    id: r.id,
     entity_slug: r.entity_slug,
     display_name: r.display_name,
     entity_type: r.entity_type,

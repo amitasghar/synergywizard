@@ -57,6 +57,7 @@ export interface FilterState {
 }
 
 export interface SemanticSearchResult {
+  id: string;
   entity_slug: string;
   display_name: string;
   entity_type: "skill" | "support" | "passive";

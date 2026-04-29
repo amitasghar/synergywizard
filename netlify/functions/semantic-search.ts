@@ -28,13 +28,13 @@ export default async function handler(req: Request, _ctx: Context): Promise<Resp
   try {
     rows = await sqlClient`
       WITH base AS (
-        SELECT entity_slug, display_name, entity_type,
+        SELECT id, entity_slug, display_name, entity_type,
                mechanic_tags, damage_tags, class_tags,
                embedding <=> ${vecLiteral}::vector AS dist
         FROM entities
         WHERE game = 'poe2' AND embedding IS NOT NULL
       )
-      SELECT entity_slug, display_name, entity_type,
+      SELECT id, entity_slug, display_name, entity_type,
              mechanic_tags, damage_tags, class_tags,
              1 - dist AS similarity
       FROM base
