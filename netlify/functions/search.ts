@@ -34,6 +34,9 @@ export default async function handler(req: Request, _ctx: Context): Promise<Resp
     return badRequest(parseResult.error.message);
   }
 
+  // Legacy type/weapon/tag single-value params are validated but intentionally not applied here.
+  // The new UI sends array params (damages/mechanics/weapons/types). Shared URLs using the old
+  // single-value params will return unfiltered results — this is acceptable during the redesign.
   const { game, q, damages, mechanics, weapons, types } = parseResult.data;
 
   const damageArr = parseArr(damages);
