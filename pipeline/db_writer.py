@@ -15,12 +15,12 @@ from pipeline import hasher
 UPSERT_ENTITY_SQL = """
 INSERT INTO entities (
     game, entity_type, entity_slug, display_name, description,
-    class_tags, mechanic_tags, damage_tags, creates, triggered_by,
+    class_tags, mechanic_tags, damage_tags, weapon_tags, creates, triggered_by,
     conversions_available, recommended_supports, relevant_passives,
     patch_version, content_hash, raw_ai_output
 ) VALUES (
     %(game)s, %(entity_type)s, %(entity_slug)s, %(display_name)s, %(description)s,
-    %(class_tags)s, %(mechanic_tags)s, %(damage_tags)s, %(creates)s, %(triggered_by)s,
+    %(class_tags)s, %(mechanic_tags)s, %(damage_tags)s, %(weapon_tags)s, %(creates)s, %(triggered_by)s,
     %(conversions_available)s, %(recommended_supports)s, %(relevant_passives)s,
     %(patch_version)s, %(content_hash)s, %(raw_ai_output)s
 )
@@ -31,6 +31,7 @@ ON CONFLICT (game, entity_slug) DO UPDATE SET
     class_tags            = EXCLUDED.class_tags,
     mechanic_tags         = EXCLUDED.mechanic_tags,
     damage_tags           = EXCLUDED.damage_tags,
+    weapon_tags           = EXCLUDED.weapon_tags,
     creates               = EXCLUDED.creates,
     triggered_by          = EXCLUDED.triggered_by,
     conversions_available = EXCLUDED.conversions_available,
@@ -81,6 +82,7 @@ def upsert_entity(
         "class_tags": entity.get("class_tags", []),
         "mechanic_tags": entity.get("mechanic_tags", []),
         "damage_tags": entity.get("damage_tags", []),
+        "weapon_tags": entity.get("weapon_tags", []),
         "creates": entity.get("creates", []),
         "triggered_by": entity.get("triggered_by", []),
         "conversions_available": json.dumps(entity.get("conversions_available", [])),

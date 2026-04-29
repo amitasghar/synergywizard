@@ -14,6 +14,52 @@ from PyPoE.poe.file.file_system import FileSystem
 from PyPoE.poe.file.dat import RelationalReader
 from PyPoE.poe.file.specification.data import poe2 as poe2_spec
 
+# Maps ActiveSkillWeaponRequirement.Id → canonical weapon_tags list.
+# Multi-weapon IDs expand to every weapon type they cover so filtering by any
+# one of them returns the skill.
+WEAPON_REQ_TO_TAGS: dict[str, list[str]] = {
+    "Bow":                              ["bow"],
+    "WandBow":                          ["wand", "bow"],
+    "Crossbow":                         ["crossbow"],
+    "Spear":                            ["spear"],
+    "SpearBow":                         ["spear", "bow"],
+    "SpearBowCrossbow":                 ["spear", "bow", "crossbow"],
+    "Wand":                             ["wand"],
+    "Dagger":                           ["dagger"],
+    "DaggerClaw":                       ["dagger"],
+    "One Hand Sword":                   ["sword"],
+    "Two Hand Sword":                   ["sword"],
+    "Any Sword":                        ["sword"],
+    "One Hand Axe":                     ["axe"],
+    "Two Hand Axe":                     ["axe"],
+    "Any Axe":                          ["axe"],
+    "One Hand Mace":                    ["mace"],
+    "Two Hand Mace":                    ["mace"],
+    "Any Mace":                         ["mace"],
+    "Any Blunt Weapon":                 ["mace", "flail"],
+    "Flail":                            ["flail"],
+    "FlailShield":                      ["flail", "shield"],
+    "Quarterstaff":                     ["staff"],
+    "PalmQuaterstaff":                  ["staff"],
+    "Any Staff":                        ["staff"],
+    "Shield":                           ["shield"],
+    "Any Shield":                       ["shield"],
+    "Buckler":                          ["shield"],
+    "Unarmed":                          ["unarmed"],
+    "Any SwordAxe":                     ["sword", "axe"],
+    "Any MaceSwordAxe":                 ["mace", "sword", "axe"],
+    "Any MaceSwordAxeStaff":            ["mace", "sword", "axe", "staff"],
+    "One Hand MaceSwordAxe":            ["mace", "sword", "axe"],
+    "One Hand Sharp":                   ["sword", "dagger"],
+    "Any Dual Wieldable Weapon":        ["sword", "axe", "mace", "dagger", "wand"],
+    "Any Melee One Hand and Unarmed":   ["sword", "axe", "mace", "dagger", "unarmed"],
+    "Any Melee Weapon":                 ["mace", "sword", "axe", "dagger", "spear", "staff", "flail"],
+    "Any Melee Weapon and Unarmed":     ["mace", "sword", "axe", "dagger", "spear", "staff", "flail", "unarmed"],
+    "Non-Talisman Melee Weapon":        ["mace", "sword", "axe", "dagger", "spear", "staff", "flail"],
+    "Any Martial Weapon":               ["bow", "crossbow", "mace", "sword", "axe", "dagger", "spear", "staff", "flail", "wand"],
+    "Any Martial Weapon and Unarmed":   ["bow", "crossbow", "mace", "sword", "axe", "dagger", "spear", "staff", "flail", "wand", "unarmed"],
+}
+
 # Mechanic tags from PoE2 ActiveSkillType enum names
 SKILL_TYPE_TO_MECHANIC: dict[str, str] = {
     "Attack": "attack",
@@ -186,6 +232,7 @@ def extract_skill_gems(index) -> list[dict]:
                 "class_tags": [],
                 "mechanic_tags": [],
                 "damage_tags": [],
+                "weapon_tags": [],
                 "description": "",
             })
         except (KeyError, AttributeError, TypeError):
@@ -226,10 +273,30 @@ def enrich_with_active_skills(index, entities: list[dict]) -> list[dict]:
 
             mechanic, damage = map_skill_types(type_names)
             desc = row["Description"] or ""
+
+            weapon_tags: list[str] = []
+            try:
+                wr = row["WeaponRequirements"]
+                if wr:
+                    req_id = str(wr["Id"]).strip()
+                    if req_id and req_id != "None":
+                        weapon_tags = WEAPON_REQ_TO_TAGS.get(req_id, [])
+            except (KeyError, TypeError, AttributeError):
+                pass
+
+            key = name.lower()
+            if key in active_map:
+                # Merge duplicate entries (same skill name, different dat rows)
+                existing = active_map[key]
+                mechanic = sorted(set(existing["mechanic_tags"]) | set(mechanic))
+                damage = sorted(set(existing["damage_tags"]) | set(damage))
+                weapon_tags = sorted(set(existing["weapon_tags"]) | set(weapon_tags))
+                desc = existing["description"] or str(desc)
             active_map[name.lower()] = {
                 "mechanic_tags": mechanic,
                 "damage_tags": damage,
                 "description": str(desc),
+                "weapon_tags": weapon_tags,
             }
         except (KeyError, AttributeError, TypeError):
             continue
@@ -242,8 +309,10 @@ def enrich_with_active_skills(index, entities: list[dict]) -> list[dict]:
             merged["mechanic_tags"] = active_map[key]["mechanic_tags"]
             merged["damage_tags"] = active_map[key]["damage_tags"]
             merged["description"] = active_map[key]["description"]
+            merged["weapon_tags"] = active_map[key]["weapon_tags"]
             enriched.append(merged)
         else:
+            entity.setdefault("weapon_tags", [])
             enriched.append(entity)
     return enriched
 
@@ -273,6 +342,7 @@ def extract_passives(index) -> list[dict]:
                 "class_tags": [],
                 "mechanic_tags": [],
                 "damage_tags": [],
+                "weapon_tags": [],
                 "description": str(desc),
             })
         except (KeyError, AttributeError, TypeError):

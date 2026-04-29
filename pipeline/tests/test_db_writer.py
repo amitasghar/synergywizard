@@ -16,6 +16,7 @@ def test_upsert_entity_issues_insert_on_conflict():
         "class_tags": ["warrior"],
         "mechanic_tags": ["slam", "fire"],
         "damage_tags": ["fire", "physical"],
+        "weapon_tags": ["mace"],
         "description": "Slam",
         "creates": [],
         "triggered_by": [],
