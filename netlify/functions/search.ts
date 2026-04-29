@@ -52,10 +52,10 @@ export default async function handler(req: Request, _ctx: Context): Promise<Resp
              mechanic_tags, damage_tags, class_tags, weapon_tags
       FROM entities
       WHERE game = ${game}
-        AND (${damageArr} IS NULL OR damage_tags  && ${damageArr})
-        AND (${mechanicArr} IS NULL OR mechanic_tags && ${mechanicArr})
-        AND (${weaponArr}  IS NULL OR weapon_tags  && ${weaponArr})
-        AND (${typeArr}    IS NULL OR entity_type  = ANY(${typeArr}))
+        AND (${damageArr}::text[]  IS NULL OR damage_tags   && ${damageArr}::text[])
+        AND (${mechanicArr}::text[] IS NULL OR mechanic_tags && ${mechanicArr}::text[])
+        AND (${weaponArr}::text[]  IS NULL OR weapon_tags   && ${weaponArr}::text[])
+        AND (${typeArr}::text[]    IS NULL OR entity_type   = ANY(${typeArr}::text[]))
         AND (
           display_name ILIKE '%' || ${q} || '%'
           OR description  ILIKE '%' || ${q} || '%'
@@ -75,10 +75,10 @@ export default async function handler(req: Request, _ctx: Context): Promise<Resp
              mechanic_tags, damage_tags, class_tags, weapon_tags
       FROM entities
       WHERE game = ${game}
-        AND (${damageArr} IS NULL OR damage_tags  && ${damageArr})
-        AND (${mechanicArr} IS NULL OR mechanic_tags && ${mechanicArr})
-        AND (${weaponArr}  IS NULL OR weapon_tags  && ${weaponArr})
-        AND (${typeArr}    IS NULL OR entity_type  = ANY(${typeArr}))
+        AND (${damageArr}::text[]  IS NULL OR damage_tags   && ${damageArr}::text[])
+        AND (${mechanicArr}::text[] IS NULL OR mechanic_tags && ${mechanicArr}::text[])
+        AND (${weaponArr}::text[]  IS NULL OR weapon_tags   && ${weaponArr}::text[])
+        AND (${typeArr}::text[]    IS NULL OR entity_type   = ANY(${typeArr}::text[]))
       ORDER BY display_name ASC
       LIMIT 50;
     `;
