@@ -1,3 +1,4 @@
+import React from "react";
 import { useStore } from "../state/store.ts";
 import type { FilterState } from "../types.ts";
 
@@ -20,21 +21,22 @@ interface GroupProps {
   label: string;
   group: keyof FilterState;
   tags: readonly string[];
-  active: string[];
+  activeSet: ReadonlySet<string>;
   toggle: (group: keyof FilterState, tag: string) => void;
 }
 
-function ChipGroup({ label, group, tags, active, toggle }: GroupProps) {
+function ChipGroup({ label, group, tags, activeSet, toggle }: GroupProps): React.ReactElement {
   return (
     <div>
       <div className="text-[10px] uppercase tracking-widest text-white/30 mb-1.5">{label}</div>
       <div className="flex flex-wrap gap-1.5">
         {tags.map((tag) => {
-          const isActive = active.includes(tag);
+          const isActive = activeSet.has(tag);
           return (
             <button
               key={tag}
               type="button"
+              aria-pressed={isActive}
               onClick={() => toggle(group, tag)}
               className={`px-2 py-0.5 rounded text-[11px] border transition-colors ${
                 isActive
@@ -65,11 +67,11 @@ export function FilterSidebar(): React.ReactElement {
 
   return (
     <aside className="w-[170px] min-w-[170px] border-r border-white/10 p-3 flex flex-col gap-4 overflow-y-auto">
-      <ChipGroup label="Damage Type" group="damageTags" tags={DAMAGE_TAGS} active={filters.damageTags} toggle={toggleFilter} />
-      <ChipGroup label="Action"      group="actionTags"  tags={ACTION_TAGS}  active={filters.actionTags}  toggle={toggleFilter} />
-      <ChipGroup label="Style"       group="styleTags"   tags={STYLE_TAGS}   active={filters.styleTags}   toggle={toggleFilter} />
-      <ChipGroup label="Weapon"      group="weaponTags"  tags={WEAPON_TAGS}  active={filters.weaponTags}  toggle={toggleFilter} />
-      <ChipGroup label="Type"        group="types"       tags={TYPE_TAGS}    active={filters.types}       toggle={toggleFilter} />
+      <ChipGroup label="Damage Type" group="damageTags" tags={DAMAGE_TAGS} activeSet={new Set(filters.damageTags)} toggle={toggleFilter} />
+      <ChipGroup label="Action"      group="actionTags"  tags={ACTION_TAGS}  activeSet={new Set(filters.actionTags)}  toggle={toggleFilter} />
+      <ChipGroup label="Style"       group="styleTags"   tags={STYLE_TAGS}   activeSet={new Set(filters.styleTags)}   toggle={toggleFilter} />
+      <ChipGroup label="Weapon"      group="weaponTags"  tags={WEAPON_TAGS}  activeSet={new Set(filters.weaponTags)}  toggle={toggleFilter} />
+      <ChipGroup label="Type"        group="types"       tags={TYPE_TAGS}    activeSet={new Set(filters.types)}       toggle={toggleFilter} />
 
       {hasActive && (
         <button
