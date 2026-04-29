@@ -24,17 +24,14 @@ function tagLine(entity: Entity): React.ReactElement {
 }
 
 export function BrowseTab(): React.ReactElement {
-  const [q, setQ]           = useState("");
+  const [q, setQ]             = useState("");
   const [results, setResults] = useState<Entity[]>([]);
-  const filters   = useStore((s) => s.filters);
-  const selected  = useStore((s) => s.selectedEntities);
-  const addEntity = useStore((s) => s.insertEntityAt);
+  const filters        = useStore((s) => s.filters);
+  const selected       = useStore((s) => s.selectedEntities);
+  const insertEntityAt = useStore((s) => s.insertEntityAt);
 
   const selectedIds = new Set(selected.map((e) => e.id));
 
-  const mechanics = [...filters.actionTags, ...filters.styleTags];
-
-  // Summary label for active filters
   const activeLabels = [
     ...filters.damageTags,
     ...filters.actionTags,
@@ -45,13 +42,14 @@ export function BrowseTab(): React.ReactElement {
 
   useEffect(() => {
     let cancelled = false;
+    const mechanics = [...filters.actionTags, ...filters.styleTags];
     api.search({
       game: "poe2",
       q: q.trim() || undefined,
-      damages:   filters.damageTags.length  ? filters.damageTags  : undefined,
-      mechanics: mechanics.length           ? mechanics            : undefined,
-      weapons:   filters.weaponTags.length  ? filters.weaponTags  : undefined,
-      types:     filters.types.length       ? filters.types        : undefined,
+      damages:   filters.damageTags.length ? filters.damageTags : undefined,
+      mechanics: mechanics.length          ? mechanics           : undefined,
+      weapons:   filters.weaponTags.length ? filters.weaponTags : undefined,
+      types:     filters.types.length      ? filters.types       : undefined,
     }).then((rows) => {
       if (!cancelled) setResults(rows);
     }).catch(() => {
@@ -96,7 +94,7 @@ export function BrowseTab(): React.ReactElement {
                 e.dataTransfer.setData("application/synergy-entity", JSON.stringify(entity));
                 e.dataTransfer.effectAllowed = "copy";
               }}
-              className="flex items-center gap-2 px-3 py-2 border-b border-white/5 hover:bg-white/3 cursor-grab group"
+              className={`flex items-center gap-2 px-3 py-2 border-b border-white/5 hover:bg-white/3 group ${inBuild ? "cursor-default" : "cursor-grab"}`}
             >
               <span className="text-white/20 text-sm group-hover:text-white/40 select-none" aria-hidden="true">⠿</span>
               <div className="flex-1 min-w-0">
@@ -108,7 +106,7 @@ export function BrowseTab(): React.ReactElement {
               ) : (
                 <button
                   type="button"
-                  onClick={() => addEntity(entity, selected.length)}
+                  onClick={() => insertEntityAt(entity, selected.length)}
                   className="text-[11px] border border-white/15 text-white/50 px-2 py-0.5 rounded hover:border-accent/50 hover:text-accent whitespace-nowrap"
                   data-testid="browse-add"
                 >
