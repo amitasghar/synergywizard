@@ -3,7 +3,6 @@ import { useStore } from "../state/store.ts";
 import { InteractionList } from "./InteractionList.tsx";
 import { ConversionPanel } from "./ConversionPanel.tsx";
 import { ExtendPanel } from "./ExtendPanel.tsx";
-import { ShareBar } from "./ShareBar.tsx";
 
 interface AnalysisPanelProps {
   className?: string;
@@ -36,7 +35,6 @@ export function AnalysisPanel({ className = "" }: AnalysisPanelProps): React.Rea
       <InteractionList analysis={analysis} highlightNew={highlightNew} />
       <ConversionPanel />
       <ExtendPanel />
-      <ShareBar />
     </section>
   );
 }

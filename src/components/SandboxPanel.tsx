@@ -4,6 +4,7 @@ import { track } from "../api/analytics.ts";
 import { useStore, MAX_TRAY } from "../state/store.ts";
 import type { Entity } from "../types.ts";
 import { SandboxCard } from "./SandboxCard.tsx";
+import { ShareBar } from "./ShareBar.tsx";
 
 export function SandboxPanel(): React.ReactElement {
   const selected      = useStore((s) => s.selectedEntities);
@@ -116,6 +117,8 @@ export function SandboxPanel(): React.ReactElement {
         >
           {isAnalyzing ? "Analyzing…" : "Analyze Build →"}
         </button>
+
+        {selected.length > 0 && <ShareBar />}
       </div>
     </div>
   );
