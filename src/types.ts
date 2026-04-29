@@ -48,6 +48,14 @@ export interface ExtendResult {
   passives: Entity[];
 }
 
+export interface FilterState {
+  damageTags: string[];   // OR within group, AND with other groups
+  actionTags: string[];
+  styleTags: string[];
+  weaponTags: string[];
+  types: string[];
+}
+
 export interface SemanticSearchResult {
   entity_slug: string;
   display_name: string;
