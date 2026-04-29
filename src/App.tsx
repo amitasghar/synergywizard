@@ -58,7 +58,7 @@ export default function App(): React.ReactElement {
         <FilterSidebar />
         <CenterPanel />
         {/* Right panel: sandbox on top, analysis scrolls below */}
-        <div className="w-[270px] min-w-[270px] flex flex-col overflow-hidden">
+        <div className="w-[270px] min-w-[270px] flex flex-col overflow-hidden min-h-0">
           <SandboxPanel />
           <AnalysisPanel className="border-t border-white/10" />
         </div>

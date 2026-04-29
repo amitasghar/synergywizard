@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { BrowseTab } from "./BrowseTab.tsx";
 import { AskTab } from "./AskTab.tsx";
 
@@ -37,9 +37,12 @@ export function CenterPanel(): React.ReactElement {
         </button>
       </div>
 
-      {/* Content */}
-      <div className="flex-1 overflow-hidden">
-        {tab === "browse" ? <BrowseTab /> : <AskTab />}
+      {/* Both tabs stay mounted to preserve state (search query, chat history) across switches */}
+      <div className={`flex-1 overflow-hidden ${tab === "browse" ? "" : "hidden"}`}>
+        <BrowseTab />
+      </div>
+      <div className={`flex-1 overflow-hidden ${tab === "ask" ? "" : "hidden"}`}>
+        <AskTab />
       </div>
     </div>
   );
