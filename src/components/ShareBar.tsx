@@ -54,26 +54,32 @@ export function ShareBar(): React.ReactElement {
     track("export_action", { format });
   }
 
+  const canShare = selected.length > 0;
+  const canExport = !!analysis;
+
   return (
     <section className="flex items-center gap-2 pt-3 border-t border-white/10">
       <button
         type="button"
         data-testid="share-url"
         onClick={copyShareUrl}
-        className="px-3 py-1 rounded border border-accent/50 text-accent hover:bg-accent/10 text-sm"
+        disabled={!canShare}
+        className="px-3 py-1 rounded border border-accent/50 text-accent hover:bg-accent/10 text-sm disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent"
       >
         🔗 {copied ? "Copied!" : "Share URL"}
       </button>
       <div className="relative">
-        <details data-testid="export-dropdown">
-          <summary className="list-none px-3 py-1 rounded border border-white/20 text-sm cursor-pointer">
+        <details data-testid="export-dropdown" {...(!canExport ? { onClick: (e: React.MouseEvent) => e.preventDefault() } : {})}>
+          <summary className={`list-none px-3 py-1 rounded border border-white/20 text-sm ${canExport ? "cursor-pointer" : "opacity-30 cursor-not-allowed"}`}>
             📋 Export ▾
           </summary>
-          <div className="absolute mt-1 bg-background border border-white/20 rounded z-10">
-            <button type="button" data-testid="export-md"   onClick={() => exportAs("markdown")} className="block w-full text-left px-3 py-1 text-sm hover:bg-white/5">Markdown</button>
-            <button type="button" data-testid="export-txt"  onClick={() => exportAs("text")}     className="block w-full text-left px-3 py-1 text-sm hover:bg-white/5">Plain text</button>
-            <button type="button" data-testid="export-json" onClick={() => exportAs("json")}     className="block w-full text-left px-3 py-1 text-sm hover:bg-white/5">JSON</button>
-          </div>
+          {canExport && (
+            <div className="absolute mt-1 bg-background border border-white/20 rounded z-10">
+              <button type="button" data-testid="export-md"   onClick={() => exportAs("markdown")} className="block w-full text-left px-3 py-1 text-sm hover:bg-white/5">Markdown</button>
+              <button type="button" data-testid="export-txt"  onClick={() => exportAs("text")}     className="block w-full text-left px-3 py-1 text-sm hover:bg-white/5">Plain text</button>
+              <button type="button" data-testid="export-json" onClick={() => exportAs("json")}     className="block w-full text-left px-3 py-1 text-sm hover:bg-white/5">JSON</button>
+            </div>
+          )}
         </details>
       </div>
     </section>

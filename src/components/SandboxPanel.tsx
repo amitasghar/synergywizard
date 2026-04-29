@@ -118,7 +118,7 @@ export function SandboxPanel(): React.ReactElement {
           {isAnalyzing ? "Analyzing…" : "Analyze Build →"}
         </button>
 
-        {selected.length > 0 && <ShareBar />}
+        <ShareBar />
       </div>
     </div>
   );

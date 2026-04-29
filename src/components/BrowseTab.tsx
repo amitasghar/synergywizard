@@ -41,6 +41,21 @@ interface ResultRowProps {
   onDragStart: (e: React.DragEvent) => void;
 }
 
+const TYPE_STYLES: Record<string, { bg: string; text: string }> = {
+  skill:   { bg: "bg-[#3d0e0e]", text: "text-[#e74c3c]" },
+  support: { bg: "bg-[#0d1f3d]", text: "text-[#5dade2]" },
+  passive: { bg: "bg-white/5",   text: "text-white/40"  },
+};
+
+function TypeBadge({ type }: { type: string }): React.ReactElement {
+  const { bg, text } = TYPE_STYLES[type] ?? TYPE_STYLES.passive;
+  return (
+    <span className={`inline-block px-1.5 py-0 rounded text-[9px] font-semibold uppercase tracking-wide ${bg} ${text} mr-1.5`}>
+      {type}
+    </span>
+  );
+}
+
 function ResultRow({ entity, inBuild, onAdd, onDragStart }: ResultRowProps): React.ReactElement {
   const [expanded, setExpanded] = useState(false);
   const desc = cleanDescription(entity.description ?? "");
@@ -57,7 +72,10 @@ function ResultRow({ entity, inBuild, onAdd, onDragStart }: ResultRowProps): Rea
       <div className="flex items-start gap-2">
         <span className="text-white/20 text-sm group-hover:text-white/40 select-none mt-0.5 shrink-0" aria-hidden="true">⠿</span>
         <div className="flex-1 min-w-0">
-          <div className="text-sm font-medium text-white/90 truncate">{entity.display_name}</div>
+          <div className="text-sm font-medium text-white/90 truncate">
+            <TypeBadge type={entity.entity_type} />
+            {entity.display_name}
+          </div>
           {tagLine(entity)}
           {/* Description */}
           {desc && (
