@@ -220,6 +220,11 @@ def extract_skill_gems(index) -> list[dict]:
             name = base_item["Name"]
             if not name or not str(name).strip():
                 continue
+            name_str = str(name).strip()
+            # Skip internal/placeholder entries
+            if (name_str.startswith("[DNT") or name_str == "Coming Soon"
+                    or name_str == "Removed Skill" or "{" in name_str):
+                continue
 
             # GemType: 0 = active skill, 1/2 = support gem variants
             is_support = int(row["GemType"]) != 0
@@ -412,6 +417,12 @@ def extract_passives(index) -> list[dict]:
             if not name or not str(name).strip():
                 continue
             name = str(name).strip()
+            # Filter internal/placeholder/navigation nodes
+            if (name.startswith("[DNT") or name.startswith("[UNUSED]")
+                    or name in {"Coming Soon", "[Jewel] Socket", "Nothingness",
+                                "MARAUDER", "WITCH", "RANGER", "DUELIST", "TEMPLAR", "SIX"}
+                    or name.endswith("Type Selector") or name.endswith("Selector")):
+                continue
 
             # Build description from stats + values
             stats = row["Stats"] or []
@@ -431,7 +442,39 @@ def extract_passives(index) -> list[dict]:
                 part = _format_passive_stat(sid, val)
                 if part:
                     stat_parts.append(part)
-            desc = "; ".join(stat_parts) if stat_parts else str(row["FlavourText"] or "")
+
+            desc = "; ".join(stat_parts)
+
+            # Passive skill points (e.g. "+1 Passive Skill Point" nodes)
+            if not desc:
+                sp = row["SkillPointsGranted"]
+                if sp and int(sp) > 0:
+                    desc = f"+{int(sp)} Passive Skill Point"
+
+            # Mastery nodes: list available choices from MasteryGroup.MasteryEffects
+            if not desc and row["MasteryGroup"]:
+                try:
+                    effects = row["MasteryGroup"]["MasteryEffects"] or []
+                    choices: list[str] = []
+                    for effect in effects:
+                        e_stats = effect["Stats"] or []
+                        e_vals = [effect["Stat1Value"], effect["Stat2Value"], effect["Stat3Value"]]
+                        e_parts: list[str] = []
+                        for j, es in enumerate(e_stats):
+                            if j >= len(e_vals):
+                                break
+                            ep = _format_passive_stat(str(es["Id"]), e_vals[j])
+                            if ep:
+                                e_parts.append(ep)
+                        if e_parts:
+                            choices.append("; ".join(e_parts))
+                    if choices:
+                        desc = "Mastery — choose one: " + " / ".join(choices)
+                except (KeyError, AttributeError, TypeError):
+                    pass
+
+            if not desc:
+                desc = str(row["FlavourText"] or "")
 
             entities.append({
                 "entity_slug": slugify(name, separator="_"),
@@ -446,13 +489,13 @@ def extract_passives(index) -> list[dict]:
         except (KeyError, AttributeError, TypeError):
             continue
 
-    seen: set[str] = set()
-    unique: list[dict] = []
+    # Deduplicate by slug, preferring the variant with a description.
+    best: dict[str, dict] = {}
     for e in entities:
-        if e["entity_slug"] not in seen:
-            seen.add(e["entity_slug"])
-            unique.append(e)
-    return unique
+        slug = e["entity_slug"]
+        if slug not in best or (e["description"] and not best[slug]["description"]):
+            best[slug] = e
+    return list(best.values())
 
 
 SEED_PATH = Path(__file__).parent / "data" / "poe2_seed.json"

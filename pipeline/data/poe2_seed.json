@@ -1,10 +1,10 @@
 {
-  "extracted_at": "2026-04-29T20:06:32.675398+00:00",
+  "extracted_at": "2026-04-29T20:53:21.254261+00:00",
   "patch_version": "unknown",
   "entity_counts": {
-    "skill": 458,
-    "support": 645,
-    "passive": 2452
+    "skill": 363,
+    "support": 620,
+    "passive": 2238
   },
   "entities": [
     {
@@ -192,16 +192,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "Supports [Projectile|Projectile] Skills, making them fire [Projectile|Projectiles] in a circle. Does not Support Skills which rain down [Projectile|Projectiles] from above."
-    },
-    {
-      "entity_slug": "dnt_unused_spiral_projectiles_i",
-      "display_name": "[DNT-UNUSED] Spiral Projectiles I",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Spiral Proj"
     },
     {
       "entity_slug": "projectile_acceleration_i",
@@ -472,16 +462,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "Supports [Projectile|Projectile] skills, making their [Projectile|Projectiles] [Pierce|Pierce] an unlimited number of enemies, losing damage as they do so."
-    },
-    {
-      "entity_slug": "spectre_0",
-      "display_name": "Spectre: {0}",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "frost_wall",
@@ -1688,22 +1668,6 @@
       "description": ""
     },
     {
-      "entity_slug": "dnt_azmerian_packleader",
-      "display_name": "[DNT] Azmerian Packleader",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "minion"
-      ],
-      "damage_tags": [
-        "chaos",
-        "fire",
-        "physical"
-      ],
-      "weapon_tags": [],
-      "description": "[DNT] Activate to summon an ancient, [Reviving] Azmerian Wolf that can howl to convene a great hunt on [Command]."
-    },
-    {
       "entity_slug": "wildfire",
       "display_name": "Wildfire",
       "entity_type": "support",
@@ -2590,36 +2554,6 @@
       "description": "Throw a single [Pierce|Piercing] lance that leaves icy fragments in its wake. The fragments [Chill] nearby enemies. Consumes a [Charges|Frenzy Charge] if possible to cause the glacial fragments created by the first [Projectile] to explode outwards after a short duration, peppering enemies with shrapnel."
     },
     {
-      "entity_slug": "dnt_unused_axe_chop",
-      "display_name": "[DNT-UNUSED] Axe Chop",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "axe"
-      ],
-      "description": "[DNT-UNUSED] Bring your axe down in a sweeping slash, creating a slash along a line in the ground, with a chance to cause bleeding."
-    },
-    {
-      "entity_slug": "dnt_unused_axe_slash",
-      "display_name": "[DNT-UNUSED] Axe Slash",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "axe"
-      ],
-      "description": "[DNT-UNUSED] Step forward and swing your axe, knocking enemies back to drag them with your attack."
-    },
-    {
       "entity_slug": "whirling_assault",
       "display_name": "Whirling Assault",
       "entity_type": "skill",
@@ -2689,20 +2623,6 @@
       "description": "[Channelling|Channel] to charge up a heavy swing, drawing earth from the ground to enlarge your mace. Release to [Slam|Slam] the ground, dealing damage in an area around the impact, followed by [Aftershock|Aftershocks] dealing damage in a larger area."
     },
     {
-      "entity_slug": "dnt_unused_evasive_strike",
-      "display_name": "[DNT-UNUSED] Evasive Strike",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee",
-        "slam"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Leap back before dashing forward, taking out enemies in a path."
-    },
-    {
       "entity_slug": "wind_blast",
       "display_name": "Wind Blast",
       "entity_type": "skill",
@@ -2717,137 +2637,6 @@
         "staff"
       ],
       "description": "Batter enemies at range by generating a gust of wind as you swing. Enemies will be [Daze|Dazed] and [Knockback|Knocked Back] based on how close they are to you."
-    },
-    {
-      "entity_slug": "dnt_unused_blade_dance",
-      "display_name": "[DNT-UNUSED] Blade Dance",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee",
-        "slam"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "sword"
-      ],
-      "description": "[DNT-UNUSED] Perform a slashing attack that moves you through the battlefield, slicing all around you."
-    },
-    {
-      "entity_slug": "dnt_unused_claw_rake",
-      "display_name": "[DNT-UNUSED] Claw Rake",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee",
-        "slam"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Perform two upwards slashes, causing massive claw marks in the ground."
-    },
-    {
-      "entity_slug": "dnt_unused_spinning_flail",
-      "display_name": "[DNT-UNUSED] Spinning Flail",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "flail"
-      ],
-      "description": "[DNT-UNUSED] Advance forward, striking enemies around you with whirling swings of your flail."
-    },
-    {
-      "entity_slug": "dnt_unused_axe_execute",
-      "display_name": "[DNT-UNUSED] Axe Execute",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "axe"
-      ],
-      "description": "[DNT-UNUSED] Perform a heavy melee attack, dealing massive damage to enemies on low life."
-    },
-    {
-      "entity_slug": "dnt_unused_axe_leaping_chop",
-      "display_name": "[DNT-UNUSED] Axe Leaping Chop",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "axe"
-      ],
-      "description": "[DNT-UNUSED] Leap forward, dealing massive damage at the end of the attack."
-    },
-    {
-      "entity_slug": "dnt_unused_axe_whirling_slash",
-      "display_name": "[DNT-UNUSED] Axe Whirling Slash",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "axe"
-      ],
-      "description": "[DNT-UNUSED] Ready your axe then spin, dealing high damage to enemies and causing them to bleed."
-    },
-    {
-      "entity_slug": "dnt_unused_axe_raised_chop",
-      "display_name": "[DNT-UNUSED] Axe Raised Chop",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee",
-        "slam"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "axe"
-      ],
-      "description": "[DNT-UNUSED] Raise your weapon and channel rage into it, before slashing downwards and dealing massive damage to enemies the path of the attack."
-    },
-    {
-      "entity_slug": "dnt_unused_axe_heavy_cleave",
-      "display_name": "[DNT-UNUSED] Axe Heavy Cleave",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "axe"
-      ],
-      "description": "[DNT-UNUSED] Ready your axe as it charges with flame, then swing in a massive flaming arc, sending out a slow wave of fire."
-    },
-    {
-      "entity_slug": "dnt_unused_knife_flip",
-      "display_name": "[DNT-UNUSED] Knife Flip",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "wave_of_frost",
@@ -2868,31 +2657,6 @@
         "staff"
       ],
       "description": "Flip backwards and send forth a [Freeze|Freezing] wave in front of you, immediately [Freeze|Freezing] enemies which are [PrimedFreeze|Primed for Freeze]."
-    },
-    {
-      "entity_slug": "dnt_unused_sword_lunge",
-      "display_name": "[DNT-UNUSED] Sword Lunge",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "sword"
-      ],
-      "description": "[DNT-UNUSED] Sword Lunge"
-    },
-    {
-      "entity_slug": "dnt_unused_sword_leap_slash",
-      "display_name": "[DNT-UNUSED] Sword Leap Slash",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "ice_strike",
@@ -3111,148 +2875,6 @@
       "description": "Call down a mass of ice from the sky, dealing high damage at the targeted location. Targeting close to you will cause you to jump back as you cast. [Consume|Consumes] a [Fire] [ElementalInfusion|Infusion] if possible to cause a devastating blast of ice and fire."
     },
     {
-      "entity_slug": "dnt_crushing_earth",
-      "display_name": "[DNT] Crushing Earth",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "duration",
-        "spell"
-      ],
-      "damage_tags": [
-        "physical"
-      ],
-      "weapon_tags": [],
-      "description": "[DNT] Convene the surrounding earth into an immense boulder to crash down, dealing high damage at the targeted location after a short delay. "
-    },
-    {
-      "entity_slug": "dnt_fungal_terrain",
-      "display_name": "[DNT] Fungal Terrain",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "duration",
-        "spell"
-      ],
-      "damage_tags": [
-        "chaos",
-        "physical"
-      ],
-      "weapon_tags": [],
-      "description": "[DNT] Conjure a field of hazardous mushrooms that explode when enemies make contact. The explosion deals [Physical] damage and leaves a degen field that deals [Chaos] damage over time to enemies that enter the space."
-    },
-    {
-      "entity_slug": "dnt_unused_blade_nova",
-      "display_name": "[DNT-UNUSED] Blade Nova",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_flame_slice",
-      "display_name": "[DNT-UNUSED] Flame Slice",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "sword"
-      ],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_ringofblades",
-      "display_name": "[DNT-UNUSED] RingOfBlades",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_combo_knife_throw",
-      "display_name": "[DNT-UNUSED] Combo Knife Throw",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "duration",
-        "projectile",
-        "spell"
-      ],
-      "damage_tags": [
-        "physical"
-      ],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_triple_slash_combo",
-      "display_name": "[DNT-UNUSED] Triple Slash Combo",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "sword"
-      ],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_hyper_slash",
-      "display_name": "[DNT-UNUSED] Hyper Slash",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow_dash",
-      "display_name": "[DNT-UNUSED] Shadow Dash",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "dagger"
-      ],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow_ambush",
-      "display_name": "[DNT-UNUSED] Shadow Ambush",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "dagger"
-      ],
-      "description": ""
-    },
-    {
       "entity_slug": "consecrate",
       "display_name": "Consecrate",
       "entity_type": "skill",
@@ -3417,21 +3039,6 @@
       "description": "Supports any skill that [HitDamage|Hits] enemies, causing it to create an icy vortex on [Shatter|Shattering] an enemy."
     },
     {
-      "entity_slug": "dnt_unused_spinning_throw",
-      "display_name": "[DNT-UNUSED] Spinning Throw",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "projectile"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "axe"
-      ],
-      "description": ""
-    },
-    {
       "entity_slug": "spiral_volley",
       "display_name": "Spiral Volley",
       "entity_type": "skill",
@@ -3462,20 +3069,6 @@
       "description": "[Shapeshift] into a [Bear] and rake enemies with your claws, generating [Rage] on [HitDamage|Hit]."
     },
     {
-      "entity_slug": "dnt_whip",
-      "display_name": "[DNT] Whip",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "rend",
       "display_name": "Rend",
       "entity_type": "skill",
@@ -3491,104 +3084,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "[Shapeshift] into a [Wyvern] and perform a wide slash with your wingtip claws. Consumes a [Charges|Power Charge] if possible to grant you a [Buff] that gives you extra [Lightning] damage. While you have the [Buff], Rend covers a much larger area but is slower."
-    },
-    {
-      "entity_slug": "dnt_unused_dodge_roll",
-      "display_name": "[DNT-UNUSED] Dodge Roll",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow_thief_slash",
-      "display_name": "[DNT-UNUSED] Shadow Thief Slash",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "dagger"
-      ],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_leaping_axe_catch",
-      "display_name": "[DNT-UNUSED] Leaping Axe Catch",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Leap, Catch, ???, Profit"
-    },
-    {
-      "entity_slug": "dnt_unused_storm_blade",
-      "display_name": "[DNT-UNUSED] Storm Blade",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [
-        "cold"
-      ],
-      "weapon_tags": [
-        "sword"
-      ],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_plunging_blade",
-      "display_name": "[DNT-UNUSED] Plunging Blade",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "melee"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "sword"
-      ],
-      "description": "[DNT-UNUSED] Make alot of fire"
-    },
-    {
-      "entity_slug": "dnt_unused_howl",
-      "display_name": "[DNT-UNUSED] Howl",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "spell"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Loud noise"
-    },
-    {
-      "entity_slug": "dnt_unused_spiral_throw",
-      "display_name": "[DNT-UNUSED] Spiral Throw",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "attack",
-        "projectile"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "axe"
-      ],
-      "description": "[DNT-UNUSED] Throw Spirally"
     },
     {
       "entity_slug": "pounce",
@@ -3983,456 +3478,6 @@
       "description": "Supports any skill that [HitDamage|Hits] enemies, causing them to apply [ArmourBreak|Broken Armour] to enemies when causing a [HeavyStun|Heavy Stun] to enemies."
     },
     {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "coming_soon",
-      "display_name": "Coming Soon",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "barrier_invocation",
       "display_name": "Barrier Invocation",
       "entity_type": "support",
@@ -4529,22 +3574,6 @@
       "description": "Capture the spirit of a defeated monster, transforming this gem to instead allow you to summon the monster's ghost as a [Reviving] [Minion|Minion]."
     },
     {
-      "entity_slug": "dnt_unused_dominating_aura",
-      "display_name": "[DNT-UNUSED] Dominating Aura",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "aura",
-        "duration",
-        "minion",
-        "spell"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Zoomancer :D"
-    },
-    {
       "entity_slug": "shroud",
       "display_name": "Shroud",
       "entity_type": "skill",
@@ -4593,16 +3622,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "Consume any combination of 3 [Charges|Power and/or Endurance Charges] to raise a [Totem] that uses socketed [Spell|Spells]. Cannot use Skills with Cooldowns."
-    },
-    {
-      "entity_slug": "dnt_unused_meta_bow_totem",
-      "display_name": "[DNT-UNUSED] Meta Bow Totem",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "explosive_grenade",
@@ -4824,16 +3843,6 @@
       ],
       "weapon_tags": [],
       "description": "Fire a burst of [Chaos] energy at the target."
-    },
-    {
-      "entity_slug": "dnt_unused_witchbolt",
-      "display_name": "[DNT-UNUSED] Witchbolt",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "frozen_locus",
@@ -5284,16 +4293,6 @@
       "description": "Conjure surging arcane energy to restore your Mana. While active, enemies you kill affected by [ElementalAilments|Elemental Ailments] have a chance to spawn a Mana [Remnant], and [Critical|Critically Hitting] a target with [ElementalAilments|Elemental Ailments] spawns a Mana [Remnant] every few seconds. Picking up a Mana [Remnant] grants you Mana which can [Overflow|Overflow] maximum Mana."
     },
     {
-      "entity_slug": "dnt_unused_sanguine_revelry",
-      "display_name": "[DNT-UNUSED] Sanguine Revelry",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Conjure hateful energy to fuel your Rage and Life. While active, [Bleed|Bleeding] enemies you kill have a chance to spawn a Hateful [Remnant], and [Hit|Hitting] a [Bleed|Bleeding] target spawns a Hateful [Remnant] every few seconds. Picking up a Hateful [Remnant] grants you Rage and restores Life based on your current Rage."
-    },
-    {
       "entity_slug": "magma_barrier",
       "display_name": "Magma Barrier",
       "entity_type": "skill",
@@ -5633,16 +4632,6 @@
         "spear"
       ],
       "description": "Hurl a single payload [Spear] that pierces through enemies and lodges in terrain where it lands. The [Spear] will explode at the end of its [DetonationTime|Detonation Time] or if [Detonator|Detonated]. Consumes a [Charges|Frenzy Charge] if you have one to explode immediately, dealing more damage in a cross-shaped area and creating [IgnitedGround|Ignited Ground]."
-    },
-    {
-      "entity_slug": "dnt_unused_spear_vortex",
-      "display_name": "[DNT-UNUSED] Spear Vortex",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "elemental_siphon",
@@ -6297,24 +5286,6 @@
         "mace"
       ],
       "description": "Build [Glory] by [HeavyStun|Heavy Stunning] enemies. When you have maximum [Glory] you may entreat the Ancestors to crush your enemies, manifesting a massive hammer that falls from the sky onto your target, [Slam|Slamming] into the ground after a short duration and dealing immense damage based on your weapon."
-    },
-    {
-      "entity_slug": "dnt_hammer_of_ngamahu",
-      "display_name": "[DNT] Hammer of Ngamahu",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack",
-        "duration",
-        "melee",
-        "slam"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "mace"
-      ],
-      "description": "[DNT] Build [Glory] by Break Armour and Igniting enemies. When you have maximum [Glory] you may entreat the Ancestors to crush your enemies, manifesting a massive hammer that falls from the sky onto your target, [Slam|Slamming] into the ground after a short duration and dealing immense damage based on your weapon."
     },
     {
       "entity_slug": "living_bomb",
@@ -7651,118 +6622,6 @@
       "description": "Enemies in your [Presence] accumulate blood boils periodically. When they die, the boils pop applying [CorruptedBlood|Corrupted Blood] to enemies near them."
     },
     {
-      "entity_slug": "dnt_unused_vivid_stags",
-      "display_name": "[DNT-UNUSED] Vivid Stags",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack"
-      ],
-      "damage_tags": [
-        "lightning"
-      ],
-      "weapon_tags": [
-        "bow",
-        "crossbow",
-        "mace",
-        "sword",
-        "axe",
-        "dagger",
-        "spear",
-        "staff",
-        "flail",
-        "wand",
-        "unarmed"
-      ],
-      "description": "[DNT-UNUSED] Not horses"
-    },
-    {
-      "entity_slug": "dnt_companion_bear",
-      "display_name": "[DNT] Companion Bear",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "minion"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT] Bear with me"
-    },
-    {
-      "entity_slug": "dnt_unused_mantra_of_illusions",
-      "display_name": "[DNT-UNUSED] Mantra of Illusions",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [
-        "bow",
-        "crossbow",
-        "mace",
-        "sword",
-        "axe",
-        "dagger",
-        "spear",
-        "staff",
-        "flail",
-        "wand",
-        "unarmed"
-      ],
-      "description": "[DNT-UNUSED] Clone Army"
-    },
-    {
-      "entity_slug": "dnt_unused_spectral_bells",
-      "display_name": "[DNT-UNUSED] Spectral Bells",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack",
-        "duration"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "bow",
-        "crossbow",
-        "mace",
-        "sword",
-        "axe",
-        "dagger",
-        "spear",
-        "staff",
-        "flail",
-        "wand",
-        "unarmed"
-      ],
-      "description": "[DNT-UNUSED] Ring ring"
-    },
-    {
-      "entity_slug": "dnt_unused_carried_spectral_bell",
-      "display_name": "[DNT-UNUSED] Carried Spectral Bell",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "bow",
-        "crossbow",
-        "mace",
-        "sword",
-        "axe",
-        "dagger",
-        "spear",
-        "staff",
-        "flail",
-        "wand",
-        "unarmed"
-      ],
-      "description": "[DNT-UNUSED] Ring ring, RING"
-    },
-    {
       "entity_slug": "mirage_deadeye",
       "display_name": "Mirage Deadeye",
       "entity_type": "support",
@@ -7777,58 +6636,6 @@
       "description": "While active, firing a ranged [Projectile] [Attack] will create a Mirage that uses socketed ranged [Attack|Attacks] for a short duration, then vanish."
     },
     {
-      "entity_slug": "dnt_meta_ranged_attack_on_ignite",
-      "display_name": "[DNT] Meta Ranged Attack on Ignite",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_meta_ranged_attack_on_shock",
-      "display_name": "[DNT] Meta Ranged Attack on Shock",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_meta_ranged_attack_on_freeze",
-      "display_name": "[DNT] Meta Ranged Attack on Freeze",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_arcane_archery",
-      "display_name": "[DNT-UNUSED] Arcane Archery",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [
-        "bow",
-        "crossbow",
-        "mace",
-        "sword",
-        "axe",
-        "dagger",
-        "spear",
-        "staff",
-        "flail",
-        "wand",
-        "unarmed"
-      ],
-      "description": "[DNT-UNUSED] Pew pew spell"
-    },
-    {
       "entity_slug": "inevitable_agony",
       "display_name": "Inevitable Agony",
       "entity_type": "skill",
@@ -7841,16 +6648,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "[Curse] all targets in an area after a short delay, causing a portion of Damage they take from [HitDamage|Hits] to be tracked by the [Curse] debuff. When the debuff's duration expires, they take that tracked damage again, all at once."
-    },
-    {
-      "entity_slug": "dnt_unused",
-      "display_name": "[DNT] UNUSED",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "called_shots",
@@ -9372,31 +8169,6 @@
       "description": "Passively coalesces icy missiles from the air over time. Using the skill fires a missile, firing an additional missile for each that has been accumulated. Fires an additional missile, up to its current missile count, targeting each [IceFragment|Ice Fragment] in its Area of effect, causing the [IceFragment|Fragments] to [DetonationTime|Detonate] immediately."
     },
     {
-      "entity_slug": "dnt_unused_gas_cloud",
-      "display_name": "[DNT-UNUSED] Gas Cloud",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "duration"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Creates a [Poison|Poison] cloud. [Burning] effects or [Detonator|Detonator] skills will cause the cloud to explode in a fiery blast. (Wording copied from Toxic Grenade.)"
-    },
-    {
-      "entity_slug": "dnt_unused_detonation",
-      "display_name": "[DNT-UNUSED] Detonation",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] [Detonator|Detonates] stuff."
-    },
-    {
       "entity_slug": "berserk",
       "display_name": "Berserk",
       "entity_type": "skill",
@@ -9558,26 +8330,6 @@
         "staff"
       ],
       "description": "Flip backward and [Channelling|Channel] to charge your [Quarterstaff] with [Lightning]. Releasing dashes towards the target location, damaging enemies along the way. Releasing with [PerfectTiming|Perfect Timing] performs a [Lightning]-assisted dash that releases shockwaves from enemies you dash through and leaves a trail of [ShockedGround|Shocked Ground] in your wake. This skill cannot be [AncestralBoost|Ancestrally Boosted]."
-    },
-    {
-      "entity_slug": "dnt_unused_iron_will",
-      "display_name": "[DNT-UNUSED] Iron Will",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Modifiers to Melee damage also apply to Spell damage for supported skill"
-    },
-    {
-      "entity_slug": "dnt_unused_iron_grip",
-      "display_name": "[DNT-UNUSED] Iron Grip",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Modifiers to Melee damage also apply to Projectile damage for supported skill"
     },
     {
       "entity_slug": "branching_fissures_i",
@@ -11003,20 +9755,6 @@
       "description": "Supports [Strike|Strikes] you use yourself. Supported Skills cannot be used until you have [Block|Blocked] a certain number of [HitDamage|Hits], but will be [AncestralBoost|Ancestrally Boosted] when used. After use, this [Block|Blocked Hit] counter will reset. Cannot Support [Channelling|Channelled] Skills or Skills which already have a [Conditional|Condition] for use."
     },
     {
-      "entity_slug": "dnt_unused_titanic_arrows",
-      "display_name": "[DNT-UNUSED] Titanic Arrows",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe"
-      ],
-      "damage_tags": [
-        "physical"
-      ],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Fill me in"
-    },
-    {
       "entity_slug": "shocking_leap",
       "display_name": "Shocking Leap",
       "entity_type": "support",
@@ -11287,16 +10025,6 @@
       "description": "Supports [Attack] Skills you use yourself. While using Supported Skills, you gain increased [Armour], with the increase scaling higher the longer the [Attack] time of the supported Skill. Cannot Support [Channelling] Skills."
     },
     {
-      "entity_slug": "dnt_unused_timerot",
-      "display_name": "[DNT-UNUSED] Timerot",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Timerot"
-    },
-    {
       "entity_slug": "punch_through",
       "display_name": "Punch Through",
       "entity_type": "support",
@@ -11492,16 +10220,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "Supports Skills which create [Hazard|Hazards], causing those [Hazard|Hazards] to only be able to trigger immediately after creation or at the end of their duration. Created [Hazard|Hazards] have significantly lowered duration, and deal more damage."
-    },
-    {
-      "entity_slug": "dnt_unused_spectral_palm",
-      "display_name": "[DNT-UNUSED] Spectral Palm",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT-UNUSED] Spectral Palm"
     },
     {
       "entity_slug": "volatile_power",
@@ -12116,16 +10834,6 @@
       "description": "Ready your [Buckler] to parry the next [Strike] or [Projectile] that would [HitDamage|Hit] you, [Block|Blocking] the [HitDamage|Hit] and retaliating with a quick sweep that leaves enemies off balance, causing them to take massively increased [Attack] damage for a short duration. Parrying causes you to accumulate [HeavyStunPlayer|Heavy Stun] buildup. You cannot [Evasion|Evade] a [HitDamage|Hit] you could parry, but [Evasion] instead grants an equal chance to avoid this [HeavyStunPlayer|Heavy Stun] buildup."
     },
     {
-      "entity_slug": "dnt_red_queen_s_visage",
-      "display_name": "[DNT] Red Queen's Visage",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT] A host of crimson souls erupt from Atziri's Mirror when you Parry, which travel outward to enemies in front of you applying the Parried Debuff and Scar of the Red Queen."
-    },
-    {
       "entity_slug": "elemental_sundering",
       "display_name": "Elemental Sundering",
       "entity_type": "skill",
@@ -12147,18 +10855,6 @@
         "spear"
       ],
       "description": "Plunge your [Spear] into the ground to emit a pulse that [Consume|Consumes] [Freeze], [Shock] and [Ignite] on a number of nearby enemies, [Allies] and [Corpse|Corpses]. The pulse itself deals no damage, but each [ElementalAilments|Ailment] [Consume|Consumed] causes an explosion of the corresponding elemental damage type."
-    },
-    {
-      "entity_slug": "companion_0",
-      "display_name": "Companion: {0}",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "minion"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "Summon a [Reviving] [MonsterCategory|Beast] [Companion] to aid you in combat."
     },
     {
       "entity_slug": "cast_on_charm_use",
@@ -12259,16 +10955,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "While active, grants a skill that you can use to instantly begin [ESRecharge|Recharging] [EnergyShield|Energy Shield] and gain a [Buff] for a duration that prevents that [ESRecharge|Recharge] being interrupted. The [Buff] is removed at maximum [EnergyShield|Energy Shield] and the skill cannot be used while [EnergyShield|Energy Shield] is full."
-    },
-    {
-      "entity_slug": "removed_skill",
-      "display_name": "Removed Skill",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "gemini_surge",
@@ -12545,23 +11231,6 @@
       "description": "Conjure Azmeri wisps to engulf a [Rarity|Rare] [MonsterCategory|Beast] for a duration, [Hinder|Hindering] them. If you defeat the [MonsterCategory|Beast] while it is engulfed in wisps, it will be captured by this gem, transforming the gem to instead allow you to summon the [MonsterCategory|Beast] as a [Reviving] [Companion]."
     },
     {
-      "entity_slug": "dnt_primal_quadrilla_slam",
-      "display_name": "[DNT] Primal Quadrilla Slam",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack",
-        "melee",
-        "slam"
-      ],
-      "damage_tags": [
-        "physical"
-      ],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "devour",
       "display_name": "Devour",
       "entity_type": "skill",
@@ -12593,16 +11262,6 @@
       ],
       "weapon_tags": [],
       "description": "Spur the growth of huge vines, which emerge randomly within the target area. The vines crash to the ground then retreat, targeting nearby enemies if possible."
-    },
-    {
-      "entity_slug": "dnt_caustic_cloud",
-      "display_name": "[DNT] Caustic Cloud",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "lunar_blessing",
@@ -12662,45 +11321,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "Supports Skills which cause [HitDamage|Damaging Hits]. Living Lightning [Minion|Minions] are created when dealing [Lightning] damage with Supported Skills - bundles of living electricity that target nearby enemies with [Chain|Chaining] [Attack|Attacks]. Enemies will not directly engage these [Minion|Minions], and can pass through them. Does not modify skills used by [Minion|Minions]."
-    },
-    {
-      "entity_slug": "dnt_stone_slam_aegis",
-      "display_name": "[DNT] Stone Slam Aegis",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_totemic_aegis",
-      "display_name": "[DNT] Totemic Aegis",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack",
-        "duration",
-        "melee"
-      ],
-      "damage_tags": [
-        "physical"
-      ],
-      "weapon_tags": [
-        "shield"
-      ],
-      "description": "[DNT] Totemic Aegis"
-    },
-    {
-      "entity_slug": "dnt_from_the_grave",
-      "display_name": "[DNT] From the Grave",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT] From the Grave Support"
     },
     {
       "entity_slug": "frozen_spite",
@@ -13162,16 +11782,6 @@
       "description": "Supports Skills that generate [Remnant|Remnants]. Picking up [Remnant|Remnants] from Supported Skills grants [KhatalsRejuvenation|Khatal's Rejuvenation]."
     },
     {
-      "entity_slug": "dnt_tangmazu_lineage",
-      "display_name": "[DNT] Tangmazu Lineage",
-      "entity_type": "support",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[DNT] Tangmazu Lineage"
-    },
-    {
       "entity_slug": "morgana_s_tempest",
       "display_name": "Morgana's Tempest",
       "entity_type": "support",
@@ -13258,36 +11868,6 @@
       "description": "Perform a [Warcry] using [Glory] gained by [Ignite|Igniting] enemies to turn you into an embodiment of Kaom. While embodying Kaom, you [Trigger] Volcanic Steps while travelling, [Melee] [Strike|Strikes] and [Slam|Slams] are [AncestralBoost|Ancestrally Boosted], and your [Melee] [Strike|Strikes] [Trigger] Volcanic Eruption."
     },
     {
-      "entity_slug": "dnt_soul_link",
-      "display_name": "[DNT] Soul Link",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_flame_link",
-      "display_name": "[DNT] Flame Link",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_owl_feather_multishot",
-      "display_name": "[DNT-UNUSED] Owl Feather Multishot",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "feast_of_flesh",
       "display_name": "Feast of Flesh",
       "entity_type": "skill",
@@ -13299,16 +11879,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "[Consume] [Corpse|Corpses] near you to recover Life and Mana over a short time per [Corpse] [Consume|Consumed]."
-    },
-    {
-      "entity_slug": "dnt_lightless_stalker",
-      "display_name": "[DNT] Lightless Stalker",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "toxic_domain",
@@ -13457,27 +12027,6 @@
       "description": "Conjure a horrific skull rising from the lightless depths to bite your enemies dealing high damage at target location and leaving [WitheringGround|Withering Ground] in its wake. Targeting close to you will cause you to jump back as you cast."
     },
     {
-      "entity_slug": "dnt_unused_the_flawed_edict",
-      "display_name": "[DNT-UNUSED] The Flawed Edict",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [
-        "mace",
-        "sword",
-        "axe",
-        "dagger",
-        "spear",
-        "staff",
-        "flail"
-      ],
-      "description": "[DNT-UNUSED] An Edict, but flawed."
-    },
-    {
       "entity_slug": "siphon_elements",
       "display_name": "Siphon Elements",
       "entity_type": "skill",
@@ -13526,16 +12075,6 @@
       "description": "Conjure Abyssal spirits to [Hinder] a [Rarity|Rare] [MonsterCategory|Undead] for a duration. If you defeat the [MonsterCategory|Undead] while it is [Hinder|Hindered], it will be captured and stored into a Soul Crystal Skill Gem. The Soul Crystal will allow a wielder of great Abyssal power to summon the bound [MonsterCategory|Undead] as a [Reviving] [Companion]."
     },
     {
-      "entity_slug": "soul_crystal_0",
-      "display_name": "Soul Crystal: {0}",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "abyssal_apparition",
       "display_name": "Abyssal Apparition",
       "entity_type": "skill",
@@ -13546,22 +12085,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "Consume a [Charges|Power Charge] when you cast a damaging [Spell] to trigger an Abyssal Apparition who will also cast that same [Spell] for you. Does not work with [Channelling] Spells, Spells with a Cooldown, [Trigger|Triggered] Spells, Spells granted by items, or Spells which already consume a [Charges|Power Charge]. This Skill is not directly Supportable."
-    },
-    {
-      "entity_slug": "dnt_landslide",
-      "display_name": "[DNT] Landslide",
-      "entity_type": "skill",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "attack",
-        "duration",
-        "melee",
-        "slam"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "creeping_chill",
@@ -14132,16 +12655,6 @@
       "description": "+1% damage (if per 15 strength); +-10% maximum mana"
     },
     {
-      "entity_slug": "dnt_unused_strength_notable",
-      "display_name": "[DNT-UNUSED] Strength Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+20 strength"
-    },
-    {
       "entity_slug": "spritely",
       "display_name": "Spritely",
       "entity_type": "passive",
@@ -14162,16 +12675,6 @@
       "description": "+25 dexterity"
     },
     {
-      "entity_slug": "dnt_unused_dexterity_notable",
-      "display_name": "[DNT-UNUSED] Dexterity Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+15 dexterity"
-    },
-    {
       "entity_slug": "ingenuity",
       "display_name": "Ingenuity",
       "entity_type": "passive",
@@ -14180,16 +12683,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+25 intelligence"
-    },
-    {
-      "entity_slug": "dnt_unused_intelligence_notable",
-      "display_name": "[DNT-UNUSED] Intelligence Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+20 intelligence"
     },
     {
       "entity_slug": "polymathy",
@@ -14365,16 +12858,6 @@
       "description": "+10% dagger damage"
     },
     {
-      "entity_slug": "dnt_unused_dagger_speed_notable",
-      "display_name": "[DNT-UNUSED] Dagger Speed Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+3% dagger attack speed"
-    },
-    {
       "entity_slug": "dagger_critical_chance",
       "display_name": "Dagger Critical Chance",
       "entity_type": "passive",
@@ -14455,16 +12938,6 @@
       "description": "+30% placing traps cooldown recovery"
     },
     {
-      "entity_slug": "dnt_unused_trap_throw_speed_notable",
-      "display_name": "[DNT-UNUSED] Trap Throw Speed Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+12% trap throwing speed"
-    },
-    {
       "entity_slug": "trap_critical_chance",
       "display_name": "Trap Critical Chance",
       "entity_type": "passive",
@@ -14492,7 +12965,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "+4% trap throwing speed"
     },
     {
       "entity_slug": "devestating_devices",
@@ -14735,28 +13208,8 @@
       "description": "+3% claw attack speed"
     },
     {
-      "entity_slug": "dnt_unused_claw_speed_notable",
-      "display_name": "[DNT-UNUSED] Claw Speed Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+3% claw attack speed"
-    },
-    {
       "entity_slug": "claw_critical_chance",
       "display_name": "Claw Critical Chance",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+10% claw critical strike chance"
-    },
-    {
-      "entity_slug": "dnt_unused_claw_critical_chance_notable",
-      "display_name": "[DNT-UNUSED] Claw Critical Chance Notable",
       "entity_type": "passive",
       "class_tags": [],
       "mechanic_tags": [],
@@ -14773,16 +13226,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% claw accuracy rating"
-    },
-    {
-      "entity_slug": "dnt_unused_claw_evasion_with_claws_notable",
-      "display_name": "[DNT-UNUSED] Claw Evasion with Claws Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% claw accuracy rating"
     },
     {
       "entity_slug": "parry_area",
@@ -14873,16 +13316,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+25% parried magnitude"
-    },
-    {
-      "entity_slug": "dnt_unused_buckler_notable",
-      "display_name": "[DNT-UNUSED] Buckler Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+5% block chance"
     },
     {
       "entity_slug": "resolute_reprisal",
@@ -15385,16 +13818,6 @@
       "description": ""
     },
     {
-      "entity_slug": "dnt_unused_axe_projectiles_notable",
-      "display_name": "[DNT-UNUSED] Axe Projectiles Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "mace_damage",
       "display_name": "Mace Damage",
       "entity_type": "passive",
@@ -15483,16 +13906,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10 your mace slam aftershock chance %; +10 your mace strike melee splash chance %"
-    },
-    {
-      "entity_slug": "dnt_unused_mace_area_notable",
-      "display_name": "[DNT-UNUSED] Mace Area Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "flail_damage",
@@ -15635,16 +14048,6 @@
       "description": ""
     },
     {
-      "entity_slug": "dnt_unused_caster_staff_spell_inherent_skills_notable",
-      "display_name": "[DNT-UNUSED] Caster Staff Spell Inherent Skills Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "wand_damage",
       "display_name": "Wand Damage",
       "entity_type": "passive",
@@ -15677,16 +14080,6 @@
     {
       "entity_slug": "wand_spell_inherent_skills",
       "display_name": "Wand Spell Inherent Skills",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+12% damage (if while wielding wand)"
-    },
-    {
-      "entity_slug": "dnt_unused_wand_spell_inherent_skills_notable",
-      "display_name": "[DNT-UNUSED] Wand Spell Inherent Skills Notable",
       "entity_type": "passive",
       "class_tags": [],
       "mechanic_tags": [],
@@ -15747,16 +14140,6 @@
     {
       "entity_slug": "sceptre_spirit",
       "display_name": "Sceptre Spirit",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_sceptre_spirit_notable",
-      "display_name": "[DNT-UNUSED] Sceptre Spirit Notable",
       "entity_type": "passive",
       "class_tags": [],
       "mechanic_tags": [],
@@ -16013,16 +14396,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% critical strike chance while dual wielding"
-    },
-    {
-      "entity_slug": "dnt_unused_dual_wielding_critical_chance_notable",
-      "display_name": "[DNT-UNUSED] Dual Wielding Critical Chance Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% critical strike chance while dual wielding"
     },
     {
       "entity_slug": "armour",
@@ -16305,16 +14678,6 @@
       "description": "+60% evasion rating (if if you have hit an enemy recently); +-5% movement speed penalty (if while performing action)"
     },
     {
-      "entity_slug": "dnt_unused_evasion_notable",
-      "display_name": "[DNT-UNUSED] Evasion Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% evasion rating"
-    },
-    {
       "entity_slug": "leather_bound_gauntlets",
       "display_name": "Leather Bound Gauntlets",
       "entity_type": "passive",
@@ -16383,16 +14746,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+30% maximum energy shield; +4% maximum mana"
-    },
-    {
-      "entity_slug": "dnt_unused_energy_shield_notable",
-      "display_name": "[DNT-UNUSED] Energy Shield Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+8 maximum life % to gain as maximum energy shield"
     },
     {
       "entity_slug": "patient_barrier",
@@ -16685,16 +15038,6 @@
       "description": "+25% physical damage reduction rating; +25% maximum energy shield; +3% movement velocity"
     },
     {
-      "entity_slug": "dnt_unused_energy_shield_and_armour_notable",
-      "display_name": "[DNT-UNUSED] Energy Shield and Armour Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+12% physical damage reduction rating; +12% maximum energy shield"
-    },
-    {
       "entity_slug": "iron_slippers",
       "display_name": "Iron Slippers",
       "entity_type": "passive",
@@ -16755,16 +15098,6 @@
       "description": "+15 armour % applies to fire damage"
     },
     {
-      "entity_slug": "dnt_unused_maximum_fire_resistance_notable",
-      "display_name": "[DNT-UNUSED] Maximum Fire Resistance Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+3 maximum fire damage resistance %"
-    },
-    {
       "entity_slug": "cold_resistance",
       "display_name": "Cold Resistance",
       "entity_type": "passive",
@@ -16783,16 +15116,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+15 armour % applies to cold damage"
-    },
-    {
-      "entity_slug": "dnt_unused_maximum_cold_resistance_notable",
-      "display_name": "[DNT-UNUSED] Maximum Cold Resistance Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+3 maximum cold damage resistance %"
     },
     {
       "entity_slug": "lightning_resistance",
@@ -16815,16 +15138,6 @@
       "description": "+15 armour % applies to lightning damage"
     },
     {
-      "entity_slug": "dnt_unused_maximum_lightning_resistance_notable",
-      "display_name": "[DNT-UNUSED] Maximum Lightning Resistance Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+3 maximum lightning damage resistance %"
-    },
-    {
       "entity_slug": "elemental_resistances",
       "display_name": "Elemental Resistances",
       "entity_type": "passive",
@@ -16833,16 +15146,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+2 resist all elements %"
-    },
-    {
-      "entity_slug": "dnt_unused_elemental_resistances_and_something_else_notable",
-      "display_name": "[DNT-UNUSED] Elemental Resistances and Something Else Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+1 maximum all elemental resistances %"
     },
     {
       "entity_slug": "unnatural_resilience",
@@ -16873,16 +15176,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+1 resist all elements %"
-    },
-    {
-      "entity_slug": "unused_levitation",
-      "display_name": "[UNUSED] Levitation",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+1000 dummy stat display nothing"
     },
     {
       "entity_slug": "ground_effect_effect",
@@ -16923,16 +15216,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+-20% slow potency; +-6% movement speed penalty (if while performing action)"
-    },
-    {
-      "entity_slug": "dnt_unused_ailment_threshold_notable",
-      "display_name": "[DNT-UNUSED] Ailment Threshold Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+40% ailment threshold"
     },
     {
       "entity_slug": "natural_immunity",
@@ -17840,16 +16123,6 @@
       "description": "+-25% chill effectiveness on self; unaffected by chill during dodge roll"
     },
     {
-      "entity_slug": "dnt_unused_extra_freeze_and_chill_threshold_after_being_chilled_or_frozen_notable",
-      "display_name": "[DNT-UNUSED] Extra Freeze and Chill Threshold after being Chilled or Frozen Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "icebreaker",
       "display_name": "Icebreaker",
       "entity_type": "passive",
@@ -18008,16 +16281,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+45 life regeneration rate per minute %; +40% flask life recovery rate"
-    },
-    {
-      "entity_slug": "dnt_unused_life_regeneration_notable",
-      "display_name": "[DNT-UNUSED] Life Regeneration Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+30 life regeneration rate per minute %; +10% life regeneration rate"
     },
     {
       "entity_slug": "hale_heart",
@@ -18330,16 +16593,6 @@
       "description": "+20 life gained on enemy death; +2 recover maximum life on enemy killed chance %"
     },
     {
-      "entity_slug": "dnt_unused_life_on_kill_notable",
-      "display_name": "[DNT-UNUSED] Life on Kill Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "life_flasks",
       "display_name": "Life Flasks",
       "entity_type": "passive",
@@ -18508,16 +16761,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% guard flask effect"
-    },
-    {
-      "entity_slug": "dnt_unused_guard_flask_notable",
-      "display_name": "[DNT-UNUSED] Guard Flask Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% guard flask effect"
     },
     {
       "entity_slug": "fortified_brews",
@@ -19130,16 +17373,6 @@
       "description": "blind enemies when they stun you; +20% blind effect"
     },
     {
-      "entity_slug": "dnt_unused_attack_speed_notable",
-      "display_name": "[DNT-UNUSED] Attack Speed Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+8% attack speed"
-    },
-    {
       "entity_slug": "blind_chance",
       "display_name": "Blind Chance",
       "entity_type": "passive",
@@ -19278,16 +17511,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+5% cast speed; +15% mana regeneration rate; +10 intelligence"
-    },
-    {
-      "entity_slug": "dnt_unused_cast_speed_notable",
-      "display_name": "[DNT-UNUSED] Cast Speed Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "hastening_barrier",
@@ -19857,7 +18080,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "+15% chill effect"
     },
     {
       "entity_slug": "chilled_to_the_bone",
@@ -20050,16 +18273,6 @@
       "description": "+10 lightning damage resistance %; +2% maximum lightning resistance (if if at least 5 green supports socketed)"
     },
     {
-      "entity_slug": "dnt_unused_shock_notable",
-      "display_name": "[DNT-UNUSED] Shock Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+40% shock chance"
-    },
-    {
       "entity_slug": "poison_chance",
       "display_name": "Poison Chance",
       "entity_type": "passive",
@@ -20200,28 +18413,8 @@
       "description": ""
     },
     {
-      "entity_slug": "dnt_unused_maim_effect_notable",
-      "display_name": "[DNT-UNUSED] Maim Effect Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "damage_against_maimed_enemies",
       "display_name": "Damage against Maimed Enemies",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_damage_against_maimed_enemies_notable",
-      "display_name": "[DNT-UNUSED] Damage against Maimed Enemies Notable",
       "entity_type": "passive",
       "class_tags": [],
       "mechanic_tags": [],
@@ -21160,16 +19353,6 @@
       "description": "+20% minion critical strike chance"
     },
     {
-      "entity_slug": "dnt_unused_minion_critical_multiplier_notable",
-      "display_name": "[DNT-UNUSED] Minion Critical Multiplier Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25 minion critical strike multiplier +"
-    },
-    {
       "entity_slug": "grip_of_evil",
       "display_name": "Grip of Evil",
       "entity_type": "passive",
@@ -21198,16 +19381,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+15 minion critical strike multiplier +"
-    },
-    {
-      "entity_slug": "dnt_unused_minion_critical_damage_notable",
-      "display_name": "[DNT-UNUSED] Minion Critical Damage Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25 minion critical strike multiplier +"
     },
     {
       "entity_slug": "restless_dead",
@@ -21540,16 +19713,6 @@
       "description": "minions are gigantic; +-25% reservation efficiency (if of minion skills)"
     },
     {
-      "entity_slug": "dnt_unused_minion_reservation_notable",
-      "display_name": "[DNT-UNUSED] Minion Reservation Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% minion damage"
-    },
-    {
       "entity_slug": "spell_damage",
       "display_name": "Spell Damage",
       "entity_type": "passive",
@@ -21618,16 +19781,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+20% spell damage; +15% skill effect duration"
-    },
-    {
-      "entity_slug": "dnt_unused_spells_notable",
-      "display_name": "[DNT-UNUSED] Spells Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% spell damage"
     },
     {
       "entity_slug": "potent_incantation",
@@ -21798,16 +19951,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+3% attack speed (if per enemy in close range); +10 dexterity"
-    },
-    {
-      "entity_slug": "dnt_unused_melee_notable",
-      "display_name": "[DNT-UNUSED] Melee Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+10% attack area of effect; +10% melee damage; +20% melee hit damage stun multiplier"
     },
     {
       "entity_slug": "unerring_impact",
@@ -22882,16 +21025,6 @@
       "description": "+5 non skill base all damage % to gain as cold; +20% hit damage freeze multiplier"
     },
     {
-      "entity_slug": "dnt_unused_cold_notable",
-      "display_name": "[DNT-UNUSED] Cold Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "attack_cold_damage_and_freeze_buildup",
       "display_name": "Attack Cold Damage and Freeze Buildup",
       "entity_type": "passive",
@@ -23847,16 +21980,6 @@
       "description": "+30% non damaging ailment effect; +10% elemental status ailment duration"
     },
     {
-      "entity_slug": "dnt_unused_elemental_notable",
-      "display_name": "[DNT-UNUSED] Elemental Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "all_natural",
       "display_name": "All Natural",
       "entity_type": "passive",
@@ -24075,16 +22198,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+8% spirit"
-    },
-    {
-      "entity_slug": "dnt_unused_spirit_notable",
-      "display_name": "[DNT-UNUSED] Spirit Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+10% spirit"
     },
     {
       "entity_slug": "changing_times",
@@ -24307,16 +22420,6 @@
       "description": "+18 skill cost life instead of mana %; +15% attack skill cost efficiency"
     },
     {
-      "entity_slug": "dnt_unused_reduced_attack_cost_notable",
-      "display_name": "[DNT-UNUSED] Reduced Attack Cost Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "mana_leech_and_cold_resistance",
       "display_name": "Mana Leech and Cold Resistance",
       "entity_type": "passive",
@@ -24325,16 +22428,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% mana leech amount; +5 cold damage resistance %"
-    },
-    {
-      "entity_slug": "dnt_unused_mana_leech_notable",
-      "display_name": "[DNT-UNUSED] Mana Leech Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+20% mana leech amount; +10 intelligence"
     },
     {
       "entity_slug": "suffusion",
@@ -24455,16 +22548,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+2 recover % maximum life on mana flask use; +6 generate x charges for mana flasks per minute"
-    },
-    {
-      "entity_slug": "dnt_unused_mana_on_kill_notable",
-      "display_name": "[DNT-UNUSED] Mana on Kill Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+2 maximum mana % gained on kill"
     },
     {
       "entity_slug": "accuracy_and_critical_chance",
@@ -25130,16 +23213,6 @@
       "description": "link skills can target minions"
     },
     {
-      "entity_slug": "dnt_unused_links_notable",
-      "display_name": "[DNT-UNUSED] Links Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "shapeshifted_damage",
       "display_name": "Shapeshifted Damage",
       "entity_type": "passive",
@@ -25178,16 +23251,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% skill speed (if while shapeshifted)"
-    },
-    {
-      "entity_slug": "dnt_unused_shapeshifting_notable",
-      "display_name": "[DNT-UNUSED] Shapeshifting Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+12% damage (if while shapeshifted)"
     },
     {
       "entity_slug": "shapeshifted_elemental_penetration",
@@ -25740,16 +23803,6 @@
       "description": "+5 spells cost life instead of mana %; +6% spell damage (if with spells that cost life)"
     },
     {
-      "entity_slug": "dnt_unused_life_costs_notable",
-      "display_name": "[DNT-UNUSED] Life Costs Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+10 spells cost life instead of mana %"
-    },
-    {
       "entity_slug": "critical_damage_vs_full_life",
       "display_name": "Critical Damage vs Full Life",
       "entity_type": "passive",
@@ -25788,16 +23841,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+40% critical strike chance against enemies on full life; +80% damage (if vs enemies on full life); cannot be blinded while on full life"
-    },
-    {
-      "entity_slug": "dnt_unused_enemies_on_full_life_notable",
-      "display_name": "[DNT-UNUSED] Enemies on Full Life Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+50 critical strike multiplier vs enemies on full life +"
     },
     {
       "entity_slug": "damage_against_enemies_on_low_life",
@@ -25840,16 +23883,6 @@
       "description": "+120% damage vs enemies on low life; +5% damage taken (if on low life)"
     },
     {
-      "entity_slug": "dnt_unused_enemies_on_low_life_notable",
-      "display_name": "[DNT-UNUSED] Enemies on Low Life Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+75% damage vs enemies on low life"
-    },
-    {
       "entity_slug": "hidden_reserves",
       "display_name": "Hidden Reserves",
       "entity_type": "passive",
@@ -25880,26 +23913,6 @@
       "description": "+10 damage removed from mana before life %"
     },
     {
-      "entity_slug": "dnt_unused_damage_from_mana_notable",
-      "display_name": "[DNT-UNUSED] Damage from Mana Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+10 damage removed from mana before life %"
-    },
-    {
-      "entity_slug": "dnt_unused_ranger_minions",
-      "display_name": "[DNT-UNUSED] Ranger Minions",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "undead_spirit_cost",
       "display_name": "Undead Spirit Cost",
       "entity_type": "passive",
@@ -25910,38 +23923,8 @@
       "description": ""
     },
     {
-      "entity_slug": "dnt_unused_undead_spirit_cost_notable",
-      "display_name": "[DNT-UNUSED] Undead Spirit Cost Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "undead_damage",
       "display_name": "Undead Damage",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_undead_damage_notable",
-      "display_name": "[DNT-UNUSED] Undead Damage Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_undead_resurrection_chance_notable",
-      "display_name": "[DNT-UNUSED] Undead Resurrection Chance Notable",
       "entity_type": "passive",
       "class_tags": [],
       "mechanic_tags": [],
@@ -26030,16 +24013,6 @@
       "description": "companions gain your strength; +15 strength"
     },
     {
-      "entity_slug": "dnt_unused_duelist_minion_notable",
-      "display_name": "[DNT-UNUSED] Duelist Minion Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% minion damage"
-    },
-    {
       "entity_slug": "unimpeded",
       "display_name": "Unimpeded",
       "entity_type": "passive",
@@ -26078,16 +24051,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+15% attack speed (if if have been hit recently); +-8% slow potency"
-    },
-    {
-      "entity_slug": "dnt_unused_duration_spells_notable",
-      "display_name": "[DNT-UNUSED] Duration Spells Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "debuff_expiry",
@@ -26138,16 +24101,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% debuff slow magnitude; +20% skill effect duration"
-    },
-    {
-      "entity_slug": "dnt_unused_slowed_enemies_notable",
-      "display_name": "[DNT-UNUSED] Slowed Enemies Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% damage"
     },
     {
       "entity_slug": "slow_effect_and_hinder_duration",
@@ -26270,16 +24223,6 @@
       "description": "+40% stun threshold; +20% stun threshold (if when not stunned recently)"
     },
     {
-      "entity_slug": "dnt_unused_weapon_swapping_notable",
-      "display_name": "[DNT-UNUSED] Weapon Swapping Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+0% weapon swap speed"
-    },
-    {
       "entity_slug": "catalysis",
       "display_name": "Catalysis",
       "entity_type": "passive",
@@ -26330,28 +24273,8 @@
       "description": ""
     },
     {
-      "entity_slug": "dnt_unused_long_range_projectiles_notable",
-      "display_name": "[DNT-UNUSED] Long range projectiles Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "stealth",
       "display_name": "Stealth",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_stealth_notable",
-      "display_name": "[DNT-UNUSED] Stealth Notable",
       "entity_type": "passive",
       "class_tags": [],
       "mechanic_tags": [],
@@ -26468,16 +24391,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% skill speed; +3% movement velocity"
-    },
-    {
-      "entity_slug": "dnt_unused_movement_speed_notable",
-      "display_name": "[DNT-UNUSED] Movement Speed Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+4% movement velocity"
     },
     {
       "entity_slug": "adrenaline_rush",
@@ -26770,16 +24683,6 @@
       "description": "+-10% spell area of effect; +35% spell area damage"
     },
     {
-      "entity_slug": "dnt_unused_area_spells_notable",
-      "display_name": "[DNT-UNUSED] Area Spells Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "spell_damage_and_projectile_speed",
       "display_name": "Spell Damage and Projectile Speed",
       "entity_type": "passive",
@@ -26860,28 +24763,8 @@
       "description": "+10% skill area of effect; +12% hit damage immobilisation multiplier"
     },
     {
-      "entity_slug": "dnt_unused_area_of_effect_notable",
-      "display_name": "[DNT-UNUSED] Area of Effect Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "killing_sprees",
       "display_name": "Killing Sprees",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_killing_sprees_notable",
-      "display_name": "[DNT-UNUSED] Killing Sprees Notable",
       "entity_type": "passive",
       "class_tags": [],
       "mechanic_tags": [],
@@ -26908,16 +24791,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+25% damage (if to rare and unique enemies); +20% accuracy rating (if vs rare or unique enemy); +20% ailment chance (if vs rare or unique enemy)"
-    },
-    {
-      "entity_slug": "dnt_unused_boss_slaying_notable",
-      "display_name": "[DNT-UNUSED] Boss Slaying Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+33% damage (if to rare and unique enemies)"
     },
     {
       "entity_slug": "culling_strike_threshold",
@@ -26980,16 +24853,6 @@
       "description": ""
     },
     {
-      "entity_slug": "dnt_unused_rapid_hit_attacks_notable",
-      "display_name": "[DNT-UNUSED] Rapid Hit Attacks Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "ailment_effect",
       "display_name": "Ailment Effect",
       "entity_type": "passive",
@@ -26998,16 +24861,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+12% ailment effect"
-    },
-    {
-      "entity_slug": "dnt_unused_slow_attacks_notable",
-      "display_name": "[DNT-UNUSED] Slow Attacks Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+15% attack damage; +-1% attack speed"
     },
     {
       "entity_slug": "crushing_verdict",
@@ -27230,16 +25083,6 @@
       "description": "+1000 life leech from all thorns damage permyriad"
     },
     {
-      "entity_slug": "dnt_unused_thorns_notable",
-      "display_name": "[DNT-UNUSED] Thorns Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+40% thorns damage"
-    },
-    {
       "entity_slug": "thornhide",
       "display_name": "Thornhide",
       "entity_type": "passive",
@@ -27308,16 +25151,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+20% attack speed (if while surrounded)"
-    },
-    {
-      "entity_slug": "dnt_unused_being_surrounded_notable",
-      "display_name": "[DNT-UNUSED] Being Surrounded Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "armour_and_evasion_while_surrounded",
@@ -27470,16 +25303,6 @@
       "description": ""
     },
     {
-      "entity_slug": "dnt_unused_impale_notable",
-      "display_name": "[DNT-UNUSED] Impale Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "sentinels",
       "display_name": "Sentinels",
       "entity_type": "passive",
@@ -27520,28 +25343,8 @@
       "description": "+25% minion maximum life; +10% block chance"
     },
     {
-      "entity_slug": "dnt_unused_sentinels_notable",
-      "display_name": "[DNT-UNUSED] Sentinels Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% minion damage"
-    },
-    {
       "entity_slug": "golems",
       "display_name": "Golems",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_golems_notable",
-      "display_name": "[DNT-UNUSED] Golems Notable",
       "entity_type": "passive",
       "class_tags": [],
       "mechanic_tags": [],
@@ -27580,16 +25383,6 @@
       "description": "+30% your aftershock area of effect"
     },
     {
-      "entity_slug": "dnt_unused_slams_notable",
-      "display_name": "[DNT-UNUSED] Slams Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "behemoth",
       "display_name": "Behemoth",
       "entity_type": "passive",
@@ -27598,16 +25391,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+3% maximum life; +8% attack area of effect; +5 your slam aftershock chance %"
-    },
-    {
-      "entity_slug": "dnt_unused_slam_area_notable",
-      "display_name": "[DNT-UNUSED] Slam Area Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "strike_damage",
@@ -27638,16 +25421,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% accuracy rating"
-    },
-    {
-      "entity_slug": "dnt_unused_strikes_notable",
-      "display_name": "[DNT-UNUSED] Strikes Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+30% melee damage"
     },
     {
       "entity_slug": "hold_focus",
@@ -27740,16 +25513,6 @@
       "description": "+60% mana cost efficiency (if of mark skills); +4% movement speed (if if used a mark recently)"
     },
     {
-      "entity_slug": "dnt_unused_marks_notable",
-      "display_name": "[DNT-UNUSED] Marks Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+12% mark effect"
-    },
-    {
       "entity_slug": "unsight",
       "display_name": "Unsight",
       "entity_type": "passive",
@@ -27828,16 +25591,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+15 chance to not consume corpse %"
-    },
-    {
-      "entity_slug": "dnt_unused_corpses_notable",
-      "display_name": "[DNT-UNUSED] Corpses Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "offering_area",
@@ -28350,16 +26103,6 @@
       "description": "+20% knockback distance; +20% hit damage stun multiplier; +20% physical damage"
     },
     {
-      "entity_slug": "dnt_unused_knockback_notable",
-      "display_name": "[DNT-UNUSED] Knockback Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+20% knockback distance"
-    },
-    {
       "entity_slug": "clear_space",
       "display_name": "Clear Space",
       "entity_type": "passive",
@@ -28430,16 +26173,6 @@
       "description": "+25 physical damage % to gain as fire vs heavy stunned"
     },
     {
-      "entity_slug": "dnt_unused_fire_penetration_notable",
-      "display_name": "[DNT-UNUSED] Fire Penetration Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+15 reduce enemy fire resistance %"
-    },
-    {
       "entity_slug": "shattered_crystal",
       "display_name": "Shattered Crystal",
       "entity_type": "passive",
@@ -28508,16 +26241,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+18 reduce enemy cold resistance %; +6 non skill base elemental damage % to gain as cold"
-    },
-    {
-      "entity_slug": "dnt_unused_cold_penetration_notable",
-      "display_name": "[DNT-UNUSED] Cold Penetration Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+15 reduce enemy cold resistance %"
     },
     {
       "entity_slug": "overload",
@@ -28602,26 +26325,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+30% hit damage electrocute multiplier; +5% skill speed"
-    },
-    {
-      "entity_slug": "dnt_unused_lightning_penetration_notable",
-      "display_name": "[DNT-UNUSED] Lightning Penetration Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+15 reduce enemy lightning resistance %"
-    },
-    {
-      "entity_slug": "dnt_unused_elemental_penetration_notable",
-      "display_name": "[DNT-UNUSED] Elemental Penetration Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+8 reduce enemy elemental resistance %"
     },
     {
       "entity_slug": "attack_damage_and_combo",
@@ -28994,16 +26697,6 @@
       "description": "maim enemy on full armour break; broken armour enemies cannot regenerate life"
     },
     {
-      "entity_slug": "dnt_unused_armour_break_notable",
-      "display_name": "[DNT-UNUSED] Armour Break Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+50% armour break amount"
-    },
-    {
       "entity_slug": "jagged_ground_effect",
       "display_name": "Jagged Ground Effect",
       "entity_type": "passive",
@@ -29042,16 +26735,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% jagged ground enemy damage taken"
-    },
-    {
-      "entity_slug": "dnt_unused_jagged_ground_notable",
-      "display_name": "[DNT-UNUSED] Jagged Ground Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+10% jagged ground effect"
     },
     {
       "entity_slug": "distracting_presence",
@@ -29104,16 +26787,6 @@
       "description": "+20% damaging ailment effect; cannot have more than 1 damaging ailment"
     },
     {
-      "entity_slug": "dnt_unused_ailment_chance_notable",
-      "display_name": "[DNT-UNUSED] Ailment Chance Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+40% ailment chance"
-    },
-    {
       "entity_slug": "exposed_wounds",
       "display_name": "Exposed Wounds",
       "entity_type": "passive",
@@ -29152,16 +26825,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+5% ailment effect; +5% damaging ailment duration"
-    },
-    {
-      "entity_slug": "dnt_unused_ailment_effect_notable",
-      "display_name": "[DNT-UNUSED] Ailment Effect Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+25% ailment effect"
     },
     {
       "entity_slug": "fast_acting_toxins",
@@ -29412,16 +27075,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+4 enemies are maimed for x seconds after becoming unpinned; +40% attack damage (if vs maimed enemies)"
-    },
-    {
-      "entity_slug": "dnt_unused_charms_notable",
-      "display_name": "[DNT-UNUSED] Charms Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+10% charm effect"
     },
     {
       "entity_slug": "primal_protection",
@@ -29742,16 +27395,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+5% life and mana regeneration rate (if for each minion in your presence capped); +15% minion maximum life"
-    },
-    {
-      "entity_slug": "dnt_unused_hazards_notable",
-      "display_name": "[DNT-UNUSED] Hazards Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+1% hazard damage"
     },
     {
       "entity_slug": "shredding_contraptions",
@@ -31131,7 +28774,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: totems action speed cannot be modified below base / +30 chance to summon two totems % / +5 damage removed from your nearest totem before life or es % / totems taunt enemies around them for x seconds when summoned / +4000 increased critical strike chance buff for x milliseconds on placing a totem / +3000 ancestor totem buff linger time ms"
     },
     {
       "entity_slug": "attack_added_lighting_damage",
@@ -31161,7 +28804,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +40 non skill base physical damage % to convert to lightning / +60% critical strike chance (if vs exposed) / +15 shock maximum magnitude + / +10 shock enemies in 150cm radius on shock chance % / additive mana modifiers apply to shock effect at 30% value / -1 enemies extra damage rolls with lightning damage while you are shocked"
     },
     {
       "entity_slug": "cower_before_the_first_ones",
@@ -31181,7 +28824,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +18 passive mastery exposure you inflict has minimum resistance lower % / +-60% elemental reflect damage taken / +-50% exposure effect on you / +25 treat enemy resistances as negated on elemental damage hit % chance / dummy stat display nothing / +3 dummy stat display nothing"
     },
     {
       "entity_slug": "bow_attack_speed",
@@ -31211,7 +28854,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +100% blink and mirror arrow cooldown speed / +20% area of effect (if while wielding bow) / +100% arrow critical strike chance (if max as distance travelled increases) / +100% mirage archer duration / accuracy rating +100 per green socket on bow / arrow speed additive modifiers also apply to bow damage"
     },
     {
       "entity_slug": "calculated_hunter",
@@ -31231,7 +28874,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +50% non damaging ailment effect (if with critical strikes) / critical strike multiplier +25 vs unique enemies / +100% stun duration on critical strike / +3 critical support gem level + / +30 self critical strike multiplier -% / +150% critical strike chance against enemies on full life"
     },
     {
       "entity_slug": "rough_carapace",
@@ -31251,7 +28894,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: totems action speed cannot be modified below base / +30 chance to summon two totems % / +5 damage removed from your nearest totem before life or es % / totems taunt enemies around them for x seconds when summoned / +4000 increased critical strike chance buff for x milliseconds on placing a totem / +3000 ancestor totem buff linger time ms"
     },
     {
       "entity_slug": "limitless_pursuit",
@@ -31271,7 +28914,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: cannot be light stunned if have not been hit recently / +40% evasion (if if hit recently) / +10% movement speed (if if have not taken damage recently) / +30 avoid bleed %; +30 avoid poison %; +30 avoid impale % / +15 dummy stat display nothing / +100% body armour evasion rating"
     },
     {
       "entity_slug": "physical_mastery",
@@ -31281,7 +28924,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +-60% physical reflect damage taken / +10 dummy stat display nothing / cannot be stunned by hits of only physical damage / +40 hits ignore enemy monster physical damage reduction % chance / +40% physical damage (if if skill costs life) / +6% bleeding effect (if per impale on enemy)"
     },
     {
       "entity_slug": "deadly_thorns",
@@ -31321,7 +28964,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +30% final repeat of spells area of effect / +25% spell damage (if final if you have been stunned while casting recently) / +6% cast speed (if per num unique spells cast recently) / maximum intensify stacks / support anticipation rapid fire count / +25 open nearby chests on cast chance %"
     },
     {
       "entity_slug": "call_upon_the_deep",
@@ -31341,7 +28984,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +18 passive mastery exposure you inflict has minimum resistance lower % / +-60% elemental reflect damage taken / +-50% exposure effect on you / +25 treat enemy resistances as negated on elemental damage hit % chance / dummy stat display nothing / +3 dummy stat display nothing"
     },
     {
       "entity_slug": "first_sting",
@@ -31361,7 +29004,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +300 dummy stat display nothing / +20 faster poison % / +12% poison effect (if vs bleeding enemies) / dummy stat display nothing / +3 recover % maximum life on killing poisoned enemy / +20% plague bearer maximum stored poison damage"
     },
     {
       "entity_slug": "bleed_duration",
@@ -31391,7 +29034,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: no extra bleeding damage while moving / +60 dummy stat display nothing / +60% bleed duration / +80% critical strike chance (if vs bleeding enemies) / +3% bleeding effect (if per endurance charge)"
     },
     {
       "entity_slug": "forbidden_path",
@@ -31411,7 +29054,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +20 minions attacks overwhelm % physical damage reduction / +8 minions penetrate elemental resistances % vs cursed enemies / +25 dummy stat display nothing / +30% minion skill area of effect / +250 minion accuracy rating / +20% offering spells effect"
     },
     {
       "entity_slug": "life_costs_and_regeneration",
@@ -31451,7 +29094,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +4% life mastery count maximum life (if final) / +15% maximum life (if if no life tags on body armour) / +20 maximum life / +55 low life threshold % override / +90 full life threshold % override / +30 skill cost life instead of mana %"
     },
     {
       "entity_slug": "armour_and_block_chance",
@@ -31501,7 +29144,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +2 chance to defend with 150% armour % per 5% missing energy shield / +5 recover % energy shield over 1 second when you take physical damage from enemy hits / +10 armour % applies to chaos damage / +20 dummy stat display nothing / +100% armour and energy shield (if from body armour if gloves helmet boots have armour and energy shield) / +10 physical damage taken % as chaos"
     },
     {
       "entity_slug": "armour_while_bleeding",
@@ -31531,7 +29174,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: X to armour per 2 strength / +30 self critical strike multiplier -% / +20 chance to double armour effect on hit % / +1 maximum all elemental resistances % if all equipment grants armour / +20% armour (if per second while stationary up to 100) / +100% armour from gloves and boots"
     },
     {
       "entity_slug": "physical_and_lightning_damage",
@@ -31954,16 +29597,6 @@
       "description": "+20% damage (if for 4 seconds on crit)"
     },
     {
-      "entity_slug": "dnt_unused_placeholder_notable",
-      "display_name": "[DNT-UNUSED] Placeholder Notable",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+60 life regeneration rate per minute %; +20% mana regeneration rate; +20 strength and intelligence"
-    },
-    {
       "entity_slug": "resolute_technique",
       "display_name": "Resolute Technique",
       "entity_type": "passive",
@@ -32102,16 +29735,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "keystone conduit"
-    },
-    {
-      "entity_slug": "unused_ghost_reaver",
-      "display_name": "[UNUSED] Ghost Reaver",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "convert all life leech to energy shield leech"
     },
     {
       "entity_slug": "resonance",
@@ -32321,7 +29944,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +3 melee range + / melee attack number of spirit strikes / remove damaging ailments on swapping stance; +6000 stance swap cooldown modifier ms / dummy stat display nothing / +5% attack speed (if per enemy in close range) / nearby enemies are intimidated while you have rage"
     },
     {
       "entity_slug": "warlord",
@@ -32594,16 +30217,6 @@
       "description": ""
     },
     {
-      "entity_slug": "dnt_unused",
-      "display_name": "[DNT] Unused",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "assassin",
       "display_name": "Assassin",
       "entity_type": "passive",
@@ -32792,16 +30405,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+25 corpses in your area of effect explode dealing % maximum life physical damage on warcry; warcries bypass cooldown"
-    },
-    {
-      "entity_slug": "dnt_unused_greatwolf_s_howl",
-      "display_name": "[DNT - UNUSED] Greatwolf's Howl",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "warcries bypass cooldown"
     },
     {
       "entity_slug": "answered_call",
@@ -33022,246 +30625,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "body armour grants unaffected by damaging ailments; +200 physical damage reduction rating no display"
-    },
-    {
-      "entity_slug": "dnt_unused_marauder1notable1",
-      "display_name": "[DNT-UNUSED] Marauder1Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder1notable2",
-      "display_name": "[DNT-UNUSED] Marauder1Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder1notable3",
-      "display_name": "[DNT-UNUSED] Marauder1Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder1notable4",
-      "display_name": "[DNT-UNUSED] Marauder1Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder1notable5",
-      "display_name": "[DNT-UNUSED] Marauder1Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder1notable6",
-      "display_name": "[DNT-UNUSED] Marauder1Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder1notable7",
-      "display_name": "[DNT-UNUSED] Marauder1Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder1notable8",
-      "display_name": "[DNT-UNUSED] Marauder1Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder2notable1",
-      "display_name": "[DNT-UNUSED] Marauder2Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder2notable2",
-      "display_name": "[DNT-UNUSED] Marauder2Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder2notable3",
-      "display_name": "[DNT-UNUSED] Marauder2Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder2notable4",
-      "display_name": "[DNT-UNUSED] Marauder2Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder2notable5",
-      "display_name": "[DNT-UNUSED] Marauder2Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder2notable6",
-      "display_name": "[DNT-UNUSED] Marauder2Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder2notable7",
-      "display_name": "[DNT-UNUSED] Marauder2Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder2notable8",
-      "display_name": "[DNT-UNUSED] Marauder2Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder3notable1",
-      "display_name": "[DNT-UNUSED] Marauder3Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder3notable2",
-      "display_name": "[DNT-UNUSED] Marauder3Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder3notable3",
-      "display_name": "[DNT-UNUSED] Marauder3Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder3notable4",
-      "display_name": "[DNT-UNUSED] Marauder3Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder3notable5",
-      "display_name": "[DNT-UNUSED] Marauder3Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder3notable6",
-      "display_name": "[DNT-UNUSED] Marauder3Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder3notable7",
-      "display_name": "[DNT-UNUSED] Marauder3Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_marauder3notable8",
-      "display_name": "[DNT-UNUSED] Marauder3Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "life",
@@ -34071,246 +31434,6 @@
       "description": "\"Yes... they fell by my blade and fire lashed them for their betrayal! No dekhara is exempt from fighting back the Winter before us. Lest they too know the Doom of the Desert!\" \r\n\r\nRuzhan fumed at Varashta, in pure defiance."
     },
     {
-      "entity_slug": "dnt_unused_duelist1notable1",
-      "display_name": "[DNT-UNUSED] Duelist1Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist1notable2",
-      "display_name": "[DNT-UNUSED] Duelist1Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist1notable3",
-      "display_name": "[DNT-UNUSED] Duelist1Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist1notable4",
-      "display_name": "[DNT-UNUSED] Duelist1Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist1notable5",
-      "display_name": "[DNT-UNUSED] Duelist1Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist1notable6",
-      "display_name": "[DNT-UNUSED] Duelist1Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist1notable7",
-      "display_name": "[DNT-UNUSED] Duelist1Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist1notable8",
-      "display_name": "[DNT-UNUSED] Duelist1Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist2notable1",
-      "display_name": "[DNT-UNUSED] Duelist2Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist2notable2",
-      "display_name": "[DNT-UNUSED] Duelist2Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist2notable3",
-      "display_name": "[DNT-UNUSED] Duelist2Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist2notable4",
-      "display_name": "[DNT-UNUSED] Duelist2Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist2notable5",
-      "display_name": "[DNT-UNUSED] Duelist2Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist2notable6",
-      "display_name": "[DNT-UNUSED] Duelist2Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist2notable7",
-      "display_name": "[DNT-UNUSED] Duelist2Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist2notable8",
-      "display_name": "[DNT-UNUSED] Duelist2Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist3notable1",
-      "display_name": "[DNT-UNUSED] Duelist3Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist3notable2",
-      "display_name": "[DNT-UNUSED] Duelist3Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist3notable3",
-      "display_name": "[DNT-UNUSED] Duelist3Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist3notable4",
-      "display_name": "[DNT-UNUSED] Duelist3Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist3notable5",
-      "display_name": "[DNT-UNUSED] Duelist3Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist3notable6",
-      "display_name": "[DNT-UNUSED] Duelist3Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist3notable7",
-      "display_name": "[DNT-UNUSED] Duelist3Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_duelist3notable8",
-      "display_name": "[DNT-UNUSED] Duelist3Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "a_solid_plan",
       "display_name": "A Solid Plan",
       "entity_type": "passive",
@@ -34631,246 +31754,6 @@
       "description": "+3 maximum fire resistance +1 per X corresponding support; +3 maximum lightning resistance +1 per X corresponding support; +3 maximum cold resistance +1 per X corresponding support"
     },
     {
-      "entity_slug": "dnt_unused_templar1notable1",
-      "display_name": "[DNT-UNUSED] Templar1Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar1notable2",
-      "display_name": "[DNT-UNUSED] Templar1Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar1notable3",
-      "display_name": "[DNT-UNUSED] Templar1Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar1notable4",
-      "display_name": "[DNT-UNUSED] Templar1Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar1notable5",
-      "display_name": "[DNT-UNUSED] Templar1Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar1notable6",
-      "display_name": "[DNT-UNUSED] Templar1Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar1notable7",
-      "display_name": "[DNT-UNUSED] Templar1Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar1notable8",
-      "display_name": "[DNT-UNUSED] Templar1Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar2notable1",
-      "display_name": "[DNT-UNUSED] Templar2Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar2notable2",
-      "display_name": "[DNT-UNUSED] Templar2Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar2notable3",
-      "display_name": "[DNT-UNUSED] Templar2Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar2notable4",
-      "display_name": "[DNT-UNUSED] Templar2Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar2notable5",
-      "display_name": "[DNT-UNUSED] Templar2Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar2notable6",
-      "display_name": "[DNT-UNUSED] Templar2Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar2notable7",
-      "display_name": "[DNT-UNUSED] Templar2Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar2notable8",
-      "display_name": "[DNT-UNUSED] Templar2Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar3notable1",
-      "display_name": "[DNT-UNUSED] Templar3Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar3notable2",
-      "display_name": "[DNT-UNUSED] Templar3Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar3notable3",
-      "display_name": "[DNT-UNUSED] Templar3Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar3notable4",
-      "display_name": "[DNT-UNUSED] Templar3Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar3notable5",
-      "display_name": "[DNT-UNUSED] Templar3Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar3notable6",
-      "display_name": "[DNT-UNUSED] Templar3Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar3notable7",
-      "display_name": "[DNT-UNUSED] Templar3Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_templar3notable8",
-      "display_name": "[DNT-UNUSED] Templar3Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "passive_point",
       "display_name": "Passive Point",
       "entity_type": "passive",
@@ -34878,7 +31761,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "+1 Passive Skill Point"
     },
     {
       "entity_slug": "critical_damage_bonus_on_you",
@@ -35059,326 +31942,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "ascendancy shaman gain additional socketable mods"
-    },
-    {
-      "entity_slug": "dnt_unused_druid3notable1",
-      "display_name": "[DNT-UNUSED] Druid3Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_druid3notable2",
-      "display_name": "[DNT-UNUSED] Druid3Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_druid3notable3",
-      "display_name": "[DNT-UNUSED] Druid3Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_druid3notable4",
-      "display_name": "[DNT-UNUSED] Druid3Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_druid3notable5",
-      "display_name": "[DNT-UNUSED] Druid3Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_druid3notable6",
-      "display_name": "[DNT-UNUSED] Druid3Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_druid3notable7",
-      "display_name": "[DNT-UNUSED] Druid3Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_druid3notable8",
-      "display_name": "[DNT-UNUSED] Druid3Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow1notable1",
-      "display_name": "[DNT-UNUSED] Shadow1Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow1notable2",
-      "display_name": "[DNT-UNUSED] Shadow1Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow1notable3",
-      "display_name": "[DNT-UNUSED] Shadow1Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow1notable4",
-      "display_name": "[DNT-UNUSED] Shadow1Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow1notable5",
-      "display_name": "[DNT-UNUSED] Shadow1Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow1notable6",
-      "display_name": "[DNT-UNUSED] Shadow1Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow1notable7",
-      "display_name": "[DNT-UNUSED] Shadow1Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow1notable8",
-      "display_name": "[DNT-UNUSED] Shadow1Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow2notable1",
-      "display_name": "[DNT-UNUSED] Shadow2Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow2notable2",
-      "display_name": "[DNT-UNUSED] Shadow2Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow2notable3",
-      "display_name": "[DNT-UNUSED] Shadow2Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow2notable4",
-      "display_name": "[DNT-UNUSED] Shadow2Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow2notable5",
-      "display_name": "[DNT-UNUSED] Shadow2Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow2notable6",
-      "display_name": "[DNT-UNUSED] Shadow2Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow2notable7",
-      "display_name": "[DNT-UNUSED] Shadow2Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow2notable8",
-      "display_name": "[DNT-UNUSED] Shadow2Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow3notable1",
-      "display_name": "[DNT-UNUSED] Shadow3Notable1",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow3notable2",
-      "display_name": "[DNT-UNUSED] Shadow3Notable2",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow3notable3",
-      "display_name": "[DNT-UNUSED] Shadow3Notable3",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow3notable4",
-      "display_name": "[DNT-UNUSED] Shadow3Notable4",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow3notable5",
-      "display_name": "[DNT-UNUSED] Shadow3Notable5",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow3notable6",
-      "display_name": "[DNT-UNUSED] Shadow3Notable6",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow3notable7",
-      "display_name": "[DNT-UNUSED] Shadow3Notable7",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "dnt_unused_shadow3notable8",
-      "display_name": "[DNT-UNUSED] Shadow3Notable8",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "energy_shield_recharge_rate",
@@ -35760,7 +32323,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "+1 Passive Skill Point"
     },
     {
       "entity_slug": "running_assault",
@@ -35920,7 +32483,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "+4 Passive Skill Point"
     },
     {
       "entity_slug": "thawing_campfire",
@@ -35940,7 +32503,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "+4 Passive Skill Point"
     },
     {
       "entity_slug": "traveller_s_wisdom",
@@ -36046,16 +32609,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "life leech also recovers based on elemental damage types"
-    },
-    {
-      "entity_slug": "dnt_ascendancyhuntress2small9",
-      "display_name": "[DNT] AscendancyHuntress2Small9",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "reduced_mana",
@@ -36166,76 +32719,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "head hunt without a corpse"
-    },
-    {
-      "entity_slug": "marauder",
-      "display_name": "MARAUDER",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "witch",
-      "display_name": "WITCH",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "ranger",
-      "display_name": "RANGER",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "duelist",
-      "display_name": "DUELIST",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "templar",
-      "display_name": "TEMPLAR",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "six",
-      "display_name": "SIX",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "jewel_socket",
-      "display_name": "[Jewel] Socket",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "ephemeral_contact",
@@ -36495,7 +32978,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +40% accuracy rating (if vs unique enemies) / gain accuracy rating equal to intelligence / dummy stat display nothing / minions accuracy is equal to yours / +50% accuracy rating (if vs enemies in close range) / +500 accuracy rating; -2 accuracy rating per level"
     },
     {
       "entity_slug": "fortify_mastery",
@@ -36505,7 +32988,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +100 recover X life when fortification expires per fortification lost / +20 gain X fortification on killing rare or unique monster / +-2% duration of ailments on self (if per fortification) / +4% block and stun (if recovery per fortification) / +100% chance to fortify on melee hit; +-3 max fortification / +-10% damage over time taken (if while you have at least 20 fortification)"
     },
     {
       "entity_slug": "spell_suppression_mastery",
@@ -36515,7 +32998,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +3 dummy stat display nothing / dummy stat display nothing / -2 dummy stat display nothing; dummy stat display nothing / -50 dummy stat display nothing / dummy stat display nothing; +8 dummy stat display nothing / dummy stat display nothing"
     },
     {
       "entity_slug": "impale_mastery",
@@ -36525,7 +33008,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +10% fishing reeling stability / +20% fishing reeling stability / +40% steel steal cast speed; +40% steel steal area of effect / +4 max steel ammo; +10% steel steal reflect damage / +20% impale magnitude (if for impales inflicted on non impaled enemies) / +20% fishing reeling stability"
     },
     {
       "entity_slug": "blind_mastery",
@@ -36535,7 +33018,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +40% blind effect / +100% blind duration / +60% critical strike chance (if vs blinded enemies) / +100 avoid blind %"
     },
     {
       "entity_slug": "flask_mastery",
@@ -36545,7 +33028,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: life flask charges recovered per 3 seconds; mana flasks gain X charges every 3 seconds / remove random elemental ailment on mana flask use / remove random non elemental ailment on life flask use / +25 gain flask chance on crit % / +100% flask charges (if from enemies with status ailments) / +4 recover % maximum life on flask use"
     },
     {
       "entity_slug": "leech_mastery",
@@ -36555,7 +33038,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +10 leech % is instant / +40% armour evasion (if while leeching) / +25 dummy stat display nothing / +25 damage recouped as life % if leech removed by filling recently / +100% leech rate / +25 dummy stat display nothing"
     },
     {
       "entity_slug": "axe_mastery",
@@ -36565,7 +33048,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: enemies explode on kill / +15 faster bleed % / +40% onslaught effect / +30% damage (if while in blood stance); +15% skill area of effect (if in sand stance) / +10 dummy stat display nothing / gain x rage on hit with axes swords 1s cooldown"
     },
     {
       "entity_slug": "bleeding_mastery",
@@ -36575,7 +33058,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: no extra bleeding damage while moving / +60 dummy stat display nothing / +60% bleed duration / +80% critical strike chance (if vs bleeding enemies) / +3% bleeding effect (if per endurance charge)"
     },
     {
       "entity_slug": "block_mastery",
@@ -36585,7 +33068,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +2 maximum block % / +2 dummy stat display nothing / +20 life gained on block; +20 mana gained on block / +3 dummy stat display nothing / +3% attack damage (if per 5% block chance)"
     },
     {
       "entity_slug": "projectile_mastery",
@@ -36595,7 +33078,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +20% projectile damage (if per pierced enemy) / +20% projectile damage (if per chain) / +1% projectile damage (if per 16 dexterity) / knockback on crit with projectile damage / +15% passive mastery more projectile speed (if final) / +-15% passive mastery less projectile speed (if final)"
     },
     {
       "entity_slug": "brand_mastery",
@@ -36605,7 +33088,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +10 recover % mana when attached brand expires / +30% brand area of effect (if if 50% attached duration expired) / brands reattach on activation / +50% sigil recall cooldown speed / +2 total number of sigils allowed / +40% sigil target search range"
     },
     {
       "entity_slug": "caster_mastery",
@@ -36615,7 +33098,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +30% final repeat of spells area of effect / +25% spell damage (if final if you have been stunned while casting recently) / +6% cast speed (if per num unique spells cast recently) / maximum intensify stacks / support anticipation rapid fire count / +25 open nearby chests on cast chance %"
     },
     {
       "entity_slug": "chaos_mastery",
@@ -36625,7 +33108,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: life gained on kill per wither stack on slain enemy % / chaos skill gem level +; +10 lose % of life and energy shield when you use a chaos skill / +1 maximum chaos damage resistance % / +40 non skill base physical damage % to convert to chaos / +10% passive mastery chaos damage (if final against enemies with energy shield) / +5 apply maximum wither stacks % chance when you apply withered"
     },
     {
       "entity_slug": "charge_mastery",
@@ -36635,7 +33118,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: cannot be ignited while at maximum endurance charges / cannot be chilled while at maximum frenzy charges / cannot be shocked while at maximum power charges / +100% charge duration / +3% damage (if per frenzy power or endurance charge)"
     },
     {
       "entity_slug": "claw_mastery",
@@ -36645,7 +33128,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +25 main hand claw life gain on hit; +25 off hand claw mana gain on hit / dual wield inherent attack speed is doubled while dual wielding claws / +60% claw damage against enemies on low life / +10 dummy stat display nothing / +50% stealth (if if have hit with claw recently) / +40% skills supported by nightblade have elusive effect"
     },
     {
       "entity_slug": "cold_mastery",
@@ -36655,7 +33138,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +40 non skill base physical damage % to convert to cold / +10 chance to inflict cold exposure on hit with cold damage % / +20 shatter has % chance to cover in frost / +1 maximum cold damage resistance % / +10 chill minimum slow % from mastery / +5% permanent damage (if per second of freeze)"
     },
     {
       "entity_slug": "curse_mastery",
@@ -36665,7 +33148,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +20 dummy stat display nothing / +-40% extra damage taken from crit (if from cursed enemy) / non cursed enemies you curse are blinded for 4 seconds / +20% while curse is 50% expired curse effect / enemies you curse have 15% hinder / recover % maximum mana when cursing non cursed enemy; recover % maximum life when cursing non cursed enemy"
     },
     {
       "entity_slug": "mark_mastery",
@@ -36675,7 +33158,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: marked enemies cannot regenerate life / enemies near marked enemy are blinded / +10 gain frenzy charge on hitting marked enemy % / marked enemies cannot deal critical strikes / +100 your marks spread to a nearby enemies on consume % chance / +50% accuracy rating against marked enemies"
     },
     {
       "entity_slug": "link_mastery",
@@ -36685,7 +33168,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: link skills grant redirect elemental ailments to link source / enemies near link skill target have exposure / link grace period 8 second override / link to X additional random allies / linked targets share endurance frenzy power charges with you / movement speed is equal to highest linked party member"
     },
     {
       "entity_slug": "dagger_mastery",
@@ -36695,7 +33178,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +100 critical strike multiplier vs enemies on full life + / crits have culling strike / +10 dummy stat display nothing / +8 dummy stat display nothing / +50% projectile speed (if with daggers) / nightblade elusive grants critical strike multiplier +40 to supported skills"
     },
     {
       "entity_slug": "recovery_mastery",
@@ -36705,7 +33188,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +3 recover maximum life on enemy killed chance % / recoup life effects apply over 3 seconds instead / +10 consume nearby corpse every 3 seconds to recover % maximum life / +-50% life mastery nearby enemy life regeneration rate / life recovery from regeneration is not applied; +6 recover 1 life per x life regeneration per minute every 4 seconds / +3000 life regeneration rate per minute"
     },
     {
       "entity_slug": "damage_over_time_mastery",
@@ -36715,7 +33198,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +30% cruelty effect / damage over time multiplier +10 if enemy killed recently / +15% skill effect duration; +15% all ailment duration / +-10% passive mastery damage taken over time (if final)"
     },
     {
       "entity_slug": "dual_wielding_mastery",
@@ -36725,7 +33208,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: no inherent chance to block while dual wielding; +15 dummy stat display nothing / +100 off hand critical strike chance while dual wielding / +60% damage (if while wielding two different weapon types) / +20 chance to gain elusive when you block while dual wielding % / +15 chance to block attack damage if not blocked recently % / +20 main hand maim on hit %; +20 off hand chance to blind on hit %"
     },
     {
       "entity_slug": "buckler_mastery",
@@ -36735,7 +33218,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +50 counterattacks debilitate for 1 second on hit % chance / +1% chance to block attack damage per 5% chance to block on equipped shield / intimidate enemies for 4 seconds on block while holding a shield / +20 avoid ailments % while holding shield / +2% attack damage (if per 75 armour or evasion on shield) / +1% critical multiplier (if per 10 max es on shield)"
     },
     {
       "entity_slug": "duration_mastery",
@@ -36745,7 +33228,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +10% passive mastery more skill effect duration (if final) / +-10% passive mastery less skill effect duration (if final) / +15% debuff time passed / +20 self elemental status duration -%"
     },
     {
       "entity_slug": "energy_shield_mastery",
@@ -36755,7 +33238,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: light radius scales with energy shield; +30% light radius / +-10% passive mastery physical damage taken (if final while on full energy shield) / +60 stun threshold based on % energy shield instead of life / +120 energy shield regeneration rate per minute % / +30 chaos damage bypass energy shield % / +100% energy shield from helmet"
     },
     {
       "entity_slug": "evasion_and_energy_shield_mastery",
@@ -36765,7 +33248,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +30% evasion rating (if while you have energy shield) / +20% energy shield recovery rate (if if not hit recently) / +20% energy shield (if if both rings have evasion mod); +40% energy shield recharge (if if amulet has evasion mod) / +100% evasion rating (if if energy shield recharge started in past 2 seconds) / +1% evasion rating (if per 5 intelligence) / regenerate energy shield equal to % evasion rating over 1 second every 4 seconds"
     },
     {
       "entity_slug": "evasion_mastery",
@@ -36775,7 +33258,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: cannot be light stunned if have not been hit recently / +40% evasion (if if hit recently) / +10% movement speed (if if have not taken damage recently) / +30 avoid bleed %; +30 avoid poison %; +30 avoid impale % / +15 dummy stat display nothing / +100% body armour evasion rating"
     },
     {
       "entity_slug": "armour_and_evasion_mastery",
@@ -36785,7 +33268,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +120 defend with % armour against ranged attacks; +5 dummy stat display nothing / +8% physical damage reduction rating (if per endurance charge); +8% evasion rating (if per frenzy charge) / +80% stun recovery / every 4 seconds regenerate % of armour and evasion as life over 1 second / +40% armour (if if you havent been hit recently); +40% evasion (if if hit recently) / immune to poison if helmet grants higher evasion than armour; immune to bleeding if helmet grants higher armour than evasion"
     },
     {
       "entity_slug": "fire_mastery",
@@ -36795,7 +33278,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +5 fire exposure you inflict lowers fire resistance by extra % / +40 non skill base physical damage % to convert to fire / +3 explode burning enemies for 10% life as fire on kill chance % / +50 refresh ignite duration on critical strike chance % / +60 life regeneration per minute per 1% uncapped fire damage resistance / critical strikes do not always ignite; +100% hit damage (if vs ignited enemies)"
     },
     {
       "entity_slug": "mace_mastery",
@@ -36805,7 +33288,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: dummy stat display nothing / +20% area of effect (if if have crit recently) / hits from maces and sceptres crush enemies / +12 chance to deal double attack damage % if attack time longer than 1 second / +50% stun duration / stuns have culling strike"
     },
     {
       "entity_slug": "mana_mastery",
@@ -36815,7 +33298,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +300 mana regeneration rate per minute / +10 recover % of maximum mana over 1 second on guard skill use / +10 damage taken goes to mana % / +10 mana cost -% / +10 recover 10% of maximum mana on skill use % / +12% mana reservation efficiency"
     },
     {
       "entity_slug": "mine_mastery",
@@ -36825,7 +33308,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +2% sabotuer mines apply damage taken (if to nearby enemies up to 10%) / +-2% sabotuer mines apply damage (if to nearby enemies up to -10%) / +30% mine aura effect / +5% skill area of effect (if per active mine) / mines invulnerable / +150 life regeneration % per minute if detonated mine recently"
     },
     {
       "entity_slug": "minion_offence_mastery",
@@ -36835,7 +33318,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +20 minions attacks overwhelm % physical damage reduction / +8 minions penetrate elemental resistances % vs cursed enemies / +25 dummy stat display nothing / +30% minion skill area of effect / +250 minion accuracy rating / +20% offering spells effect"
     },
     {
       "entity_slug": "minion_defence_mastery",
@@ -36845,7 +33328,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +8 minion maximum all elemental resistances % / link skills can target minions / +100 dummy stat display nothing / +40% convocation cooldown speed / +30% minion maximum life; +-15% minion life recovery rate / +5 minion recover % maximum life on minion death"
     },
     {
       "entity_slug": "reservation_mastery",
@@ -36855,7 +33338,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +8% damage (if per your aura or herald skill affecting you) / +1 maximum all elemental resistances % with reserved life and mana / +20% life reservation efficiency / +30% aura area of effect / +10% aura effect on self from your skills / +50% skill effect duration (if with non curse aura skills)"
     },
     {
       "entity_slug": "shield_mastery",
@@ -36865,7 +33348,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +50 counterattacks debilitate for 1 second on hit % chance / +1% chance to block attack damage per 5% chance to block on equipped shield / intimidate enemies for 4 seconds on block while holding a shield / +20 avoid ailments % while holding shield / +2% attack damage (if per 75 armour or evasion on shield) / +1% critical multiplier (if per 10 max es on shield)"
     },
     {
       "entity_slug": "staff_mastery",
@@ -36875,7 +33358,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +2 recover % life when you block attack damage while wielding a staff; +2 dummy stat display nothing / +30% defences (if while wielding quarterstaff) / +8% chance to block attack damage if stunned an enemy recently / +20 chance to double stun duration % / +100 dummy stat display nothing; 0 dummy stat display nothing / critical strike multiplier +60 if have not dealt critical strike recently"
     },
     {
       "entity_slug": "sword_mastery",
@@ -36885,7 +33368,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: melee range +3 with sword / +20 attacks impale on hit % chance / +8 gain frenzy charge on hitting unique enemy % / off hand accuracy equal to main hand accuracy while wielding sword / +120% sword critical strike chance; -20 sword critical strike multiplier + / +50 dummy stat display nothing"
     },
     {
       "entity_slug": "trap_mastery",
@@ -36895,7 +33378,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +5 chance to throw 4 additional traps % / +8 trap % chance to trigger twice / +5 number of additional traps allowed / +60% trap trigger radius / +30 gain x life on trap triggered by an enemy / traps invulnerable"
     },
     {
       "entity_slug": "two_hand_mastery",
@@ -36905,7 +33388,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +3 chance to deal triple damage % / +40% damage (if to rare and unique enemies) / +10% armour (if per red socket on main hand weapon); +10% evasion rating (if per green socket on main hand weapon) / +15 dummy stat display nothing / +60% damage (if with two handed weapons); +-10% attack speed"
     },
     {
       "entity_slug": "wand_mastery",
@@ -36915,7 +33398,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +10 gain power charge on critical strike with wands % / unnerve for 4 seconds on hit with wands / dummy stat display nothing / +100 additive spell damage modifiers apply to attack damage at % value while wielding wand / +50 dummy stat display nothing; +50 dummy stat display nothing / dummy stat display nothing"
     },
     {
       "entity_slug": "warcry_mastery",
@@ -36925,7 +33408,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: travel skills cannot be exerted / +15 restore life on warcry % / warcries have minimum 10 power / warcries debilitate enemies for 1 second / remove all damaging ailments on warcry / +10 chance to gain 3 additional exerted attacks %"
     },
     {
       "entity_slug": "attributes_mastery",
@@ -36935,7 +33418,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +5% all attributes / +1% damage (if per 5 of your lowest attribute) / +5 strength per allocated mastery / +5 intelligence per allocated mastery / +5 dexterity per allocated mastery"
     },
     {
       "entity_slug": "resistance_and_ailment_protection_mastery",
@@ -36945,7 +33428,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +-65% withered effect on self / elemental resistance cannot be lowered by curses / cannot be inflicted by corrupted blood / +100 avoid maim % chance; you cannot be hindered / +100 avoid impale % / cannot have more than 1 damaging ailment; cannot have more than 1 non damaging ailment"
     },
     {
       "entity_slug": "companion_mastery",
@@ -36955,7 +33438,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +20 minions attacks overwhelm % physical damage reduction / +8 minions penetrate elemental resistances % vs cursed enemies / +25 dummy stat display nothing / +30% minion skill area of effect / +250 minion accuracy rating / +20% offering spells effect"
     },
     {
       "entity_slug": "infusion_mastery",
@@ -36965,7 +33448,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +18 passive mastery exposure you inflict has minimum resistance lower % / +-60% elemental reflect damage taken / +-50% exposure effect on you / +25 treat enemy resistances as negated on elemental damage hit % chance / dummy stat display nothing / +3 dummy stat display nothing"
     },
     {
       "entity_slug": "spear_mastery",
@@ -36975,7 +33458,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +50 counterattacks debilitate for 1 second on hit % chance / +1% chance to block attack damage per 5% chance to block on equipped shield / intimidate enemies for 4 seconds on block while holding a shield / +20 avoid ailments % while holding shield / +2% attack damage (if per 75 armour or evasion on shield) / +1% critical multiplier (if per 10 max es on shield)"
     },
     {
       "entity_slug": "banner_mastery",
@@ -36985,17 +33468,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "nothingness",
-      "display_name": "Nothingness",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +50 counterattacks debilitate for 1 second on hit % chance / +1% chance to block attack damage per 5% chance to block on equipped shield / intimidate enemies for 4 seconds on block while holding a shield / +20 avoid ailments % while holding shield / +2% attack damage (if per 75 armour or evasion on shield) / +1% critical multiplier (if per 10 max es on shield)"
     },
     {
       "entity_slug": "aura_mastery",
@@ -37005,7 +33478,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +5% all attributes / +1% damage (if per 5 of your lowest attribute) / +5 strength per allocated mastery / +5 intelligence per allocated mastery / +5 dexterity per allocated mastery"
     },
     {
       "entity_slug": "chaos_resistance_mastery",
@@ -37015,7 +33488,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: life gained on kill per wither stack on slain enemy % / chaos skill gem level +; +10 lose % of life and energy shield when you use a chaos skill / +1 maximum chaos damage resistance % / +40 non skill base physical damage % to convert to chaos / +10% passive mastery chaos damage (if final against enemies with energy shield) / +5 apply maximum wither stacks % chance when you apply withered"
     },
     {
       "entity_slug": "channelling_mastery",
@@ -37025,7 +33498,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: link skills grant redirect elemental ailments to link source / enemies near link skill target have exposure / link grace period 8 second override / link to X additional random allies"
     },
     {
       "entity_slug": "charms_mastery",
@@ -37035,7 +33508,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: life flask charges recovered per 3 seconds; mana flasks gain X charges every 3 seconds / remove random elemental ailment on mana flask use / remove random non elemental ailment on life flask use / +25 gain flask chance on crit % / +100% flask charges (if from enemies with status ailments) / +4 recover % maximum life on flask use"
     },
     {
       "entity_slug": "cold_resistance_mastery",
@@ -37045,7 +33518,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +40 non skill base physical damage % to convert to cold / +10 chance to inflict cold exposure on hit with cold damage % / +20 shatter has % chance to cover in frost / +1 maximum cold damage resistance % / +10 chill minimum slow % from mastery / +5% permanent damage (if per second of freeze)"
     },
     {
       "entity_slug": "crossbow_mastery",
@@ -37055,7 +33528,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +50% non damaging ailment effect (if with critical strikes) / critical strike multiplier +25 vs unique enemies / +100% stun duration on critical strike / +3 critical support gem level + / +30 self critical strike multiplier -% / +150% critical strike chance against enemies on full life"
     },
     {
       "entity_slug": "endurance_charge_mastery",
@@ -37065,7 +33538,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: cannot be ignited while at maximum endurance charges / cannot be chilled while at maximum frenzy charges / cannot be shocked while at maximum power charges / +100% charge duration / +3% damage (if per frenzy power or endurance charge)"
     },
     {
       "entity_slug": "fire_resistance_mastery",
@@ -37075,7 +33548,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +5 fire exposure you inflict lowers fire resistance by extra % / +40 non skill base physical damage % to convert to fire / +3 explode burning enemies for 10% life as fire on kill chance % / +50 refresh ignite duration on critical strike chance % / +60 life regeneration per minute per 1% uncapped fire damage resistance / critical strikes do not always ignite; +100% hit damage (if vs ignited enemies)"
     },
     {
       "entity_slug": "flail_mastery",
@@ -37085,7 +33558,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +5 fire exposure you inflict lowers fire resistance by extra % / +40 non skill base physical damage % to convert to fire / +3 explode burning enemies for 10% life as fire on kill chance % / +50 refresh ignite duration on critical strike chance % / +60 life regeneration per minute per 1% uncapped fire damage resistance / critical strikes do not always ignite; +100% hit damage (if vs ignited enemies)"
     },
     {
       "entity_slug": "frenzy_charge_mastery",
@@ -37095,7 +33568,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: cannot be ignited while at maximum endurance charges / cannot be chilled while at maximum frenzy charges / cannot be shocked while at maximum power charges / +100% charge duration / +3% damage (if per frenzy power or endurance charge)"
     },
     {
       "entity_slug": "herald_mastery",
@@ -37105,7 +33578,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +100 recover X life when fortification expires per fortification lost / +20 gain X fortification on killing rare or unique monster / +-2% duration of ailments on self (if per fortification) / +4% block and stun (if recovery per fortification) / +100% chance to fortify on melee hit; +-3 max fortification / +-10% damage over time taken (if while you have at least 20 fortification)"
     },
     {
       "entity_slug": "lightning_resistance_mastery",
@@ -37115,7 +33588,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +40 non skill base physical damage % to convert to lightning / +60% critical strike chance (if vs exposed) / +15 shock maximum magnitude + / +10 shock enemies in 150cm radius on shock chance % / additive mana modifiers apply to shock effect at 30% value / -1 enemies extra damage rolls with lightning damage while you are shocked"
     },
     {
       "entity_slug": "power_charge_mastery",
@@ -37125,7 +33598,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: cannot be ignited while at maximum endurance charges / cannot be chilled while at maximum frenzy charges / cannot be shocked while at maximum power charges / +100% charge duration / +3% damage (if per frenzy power or endurance charge)"
     },
     {
       "entity_slug": "quarterstaff_mastery",
@@ -37135,7 +33608,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +20% projectile damage (if per pierced enemy) / +20% projectile damage (if per chain) / +1% projectile damage (if per 16 dexterity) / knockback on crit with projectile damage / +15% passive mastery more projectile speed (if final) / +-15% passive mastery less projectile speed (if final)"
     },
     {
       "entity_slug": "rage_mastery",
@@ -37145,7 +33618,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +20% projectile damage (if per pierced enemy) / +20% projectile damage (if per chain) / +1% projectile damage (if per 16 dexterity) / knockback on crit with projectile damage / +15% passive mastery more projectile speed (if final) / +-15% passive mastery less projectile speed (if final)"
     },
     {
       "entity_slug": "shapeshifting_mastery",
@@ -37155,7 +33628,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +-65% withered effect on self / elemental resistance cannot be lowered by curses / cannot be inflicted by corrupted blood / +100 avoid maim % chance; you cannot be hindered / +100 avoid impale % / cannot have more than 1 damaging ailment; cannot have more than 1 non damaging ailment"
     },
     {
       "entity_slug": "spirit_mastery",
@@ -37165,7 +33638,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +50 counterattacks debilitate for 1 second on hit % chance / +1% chance to block attack damage per 5% chance to block on equipped shield / intimidate enemies for 4 seconds on block while holding a shield / +20 avoid ailments % while holding shield / +2% attack damage (if per 75 armour or evasion on shield) / +1% critical multiplier (if per 10 max es on shield)"
     },
     {
       "entity_slug": "trigger_mastery",
@@ -37175,7 +33648,7 @@
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
-      "description": ""
+      "description": "Mastery — choose one: +5 chance to throw 4 additional traps % / +8 trap % chance to trigger twice / +5 number of additional traps allowed / +60% trap trigger radius / +30 gain x life on trap triggered by an enemy / traps invulnerable"
     },
     {
       "entity_slug": "item_rarity",
@@ -37598,16 +34071,6 @@
       "description": "+8% map item drop rarity; +5% map item drop quantity"
     },
     {
-      "entity_slug": "unused_careful_surveyor",
-      "display_name": "[UNUSED] Careful Surveyor",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+20 world map unique maps visible X units beyond light radius"
-    },
-    {
       "entity_slug": "fortunate_path",
       "display_name": "Fortunate Path",
       "entity_type": "passive",
@@ -37626,16 +34089,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10 map dropped waystones are rare and corrupted chance %"
-    },
-    {
-      "entity_slug": "unused_twice_travelled",
-      "display_name": "[UNUSED] Twice Travelled",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "treasure_coves",
@@ -37666,16 +34119,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+10% map map item drop chance"
-    },
-    {
-      "entity_slug": "unused",
-      "display_name": "[UNUSED]",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "+40% map rogue exile chance"
     },
     {
       "entity_slug": "local_knowledge",
@@ -37768,26 +34211,6 @@
       "description": "+50% map strongbox monsters chance to be magic; +50% map strongbox monsters chance to be rare"
     },
     {
-      "entity_slug": "strongbox_type_selector",
-      "display_name": "Strongbox Type Selector",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "essence_type_selector",
-      "display_name": "Essence Type Selector",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "harmonic_corruption",
       "display_name": "Harmonic Corruption",
       "entity_type": "passive",
@@ -37828,26 +34251,6 @@
       "description": "+33 map shrines x% chance all packs are magic"
     },
     {
-      "entity_slug": "shrine_type_selector",
-      "display_name": "Shrine Type Selector",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "spirit_type_selector",
-      "display_name": "Spirit Type Selector",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
       "entity_slug": "shining_trail",
       "display_name": "Shining Trail",
       "entity_type": "passive",
@@ -37866,26 +34269,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "+25 map shrines have x% chance for an additional effect; +15 map strongbox close after opening chance %"
-    },
-    {
-      "entity_slug": "exile_attribute_selector",
-      "display_name": "Exile Attribute Selector",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
-    },
-    {
-      "entity_slug": "exile_item_class_selector",
-      "display_name": "Exile Item Class Selector",
-      "entity_type": "passive",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": ""
     },
     {
       "entity_slug": "merging_worlds",
