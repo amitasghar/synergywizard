@@ -317,6 +317,43 @@ def enrich_with_active_skills(index, entities: list[dict]) -> list[dict]:
     return enriched
 
 
+def enrich_with_support_text(index, entities: list[dict]) -> list[dict]:
+    """Read SupportText from SkillGems.GemEffects for support gems.
+
+    Active skills get descriptions from ActiveSkills.dat64; supports have no
+    equivalent table. Instead, SkillGems → GemEffects[0] → SupportText holds
+    the human-readable description for each support gem.
+    """
+    rows = read_dat(index, "SkillGems.dat64")
+    support_text_map: dict[str, str] = {}
+    for row in rows:
+        try:
+            is_support = int(row["GemType"]) != 0
+            if not is_support:
+                continue
+            name = row["BaseItemType"]["Name"]
+            if not name:
+                continue
+            gem_effects = row["GemEffects"]
+            if not gem_effects:
+                continue
+            text = str(gem_effects[0]["SupportText"] or "").strip()
+            if text:
+                support_text_map[str(name).lower()] = text
+        except (KeyError, AttributeError, TypeError, IndexError):
+            continue
+
+    enriched = []
+    for entity in entities:
+        if not entity.get("description") and entity["entity_type"] == "support":
+            text = support_text_map.get(entity["display_name"].lower())
+            if text:
+                entity = dict(entity)
+                entity["description"] = text
+        enriched.append(entity)
+    return enriched
+
+
 def extract_passives(index) -> list[dict]:
     """Parse PassiveSkills.dat64 → list of passive entities.
 
@@ -387,6 +424,9 @@ def extract_all(poe2_dir: Path, output_path: Path) -> None:
 
     print("Enriching with ActiveSkills.dat64...")
     skill_entities = enrich_with_active_skills(index, skill_entities)
+
+    print("Enriching support gem descriptions from GemEffects.SupportText...")
+    skill_entities = enrich_with_support_text(index, skill_entities)
 
     print("Extracting PassiveSkills.dat64...")
     passive_entities = extract_passives(index)
