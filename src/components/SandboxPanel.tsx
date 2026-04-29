@@ -15,8 +15,7 @@ export function SandboxPanel(): React.ReactElement {
   const setAnalyzing  = useStore((s) => s.setAnalyzing);
   const isAnalyzing   = useStore((s) => s.isAnalyzing);
 
-  const [dragFromIdx, setDragFromIdx] = useState<number | null>(null);
-  const [dropTarget,  setDropTarget]  = useState<number | null>(null);
+  const [dropTarget, setDropTarget] = useState<number | null>(null);
 
   const slots: (Entity | null)[] = Array.from({ length: MAX_TRAY }, (_, i) => selected[i] ?? null);
   const canAnalyze = selected.length >= 2 && !isAnalyzing;
@@ -35,8 +34,19 @@ export function SandboxPanel(): React.ReactElement {
 
   function handleSlotDragOver(e: React.DragEvent, slotIdx: number) {
     e.preventDefault();
-    e.dataTransfer.dropEffect = dragFromIdx !== null ? "move" : "copy";
+    // Use dataTransfer.types (available during dragover) to determine drag source
+    // rather than closing over stale dragFromIdx state.
+    const isInternal = e.dataTransfer.types.includes("application/synergy-index");
+    e.dataTransfer.dropEffect = isInternal ? "move" : "copy";
     setDropTarget(slotIdx);
+  }
+
+  function handleSlotDragLeave(e: React.DragEvent) {
+    // Only clear highlight when the pointer leaves the slot wrapper entirely,
+    // not when it moves into a child element (e.g. SandboxCard).
+    if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+      setDropTarget(null);
+    }
   }
 
   function handleSlotDrop(e: React.DragEvent, slotIdx: number) {
@@ -56,7 +66,6 @@ export function SandboxPanel(): React.ReactElement {
         insertEntityAt(entity, slotIdx);
       } catch { /* ignore malformed data */ }
     }
-    setDragFromIdx(null);
   }
 
   return (
@@ -72,7 +81,7 @@ export function SandboxPanel(): React.ReactElement {
             <div
               key={slotIdx}
               onDragOver={(e) => handleSlotDragOver(e, slotIdx)}
-              onDragLeave={() => setDropTarget(null)}
+              onDragLeave={handleSlotDragLeave}
               onDrop={(e) => handleSlotDrop(e, slotIdx)}
               className={`min-h-[68px] rounded transition-colors ${
                 dropTarget === slotIdx ? "ring-1 ring-accent/60 bg-accent/5" : ""
@@ -83,7 +92,8 @@ export function SandboxPanel(): React.ReactElement {
                   entity={entity}
                   index={slotIdx}
                   onRemove={removeEntity}
-                  onDragStart={(i) => setDragFromIdx(i)}
+                  onDragStart={() => {}}
+                  onDragEnd={() => setDropTarget(null)}
                 />
               ) : (
                 <div

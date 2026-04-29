@@ -6,6 +6,7 @@ interface Props {
   index: number;
   onRemove: (id: string) => void;
   onDragStart: (index: number) => void;
+  onDragEnd: () => void;
 }
 
 function typeBadgeStyle(type: string): string {
@@ -25,7 +26,7 @@ function tagSummary(entity: Entity): string {
   return parts.join(" · ");
 }
 
-export function SandboxCard({ entity, index, onRemove, onDragStart }: Props): React.ReactElement {
+export function SandboxCard({ entity, index, onRemove, onDragStart, onDragEnd }: Props): React.ReactElement {
   return (
     <div
       draggable
@@ -34,6 +35,7 @@ export function SandboxCard({ entity, index, onRemove, onDragStart }: Props): Re
         e.dataTransfer.effectAllowed = "move";
         onDragStart(index);
       }}
+      onDragEnd={onDragEnd}
       className={`relative bg-background/60 border ${cardBorderStyle(entity.entity_type)} rounded p-2 cursor-grab active:cursor-grabbing select-none`}
     >
       <span
