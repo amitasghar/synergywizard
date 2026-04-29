@@ -354,12 +354,55 @@ def enrich_with_support_text(index, entities: list[dict]) -> list[dict]:
     return enriched
 
 
+def _format_passive_stat(stat_id: str, val: int) -> str:
+    """Convert a single PassiveSkills stat ID + value to readable text.
+
+    Stat IDs use _ as word separator with special tokens:
+      _+%  at end   → +val% label   (e.g. damage_+% → "+5% damage")
+      _+%_ in middle → +val% label (if condition)
+      _+_  in middle → +val  label  (e.g. stun_threshold_+_from_...)
+      base_/additional_ prefix → +val label
+    """
+    s = str(stat_id)
+    if not s or s.startswith("display_"):
+        return ""
+
+    # +% at end: "label_+%" → "+val% label"
+    if s.endswith("_+%"):
+        label = s[:-3].replace("base_", "").replace("additional_", "").replace("_", " ").strip()
+        return f"+{val}% {label}"
+
+    # +%_ in middle: "label_+%_condition" → "+val% label (if condition)"
+    if "_+%_" in s:
+        idx = s.index("_+%_")
+        label = s[:idx].replace("base_", "").replace("additional_", "").replace("_", " ").strip()
+        condition = s[idx + 4:].replace("_", " ").strip()
+        return f"+{val}% {label} (if {condition})"
+
+    # +_ in middle: "label_+_rest" → "label +val rest"
+    if "_+_" in s:
+        s = s.replace("_+_", f" +{val} ", 1)
+        s = s.replace("_%_", " % ").replace("_", " ").replace("  ", " ").strip()
+        return s
+
+    # base_/additional_ prefix: flat bonus
+    if s.startswith("base_") or s.startswith("additional_"):
+        label = s.split("_", 1)[1].replace("_", " ").strip()
+        return f"+{val} {label}"
+
+    # Generic: boolean (val==1) or plain numeric
+    label = s.replace("_", " ").strip()
+    if val == 1:
+        return label
+    sign = "+" if val > 0 else ""
+    return f"{sign}{val} {label}"
+
+
 def extract_passives(index) -> list[dict]:
     """Parse PassiveSkills.dat64 → list of passive entities.
 
-    Field names discovered from live smoke test:
-    - Name: str passive name (may be empty for icon-only nodes)
-    - FlavourText: str flavour/description text
+    Description is built from Stats + Stat1-5Value since FlavourText is almost
+    always empty. Stat IDs are converted to readable text by _format_passive_stat.
     """
     rows = read_dat(index, "PassiveSkills.dat64")
     entities: list[dict] = []
@@ -370,7 +413,25 @@ def extract_passives(index) -> list[dict]:
                 continue
             name = str(name).strip()
 
-            desc = row["FlavourText"] or ""
+            # Build description from stats + values
+            stats = row["Stats"] or []
+            raw_vals = [
+                row["Stat1Value"], row["Stat2Value"], row["Stat3Value"],
+                row["Stat4Value"], row["Stat5Value"],
+            ]
+            stat_parts: list[str] = []
+            for i, stat in enumerate(stats):
+                if i >= len(raw_vals):
+                    break
+                val = raw_vals[i]
+                try:
+                    sid = str(stat["Id"])
+                except (KeyError, TypeError):
+                    continue
+                part = _format_passive_stat(sid, val)
+                if part:
+                    stat_parts.append(part)
+            desc = "; ".join(stat_parts) if stat_parts else str(row["FlavourText"] or "")
 
             entities.append({
                 "entity_slug": slugify(name, separator="_"),
@@ -380,7 +441,7 @@ def extract_passives(index) -> list[dict]:
                 "mechanic_tags": [],
                 "damage_tags": [],
                 "weapon_tags": [],
-                "description": str(desc),
+                "description": desc,
             })
         except (KeyError, AttributeError, TypeError):
             continue
