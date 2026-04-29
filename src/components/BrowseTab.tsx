@@ -3,7 +3,16 @@ import { api } from "../api/client.ts";
 import { useStore } from "../state/store.ts";
 import type { Entity } from "../types.ts";
 
-const PREVIEW_LENGTH = 100;
+const PREVIEW_LENGTH = 120;
+
+function cleanDescription(raw: string): string {
+  return raw
+    .replace(/\[([^\]|]+)\|([^\]]+)\]/g, "$2")
+    .replace(/\[([^\]]+)\]/g, "$1")
+    .replace(/\{[0-9]+\}/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
 function tagLine(entity: Entity): React.ReactElement {
   const damageParts = entity.damage_tags.map((t) => (
@@ -34,7 +43,7 @@ interface ResultRowProps {
 
 function ResultRow({ entity, inBuild, onAdd, onDragStart }: ResultRowProps): React.ReactElement {
   const [expanded, setExpanded] = useState(false);
-  const desc = entity.description ?? "";
+  const desc = cleanDescription(entity.description ?? "");
   const isLong = desc.length > PREVIEW_LENGTH;
   const preview = isLong && !expanded ? desc.slice(0, PREVIEW_LENGTH).trimEnd() + "…" : desc;
 
