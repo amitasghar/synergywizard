@@ -67,11 +67,11 @@ export const useStore = create<StoreState>((set, get) => ({
     if (existing.some((x) => x.id === e.id)) return;
     if (existing.length >= MAX_TRAY) return;
     const next = [...existing];
-    const clampedIdx = Math.min(atIdx, next.length);
+    const clampedIdx = Math.max(0, Math.min(atIdx, next.length));
     next.splice(clampedIdx, 0, e);
     set({ selectedEntities: next });
   },
-  clear: () => set({ selectedEntities: [], analysisResult: null, baselineAnalysis: null, conversion: null, extendResult: null }),
+  clear: () => set({ selectedEntities: [], analysisResult: null, baselineAnalysis: null, conversion: null, extendResult: null, filters: emptyFilters() }),
   reset: () =>
     set({
       selectedEntities: [],
