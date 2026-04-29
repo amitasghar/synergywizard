@@ -59,7 +59,8 @@ export const useStore = create<StoreState>((set, get) => ({
     if (fromIdx === toIdx || fromIdx >= existing.length) return;
     const next = [...existing];
     const [moved] = next.splice(fromIdx, 1);
-    next.splice(toIdx, 0, moved);
+    const clampedTo = Math.max(0, Math.min(toIdx, next.length));
+    next.splice(clampedTo, 0, moved);
     set({ selectedEntities: next });
   },
   insertEntityAt: (e, atIdx) => {
