@@ -8,6 +8,7 @@ import { api } from "./api/client.ts";
 import { useStore } from "./state/store.ts";
 import { decodeStateFromUrl } from "./state/url.ts";
 import type { GameId } from "./components/GameSelector.tsx";
+import { D4Experience } from "./components/d4/D4Experience.tsx";
 
 function Poe2Experience(): React.ReactElement {
   const addEntity     = useStore((s) => s.addEntity);
@@ -81,7 +82,7 @@ export default function App(): React.ReactElement {
     <div className="h-full flex flex-col">
       <Header activeGame={activeGame} onGameChange={setActiveGame} />
       {activeGame === "poe2" && <Poe2Experience />}
-      {activeGame === "d4"   && <div className="flex-1 flex items-center justify-center text-white/30 text-sm">D4 coming soon…</div>}
+      {activeGame === "d4"   && <D4Experience />}
     </div>
   );
 }
