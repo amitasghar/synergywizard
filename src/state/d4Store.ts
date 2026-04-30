@@ -71,7 +71,7 @@ export const useD4Store = create<D4StoreState>((set, get) => ({
     next.splice(clampedIdx, 0, e);
     set({ selectedEntities: next });
   },
-  clear: () => set({ selectedEntities: [], analysisResult: null, baselineAnalysis: null, conversion: null, extendResult: null, filters: emptyFilters() }),
+  clear: () => set({ selectedEntities: [], analysisResult: null, baselineAnalysis: null, conversion: null, extendResult: null, isAnalyzing: false, filters: emptyFilters() }),
   reset: () =>
     set({
       selectedEntities: [],

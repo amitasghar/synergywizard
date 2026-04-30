@@ -64,14 +64,18 @@ function Poe2Experience(): React.ReactElement {
   );
 }
 
-function resolveInitialGame(): GameId {
-  const path = window.location.pathname;
-  if (path.startsWith("/d4")) return "d4";
-  return "poe2";
+function resolveGameFromPath(): GameId {
+  return window.location.pathname.startsWith("/d4") ? "d4" : "poe2";
 }
 
 export default function App(): React.ReactElement {
-  const [activeGame, setActiveGame] = useState<GameId>(resolveInitialGame);
+  const [activeGame, setActiveGame] = useState<GameId>(resolveGameFromPath);
+
+  useEffect(() => {
+    function onPopState() { setActiveGame(resolveGameFromPath()); }
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   return (
     <div className="h-full flex flex-col">

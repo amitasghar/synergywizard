@@ -12,7 +12,7 @@ export interface Entity {
 }
 
 export interface SynergyEdge {
-  from_entity_id: string;
+  from_entity_id: string | null;
   to_entity_id: string;
   interaction_type: "direct" | "extended" | "conditional";
   reason: string;
