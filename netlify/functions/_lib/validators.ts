@@ -31,3 +31,15 @@ export const semanticSearchBodySchema = z.object({
   vector: z.array(z.number()).min(1).max(1024),
   limit: z.number().int().min(1).max(20).default(10),
 });
+
+export const d4SearchQuerySchema = z.object({
+  q: z.string().trim().min(1).max(100).optional(),
+  damages: z.string().trim().max(200).optional(),
+  mechanics: z.string().trim().max(200).optional(),
+  classes: z.string().trim().max(200).optional(),
+  types: z.string().trim().max(200).optional(),
+});
+
+export const d4AnalyzeBodySchema = z.object({
+  entity_ids: z.array(z.string().uuid()).min(1).max(8),
+});
