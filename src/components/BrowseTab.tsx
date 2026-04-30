@@ -48,6 +48,7 @@ const TYPE_STYLES: Record<string, { bg: string; text: string }> = {
   keystone:    { bg: "bg-[#1a1000]",   text: "text-[#d4a017]" },
   mastery:     { bg: "bg-[#0d1a0d]",   text: "text-[#4caf50]" },
   ascendancy:  { bg: "bg-[#1a0d2e]",   text: "text-[#9b59b6]" },
+  aspect:      { bg: "bg-[#1a0d1a]",   text: "text-[#c39bd3]" },
 };
 
 function TypeBadge({ type }: { type: string }): React.ReactElement {

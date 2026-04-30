@@ -1,5 +1,5 @@
 import { describe, expect, it, vi, beforeAll, afterEach } from "vitest";
-import { api, buildSearchUrl } from "./client.ts";
+import { api, buildSearchUrl, buildD4SearchUrl } from "./client.ts";
 
 describe("api client", () => {
   beforeAll(() => {
@@ -75,5 +75,18 @@ describe("api client", () => {
     const body = JSON.parse(String(init.body));
     expect(body.text).toBe("fire slams");
     fetchSpy.mockRestore();
+  });
+});
+
+describe("buildD4SearchUrl", () => {
+  it("includes class filter", () => {
+    const url = buildD4SearchUrl({ classes: ["barbarian", "druid"] });
+    expect(url).toContain("classes=barbarian%2Cdruid");
+  });
+
+  it("omits empty arrays", () => {
+    const url = buildD4SearchUrl({ q: "whirlwind" });
+    expect(url).not.toContain("classes");
+    expect(url).toContain("q=whirlwind");
   });
 });

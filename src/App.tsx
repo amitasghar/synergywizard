@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Header } from "./components/Header.tsx";
 import { FilterSidebar } from "./components/FilterSidebar.tsx";
 import { CenterPanel } from "./components/CenterPanel.tsx";
@@ -7,13 +7,14 @@ import { AnalysisPanel } from "./components/AnalysisPanel.tsx";
 import { api } from "./api/client.ts";
 import { useStore } from "./state/store.ts";
 import { decodeStateFromUrl } from "./state/url.ts";
+import type { GameId } from "./components/GameSelector.tsx";
 
-export default function App(): React.ReactElement {
-  const addEntity    = useStore((s) => s.addEntity);
-  const setAnalysis  = useStore((s) => s.setAnalysis);
-  const setBaseline  = useStore((s) => s.setBaseline);
+function Poe2Experience(): React.ReactElement {
+  const addEntity     = useStore((s) => s.addEntity);
+  const setAnalysis   = useStore((s) => s.setAnalysis);
+  const setBaseline   = useStore((s) => s.setBaseline);
   const setConversion = useStore((s) => s.setConversion);
-  const hydrated     = useRef(false);
+  const hydrated      = useRef(false);
 
   useEffect(() => {
     if (hydrated.current) return;
@@ -52,17 +53,31 @@ export default function App(): React.ReactElement {
   }, [addEntity, setAnalysis, setBaseline, setConversion]);
 
   return (
-    <div className="h-full flex flex-col">
-      <Header game="poe2" />
-      <div className="flex-1 flex overflow-hidden">
-        <FilterSidebar />
-        <CenterPanel />
-        {/* Right panel: sandbox on top, analysis scrolls below */}
-        <div className="w-[380px] min-w-[380px] flex flex-col overflow-hidden min-h-0">
-          <SandboxPanel />
-          <AnalysisPanel className="border-t border-white/10" />
-        </div>
+    <div className="flex-1 flex overflow-hidden">
+      <FilterSidebar />
+      <CenterPanel />
+      <div className="w-[380px] min-w-[380px] flex flex-col overflow-hidden min-h-0">
+        <SandboxPanel />
+        <AnalysisPanel className="border-t border-white/10" />
       </div>
+    </div>
+  );
+}
+
+function resolveInitialGame(): GameId {
+  const path = window.location.pathname;
+  if (path.startsWith("/d4")) return "d4";
+  return "poe2";
+}
+
+export default function App(): React.ReactElement {
+  const [activeGame, setActiveGame] = useState<GameId>(resolveInitialGame);
+
+  return (
+    <div className="h-full flex flex-col">
+      <Header activeGame={activeGame} onGameChange={setActiveGame} />
+      {activeGame === "poe2" && <Poe2Experience />}
+      {activeGame === "d4"   && <div className="flex-1 flex items-center justify-center text-white/30 text-sm">D4 coming soon…</div>}
     </div>
   );
 }

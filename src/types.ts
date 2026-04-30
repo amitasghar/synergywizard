@@ -1,4 +1,4 @@
-export type EntityType = "skill" | "support" | "passive" | "keystone" | "mastery" | "ascendancy";
+export type EntityType = "skill" | "support" | "passive" | "keystone" | "mastery" | "ascendancy" | "aspect";
 
 export interface Entity {
   id: string;
@@ -54,6 +54,21 @@ export interface FilterState {
   styleTags: string[];
   weaponTags: string[];
   types: string[];
+}
+
+export interface D4FilterState {
+  classTags: string[];
+  damageTags: string[];
+  mechanicTags: string[];
+  types: string[];  // "skill" | "passive" | "aspect"
+}
+
+export interface D4SearchParams {
+  q?: string;
+  damages?: string[];
+  mechanics?: string[];
+  classes?: string[];
+  types?: string[];
 }
 
 export interface SemanticSearchResult {
