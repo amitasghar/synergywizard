@@ -1,13 +1,15 @@
 """Backfill embeddings for all entities that have embedding IS NULL.
 
 Run from the project root:
-    python scripts/push-embeddings.py
+    python scripts/push-embeddings.py           # PoE2 (default)
+    python scripts/push-embeddings.py --game d4 # Diablo IV
 
 Reads NETLIFY_DATABASE_URL from .env automatically.
 """
 
 from __future__ import annotations
 
+import argparse
 import os
 import sys
 from pathlib import Path
@@ -30,19 +32,24 @@ BATCH_COMMIT = 200
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--game", default="poe2", help="Game slug (poe2, d4)")
+    args = parser.parse_args()
+    game = args.game
+
     conn = db_writer.connect()
     try:
         with conn.cursor() as cur:
             cur.execute("""
                 SELECT entity_slug, display_name, description, mechanic_tags, damage_tags
                 FROM entities
-                WHERE game = 'poe2' AND embedding IS NULL
+                WHERE game = %s AND embedding IS NULL
                 ORDER BY entity_type, entity_slug
-            """)
+            """, (game,))
             rows = cur.fetchall()
 
         total = len(rows)
-        print(f"Found {total} entities without embeddings")
+        print(f"Found {total} {game} entities without embeddings")
         if total == 0:
             print("Nothing to do.")
             return 0
@@ -59,7 +66,7 @@ def main() -> int:
             }
             try:
                 vec = embedder.embed_entity(entity)
-                db_writer.update_embedding(conn, slug, vec)
+                db_writer.update_embedding(conn, slug, vec, game=game)
                 ok += 1
             except Exception as exc:
                 print(f"\nWARNING {slug}: {exc}")

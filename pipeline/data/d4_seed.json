@@ -1,6 +1,6 @@
 {
   "game": "d4",
-  "extracted_at": "2026-05-01T00:26:05.852636+00:00",
+  "extracted_at": "2026-05-01T17:50:06.639015+00:00",
   "source_tag": "master",
   "entities": [
     {
@@ -7398,23 +7398,6 @@
       "conversions_available": []
     },
     {
-      "entity_slug": "d4-spiritborn-ph-clobber",
-      "display_name": "(PH) Clobber",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "lucky"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Generate Vigor: Lucky Hit Chance: % Hit enemies in front of you, dealing damage and increasing your Thorns by [] for [] seconds. Every 3rd cast hits all enemies around you and reduces their damage by [*100|%|] for seconds.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
       "entity_slug": "d4-spiritborn-rock-splitter",
       "display_name": "Rock Splitter",
       "entity_type": "skill",
@@ -7525,21 +7508,6 @@
       "conversions_available": []
     },
     {
-      "entity_slug": "d4-spiritborn-ph-invoke",
-      "display_name": "(PH) Invoke",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Required Starting Allegiance: [] Allegiance Cost: [] per second Active: Unleash the power of the Spirits until your Allegiance runs out in order to: Make Core Skills free to cast Gain [*100|%+|] bonus Core Stats Passive: You gain [|1|] Allegiance for every point of Vigor you spend.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
       "entity_slug": "d4-spiritborn-thrash",
       "display_name": "Thrash",
       "entity_type": "skill",
@@ -7609,24 +7577,6 @@
       "conversions_available": []
     },
     {
-      "entity_slug": "d4-spiritborn-ph-ravager-marks",
-      "display_name": "(PH) Ravager Marks",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "aoe",
-        "lucky"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Cooldown: seconds Lucky Hit Chance: % Passive: Every seconds you Mark a surrounding enemy. Hitting a Marked enemy consumes the Mark and triggers an additional strike for damage. Active: Unleash a savage roar, Marking all Nearby enemies and gaining maximum stacks of Ferocity.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
       "entity_slug": "d4-spiritborn-rushing-claw",
       "display_name": "Rushing Claw",
       "entity_type": "skill",
@@ -7678,75 +7628,6 @@
       "conversions_available": []
     },
     {
-      "entity_slug": "d4-spiritborn-ph-thrust",
-      "display_name": "(PH) Thrust",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "movement",
-        "lucky"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Generate Vigor: Lucky Hit Chance: % Quickly jab forward with a fiery piercing strike dealing . Every 3rd cast pierces further and makes your next Evade free to cast.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-counterattack",
-      "display_name": "(PH) Counterattack",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "movement",
-        "lucky"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Charges: Charge Cooldown: seconds Lucky Hit Chance: % Passive: Take [*100|%|] less damage while Injured. Active: Whirl around and Dodge all direct attacks for seconds, retaliating against Close enemy attackers for damage.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-pounce",
-      "display_name": "(PH) Pounce",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Cooldown: seconds Take on the mantle of a pouncing jaguar as you vault to a target location and become Unstoppable for seconds. Recast within seconds to Pounce again.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-coalition-of-speed",
-      "display_name": "(PH) Coalition of Speed",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "aoe",
-        "movement"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Cooldown: seconds Spin and create a wide circling area for seconds. While within the circle you are Unstoppable, can move freely through enemies, and gain: [*100|%+|] increased Attack Speed [*100|%+|] increased Movement Speed",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
       "entity_slug": "d4-spiritborn-rune-area",
       "display_name": "Rune Area",
       "entity_type": "skill",
@@ -7757,142 +7638,6 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-raptor-strike",
-      "display_name": "(PH) Raptor Strike",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "aoe",
-        "lucky"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Generate Vigor: Lucky Hit Chance: % Send forth a spirit bird at an enemy, dealing damage on impact. Every 3rd cast explodes on impact dealing damage to the primary target and enemies behind it.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-bird-swarm",
-      "display_name": "(PH) Bird Swarm",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "lucky"
-      ],
-      "damage_tags": [
-        "fire"
-      ],
-      "weapon_tags": [],
-      "description": "(PH) Cooldown: seconds Lucky Hit Chance: % Fire a slow swarm of birds that burst on impact, dealing damage and splitting into a piercing spiral of birds that each deal damage.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-spore-pod",
-      "display_name": "(PH) Spore Pod",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "aoe",
-        "dot",
-        "lucky"
-      ],
-      "damage_tags": [
-        "poison"
-      ],
-      "weapon_tags": [],
-      "description": "(PH) Generate Vigor: Lucky Hit Chance: % Create a small fungal pod that bursts on contact with an enemy, releasing a spore that deals damage and applies Poisoning damage over [] seconds to enemies in the area and generates [] Vigor. Every 3rd cast creates a larger pod and lobs 3 additional spores when it bursts.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-voracious-maw",
-      "display_name": "(PH) Voracious Maw",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "dot",
-        "lucky"
-      ],
-      "damage_tags": [
-        "poison"
-      ],
-      "weapon_tags": [],
-      "description": "(PH) Cooldown: seconds Lucky Hit Chance: % Cast to create a toxic ring, Tethering enemies within and applying Poisoning damage over seconds.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-dreadful-swarm",
-      "display_name": "(PH) Dreadful Swarm",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "dot",
-        "lucky"
-      ],
-      "damage_tags": [
-        "poison"
-      ],
-      "weapon_tags": [],
-      "description": "(PH) Cooldown: seconds Lucky Hit Chance: % Call forth a wave of insects that bite enemies, Fearing them for [] seconds and each applying Poisoning damage over [] seconds.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-centipede-wake",
-      "display_name": "(PH) Centipede Wake",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "dot",
-        "channel",
-        "lucky"
-      ],
-      "damage_tags": [
-        "poison"
-      ],
-      "weapon_tags": [],
-      "description": "(PH) Vigor Cost: Lucky Hit Chance: [|%|] Direct the Centipede along the ground, dealing damage as it travels and leaving behind a trail that applies Poisoning damage over [] seconds. Centipede Wake lasts for up to [] seconds and Channeling or casting again will redirect it.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-leech-harvest",
-      "display_name": "(PH) Leech Harvest",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "lucky"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Cooldown: seconds Lucky Hit Chance: % Bring leeches up out of the ground that latch onto surrounding enemies for [] seconds. Each leech Heals you for [*100|%|] of your Maximum Life ([Max(1,PlayerHealthMax() * )]) and deals damage to its host every second.",
       "recommended_supports": [],
       "relevant_passives": [],
       "conversions_available": []
@@ -7912,112 +7657,6 @@
       ],
       "weapon_tags": [],
       "description": "Create a Swarm dealing Poison damage.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-icon-bullet-1-2-bruiser-icon-bullet-1-2-c-gray-jaguar-gorilla-c",
-      "display_name": "(PH) {icon:bullet,1.2} Bruiser {icon:bullet,1.2}\r\n{c_gray}[Jaguar][Gorilla]{/c}",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) While moving you gain [*100|+%|] Dodge Chance or after standing still for [] seconds you become Unstoppable. When you Dodge or Block an attack you trigger a [*100|%|] Thorns attack against the attacker.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-icon-bullet-1-2-raider-icon-bullet-1-2-c-gray-jaguar-centipede-c",
-      "display_name": "(PH) {icon:bullet,1.2} Raider {icon:bullet,1.2}\r\n{c_gray}[Jaguar][Centipede]{/c}",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "dot"
-      ],
-      "damage_tags": [
-        "poison"
-      ],
-      "weapon_tags": [],
-      "description": "(PH) Your Poisoning deals damage [1 / (1-) * 100|%|] faster. Gain Ferocity when you Crowd Control an enemy.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-icon-bullet-1-2-vindicator-icon-bullet-1-2-c-gray-eagle-gorilla-c",
-      "display_name": "(PH) {icon:bullet,1.2} Vindicator {icon:bullet,1.2}\r\n{c_gray}[Eagle][Gorilla]{/c}",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Gain [*100|+%|] Block Chance and [*100|+%|] Block Reduction while you have a Eagle Skill active. Gain increased Critical Strike Damage equal to [*100|+%|] of your Block Chance. Blocking an attack doubles this bonus for seconds.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-icon-bullet-1-2-duelist-icon-bullet-1-2-c-gray-jaguar-eagle-c",
-      "display_name": "(PH) {icon:bullet,1.2} Duelist {icon:bullet,1.2}\r\n{c_gray}[Jaguar][Eagle]{/c}",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "movement"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Your Eagle Skill missiles fly [*100|%|] faster and have a [*100|%|] chance to hit twice. Every second while moving gain [*100|%|] Bonus Movement Speed for [|1|] seconds, up to [*100|%|].",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-icon-bullet-1-2-tormentor-icon-bullet-1-2-c-gray-centipede-gorilla-c",
-      "display_name": "(PH) {icon:bullet,1.2} Tormentor {icon:bullet,1.2}\r\n{c_gray}[Centipede][Gorilla]{/c}",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "dot",
-        "movement"
-      ],
-      "damage_tags": [
-        "poison"
-      ],
-      "weapon_tags": [],
-      "description": "(PH) When you take direct damage you instead only receive [*100|%|] of it in the form of Poisoning over seconds. Enemies who move while Poisoned by you additionally take [*100|%|] of your Thorns damage per second.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-icon-bullet-1-2-reaper-icon-bullet-1-2-c-gray-eagle-centipede-c",
-      "display_name": "(PH) {icon:bullet,1.2} Reaper {icon:bullet,1.2}\r\n{c_gray}[Eagle][Centipede]{/c}",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "aoe",
-        "dot"
-      ],
-      "damage_tags": [
-        "poison"
-      ],
-      "weapon_tags": [],
-      "description": "(PH) Critical Strikes cause enemies to burst [*100|%|] of the Poisoning on them as Poison damage to those around them. Your Eagle Skills affect [*100|%|] larger areas.",
       "recommended_supports": [],
       "relevant_passives": [],
       "conversions_available": []
@@ -8520,70 +8159,6 @@
       "conversions_available": []
     },
     {
-      "entity_slug": "d4-spiritborn-ph-sustained-decay",
-      "display_name": "(PH) Sustained Decay",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [
-        "dot"
-      ],
-      "damage_tags": [
-        "poison"
-      ],
-      "weapon_tags": [],
-      "description": "(PH) While Invoke is active, you gain [*100|+%|] increased Poisoning Duration and [*100|+%|] increased Crowd Control Duration.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-proliferation",
-      "display_name": "(PH) Proliferation",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Whenever you cast a Core Skill, you gain Allegiance.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-transcendence",
-      "display_name": "(PH) Transcendence",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Your Maximum Allegiance is increased by [*100|x%|] and all Allegiance Generation is increased by [*100|x%|].",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-invoke-mod",
-      "display_name": "(PH) Invoke Mod",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) PH",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
       "entity_slug": "d4-spiritborn-sustenance",
       "display_name": "Sustenance",
       "entity_type": "skill",
@@ -8674,51 +8249,6 @@
       "conversions_available": []
     },
     {
-      "entity_slug": "d4-spiritborn-ph-legacy",
-      "display_name": "(PH) Legacy",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Invoke only requires 250 Allegiance to activate. Invoke can be recast to deactivate.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-persistence",
-      "display_name": "(PH) Persistence",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) You gain Allegiance per second.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-spiritborn-ph-no-mercy",
-      "display_name": "(PH) No Mercy",
-      "entity_type": "skill",
-      "class_tags": [
-        "spiritborn"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "(PH) Whenever you kill an enemy, you gain Allegiance.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
       "entity_slug": "d4-spiritborn-attack",
       "display_name": "Attack",
       "entity_type": "skill",
@@ -8729,6 +8259,2273 @@
       "damage_tags": [],
       "weapon_tags": [],
       "description": "Attack enemies in front of you, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-advance",
+      "display_name": "Advance",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Generate Faith: Lucky Hit Chance: [|%|] Advance forward with your weapon, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-blessed-hammer",
+      "display_name": "Blessed Hammer",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Lucky Hit Chance: [|%|] Throw a Blessed Hammer that spirals out, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-blessed-shield",
+      "display_name": "Blessed Shield",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "barrier",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Lucky Hit Chance: [|%|] Bless and hurl your shield with Holy energy, dealing damage that ricochets up to [-1] times.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-brandish",
+      "display_name": "Brandish",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Generate Faith: Lucky Hit Chance: [|%|] Brandish the Light, unleashing an arc that deals damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-sunder",
+      "display_name": "Sunder",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "stun",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: % Thrust your weapon into the ground, dealing damage and creating a hellrift that Stuns for seconds and periodically Pulls enemies in. After [] seconds, the hellrift collapses, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-condemn",
+      "display_name": "Condemn",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "stun",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: [|%|] Harness the Light and Pull enemies in after [SF_5|2|][SF_5|1|] seconds, briefly Stunning them and dealing damage. While Casting Condemn, you become Unhindered for [|1|] seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-consecration",
+      "display_name": "Consecration",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: [|%|] Bathe in the Light for seconds, Healing you and your allies for [SF_8*100|1%|] Maximum Life ([Max(1,PlayerHealthMax() * )]) per second and damaging enemies for damage per second.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-defiance-aura",
+      "display_name": "Defiance Aura",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Cooldown: seconds Lucky Hit Chance: [|%|] Passive: Your presence reinforces you and your allies, granting [ * 100|%|] Armor and [ * 100|%|] bonus on All Resistances. Active: You become Unstoppable for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-arbiter-of-justice",
+      "display_name": "Arbiter of Justice",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: [|%|] Ascend to the heavens and crash upon the battlefield as an Arbiter for [SF_9|1|] seconds, dealing damage upon landing.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-fortress",
+      "display_name": "Fortress",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: [SF_19] seconds Lucky Hit Chance: [|%|] Make your stand, becoming Immune for [|1|] seconds and create a defensive area around you for [SF_14|1|] seconds. Standing in your Fortress grants you and your allies [SF_4] Resolve stacks every [SF_8|1|] seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-heaven-s-fury",
+      "display_name": "Heaven's Fury",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: [|%|] Grasp the Light, dealing damage around you per second before releasing it to seek Nearby enemies and dealing damage per hit for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-holy-light-aura",
+      "display_name": "Holy Light Aura",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: % Passive: You and your allies emanate the Light, dealing damage every seconds to random Nearby enemies. Attack Speed further increases this damage. Active: Unleash pure bolts of light, dealing Holy damage to the Closest enemy and chaining up to [SF_10] additional enemies before returning to you. When your first bolt of light returns, Heal for [SF_12*100|%|] of your Maximum Life ([Max(1,PlayerHealthMax() * )]).",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-divine-lance",
+      "display_name": "Divine Lance",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Lucky Hit Chance: [|%|] Impale enemies with a heavenly lance, stabbing times for damage each.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-falling-star",
+      "display_name": "Falling Star",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: [|%|] Soar into the air with angelic wings and dive onto the battlefield, dealing damage on takeoff and damage on landing.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-oath-angel",
+      "display_name": "Oath_ Angel",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Casting a Disciple Skill with a cooldown grants Arbiter for [SF_4|1|] seconds. Wing Strikes gain Disciple Skill benefits. While in Arbiter form, your Disciple Skills deal [SF_6 * 100|%x|] increased damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-judicator",
+      "display_name": "Judicator",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "aoe"
+      ],
+      "damage_tags": [
+        "physical"
+      ],
+      "weapon_tags": [],
+      "description": "Your Basic Skills now apply Judgement. Judgement can now be detonated early by your Core Judicator Skills, dealing [SF_7*100|%|] weapon damage in a small area and gaining Judicator Skill benefits. Each time you Judge an enemy, increase the damage they take from you by [SF_5*100|%x|], up to [SF_5* SF_6*100|%x|] until they die.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-oath-juggernaut",
+      "display_name": "Oath_ Juggernaut",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Casting a Juggernaut Skill consumes [SF_11] stacks of Resolve, giving your Juggernaut Skills [SF_12*100|x%|] increased damage and gain [SF_13*100|%|] increased size for [SF_9] seconds. Your Minimum Resolve is increased by [SF_2] and is no longer consumed when getting hit.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-oath-zealot",
+      "display_name": "Oath_ Zealot",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Casting Zealot Skills grants Fervor for [SF_1] seconds. Critically Striking with these Skills echoes the attack for an additional [SF_2 * 100|%|] of the damage, repeating for each stack of Fervor. While at maximum Fervor, additionally Fortify for [*100|%|] of your Maximum Life ([Max(1,)|0|]).",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-fanaticism-aura",
+      "display_name": "Fanaticism Aura",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "aoe"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Cooldown: seconds Passive: Spending Faith emanates power from you, granting you and your allies [*100|1%+|] Attack Speed and [*100|1%+|] Critical Strike Chance for seconds up to a maximum of [] times. Active: Weaken all Nearby enemies for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-phalanx",
+      "display_name": "Phalanx",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "minion"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Summon a phalanx soldier to fight for you!",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-zeal",
+      "display_name": "Zeal",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Health Cost:[SF_29*100|%|] Faith Cost: Lucky Hit Chance: [|%|] Strike enemies with blinding speed, dealing damage followed immediately by [SF_16] additional strikes dealing damage each.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-clash",
+      "display_name": "Clash",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "barrier",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Generate Faith: Lucky Hit Chance: [|%|] Strike an enemy with your weapon and shield, dealing damage. Striking enemies with Clash grants you Crusader's March, increasing your Block Chance by [SF_4*100|%x|] for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-purify",
+      "display_name": "Purify",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: [|%|] Enshroud your enemies in the Light, Dazing them for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-rally",
+      "display_name": "Rally",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "movement"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Charges: Charge Cooldown: secondsHealth Cost:[SF_7*100|%|] Rally forth, generating [SF_3] Faith and gaining [SF_2*100|+%|] Movement Speed for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-shield-bash",
+      "display_name": "Shield Bash",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "movement",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Lucky Hit Chance: [|%|] Charge at an enemy and bash in front of you, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-c-red-wip-shield-charge-c",
+      "display_name": "{c_red}[WIP] Shield Charge{/c}",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "movement",
+        "channel"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "(PH) Hold the button wind up and release to charge forward.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-shield-charge",
+      "display_name": "Shield Charge",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "movement",
+        "barrier",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: [|%|] Raise your shield, gaining [*100|%|] Damage Reduction and rush forward, pushing enemies out of the way. At the end of the charge hit enemies for damage and Knock them Down.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-aegis",
+      "display_name": "Aegis",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "barrier"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Surround yourself with shields of the Light, Taunting Close enemies and gaining [*100|%|] Block Chance for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-spear-of-the-heavens",
+      "display_name": "Spear of the Heavens",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Cooldown: seconds Lucky Hit Chance: % Rain down [1+] heavenly spears from the sky, dealing damage and Knocking Down enemies for seconds. After [|1|] seconds, the spears burst, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-holy-bolt",
+      "display_name": "Holy Bolt",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Faith Cost: Generate Faith: Lucky Hit Chance: [|%|] Throw a Holy hammer, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-arbiter",
+      "display_name": "Arbiter",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-judgement",
+      "display_name": "Judgement",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-retribution",
+      "display_name": "Retribution",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-meditation",
+      "display_name": "[WIP] Meditation",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain [ * 100|%x|] Primary Resource Generation for you and allies within your auras.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-concentration",
+      "display_name": "[WIP] Concentration",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Increase damage and crit strike damage by [ * 100|1%x|] for you and allies within your auras.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-salvation",
+      "display_name": "[WIP] Salvation",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain an additional [*100|%|] Damage Reduction and [*100|%|] Maximum Life for you and allies within your auras.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-vigor",
+      "display_name": "[WIP] Vigor",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "movement"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "WIP Increase the movement speed of you and all allies within your auras by [*100|%x|].",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-conviction",
+      "display_name": "[WIP] Conviction",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "WIP Enemies within your Auras take [*100|x%|] increased damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-radiance",
+      "display_name": "[WIP] Radiance",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "[WIP] Increase the potency of all of your auras by x %",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-piety",
+      "display_name": "Piety",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Your Maximum Faith is increased by .",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-discipline",
+      "display_name": "Discipline",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Your Core Skills deal [ * 100|%x|] increased damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-en-garde",
+      "display_name": "En Garde",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You gain [ * 100|%+|] Armor and [ * 100|%+|] Block Chance.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-riposte",
+      "display_name": "Riposte",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Blocking grants you [SF_0*100|x%|] damage for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-courage",
+      "display_name": "Courage",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "aoe"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You gain Resolve every seconds an Elite enemy is Nearby.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-crack-in-the-armor",
+      "display_name": "Crack in the Armor",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You deal [ * 100|%x|] increased damage to Vulnerable enemies.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-pacify",
+      "display_name": "Pacify",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You gain [ * 100|%+|] increased Crowd Control duration.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-high-charity",
+      "display_name": "High Charity",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You gain [ * 100|%|] Cooldown Reduction.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-giant-slayer",
+      "display_name": "Giant Slayer",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You deal [*100|%x|] increased damage to Elites and [*100|%x|] increased damage to Healthy enemies.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-righteousness",
+      "display_name": "Righteousness",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [
+        "fire"
+      ],
+      "weapon_tags": [],
+      "description": "You deal [*100|%x|] increased Holy and Fire damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-faith-spend-cdr",
+      "display_name": "[WIP] Faith Spend CDR",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Every Faith you spend reduces the cooldowns of your Angelic Skills by [|1|] seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-vulnerable-1",
+      "display_name": "[WIP] Vulnerable 1",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Not yet implemented",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-vulnerable-3",
+      "display_name": "[WIP] Vulnerable 3",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Not yet implemented",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-dizzying-blow",
+      "display_name": "Dizzying Blow",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You deal [*100|%x|] increased damage to Crowd Controled enemies.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-iron-sharpens-iron",
+      "display_name": "Iron Sharpens Iron",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You gain [ * 100|%x|] Critical Strike Damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-break-the-line",
+      "display_name": "Break the Line",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You have a [ * 100|%+|] increased Critical Strike Chance and deal [ * 100|%x|] increased Damage to Weakened enemies.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-press-the-advantage",
+      "display_name": "Press the Advantage",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Critically Striking grants you [*100|%|] Damage Reduction for [] seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-heavyweight",
+      "display_name": "Heavyweight",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You deal [*100|%x|] increased Critical Strike Damage while Healthy.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-coat-of-arms",
+      "display_name": "Coat of Arms",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Your damage is increased by [*100|%|] of your Armor Percent and [*100|%|] of your Block Chance. Current Damage Bonus : [*100|%x|]",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-path-of-the-penitent",
+      "display_name": "Path of the Penitent",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Your Zealot Skills cost [*-1*100|%|] more Faith, but Casting them grants all Skills [*100|%+|] Resource Cost Reduction and [*100|%x|] increased damage for [SF_3] seconds, up to [SF_4] times.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-judgement-day",
+      "display_name": "Judgement Day",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "aoe"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Consuming Judgement increases your damage by [SF_0 * 100 |%x|] for seconds, up to [SF_0 * 100 * SF_2 |%x|]. Judgement now spreads to nearby targets without Judgement when it detonates.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-exaltation",
+      "display_name": "Exaltation",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "During Arbiter your damage is increased by [SF_0*100|%x|] and Wing Strikes strike [SF_1] additional time.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-shining-armor",
+      "display_name": "Shining Armor",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "barrier"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain a bonus based on your equipped weapon and armor qualities: Unique Weapon or Shield: Gain [*100|%x|] Damage. Unique Helmet, Chest or Pants: Gain [*100|%+|] Armor.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-sacred-arms",
+      "display_name": "Sacred Arms",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "barrier"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain a bonus based on your equipped weapon types: Two Handed: Gain [*100|%x|] Critical Strike Damage. One Handed and Shield: [*100|%|] chance to ignore damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-leave-luck-to-heaven",
+      "display_name": "Leave Luck to Heaven",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You gain [*100|%|] Lucky Hit Chance.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-master-craftwork",
+      "display_name": "Master Craftwork",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "barrier"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Your Armor is increased by [ * 100|%|] of your Shield's Block Chance.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-shake-it-off",
+      "display_name": "Shake It Off",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You have a [*100|%|] chance to become Unstoppable for second after being hit by a Crowd Control Effect.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-thorns-and-thistles",
+      "display_name": "Thorns and Thistles",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain [] Thorns and your total Thorns damage is increased by [*100|%x|]",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-repentance",
+      "display_name": "Repentance",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain [ * 100|%+|] Retribution chance.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-update-needed",
+      "display_name": "[WIP] Update needed",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Update needed - - Taking damage grants you [*100|%x|] Critical Strike Chance for [] seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-the-best-offense",
+      "display_name": "The Best Offense",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You deal [*100|%x|] increased damage while Fortified.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-wip-dr-for-resolve",
+      "display_name": "[WIP] DR for Resolve",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain [*100|%1|] additional Damage Reduction per stack of Resolve.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-resolute",
+      "display_name": "Resolute",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gaining a stack of Resolve Heals for [ * 100|1%|] of your Maximum Life ([Max(1,PlayerHealthMax() * )]).",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-conviction",
+      "display_name": "Conviction",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain [ * 100|1%+|] Attack Speed for each stack of Resolve up to [ * 100|1%+|].",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-attenuate",
+      "display_name": "Attenuate",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain [SF_0 * 100|%+|] Resource Cost Reduction for every stack of Resolve up to [SF_2 * 100|%|].",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-fortitude",
+      "display_name": "Fortitude",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Gain [*100|%x|] Critical Strike Damage while Fortified.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-zenith",
+      "display_name": "Zenith",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: % Summon a divine sword that cleaves the battlefield for damage. Casting Zenith again cuts through the battlefield for damage and Knocks Down enemies for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-paladin-attack",
+      "display_name": "Attack",
+      "entity_type": "skill",
+      "class_tags": [
+        "paladin"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Melee attack an enemy, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-metamorphosis",
+      "display_name": "Metamorphosis",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Transform into a demon and gain: Demonform All Archfiend Demonform Skill Variants An Ultimate Archfiend Basic attack that deals damage and generates Dominance Cast again while active to cancel.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-brimstone",
+      "display_name": "Brimstone",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-molten-bomb",
+      "display_name": "Molten Bomb",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Generate Wrath: Lucky Hit Chance: % Lob molten lava at an enemy, dealing damage in a small area.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-blazing-scream",
+      "display_name": "Blazing Scream",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Wrath Cost: Lucky Hit Chance: [|%|] Send forth a Demon Skull dealing damage as it travels.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-umbral-chains",
+      "display_name": "Umbral Chains",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [
+        "shadow"
+      ],
+      "weapon_tags": [],
+      "description": "Wrath Cost: Lucky Hit Chance: % Send forth a shadowy chain, dealing damage along the way and linking up to [2] enemies for seconds. Enemies caught in the chain are Slowed by [SF_33 * 100|%|] and take damage per second.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-dark-prison",
+      "display_name": "Dark Prison",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "movement",
+        "lucky"
+      ],
+      "damage_tags": [
+        "shadow"
+      ],
+      "weapon_tags": [],
+      "description": "Charges: Charge Cooldown: seconds Cooldown: seconds Lucky Hit Chance: % Create a shadowy totem for seconds that chains enemies, Tethering them to the area and preventing them from escaping.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-legion-shard",
+      "display_name": "Legion Shard",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Casting a Greater Demon Skill increases Lesser Demon Skill Cast Speed by [*100|+%|] and Cooldown Rate by [*100|%|] for seconds. When [SF_5] of your Lesser Demons die, your next Greater Demon Skill Cast has no Dominance Cost.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-spawn-fragment",
+      "display_name": "Spawn Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Ae'grom now passively spawns a Vile Child Lesser Demon every [SF_0|1|] seconds and deals [*100|x%|] increased damage. Command Ae'grom no longer spews Vile Children and instead causes all of your Lesser Demons to explode, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-sacrificial-fragment",
+      "display_name": "Sacrificial Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "You are Unstoppable and your Demonology Skills deal [*100|x%|] increased damage as long as you have active Lesser Demon Summons. When you would become Crowd Controlled, of your Lesser Demons Summons is sacrificed.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-evisceration-fragment",
+      "display_name": "Evisceration Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "movement",
+        "minion"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "While an enemy is Eviscerated, your Summoned Demons prioritize them and gain [ * 100|%|] increased Movement Speed. Lesser Demon Skills gain a [|%|] chance to Eviscerate enemies that are already Eviscerated.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-mastermind-shard",
+      "display_name": "Mastermind Shard",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "movement"
+      ],
+      "damage_tags": [
+        "shadow"
+      ],
+      "weapon_tags": [],
+      "description": "Recast Skills no longer break Shadowform Stealth at the cost of stacks of Shadowform per Cast. While you have Shadowform, Abyss Skills deal [*100|x%|] increased damage, and you gain [*100|+%|] increased Movement Speed per stack.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-unfathomable-fragment",
+      "display_name": "Unfathomable Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Laalish also Weakens enemies. Laalish deals [*100|x%|] increased damage and Executes enemies. When Laalish kills an enemy or when an enemy is Executed, the Cooldown of Command Laalish is reduced by [|1|] seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-blasphemous-fragment",
+      "display_name": "Blasphemous Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Recast Skills Hex enemies on hit and increase the damage they take from your Abyss Demonology Skills by [*100|x%|].",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-subjugation-fragment",
+      "display_name": "Subjugation Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion"
+      ],
+      "damage_tags": [
+        "shadow"
+      ],
+      "weapon_tags": [],
+      "description": "Summoning a non-Soul Shard, Abyss Greater Demon consumes all Dominance, increasing its damage by [SF_0*100|2x%|] per Dominance consumed. Maintaining Shadowform grants you [] Dominance every [] |4second:seconds;.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-ritualist-shard",
+      "display_name": "Ritualist Shard",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [
+        "fire"
+      ],
+      "weapon_tags": [],
+      "description": "Occult Skills deal [*100|x1%|] increased damage per stack of Overpower and gain [*100|+%|] increased Size per stacks of Overpower. With at least stacks of Overpower, Occult Abyss Skills apply additional Hex to enemies on hit, and Occult Hellfire Skills have a [*100|%|] chance to grant Volatility for seconds when Cast.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-abyssal-fragment",
+      "display_name": "Abyssal Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "movement"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Hex stacks up to a maximum of . When a target gains stacks, [*100|%|] of the Occult Abyss Skill damage dealt to the target echoes after seconds and removes all stacks of Hex. Command Valloch also causes Occult Abyss Skills to apply additional |4stack:stacks; of Hex to enemies while you've siphoned its power.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-scorching-fragment",
+      "display_name": "Scorching Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [
+        "fire"
+      ],
+      "weapon_tags": [],
+      "description": "Occult Hellfire Skills are always empowered and consume [*100|%|] of your Maximum Life. Volatility can now stack up to times, increasing the damage of empowered Skills by [*100|x%|] and the Life they consume by [*100|+%|] per stack. Command Valloch also siphons its life to Fortify you for [*100|%|] of your Maximum Life and causes Valloch to pay [*100|%|] of Life Costs instead while you've siphoned its power.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-twisted-fragment",
+      "display_name": "Twisted Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe"
+      ],
+      "damage_tags": [
+        "fire"
+      ],
+      "weapon_tags": [],
+      "description": "Occult Hellfire Skills consume stack of Hex on targets hit to increase its damage against the target by [*100|x%|]. Occult Abyss Skills can be empowered by Volatility to cause explosions when hitting an enemy for the first time, dealing damage, increased by that Skill's Rank. Every Wrath spent grants Overpower.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-vanguard-shard",
+      "display_name": "Vanguard Shard",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "While in Demonform, Casting Archfiend Skills additionally Summons the Archfiend Demon: Rampage summons a brute for seconds that follows you and swipes at enemies, dealing damage. Infernal Breath summons a demonic head for seconds that orbits you and spews flames, dealing damage. Tyrant's Grasp summons additional demon hands that each deal damage. Profane Sentinel summons an additional eye for seconds that follows you and blasts enemies, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-hellguard-fragment",
+      "display_name": "Hellguard Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "movement"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Abodian gains [*100|+%|] increased Cast Speed and [*100|x%|] Movement Speed and cleaves on its attacks. Abodian erupts Brimstones during Command Abodian, launching them periodically while moving and when dismounting. Each Brimstone deals damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-warden-fragment",
+      "display_name": "Warden Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion"
+      ],
+      "damage_tags": [
+        "fire"
+      ],
+      "weapon_tags": [],
+      "description": "Demonform increases the damage of Hellfire Demonology Skills by [*100|x%|] and drains [SF_0|1|] Dominance per second per Close Hellfire Demonology Summon to extend their durations.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-inferno-fragment",
+      "display_name": "Inferno Fragment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [
+        "fire"
+      ],
+      "weapon_tags": [],
+      "description": "While you are Volatile in Demonform, Hellfire Skill damage causes you to emanate fire for seconds, dealing [*100|%|] of that damage to Close enemies periodically over [] seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-command-ae-grom",
+      "display_name": "Command Ae'grom",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "movement",
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Charges: 2 Charge Cooldown: seconds Cooldown: seconds Lucky Hit Chance: % Passive: Ae'grom cleaves with its arms, dealing damage, and spawns a Vile Child Lesser Demon every [SF_19] second. Summoning a Greater Demon increases this spawn rate by [*100|%|] for [SF_22] seconds, up to [**100|%|]. Additional stacks do not refresh this duration.Ae'grom cleaves with its arms, dealing damage Active: Command Ae'grom to explode all of your Lesser Demons, dealing damage each.Command Ae'grom to spew Vile Child Lesser Demons, dealing damage when they land. Vile Children claw enemies, dealing , and last for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-command-laalish",
+      "display_name": "Command Laalish",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "movement",
+        "lucky"
+      ],
+      "damage_tags": [
+        "shadow"
+      ],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: % Passive: Laalish seeks enemies and applies Vulnerable, Weaken, and a [SF_3*100|%|] Slow to Close enemies that lingers for seconds.Laalish seeks enemies and applies Vulnerable and a [SF_3*100|%|] Slow to Close enemies that lingers for seconds. When you attack enemies, it moves through the abyss to bite them, dealing damage. Active: Command Laalish to create a Terror Realm for [SF_13] seconds, applying Vulnerable, Weaken, and a [SF_18*100|%|] Slow to enemies within.Command Laalish to create a Terror Realm for [SF_13] seconds, applying Vulnerable and a [SF_18*100|%|] Slow to enemies within. Laalish devours enemies within Terror Realm, dealing damage every second. While you are within Terror Realm, gain stacks of Shadowform every [|2|] seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-command-valloch",
+      "display_name": "Command Valloch",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Dominance Cost: Passive: Valloch increases your Maximum Overpower by and Maximum Wrath by . Active: Command Valloch to siphon its power to overfill your Overpower by and increase Wrath Regeneration by [*100|+%|] for seconds. While its power is siphoned, Occult Abyss Skills apply additional stack of Hex to enemies. Fortify for [*100|%|] of your Maximum Life, and, while its power is siphoned, Valloch pays [*100|%|] of Life Costs instead of you.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-command-abodian",
+      "display_name": "Command Abodian",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "movement",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: % Passive: Abodian bites and claws, dealing damage. Active: Command Abodian to enter Demonform for seconds and mount Abodian, gaining [*100|x%|] increased Movement Speed for seconds. While mounted, chain enemies and Pull them behind you, dealing damage every [|1|] seconds. After you dismount, Abodian slams the ground, dealing damage. Brimstones launched deal damage. Cast again while active to cancel.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-tortured-wretch",
+      "display_name": "Tortured Wretch",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Dominance Cost: Lucky Hit Chance: % Summon a tortured demon on your enemies, dealing damage and Taunting them to attack it for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-wall-of-agony",
+      "display_name": "Wall of Agony",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Dominance Cost: Lucky Hit Chance: % Summon and fuse frenzied demons into a line for seconds. The demons block enemies and flail wildly, dealing damage per hit to those in front of them.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-demonform",
+      "display_name": "Demonform",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Demonform",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-bombardment",
+      "display_name": "Bombardment",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Wrath Cost: Lucky Hit Chance: % Smash down demons into the ground, each dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-tyrant-s-grasp",
+      "display_name": "Tyrant's Grasp",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Wrath Cost: Dominance Cost: Lucky Hit Chance: % Summon a demon hand that Pulls enemies away from you, dealing damage. Vanguard: Casting Tyrant's Grasp summons 2 additional demon hands that each deal damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-rampage",
+      "display_name": "Rampage",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Wrath Cost: Dominance Cost: Lucky Hit Chance: % Summon a rampaging brute for seconds that smashes wildly, dealing damage with a [|%|] chance per hit to Eviscerate enemies for damage. Vanguard: Casting Rampage summons an additional brute for seconds that follows you and swipes at enemies, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-infernal-breath",
+      "display_name": "Infernal Breath",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [
+        "fire"
+      ],
+      "weapon_tags": [],
+      "description": "Wrath Cost: Dominance Cost: Lucky Hit Chance: % Summon a demonic head for seconds that breathes fire on enemies dealing damage per hit. Vanguard: Casting Infernal Breath summons an additional demonic head for seconds that orbits you and spews flames, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-profane-sentinel",
+      "display_name": "Profane Sentinel",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Wrath Cost: Dominance Cost: Lucky Hit Chance: % Summon a demonic eye for seconds that focuses upon enemies with a beam that makes them Vulnerable and periodically blasts them, dealing damage. Recast to direct the eye's targeting. Vanguard: Casting Profane Sentinel summons an additional eye for seconds that follows you and blasts enemies, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-apocalypse",
+      "display_name": "Apocalypse",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Stacks Cost: , up to Cooldown: seconds Lucky Hit Chance: % Create a massive sigil that detonates after [|1|] seconds dealing damage to all enemies within. This ritual does not benefit from Cooldown Reduction.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-eviscerated",
+      "display_name": "Eviscerated",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Eviscerated",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-hell-fracture",
+      "display_name": "Hell Fracture",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [
+        "fire"
+      ],
+      "weapon_tags": [],
+      "description": "Wrath Cost: Lucky Hit Chance: [|%|] Summon the fires of hell to fracture the ground, dealing damage to enemies in the area. The fractures remain for seconds and explode up to more times when you cast Hell Fracture again.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-terror-swarm",
+      "display_name": "Terror Swarm",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: % Summon a terror from the depths that deals damage and spews a voracious swarm that deals damage per bite for seconds.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-doom",
+      "display_name": "Doom",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Generate Wrath: Lucky Hit Chance: % Burst a sigil on your enemies, Hexing them and dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-hex-debuff",
+      "display_name": "Hex Debuff",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-angry-lunatic",
+      "display_name": "Angry Lunatic",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cast again while active to cancel.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-nether-step",
+      "display_name": "Nether Step",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-dread-claws",
+      "display_name": "Dread Claws",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [
+        "shadow"
+      ],
+      "weapon_tags": [],
+      "description": "Wrath Cost: Lucky Hit Chance: % Burst forth [*2] shadowy claws, each dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-shadowform",
+      "display_name": "Shadowform",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [
+        "shadow"
+      ],
+      "weapon_tags": [],
+      "description": "Shadowform",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-sigil-of-calamity",
+      "display_name": "Sigil of Calamity",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "movement",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "(PH) Cooldown: seconds Lucky Hit Chance: % Create a sigil with multiple rings, as enemies move through the rings they are Hexed and a seal breaks, building up to a major pixel pull in explosion",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-sigil-of-chaos",
+      "display_name": "Sigil of Chaos",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "lucky"
+      ],
+      "damage_tags": [
+        "fire"
+      ],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: % Create a destructive ritual for seconds that grants you Volatility while within. Killing enemies or Demons within fuels the ritual's chaotic hellfire, increasing the chance for each enemy to explode for damage on death.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-sigil-of-subversion",
+      "display_name": "Sigil of Subversion",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [
+        "shadow"
+      ],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: % Create a subversive ritual for seconds that Hexes enemies. Killing enemies or Demons within fuels the ritual to send forth shadow trails for [|1|] seconds that periodically grant you stack of Shadowform while in them. You can have up to trails active at once.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-sigil-of-summons",
+      "display_name": "Sigil of Summons",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Cooldown: seconds Lucky Hit Chance: % Create a binding ritual for seconds that extends the duration of your Summons. Killing enemies or Demons within fuels the ritual to summon a demon for seconds which attacks nearby enemies, dealing damage per hit. You can have up to demons active at once.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-summon-ae-grom",
+      "display_name": "Summon Ae'grom",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Dominance Cost: Summon Ae'grom, the Demon of Legions.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-command-fallen",
+      "display_name": "Command Fallen",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "aoe",
+        "movement",
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Generate Wrath: Lucky Hit Chance: % Summon a Fallen Lunatic that charges your target and explodes, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-summon-laalish",
+      "display_name": "Summon Laalish",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Dominance Cost: Summon Laalish, the Abyss Demon.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-summon-valloch",
+      "display_name": "Summon Valloch",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Dominance Cost: Summon Valloch, the Fallen One.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-summon-abodian",
+      "display_name": "Summon Abodian",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Dominance Cost: Summon Abodian, the Hellhound.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-hellion-sting",
+      "display_name": "Hellion Sting",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Generate Wrath: Lucky Hit Chance: % Whip a demon tail forward, dealing damage with a [|%|] chance to Eviscerate enemies for damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-demonic-strike",
+      "display_name": "Demonic Strike",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Generate Dominance : Lucky Hit Chance: % Attack an enemy, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-fiend-of-abaddon",
+      "display_name": "Fiend of Abaddon",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [
+        "minion",
+        "lucky"
+      ],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Dominance Cost: Cooldown: seconds Lucky Hit Chance: % Summon a massive fiend for seconds that attacks enemies, dealing damage per swipe.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-volatility",
+      "display_name": "Volatility",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Volatility",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-attack",
+      "display_name": "Attack",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "Attack an enemy, dealing damage.",
+      "recommended_supports": [],
+      "relevant_passives": [],
+      "conversions_available": []
+    },
+    {
+      "entity_slug": "d4-warlock-swarming-bite",
+      "display_name": "Swarming Bite",
+      "entity_type": "skill",
+      "class_tags": [
+        "warlock"
+      ],
+      "mechanic_tags": [],
+      "damage_tags": [],
+      "weapon_tags": [],
+      "description": "",
       "recommended_supports": [],
       "relevant_passives": [],
       "conversions_available": []
@@ -11929,66 +13726,12 @@
       "conversions_available": []
     },
     {
-      "entity_slug": "d4-aspect-legendary-paladin-001",
-      "display_name": "(DO NOT SHIP) (PH) of Judicator Distant Damage",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "Judicator Skills deal [Affix_Value_1|%x|] increased damage to Distant enemies.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-aspect-legendary-paladin-002",
-      "display_name": "(DNS) of Justice Faith Restoration",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [
-        "lucky"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "Lucky Hit: Up to a [Affix_Value_1|%|] chance to restore [Affix.\"Static Value 0\"] Faith against enemies that have been recently damaged by your Justice Skills.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-aspect-legendary-paladin-003",
-      "display_name": "(DNS) of Zealot Battlerage",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "Zealot Skills deal [Affix_Value_1|2%x|] increased damage for each second an Elite enemy is Nearby. Stacks up to [Affix.\"Static Value 0\"||] times.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-aspect-legendary-paladin-004",
-      "display_name": "(DNS) Conqueror's",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "Juggernaut Skills grant you Conqueror for [Affix.\"Static Value 0\"] seconds when hitting a Crowd Controlled enemy. Juggernaut Skills always Overpower during Conqueror. This effect has a [Affix_Value_1] second Cooldown.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
       "entity_slug": "d4-aspect-legendary-paladin-005",
       "display_name": "of Celestial Strife",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12001,7 +13744,9 @@
       "entity_slug": "d4-aspect-legendary-paladin-006",
       "display_name": "of Proselytizing",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12014,7 +13759,9 @@
       "entity_slug": "d4-aspect-legendary-paladin-007",
       "display_name": "of the Valintyr",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12027,7 +13774,9 @@
       "entity_slug": "d4-aspect-legendary-paladin-008",
       "display_name": "Bulwark's",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12040,7 +13789,9 @@
       "entity_slug": "d4-aspect-legendary-paladin-008-x2",
       "display_name": "Bulwark's",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12053,7 +13804,9 @@
       "entity_slug": "d4-aspect-legendary-paladin-009",
       "display_name": "Lord of Blood's",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [
         "lucky"
       ],
@@ -12068,7 +13821,9 @@
       "entity_slug": "d4-aspect-legendary-paladin-009-x2",
       "display_name": "Lord of Blood's",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [
         "lucky"
       ],
@@ -12080,23 +13835,12 @@
       "conversions_available": []
     },
     {
-      "entity_slug": "d4-aspect-legendary-paladin-010",
-      "display_name": "(DNS) of Salvation",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "Blocking heals you and your allies for [Affix_Value_1|%|] of the amount blocked.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
       "entity_slug": "d4-aspect-legendary-paladin-011",
       "display_name": "Vanguard's",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12109,7 +13853,9 @@
       "entity_slug": "d4-aspect-legendary-paladin-012",
       "display_name": "of Lagera's Sovereignty",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12119,65 +13865,12 @@
       "conversions_available": []
     },
     {
-      "entity_slug": "d4-aspect-legendary-paladin-013",
-      "display_name": "(DNS) Juggernaut CC",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "While Healthy, Juggernaut Skills Knock Down enemies for [Affix_Value_1|1|] seconds. Enemies can be Knocked Down this way every [Affix.\"Static Value 0\"] seconds.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-aspect-legendary-paladin-014",
-      "display_name": "(DNS) CC Area Damage",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [
-        "aoe",
-        "lucky"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "Lucky Hit: Up to [Affix_Value_1|%1|] chance to deal Area Damage to Crowd Controlled enemies.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-aspect-legendary-paladin-015",
-      "display_name": "(DNS) Thorns DD",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "[Affix_Value_1|%|] of your Thorns is applied to every attack.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-aspect-legendary-paladin-016",
-      "display_name": "(DNS) Thorns Taunt",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "Taunted enemies gain [(Owner.Attack_Speed_Percent_Bonus_Total + Owner.Attacks_Speed_Percent_Bonus) * (Affix_Value_1)|%|] Attack Speed (based on [Affix_Value_1|%|] of your Attack Speed Bonus.) Additionally, enemies take [Affix_Value_2|%|] increased Thorns damage.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
       "entity_slug": "d4-aspect-legendary-paladin-017",
       "display_name": "of Verdant Restoration",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12190,7 +13883,9 @@
       "entity_slug": "d4-aspect-legendary-paladin-018",
       "display_name": "of Barbed Roses",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12203,7 +13898,9 @@
       "entity_slug": "d4-aspect-legendary-paladin-019",
       "display_name": "of Akarat's Blessing",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -12216,26 +13913,13 @@
       "entity_slug": "d4-aspect-legendary-paladin-020",
       "display_name": "of the Indomitable",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "paladin"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
       "description": "Gain up to [Affix_Value_1|%|] Damage Reduction and Impairment Resistance, based on your Block chance. Current Bonus: [(Owner.Block_Chance * Affix_Value_1)|%|]",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-aspect-legendary-paladin-021",
-      "display_name": "(DNS) of Righteous Pursuit",
-      "entity_type": "aspect",
-      "class_tags": [],
-      "mechanic_tags": [
-        "movement"
-      ],
-      "damage_tags": [],
-      "weapon_tags": [],
-      "description": "Justice Skills increase your Movement Speed by [Affix_Value_1|%|] for [Affix.\"Static Value 0\"] seconds.",
       "recommended_supports": [],
       "relevant_passives": [],
       "conversions_available": []
@@ -15273,7 +16957,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-001-x2",
       "display_name": "Brutal",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15286,7 +16972,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-002-x2",
       "display_name": "Malicious",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15299,7 +16987,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-003-x2",
       "display_name": "Insidious",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15312,7 +17002,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-004-x2",
       "display_name": "of Calamity",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15325,7 +17017,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-005-x2",
       "display_name": "Remorseless",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15338,7 +17032,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-006-x2",
       "display_name": "Aggressive",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15351,7 +17047,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-007-x2",
       "display_name": "Ominous",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15364,7 +17062,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-008-x2",
       "display_name": "Overwhelming",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15377,7 +17077,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-009-x2",
       "display_name": "Demonic",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15390,7 +17092,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-010-x2",
       "display_name": "of Scorching Heat",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [
         "fire"
@@ -15405,7 +17109,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-011-x2",
       "display_name": "of Fathomless Dark",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [
         "shadow"
@@ -15420,7 +17126,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-012-x2",
       "display_name": "of Heresy",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15433,7 +17141,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-013-x2",
       "display_name": "of Mutilation",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [
         "dot"
       ],
@@ -15450,7 +17160,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-014-x2",
       "display_name": "of Ignition",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15463,7 +17175,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-015-x2",
       "display_name": "of Peril",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15476,7 +17190,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-016-x2",
       "display_name": "of Lava",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [
         "aoe"
       ],
@@ -15491,7 +17207,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-017-x2",
       "display_name": "of Scorn",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [
         "barrier"
       ],
@@ -15506,7 +17224,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-018-x2",
       "display_name": "of Diabolical Armor",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [
         "fire"
@@ -15521,7 +17241,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-019-x2",
       "display_name": "of Deeper Shadows",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [
         "shadow"
@@ -15536,7 +17258,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-020-x2",
       "display_name": "Misanthropic",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15549,7 +17273,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-021-x2",
       "display_name": "Gorefeast",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15562,7 +17288,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-022-x2",
       "display_name": "of Cauterization",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [
         "fire"
@@ -15577,7 +17305,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-023-x2",
       "display_name": "Enfeebling",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15590,7 +17320,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-024-x2",
       "display_name": "Obstinate",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15603,7 +17335,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-025-x2",
       "display_name": "of Malevolence",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15616,7 +17350,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-026-x2",
       "display_name": "of Fiendish Oppression",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [
         "minion"
       ],
@@ -15631,7 +17367,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-027-x2",
       "display_name": "of Immolation",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15644,7 +17382,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-028-x2",
       "display_name": "Bane-Link",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15657,7 +17397,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-029-x2",
       "display_name": "Sadistic",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15670,7 +17412,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-030-x2",
       "display_name": "Pyroclastic",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [
         "aoe"
       ],
@@ -15685,7 +17429,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-031-x2",
       "display_name": "Nefarious",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [
         "shadow"
@@ -15700,7 +17446,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-032-x2",
       "display_name": "of Misfortune",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15713,7 +17461,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-033-x2",
       "display_name": "Methodical",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15726,7 +17476,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-034-x2",
       "display_name": "of Impetus",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [
         "movement"
       ],
@@ -15741,7 +17493,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-035-x2",
       "display_name": "of Authority",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [],
       "weapon_tags": [],
@@ -15754,7 +17508,9 @@
       "entity_slug": "d4-aspect-legendary-warlock-036-x2",
       "display_name": "of Ritual Synthesis",
       "entity_type": "aspect",
-      "class_tags": [],
+      "class_tags": [
+        "warlock"
+      ],
       "mechanic_tags": [],
       "damage_tags": [
         "fire"
@@ -16055,23 +17811,6 @@
       ],
       "weapon_tags": [],
       "description": "Lucky Hit: Lightning Damage has up to a [Affix_Value_1|%|] chance to Stun enemies for [Affix.\"Static Value 0\"|1|] seconds.",
-      "recommended_supports": [],
-      "relevant_passives": [],
-      "conversions_available": []
-    },
-    {
-      "entity_slug": "d4-aspect-legendary-sorc-034",
-      "display_name": "(PH) of Ensnaring Current",
-      "entity_type": "aspect",
-      "class_tags": [
-        "sorcerer"
-      ],
-      "mechanic_tags": [],
-      "damage_tags": [
-        "lightning"
-      ],
-      "weapon_tags": [],
-      "description": "Ball Lightning pulls enemies with it as it travels.",
       "recommended_supports": [],
       "relevant_passives": [],
       "conversions_available": []

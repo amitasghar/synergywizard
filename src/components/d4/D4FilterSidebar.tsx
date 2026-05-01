@@ -2,7 +2,7 @@ import React from "react";
 import { useD4Store } from "../../state/d4Store.ts";
 import type { D4FilterState } from "../../types.ts";
 
-const D4_CLASSES    = ["barbarian", "druid", "necromancer", "rogue", "sorcerer", "spiritborn"] as const;
+const D4_CLASSES    = ["barbarian", "druid", "necromancer", "paladin", "rogue", "sorcerer", "spiritborn", "warlock"] as const;
 const DAMAGE_TAGS   = ["physical", "fire", "cold", "lightning", "poison", "shadow"] as const;
 const MECHANIC_TAGS = ["aoe", "dot", "movement", "minion", "stun", "barrier", "channel", "lucky"] as const;
 const TYPE_TAGS     = ["skill", "passive", "aspect"] as const;

@@ -16,7 +16,7 @@ Tarball structure (master branch):
             Power_<Class>_<SkillName>.stl.json  ← skill display name + description
             Affix_<affix_name>.stl.json          ← aspect display name + description
 
-Classes supported: Barbarian, Druid, Necromancer, Rogue, Sorcerer, Spiritborn (VoH)
+Classes supported: Barbarian, Druid, Necromancer, Rogue, Sorcerer, Spiritborn (VoH), Paladin, Warlock (Lord of Hatred)
 
 Skills are sourced from Power_<Class>_*.stl.json files.
 Aspects are sourced from Aspect/*.asp.json → snoAffix.name → Affix_*.stl.json.
@@ -55,6 +55,8 @@ STL_CLASS_MAP = {
     "Rogue": "rogue",
     "Sorcerer": "sorcerer",
     "Spiritborn": "spiritborn",  # Vessel of Hatred expansion class
+    "Paladin": "paladin",         # Lord of Hatred expansion class
+    "Warlock": "warlock",         # Lord of Hatred expansion class
 }
 
 # Map Aspect filename class tokens → canonical class slug
@@ -67,7 +69,9 @@ ASP_CLASS_MAP = {
     "Sorc": "sorcerer",
     "sorc": "sorcerer",
     "Spiritborn": "spiritborn",  # Vessel of Hatred expansion class
-    # Generic = no class
+    "Paladin": "paladin",         # Lord of Hatred expansion class
+    "Warlock": "warlock",         # Lord of Hatred expansion class
+    # Generic / burningUser / coldUser / fireUser / lightningUser = no class tag
 }
 
 # Suffixes that indicate non-primary skills to exclude from the skills list.
@@ -84,6 +88,9 @@ SKILL_EXCLUDE_SUFFIXES = (
     "_KillCheck",
     "_Passability",
 )
+
+# Display name prefixes that indicate dev/placeholder content — exclude these.
+DEV_NAME_PREFIXES = ("(PH)", "(DNS)", "(DO NOT SHIP)", "(PLACEHOLDER)", "(placeholder)")
 
 DAMAGE_KEYWORDS: dict[str, list[str]] = {
     "physical": ["physical", "weapon damage", "bleed", "bleeding"],
@@ -123,12 +130,11 @@ def _clean_description(raw: str) -> str:
     return " ".join(text.split()).strip()
 
 
-def _get_tarball_url() -> tuple[str, str]:
-    """Return (tarball_url, version_label) for DiabloTools/d4data master branch.
+TARBALL_CACHE = Path(tempfile.gettempdir()) / "d4data_master.tar.gz"
 
-    DiabloTools/d4data has no releases or tags, so we use the master branch
-    tarball directly. The version label is set to "main" for metadata purposes.
-    """
+
+def _get_tarball_url() -> tuple[str, str]:
+    """Return (tarball_url, version_label) for DiabloTools/d4data master branch."""
     return TARBALL_URL, "master"
 
 
@@ -216,6 +222,9 @@ def extract_skills(contents: dict[str, bytes], prefix: str) -> list[dict]:
             if not display_name:
                 display_name = re.sub(r"([A-Z])", r" \1", skill_part).strip()
 
+            if any(display_name.startswith(pfx) for pfx in DEV_NAME_PREFIXES):
+                continue
+
             # Prefer simple_desc (cleaner), fall back to desc
             desc_raw = strings.get("simple_desc") or strings.get("desc") or ""
             desc = _clean_description(desc_raw)
@@ -271,6 +280,8 @@ def extract_aspects(contents: dict[str, bytes], prefix: str) -> list[dict]:
 
         if not display_name or not desc:
             continue
+        if any(display_name.startswith(pfx) for pfx in DEV_NAME_PREFIXES):
+            continue
 
         # Infer class from the Aspect filename, e.g. Asp_Legendary_Barb_001
         asp_filename = member_path.split("/")[-1]
@@ -302,11 +313,13 @@ def main() -> None:
     print(f"Version: {tag}", file=sys.stderr)
     print(f"Downloading {url}", file=sys.stderr)
 
-    with tempfile.NamedTemporaryFile(suffix=".tar.gz", delete=False) as tmp:
-        tmp_path = Path(tmp.name)
-
-    urllib.request.urlretrieve(url, tmp_path)
-    print(f"Downloaded ({tmp_path.stat().st_size // 1024 // 1024} MB)", file=sys.stderr)
+    if TARBALL_CACHE.exists() and TARBALL_CACHE.stat().st_size > 1_000_000:
+        tmp_path = TARBALL_CACHE
+        print(f"Using cached tarball ({tmp_path.stat().st_size // 1024 // 1024} MB)", file=sys.stderr)
+    else:
+        tmp_path = TARBALL_CACHE
+        urllib.request.urlretrieve(url, tmp_path)
+        print(f"Downloaded ({tmp_path.stat().st_size // 1024 // 1024} MB)", file=sys.stderr)
 
     print("Reading needed files (single streaming pass)…", file=sys.stderr)
     prefix, contents = _load_needed_files(tmp_path)
