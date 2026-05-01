@@ -1,6 +1,9 @@
-"""Extract D4 skill/aspect data from blizzhackers/d4data community JSON export.
+"""Extract D4 skill/aspect data from DiabloTools/d4data community JSON export.
 
-Actual tarball structure (tag 1.3.5.51869):
+Source: https://github.com/DiabloTools/d4data (active fork, updated April 2026,
+        includes Vessel of Hatred / Spiritborn class content, patch 3.0+)
+
+Tarball structure (master branch):
   <root>/
     json/
       base/
@@ -13,10 +16,12 @@ Actual tarball structure (tag 1.3.5.51869):
             Power_<Class>_<SkillName>.stl.json  ← skill display name + description
             Affix_<affix_name>.stl.json          ← aspect display name + description
 
+Classes supported: Barbarian, Druid, Necromancer, Rogue, Sorcerer, Spiritborn (VoH)
+
 Skills are sourced from Power_<Class>_*.stl.json files.
 Aspects are sourced from Aspect/*.asp.json → snoAffix.name → Affix_*.stl.json.
 
-IMPORTANT: The tarball has ~430k entries. We use a SINGLE streaming pass to read all
+IMPORTANT: The tarball has ~500k+ entries. We use a SINGLE streaming pass to read all
 needed files, storing their content in memory. This avoids the O(n²) cost of calling
 extractfile() on a gzip stream (which requires rewinding for each member).
 """
@@ -38,8 +43,8 @@ except ImportError:
     def slugify(text: str) -> str:
         return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
-# The blizzhackers/d4data repo has no "releases", only tags.
-GITHUB_TAGS_API = "https://api.github.com/repos/blizzhackers/d4data/tags"
+# DiabloTools/d4data has no releases or tags — we use the master branch tarball directly.
+TARBALL_URL = "https://api.github.com/repos/DiabloTools/d4data/tarball/master"
 OUT_PATH = Path(__file__).parent.parent.parent / "data" / "d4_seed.json"
 
 # Map StringList class name tokens → canonical class slug
@@ -49,6 +54,7 @@ STL_CLASS_MAP = {
     "Necromancer": "necromancer",
     "Rogue": "rogue",
     "Sorcerer": "sorcerer",
+    "Spiritborn": "spiritborn",  # Vessel of Hatred expansion class
 }
 
 # Map Aspect filename class tokens → canonical class slug
@@ -60,6 +66,7 @@ ASP_CLASS_MAP = {
     "Rogue": "rogue",
     "Sorc": "sorcerer",
     "sorc": "sorcerer",
+    "Spiritborn": "spiritborn",  # Vessel of Hatred expansion class
     # Generic = no class
 }
 
@@ -117,19 +124,12 @@ def _clean_description(raw: str) -> str:
 
 
 def _get_tarball_url() -> tuple[str, str]:
-    """Return (tarball_url, tag_name) for the latest blizzhackers/d4data tag."""
-    req = urllib.request.Request(
-        GITHUB_TAGS_API,
-        headers={"User-Agent": "synergywizard-d4-pipeline/1.0"},
-    )
-    with urllib.request.urlopen(req) as resp:
-        tags = json.loads(resp.read())
-    if not tags:
-        raise RuntimeError("No tags found in blizzhackers/d4data")
-    latest = tags[0]
-    tag_name = latest["name"]
-    tarball_url = latest["tarball_url"]
-    return tarball_url, tag_name
+    """Return (tarball_url, version_label) for DiabloTools/d4data master branch.
+
+    DiabloTools/d4data has no releases or tags, so we use the master branch
+    tarball directly. The version label is set to "main" for metadata purposes.
+    """
+    return TARBALL_URL, "master"
 
 
 def _load_needed_files(tarball_path: Path) -> tuple[str, dict[str, bytes]]:
@@ -297,9 +297,9 @@ def extract_aspects(contents: dict[str, bytes], prefix: str) -> list[dict]:
 
 
 def main() -> None:
-    print("Fetching latest blizzhackers/d4data tag…", file=sys.stderr)
+    print("Fetching DiabloTools/d4data master branch tarball…", file=sys.stderr)
     url, tag = _get_tarball_url()
-    print(f"Tag: {tag}", file=sys.stderr)
+    print(f"Version: {tag}", file=sys.stderr)
     print(f"Downloading {url}", file=sys.stderr)
 
     with tempfile.NamedTemporaryFile(suffix=".tar.gz", delete=False) as tmp:
