@@ -19,13 +19,5 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "datagen/**/*.ts"
-  ],
-  "exclude": [
-    "src/components",
-    "src/state",
-    "src/export",
-    "src/api/client.ts",
-    "src/api/client.test.ts",
-    "src/hooks/useEmbedder.test.ts"
   ]
 }
