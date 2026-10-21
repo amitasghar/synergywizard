@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import logoSrc from "./assets/logo-banner.jpg";
+import logoSrc from "./assets/banner-90s.webp";
 import { track } from "./api/analytics.ts";
 import { useDebouncedValue } from "./hooks/useDebouncedValue.ts";
 import { useEmbedder } from "./hooks/useEmbedder.ts";
@@ -96,10 +96,10 @@ export default function App(): React.ReactElement {
         </div>
         <div className="window-body">
           <h1
-            className="m-0 bg-[#000211] overflow-hidden"
+            className="m-0 bg-[#050f3a] overflow-hidden"
             style={{ boxShadow: "inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a", padding: 2 }}
           >
-            <img src={logoSrc} alt="Synergy Wizard" width={712} height={145} className="block mx-auto max-h-[112px] w-auto max-w-full" />
+            <img src={logoSrc} alt="Synergy Wizard - PoE2 Skill Finder" width={2100} height={420} className="block w-full h-auto" />
           </h1>
           <p className="font-prose text-[15px] leading-[1.6] mt-2 mb-0">Search every Path of Exile 2 skill, support and passive by what it does.</p>
           {dataset && (
