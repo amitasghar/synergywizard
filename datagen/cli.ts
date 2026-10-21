@@ -8,6 +8,7 @@ import type { Dataset } from "../src/data/types.ts";
 import { buildEntities, searchText, type RawData } from "./build.ts";
 import { DIMS, embedAll } from "./embed.ts";
 import { buildTranslationIndex, type Translation } from "./text.ts";
+import { checkSanity } from "./sanity.ts";
 
 const BASE = "https://repoe-fork.github.io/poe2";
 const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "public", "data");
@@ -55,6 +56,10 @@ async function main(): Promise<void> {
   if (!force && current && current.version === version && JSON.stringify(current.entities) === JSON.stringify(entities)) {
     console.log(`Up to date: PoE2 ${version}, no content changes`);
     return;
+  }
+  const problems = checkSanity(current?.entities ?? null, entities);
+  if (problems.length && !process.argv.includes("--allow-shrink")) {
+    throw new Error(`Refusing to publish suspicious data for PoE2 ${version}:\n- ${problems.join("\n- ")}\nRe-run with --allow-shrink if this is expected.`);
   }
   const counts: Record<string, number> = {};
   for (const e of entities) counts[e.kind] = (counts[e.kind] ?? 0) + 1;

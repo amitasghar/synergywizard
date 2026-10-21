@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
 import logoSrc from "./assets/banner-90s.webp";
-import { track } from "./api/analytics.ts";
+import { getConsent, track } from "./api/analytics.ts";
 import { useDebouncedValue } from "./hooks/useDebouncedValue.ts";
 import { useEmbedder } from "./hooks/useEmbedder.ts";
 import { emptyFilters, search, type Filters } from "./search/search.ts";
 import { readUrl, writeUrl } from "./search/url.ts";
 import { useDataset } from "./search/useDataset.ts";
+import { ConsentBar } from "./ui/ConsentBar.tsx";
 import { FilterPanel } from "./ui/FilterPanel.tsx";
 import { ResultCard } from "./ui/ResultCard.tsx";
 
@@ -29,6 +30,7 @@ export default function App(): React.ReactElement {
   const [filters, setFilters] = useState<Filters>(initial.filters);
   const [limit, setLimit] = useState(PAGE);
   const [showFilters, setShowFilters] = useState(false);
+  const [consentOpen, setConsentOpen] = useState(() => getConsent() === null);
   const [queryVector, setQueryVector] = useState<{ q: string; v: number[] } | null>(null);
   const data = useDataset();
   const { status: modelStatus, embed } = useEmbedder();
@@ -203,7 +205,10 @@ export default function App(): React.ReactElement {
         </aside>
       </main>
 
-      <footer className="text-xs text-white flex flex-col items-center gap-1 text-center" style={{ textShadow: "1px 1px 0 #000" }}>
+      <footer
+        className={`text-xs text-white flex flex-col items-center gap-1 text-center${consentOpen ? " pb-32" : ""}`}
+        style={{ textShadow: "1px 1px 0 #000" }}
+      >
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
           <a className="btn-play" href="https://90sgamer.com" onClick={() => track("outbound_click", { site: "90sgamer", id: "footer_back" })}>
             ◀ Back to 90sGamer.com
@@ -223,7 +228,11 @@ export default function App(): React.ReactElement {
           </a>
           , refreshed automatically after each patch. Not affiliated with Grinding Gear Games.
         </span>
+        <button type="button" className="link-btn" style={{ color: "#fff" }} onClick={() => setConsentOpen(true)}>
+          Cookie settings
+        </button>
       </footer>
+      <ConsentBar open={consentOpen} onClose={() => setConsentOpen(false)} />
     </div>
   );
 }
