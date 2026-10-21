@@ -1,20 +1,12 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  functions = "netlify/functions"
 
-[functions]
-  node_bundler = "esbuild"
-
-[[redirects]]
-  from = "/admin"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
+# Data files keep fixed names and change after each patch, so always revalidate.
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[redirects]]
   from = "/*"
@@ -22,4 +14,4 @@
   status = 200
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "24"

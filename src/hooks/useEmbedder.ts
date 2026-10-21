@@ -15,14 +15,17 @@ let pipelinePromise: Promise<PipelineFn> | null = null;
 function loadPipeline(): Promise<PipelineFn> {
   if (pipelinePromise) return pipelinePromise;
   pipelinePromise = import("@xenova/transformers")
-    .then(({ pipeline }) =>
-      pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2") as Promise<PipelineFn>
-    )
+    .then(({ pipeline, env }) => {
+      // Otherwise it first probes /models/… on this site, and the SPA fallback answers with index.html.
+      env.allowLocalModels = false;
+      return pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2") as Promise<PipelineFn>;
+    })
     .then((fn) => {
       pipelineCache = fn;
       return fn;
     })
     .catch((err) => {
+      console.error("Embedding model failed to load", err);
       pipelinePromise = null;
       throw new Error("Failed to load embedding model", { cause: err });
     });

@@ -10,8 +10,22 @@
     "noEmit": true,
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": false,
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "jsx": "react-jsx"
   },
-  "include": ["netlify/**/*.ts", "db/**/*.ts", "tests/**/*.ts", "drizzle.config.ts", "src/**/*.ts", "src/**/*.tsx"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "datagen/**/*.ts"
+  ],
+  "exclude": [
+    "src/components",
+    "src/state",
+    "src/export",
+    "src/api/client.ts",
+    "src/api/client.test.ts",
+    "src/hooks/useEmbedder.test.ts"
+  ]
 }
