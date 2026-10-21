@@ -15,7 +15,9 @@
     "eval": "node datagen/eval.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "short:record": "node marketing/short/record.mjs",
+    "short:build": "node marketing/short/build.mjs"
   },
   "dependencies": {
     "@xenova/transformers": "^2.17.2",
@@ -29,6 +31,8 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.0",
     "autoprefixer": "^10.4.20",
+    "ffmpeg-static": "^5.3.0",
+    "playwright-core": "^1.64.1",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.0",

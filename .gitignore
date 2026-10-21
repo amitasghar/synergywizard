@@ -21,3 +21,6 @@ dist/
 
 # Source art
 *.psd
+
+# Short video intermediates
+marketing/short/.work/
