@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import bannerSrc from "./assets/banner.jpg";
+import logoSrc from "./assets/logo-banner.jpg";
 import { track } from "./api/analytics.ts";
 import { useDebouncedValue } from "./hooks/useDebouncedValue.ts";
 import { useEmbedder } from "./hooks/useEmbedder.ts";
@@ -68,47 +68,57 @@ export default function App(): React.ReactElement {
   }
 
   const activeCount = Object.values(filters).reduce((n, v) => n + v.length, 0);
-  const smart = modelStatus === "ready" ? "Smart search on" : modelStatus === "loading" ? "Loading smart search…" : modelStatus === "error" ? "Keyword search only" : "";
+  const searching = debounced.trim().length > 0;
+  const smart =
+    modelStatus === "ready" ? "Smart search" : modelStatus === "loading" ? "Loading smart search…" : modelStatus === "error" ? "Keyword search" : "";
+  const dataset = data.status === "ready" ? data.index.dataset : null;
 
   return (
     <div className="min-h-full flex flex-col">
-      <header className="border-b border-white/10">
-        <img src={bannerSrc} alt="Synergy Wizard" className="w-full block max-h-40 object-cover" />
-        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <h1 className="text-accent text-xl font-semibold">Synergy Wizard</h1>
-          <p className="text-sm text-white/55">Search every Path of Exile 2 skill, support and passive by what it does.</p>
+      <header className="border-b border-ink-700/60 bg-gradient-to-r from-[#000211] via-[#0a1028] to-ink-950">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col md:flex-row md:items-center gap-3 md:gap-8">
+          <h1 className="shrink-0">
+            <img
+              src={logoSrc}
+              alt="Synergy Wizard"
+              width={712}
+              height={145}
+              className="h-[72px] sm:h-[96px] md:h-[112px] w-auto [mask-image:linear-gradient(to_right,black_85%,transparent)]"
+            />
+          </h1>
+          <div className="md:ml-auto md:text-right">
+            <p className="text-base sm:text-lg text-text">Search every Path of Exile 2 skill, support and passive by what it does.</p>
+            {dataset && (
+              <p className="mt-1 text-xs text-muted">
+                <span className="inline-block rounded-full border border-gold/40 bg-gold-soft text-gold px-2 py-0.5 mr-2">Patch {dataset.version}</span>
+                Updated {formatDate(dataset.sourceUpdated)} · {dataset.entities.length.toLocaleString()} entries
+              </p>
+            )}
+          </div>
         </div>
       </header>
 
-      <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-4 grid gap-6 md:grid-cols-[230px_1fr]">
-        <aside className="md:sticky md:top-4 md:self-start">
-          <button
-            type="button"
-            className="md:hidden w-full text-left text-sm border border-white/15 rounded px-3 py-2 mb-3"
-            onClick={() => setShowFilters(!showFilters)}
-            aria-expanded={showFilters}
-          >
-            Filters{activeCount ? ` (${activeCount})` : ""} {showFilters ? "▲" : "▼"}
-          </button>
-          <div className={`${showFilters ? "block" : "hidden"} md:block`}>
-            <FilterPanel filters={filters} onToggle={toggle} onClear={() => setFilters(emptyFilters())} />
-          </div>
-        </aside>
-
+      <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 py-5 grid gap-5 md:gap-8 md:grid-cols-[240px_minmax(0,1fr)]">
         <section className="min-w-0">
           <label htmlFor="q" className="sr-only">
-            Search
+            Describe what you want
           </label>
-          <input
-            id="q"
-            type="search"
-            value={query}
-            autoFocus
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Describe what you want, e.g. protect me for a few seconds"
-            className="w-full bg-white/5 border border-white/15 focus:border-accent/70 outline-none rounded-lg px-4 py-3 text-base placeholder:text-white/35"
-          />
-          <div className="flex flex-wrap gap-1.5 mt-2">
+          <div className="relative">
+            <svg aria-hidden="true" viewBox="0 0 20 20" className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-faint">
+              <path fill="currentColor" d="M8.5 3a5.5 5.5 0 0 1 4.38 8.83l3.65 3.64-1.06 1.06-3.64-3.65A5.5 5.5 0 1 1 8.5 3Zm0 1.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" />
+            </svg>
+            <input
+              id="q"
+              type="search"
+              value={query}
+              autoFocus
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Describe what you want, e.g. protect me for a few seconds"
+              className="w-full bg-ink-900 border border-ink-700 focus:border-gold/70 focus:outline-none focus:ring-2 focus:ring-gold/20 rounded-xl pl-12 pr-4 py-3.5 text-base text-text placeholder:text-faint shadow-[0_8px_30px_rgba(0,0,0,0.35)]"
+            />
+          </div>
+          <div className="mt-3 flex items-center gap-2 overflow-x-auto no-scrollbar sm:flex-wrap -mx-4 px-4 sm:mx-0 sm:px-0">
+            <span className="shrink-0 text-xs font-display tracking-wider text-gold/80">Try</span>
             {EXAMPLES.map((ex) => (
               <button
                 key={ex}
@@ -117,24 +127,28 @@ export default function App(): React.ReactElement {
                   track("example_click", { example: ex });
                   setQuery(ex);
                 }}
-                className="text-xs px-2 py-1 rounded-full border border-white/10 text-white/55 hover:text-white/85 hover:border-white/30"
+                className="shrink-0 text-xs px-3 py-1.5 rounded-full border border-ink-700 bg-ink-900/60 text-muted hover:text-text hover:border-violet/60 transition-colors"
               >
                 {ex}
               </button>
             ))}
           </div>
 
-          <div className="mt-4 rounded-lg border border-white/10 overflow-hidden">
-            <div className="px-4 py-2 text-xs text-white/45 border-b border-white/10 flex flex-wrap gap-x-3 justify-between">
+          <div className="mt-5 rounded-xl border border-ink-700/70 bg-ink-900/80 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+            <div className="px-4 py-2.5 text-xs text-muted border-b border-ink-700/70 flex items-center justify-between gap-3">
               {data.status === "ready" ? (
                 <>
                   <span>
-                    {results!.total.toLocaleString()} result{results!.total === 1 ? "" : "s"}
-                    {debounced.trim() && smart ? ` · ${smart}` : ""}
+                    {searching
+                      ? `${results!.total.toLocaleString()} match${results!.total === 1 ? "" : "es"}`
+                      : `Browsing all ${results!.total.toLocaleString()}`}
                   </span>
-                  <span>
-                    PoE2 {data.index.dataset.version} · data updated {formatDate(data.index.dataset.sourceUpdated)}
-                  </span>
+                  {searching && smart && (
+                    <span className="inline-flex items-center gap-1.5 text-teal">
+                      <span className={`w-1.5 h-1.5 rounded-full ${modelStatus === "ready" ? "bg-teal" : "bg-faint animate-pulse"}`} />
+                      {smart}
+                    </span>
+                  )}
                 </>
               ) : (
                 <span>{data.status === "loading" ? "Loading game data…" : `Couldn't load game data (${data.error})`}</span>
@@ -142,27 +156,46 @@ export default function App(): React.ReactElement {
             </div>
             {results?.hits.map((h) => <ResultCard key={h.entity.id} entity={h.entity} />)}
             {results && results.total === 0 && (
-              <p className="px-4 py-8 text-sm text-white/50">Nothing matches. Try fewer filters or different words.</p>
+              <p className="px-4 py-10 text-center text-sm text-muted">Nothing matches. Try fewer filters or different words.</p>
             )}
             {results && results.total > results.hits.length && (
-              <button type="button" onClick={() => setLimit(limit + PAGE)} className="w-full py-3 text-sm text-accent/80 hover:text-accent hover:bg-white/[0.03]">
+              <button
+                type="button"
+                onClick={() => setLimit(limit + PAGE)}
+                className="w-full py-3 text-sm text-gold/90 hover:text-gold hover:bg-ink-850 border-t border-ink-700/70"
+              >
                 Show more ({(results.total - results.hits.length).toLocaleString()} left)
               </button>
             )}
           </div>
         </section>
+
+        <aside className="md:order-first md:sticky md:top-5 md:self-start">
+          <button
+            type="button"
+            className="md:hidden w-full flex items-center justify-between text-sm text-text bg-ink-900 border border-ink-700 rounded-xl px-4 py-3"
+            onClick={() => setShowFilters(!showFilters)}
+            aria-expanded={showFilters}
+          >
+            <span>Filters{activeCount ? ` (${activeCount})` : ""}</span>
+            <span className="text-faint">{showFilters ? "Hide" : "Show"}</span>
+          </button>
+          <div className={`${showFilters ? "block mt-3" : "hidden"} md:block rounded-xl md:rounded-none border md:border-0 border-ink-700 bg-ink-900 md:bg-transparent p-4 md:p-0`}>
+            <FilterPanel filters={filters} onToggle={toggle} onClear={() => setFilters(emptyFilters())} />
+          </div>
+        </aside>
       </main>
 
-      <footer className="border-t border-white/10 text-xs text-white/40">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-wrap gap-x-4 gap-y-1">
+      <footer className="border-t border-ink-700/60 text-xs text-faint">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-wrap gap-x-5 gap-y-2">
           <span>
             Game data from{" "}
-            <a className="underline hover:text-white/70" href="https://repoe-fork.github.io/poe2/">
+            <a className="text-muted underline decoration-ink-700 underline-offset-2 hover:text-text" href="https://repoe-fork.github.io/poe2/">
               RePoE
             </a>
             , refreshed automatically after each patch.
           </span>
-          <a className="underline hover:text-white/70" href="https://90sgamer.com">
+          <a className="text-muted underline decoration-ink-700 underline-offset-2 hover:text-text" href="https://90sgamer.com">
             More from 90sGamer
           </a>
           <span>Not affiliated with Grinding Gear Games.</span>

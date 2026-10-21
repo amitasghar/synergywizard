@@ -1,29 +1,29 @@
 /** @type {import('tailwindcss').Config} */
+// Palette sampled from the banner art: night-sky navy, wizard violet, logo gold, tagline teal.
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        background: "#0d0f12",
-        accent: "#c8a96e",
-        tagMechanic: "#2563eb",
-        tagDamage: "#ef4444",
-        tagClass: "#16a34a",
+        ink: {
+          950: "#070a1c",
+          900: "#0d1230",
+          850: "#121840",
+          800: "#19204d",
+          700: "#262e63",
+        },
+        text: "#ece9f7",
+        muted: "#a8abcf",
+        faint: "#7277a3",
+        gold: { DEFAULT: "#e8c46f", soft: "#2b2412" },
+        violet: { DEFAULT: "#a58bff", deep: "#6e51df", soft: "#1e1847" },
+        teal: { DEFAULT: "#6fdbe6" },
+        stat: "#a9b8ff",
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui"],
-        mono: ["ui-monospace", "SFMono-Regular", "monospace"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Cinzel", "Georgia", "serif"],
       },
-      boxShadow: {
-        amberGlow: "0 0 0 1px rgba(200,169,110,0.4), 0 0 12px rgba(200,169,110,0.25)",
-      },
-      keyframes: {
-        pulseRing: {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(200,169,110,0.6)" },
-          "50%": { boxShadow: "0 0 0 8px rgba(200,169,110,0)" },
-        },
-      },
-      animation: { pulseRing: "pulseRing 1.6s ease-out infinite" },
     },
   },
   plugins: [],

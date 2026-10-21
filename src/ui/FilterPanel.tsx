@@ -17,11 +17,11 @@ const WEAPONS: [string, string][] = [
 ].map((w) => [w, w]);
 
 const DAMAGE_COLOR: Record<string, string> = {
-  fire: "border-[#e74c3c88] text-[#ff7b6b] bg-[#2a0b08]",
-  cold: "border-[#3498db88] text-[#7cc4f5] bg-[#0b1a2a]",
-  lightning: "border-[#f1c40f88] text-[#f5d442] bg-[#2a2408]",
-  physical: "border-[#bdc3c788] text-[#dfe4e6] bg-[#1d2022]",
-  chaos: "border-[#9b59b688] text-[#c58bdf] bg-[#1d0c26]",
+  fire: "border-[#ff7a5c99] text-[#ff9c82] bg-[#2a1018]",
+  cold: "border-[#6fb8ff99] text-[#9fd0ff] bg-[#0f1d3d]",
+  lightning: "border-[#ffd84d99] text-[#ffe27a] bg-[#2a2414]",
+  physical: "border-[#c9c7d899] text-[#e4e2ef] bg-[#1c1f38]",
+  chaos: "border-[#c58bdf99] text-[#d9a8f0] bg-[#22123a]",
 };
 
 interface GroupProps {
@@ -36,19 +36,19 @@ function Group({ label, field, options, filters, onToggle }: GroupProps): React.
   const active = new Set<string>(filters[field]);
   return (
     <fieldset>
-      <legend className="text-[11px] uppercase tracking-widest text-white/40 mb-2">{label}</legend>
+      <legend className="font-display text-[12px] tracking-[0.12em] text-gold/85 mb-2">{label}</legend>
       <div className="flex flex-wrap gap-1.5">
         {options.map(([value, text]) => {
           const on = active.has(value);
-          const color = field === "damage" ? DAMAGE_COLOR[value] : "border-accent/60 text-accent bg-[#2a1f00]";
+          const color = field === "damage" ? DAMAGE_COLOR[value] : "border-gold/60 text-gold bg-gold-soft";
           return (
             <button
               key={value}
               type="button"
               aria-pressed={on}
               onClick={() => onToggle(field, value)}
-              className={`px-2 py-1 rounded text-xs border capitalize transition-colors ${
-                on ? color : "border-white/10 text-white/55 hover:border-white/30 hover:text-white/80"
+              className={`px-2.5 py-1 rounded-md text-xs border transition-colors ${field === "effects" ? "" : "capitalize"} ${
+                on ? color : "border-ink-700 text-muted hover:border-violet/50 hover:text-text"
               }`}
             >
               {text}
@@ -75,7 +75,7 @@ export function FilterPanel({ filters, onToggle, onClear }: Props): React.ReactE
       <Group label="Damage" field="damage" options={DAMAGE} filters={filters} onToggle={onToggle} />
       <Group label="Weapon" field="weapons" options={WEAPONS} filters={filters} onToggle={onToggle} />
       {any && (
-        <button type="button" onClick={onClear} className="self-start text-xs text-white/45 hover:text-white/80 underline underline-offset-2">
+        <button type="button" onClick={onClear} className="self-start text-xs text-muted hover:text-text underline decoration-ink-700 underline-offset-2">
           Clear filters
         </button>
       )}
