@@ -4,14 +4,14 @@ import type { Entity } from "../data/types.ts";
 import { track } from "../api/analytics.ts";
 import { poe2dbUrl, wikiUrl } from "./links.ts";
 
-const KIND_STYLE: Record<string, { label: string; cls: string }> = {
-  skill: { label: "Skill", cls: "bg-[#3a1424] text-[#ff9c82]" },
-  spirit: { label: "Spirit", cls: "bg-[#0f2a35] text-teal" },
-  support: { label: "Support", cls: "bg-[#14224d] text-[#9fd0ff]" },
-  keystone: { label: "Keystone", cls: "bg-gold-soft text-gold" },
-  notable: { label: "Notable", cls: "bg-[#231f2e] text-[#e3cf9f]" },
-  ascendancy: { label: "Ascendancy", cls: "bg-[#2a2360] text-[#e6e0ff]" },
-  passive: { label: "Passive", cls: "bg-ink-800 text-muted" },
+const KIND_STYLE: Record<string, { label: string; bg: string; color?: string }> = {
+  skill: { label: "Skill", bg: "#ff9900" },
+  spirit: { label: "Spirit", bg: "#39ff14" },
+  support: { label: "Support", bg: "#00e5ff" },
+  keystone: { label: "Keystone", bg: "#ffe600" },
+  notable: { label: "Notable", bg: "#ffd8a8" },
+  ascendancy: { label: "Ascendancy", bg: "#ff2bd6", color: "#fff" },
+  passive: { label: "Passive", bg: "#c0c0c0" },
 };
 
 const ATTR: Record<string, string> = { str: "Str", dex: "Dex", int: "Int" };
@@ -36,51 +36,56 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
     setOpen(!open);
   }
 
+  const links = (
+    <span className="flex gap-2 flex-wrap">
+      {[
+        ["poe2db", "📖 poe2db", poe2dbUrl(entity.name)],
+        ["Wiki", "🌐 PoE2 Wiki", wikiUrl(entity.name)],
+      ].map(([site, label, href]) => (
+        <a
+          key={site}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => track("outbound_click", { site, id: entity.id })}
+          className="ext-btn"
+        >
+          {label}
+        </a>
+      ))}
+    </span>
+  );
+
   return (
-    <article className="border-b border-ink-700/50 last:border-b-0 px-4 sm:px-5 py-3.5 hover:bg-ink-850/60 transition-colors">
-      <header className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-        <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider ${kind.cls}`}>{kind.label}</span>
-        <h3 className="text-[15px] font-semibold text-text">{entity.name}</h3>
+    <article className="border-b border-[#c0c0c0] last:border-b-0 px-3 sm:px-4 py-3 font-prose">
+      <header className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+        <span className="tag" style={{ background: kind.bg, color: kind.color }}>{kind.label.toUpperCase()}</span>
+        <h3 className="text-[16px] font-bold text-navy m-0">{entity.name}</h3>
         {entity.effects.map((e) => (
-          <span key={e} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#2a2360] border border-[#6a5ad6]/60 text-[#e6e0ff]">
+          <span key={e} className="font-ui text-[11px] text-black bg-[#ffffe1] border border-black px-1.5 py-px">
             {EFFECT_LABEL[e]}
           </span>
         ))}
-        <span className="ml-auto flex gap-3 text-[11px]">
-          {[
-            ["poe2db", poe2dbUrl(entity.name)],
-            ["Wiki", wikiUrl(entity.name)],
-          ].map(([site, href]) => (
-            <a
-              key={site}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => track("outbound_click", { site, id: entity.id })}
-              className="text-faint hover:text-teal underline decoration-ink-700 underline-offset-2"
-            >
-              {site} ↗
-            </a>
-          ))}
-        </span>
+        <span className="hidden sm:block sm:ml-auto">{links}</span>
       </header>
-      {meta.length > 0 && <div className="text-[11px] text-faint mt-1">{meta.join(" · ")}</div>}
-      {text && <p className="text-sm text-muted mt-1.5 leading-relaxed">{text}</p>}
+      {meta.length > 0 && <div className="text-[12px] text-[#555] mt-1 font-ui">{meta.join(" · ")}</div>}
+      {text && <p className="text-[14px] text-ink mt-1.5 mb-0 leading-[1.5]">{text}</p>}
       {stats.length > 0 && (
-        <ul className="mt-2 text-[13px] text-stat space-y-0.5 border-l-2 border-ink-700 pl-3">
+        <ul className="mt-2 mb-0 p-0 text-[13px] text-navy space-y-0.5 border-l-2 border-[#808080] pl-3 list-none font-ui">
           {stats.map((s, i) => (
             <li key={i}>{s}</li>
           ))}
         </ul>
       )}
       {open && entity.supports?.length ? (
-        <p className="mt-2 text-xs text-muted">
-          <span className="text-faint">Suggested supports: </span>
+        <p className="mt-2 mb-0 text-xs text-[#555]">
+          <span>Suggested supports: </span>
           {entity.supports.join(", ")}
         </p>
       ) : null}
+      <div className="mt-2 sm:hidden">{links}</div>
       {canExpand && (
-        <button type="button" onClick={toggle} className="mt-2 text-xs text-teal/90 hover:text-teal">
+        <button type="button" onClick={toggle} className="link-btn mt-1 -ml-1">
           {open ? "Show less" : hiddenStats > 0 ? `Show ${hiddenStats} more line${hiddenStats > 1 ? "s" : ""}` : "Show more"}
         </button>
       )}

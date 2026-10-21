@@ -1,27 +1,24 @@
 /** @type {import('tailwindcss').Config} */
-// Palette sampled from the banner art: night-sky navy, wizard violet, logo gold, tagline teal.
+// Palette matches 90sGamer.com (Windows 98 desktop via 98.css).
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  corePlugins: { preflight: false },
   theme: {
     extend: {
       colors: {
-        ink: {
-          950: "#070a1c",
-          900: "#0d1230",
-          850: "#121840",
-          800: "#19204d",
-          700: "#262e63",
-        },
-        text: "#ece9f7",
-        muted: "#a8abcf",
-        faint: "#7277a3",
-        gold: { DEFAULT: "#e8c46f", soft: "#2b2412" },
-        violet: { DEFAULT: "#a58bff", deep: "#6e51df", soft: "#1e1847" },
-        teal: { DEFAULT: "#6fdbe6" },
-        stat: "#a9b8ff",
+        teal: "#008080",
+        gray: "#c0c0c0",
+        navy: "#000080",
+        pink: "#ff2bd6",
+        lime: "#39ff14",
+        cyan: "#00e5ff",
+        yellow: "#ffe600",
+        ink: "#111",
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        ui: ["Tahoma", "Verdana", "'Segoe UI'", "sans-serif"],
+        prose: ["Verdana", "Tahoma", "Geneva", "sans-serif"],
+        pixel: ["'Press Start 2P'", "monospace"],
       },
     },
   },

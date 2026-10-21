@@ -74,39 +74,56 @@ export default function App(): React.ReactElement {
   const dataset = data.status === "ready" ? data.index.dataset : null;
 
   return (
-    <div className="min-h-full flex flex-col">
-      <header className="border-b border-ink-700/60 bg-gradient-to-r from-[#000211] via-[#0a1028] to-ink-950">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col md:flex-row md:items-center gap-3 md:gap-8">
-          <h1 className="shrink-0">
-            <img
-              src={logoSrc}
-              alt="Synergy Wizard"
-              width={712}
-              height={145}
-              className="h-[72px] sm:h-[96px] md:h-[112px] w-auto [mask-image:linear-gradient(to_right,black_85%,transparent)]"
-            />
-          </h1>
-          <div className="md:ml-auto md:text-right">
-            <p className="text-base sm:text-lg text-text">Search every Path of Exile 2 skill, support and passive by what it does.</p>
-            {dataset && (
-              <p className="mt-1 text-xs text-muted">
-                <span className="inline-block rounded-full border border-gold/40 bg-gold-soft text-gold px-2 py-0.5 mr-2">Patch {dataset.version}</span>
-                Updated {formatDate(dataset.sourceUpdated)} · {dataset.entities.length.toLocaleString()} entries
-              </p>
-            )}
+    <div className="max-w-[1100px] mx-auto px-4 py-4 sm:py-6 flex flex-col gap-4">
+      <p className="font-pixel text-[14px] leading-[1.6] text-center text-white m-0" style={{ textShadow: "2px 2px 0 #000" }}>
+        <a
+          href="https://90sgamer.com"
+          className="text-white no-underline hover:underline"
+          onClick={() => track("outbound_click", { site: "90sgamer", id: "header" })}
+        >
+          90sGamer.com
+        </a>{" "}
+        presents
+      </p>
+
+      <header className="window">
+        <div className="title-bar">
+          <div className="title-bar-text">🧙 Synergy Wizard - a 90sGamer.com tool</div>
+          <div className="title-bar-controls">
+            <button aria-label="Minimize" tabIndex={-1}></button>
+            <button aria-label="Maximize" tabIndex={-1}></button>
           </div>
+        </div>
+        <div className="window-body">
+          <h1
+            className="m-0 bg-[#000211] overflow-hidden"
+            style={{ boxShadow: "inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a", padding: 2 }}
+          >
+            <img src={logoSrc} alt="Synergy Wizard" width={712} height={145} className="block mx-auto max-h-[112px] w-auto max-w-full" />
+          </h1>
+          <p className="font-prose text-[15px] leading-[1.6] mt-2 mb-0">Search every Path of Exile 2 skill, support and passive by what it does.</p>
+          {dataset && (
+            <p className="mt-1 mb-0 text-xs text-[#555]">
+              <span className="tag mr-2" style={{ background: "#ffe600" }}>PATCH {dataset.version}</span>
+              Updated {formatDate(dataset.sourceUpdated)} · {dataset.entities.length.toLocaleString()} entries
+            </p>
+          )}
         </div>
       </header>
 
-      <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 py-5 grid gap-5 md:gap-8 md:grid-cols-[240px_minmax(0,1fr)]">
-        <section className="min-w-0">
-          <label htmlFor="q" className="sr-only">
-            Describe what you want
-          </label>
-          <div className="relative">
-            <svg aria-hidden="true" viewBox="0 0 20 20" className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-faint">
-              <path fill="currentColor" d="M8.5 3a5.5 5.5 0 0 1 4.38 8.83l3.65 3.64-1.06 1.06-3.64-3.65A5.5 5.5 0 1 1 8.5 3Zm0 1.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" />
-            </svg>
+      <main className="grid gap-4 md:grid-cols-[250px_minmax(0,1fr)] items-start">
+        <section className="window min-w-0">
+          <div className="title-bar">
+            <div className="title-bar-text">🔎 Search.exe</div>
+            <div className="title-bar-controls">
+              <button aria-label="Minimize" tabIndex={-1}></button>
+              <button aria-label="Maximize" tabIndex={-1}></button>
+            </div>
+          </div>
+          <div className="window-body">
+            <label htmlFor="q" className="sr-only">
+              Describe what you want
+            </label>
             <input
               id="q"
               type="search"
@@ -114,92 +131,98 @@ export default function App(): React.ReactElement {
               autoFocus
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Describe what you want, e.g. protect me for a few seconds"
-              className="w-full bg-ink-900 border border-ink-700 focus:border-gold/70 focus:outline-none focus:ring-2 focus:ring-gold/20 rounded-xl pl-12 pr-4 py-3.5 text-base text-text placeholder:text-faint shadow-[0_8px_30px_rgba(0,0,0,0.35)]"
+              className="search-input"
             />
-          </div>
-          <div className="mt-3 flex items-center gap-2 overflow-x-auto no-scrollbar sm:flex-wrap -mx-4 px-4 sm:mx-0 sm:px-0">
-            <span className="shrink-0 text-[11px] font-semibold uppercase tracking-wider text-muted">Try</span>
-            {EXAMPLES.map((ex) => (
-              <button
-                key={ex}
-                type="button"
-                onClick={() => {
-                  track("example_click", { example: ex });
-                  setQuery(ex);
-                }}
-                className="shrink-0 text-xs px-3 py-1.5 rounded-full border border-ink-700 bg-ink-900/60 text-muted hover:text-text hover:border-violet/60 transition-colors"
-              >
-                {ex}
-              </button>
-            ))}
-          </div>
+            <div className="mt-2 flex flex-wrap items-center gap-1.5">
+              <span className="font-bold text-xs">Try:</span>
+              {EXAMPLES.map((ex) => (
+                <button
+                  key={ex}
+                  type="button"
+                  onClick={() => {
+                    track("example_click", { example: ex });
+                    setQuery(ex);
+                  }}
+                  className="tap !min-w-0 !h-auto py-1 px-2 text-left"
+                >
+                  {ex}
+                </button>
+              ))}
+            </div>
 
-          <div className="mt-5 rounded-xl border border-ink-700/70 bg-ink-900/80 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-            <div className="px-4 py-2.5 text-xs text-muted border-b border-ink-700/70 flex items-center justify-between gap-3">
-              {data.status === "ready" ? (
-                <>
-                  <span>
-                    {searching
-                      ? `${results!.total.toLocaleString()} match${results!.total === 1 ? "" : "es"}`
-                      : `Browsing all ${results!.total.toLocaleString()}`}
-                  </span>
-                  {searching && smart && (
-                    <span className="inline-flex items-center gap-1.5 text-teal">
-                      <span className={`w-1.5 h-1.5 rounded-full ${modelStatus === "ready" ? "bg-teal" : "bg-faint animate-pulse"}`} />
-                      {smart}
-                    </span>
-                  )}
-                </>
-              ) : (
-                <span>{data.status === "loading" ? "Loading game data…" : `Couldn't load game data (${data.error})`}</span>
+            <div className="sunken-panel mt-3 bg-white" style={{ maxHeight: "none", overflow: "visible" }}>
+              {results?.hits.map((h) => <ResultCard key={h.entity.id} entity={h.entity} />)}
+              {data.status !== "ready" && (
+                <p className="px-4 py-8 text-center text-sm font-prose m-0">
+                  {data.status === "loading" ? "Loading game data…" : `Couldn't load game data (${data.error})`}
+                </p>
+              )}
+              {results && results.total === 0 && (
+                <p className="px-4 py-10 text-center text-sm font-prose m-0">Nothing matches. Try fewer filters or different words.</p>
+              )}
+              {results && results.total > results.hits.length && (
+                <button type="button" onClick={() => setLimit(limit + PAGE)} className="link-btn w-full py-3 border-t border-[#c0c0c0]">
+                  Show more ({(results.total - results.hits.length).toLocaleString()} left)
+                </button>
               )}
             </div>
-            {results?.hits.map((h) => <ResultCard key={h.entity.id} entity={h.entity} />)}
-            {results && results.total === 0 && (
-              <p className="px-4 py-10 text-center text-sm text-muted">Nothing matches. Try fewer filters or different words.</p>
-            )}
-            {results && results.total > results.hits.length && (
-              <button
-                type="button"
-                onClick={() => setLimit(limit + PAGE)}
-                className="w-full py-3 text-sm text-gold/90 hover:text-gold hover:bg-ink-850 border-t border-ink-700/70"
-              >
-                Show more ({(results.total - results.hits.length).toLocaleString()} left)
-              </button>
+          </div>
+          <div className="status-bar">
+            {data.status === "ready" ? (
+              <>
+                <p className="status-bar-field">
+                  {searching
+                    ? `${results!.total.toLocaleString()} match${results!.total === 1 ? "" : "es"}`
+                    : `Browsing all ${results!.total.toLocaleString()}`}
+                </p>
+                {searching && smart && <p className="status-bar-field">{smart}</p>}
+                <p className="status-bar-field">Patch {dataset!.version}</p>
+              </>
+            ) : (
+              <p className="status-bar-field">{data.status === "loading" ? "Loading game data…" : "Error"}</p>
             )}
           </div>
         </section>
 
-        <aside className="md:order-first md:sticky md:top-5 md:self-start">
-          <button
-            type="button"
-            className="md:hidden w-full flex items-center justify-between text-sm text-text bg-ink-900 border border-ink-700 rounded-xl px-4 py-3"
-            onClick={() => setShowFilters(!showFilters)}
-            aria-expanded={showFilters}
-          >
-            <span>Filters{activeCount ? ` (${activeCount})` : ""}</span>
-            <span className="text-faint">{showFilters ? "Hide" : "Show"}</span>
+        <aside className="md:order-first md:sticky md:top-4 md:self-start min-w-0">
+          <button type="button" className="md:hidden w-full tap" onClick={() => setShowFilters(!showFilters)} aria-expanded={showFilters}>
+            Filters{activeCount ? ` (${activeCount})` : ""} {showFilters ? "▲" : "▼"}
           </button>
-          <div className={`${showFilters ? "block mt-3" : "hidden"} md:block rounded-xl md:rounded-none border md:border-0 border-ink-700 bg-ink-900 md:bg-transparent p-4 md:p-0`}>
-            <FilterPanel filters={filters} onToggle={toggle} onClear={() => setFilters(emptyFilters())} />
+          <div className={`${showFilters ? "block mt-3" : "hidden"} md:block md:mt-0 window`}>
+            <div className="title-bar">
+              <div className="title-bar-text">⚙️ Filters</div>
+              <div className="title-bar-controls">
+                <button aria-label="Minimize" tabIndex={-1}></button>
+                <button aria-label="Maximize" tabIndex={-1}></button>
+              </div>
+            </div>
+            <div className="window-body">
+              <FilterPanel filters={filters} onToggle={toggle} onClear={() => setFilters(emptyFilters())} />
+            </div>
           </div>
         </aside>
       </main>
 
-      <footer className="border-t border-ink-700/60 text-xs text-faint">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-wrap gap-x-5 gap-y-2">
-          <span>
-            Game data from{" "}
-            <a className="text-muted underline decoration-ink-700 underline-offset-2 hover:text-text" href="https://repoe-fork.github.io/poe2/">
-              RePoE
-            </a>
-            , refreshed automatically after each patch.
-          </span>
-          <a className="text-muted underline decoration-ink-700 underline-offset-2 hover:text-text" href="https://90sgamer.com">
-            More from 90sGamer
+      <footer className="text-xs text-white flex flex-col items-center gap-1 text-center" style={{ textShadow: "1px 1px 0 #000" }}>
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+          <a className="btn-play" href="https://90sgamer.com" onClick={() => track("outbound_click", { site: "90sgamer", id: "footer_back" })}>
+            ◀ Back to 90sGamer.com
           </a>
-          <span>Not affiliated with Grinding Gear Games.</span>
+          <a
+            className="text-white underline text-[13px]"
+            href="https://90sgamer.com"
+            onClick={() => track("outbound_click", { site: "90sgamer", id: "footer_more" })}
+          >
+            More free games and tools at 90sGamer.com
+          </a>
         </div>
+        <span>
+          Game data from{" "}
+          <a className="text-white underline" href="https://repoe-fork.github.io/poe2/">
+            RePoE
+          </a>
+          , refreshed automatically after each patch. Not affiliated with Grinding Gear Games.
+        </span>
       </footer>
     </div>
   );
