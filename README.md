@@ -1,7 +1,7 @@
 # Synergy Wizard
 
 Search every Path of Exile 2 skill gem, support and passive by what it does
-("protect me for a few seconds"). Live at https://synergywizard.netlify.app.
+("protect me for a few seconds"). Live at https://poe2.90sgamer.com (also https://90sgamer.com/poe2).
 
 Everything runs in the browser from two static files, so hosting costs nothing
 beyond Netlify and there is no database, server function or paid AI.
