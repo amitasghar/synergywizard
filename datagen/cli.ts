@@ -34,11 +34,7 @@ async function main(): Promise<void> {
   const force = process.argv.includes("--force");
   const { version, updated } = await sourceVersion();
   const current = existsSync(JSON_PATH) ? (JSON.parse(readFileSync(JSON_PATH, "utf8")) as Dataset) : null;
-  if (!force && current && current.version === version && current.sourceUpdated === updated) {
-    console.log(`Up to date: PoE2 ${version} (${updated})`);
-    return;
-  }
-  console.log(`Building PoE2 ${version} (RePoE updated ${updated})`);
+  console.log(`Checking PoE2 ${version} (RePoE updated ${updated})`);
 
   const [gems, skills, tree, ascendancies, passiveTr, generalTr] = await Promise.all([
     getJson<RawData["gems"]>("skill_gems.min.json"),
@@ -55,6 +51,11 @@ async function main(): Promise<void> {
     ascendancies,
     translations: buildTranslationIndex(passiveTr, generalTr),
   });
+  // RePoE's mirrors disagree on Last-Modified, so compare the content itself.
+  if (!force && current && current.version === version && JSON.stringify(current.entities) === JSON.stringify(entities)) {
+    console.log(`Up to date: PoE2 ${version}, no content changes`);
+    return;
+  }
   const counts: Record<string, number> = {};
   for (const e of entities) counts[e.kind] = (counts[e.kind] ?? 0) + 1;
   console.log(`${entities.length} entities`, counts);
