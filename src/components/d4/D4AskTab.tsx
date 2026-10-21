@@ -65,7 +65,8 @@ export function D4AskTab(): React.ReactElement {
       setMessages((prev) => [...prev, assistantMsg]);
     } catch (err) {
       console.error("D4 Ask AI error:", err);
-      setError("Search failed. Try again.");
+      const msg = err instanceof Error ? err.message : String(err);
+      setError(`Search failed: ${msg}`);
     } finally {
       setSearching(false);
       setTimeout(() => bottomRef.current?.scrollIntoView({ behavior: "smooth" }), 50);
