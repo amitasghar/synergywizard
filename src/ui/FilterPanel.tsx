@@ -36,7 +36,7 @@ function Group({ label, field, options, filters, onToggle }: GroupProps): React.
   const active = new Set<string>(filters[field]);
   return (
     <fieldset>
-      <legend className="font-display text-[12px] tracking-[0.12em] text-gold/85 mb-2">{label}</legend>
+      <legend className="text-[11px] font-semibold uppercase tracking-wider text-muted mb-2">{label}</legend>
       <div className="flex flex-wrap gap-1.5">
         {options.map(([value, text]) => {
           const on = active.has(value);

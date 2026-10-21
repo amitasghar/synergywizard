@@ -118,7 +118,7 @@ export default function App(): React.ReactElement {
             />
           </div>
           <div className="mt-3 flex items-center gap-2 overflow-x-auto no-scrollbar sm:flex-wrap -mx-4 px-4 sm:mx-0 sm:px-0">
-            <span className="shrink-0 text-xs font-display tracking-wider text-gold/80">Try</span>
+            <span className="shrink-0 text-[11px] font-semibold uppercase tracking-wider text-muted">Try</span>
             {EXAMPLES.map((ex) => (
               <button
                 key={ex}

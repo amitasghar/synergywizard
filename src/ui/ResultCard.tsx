@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { EFFECT_LABEL } from "../data/effects.ts";
 import type { Entity } from "../data/types.ts";
 import { track } from "../api/analytics.ts";
+import { poe2dbUrl, wikiUrl } from "./links.ts";
 
 const KIND_STYLE: Record<string, { label: string; cls: string }> = {
   skill: { label: "Skill", cls: "bg-[#3a1424] text-[#ff9c82]" },
@@ -9,7 +10,7 @@ const KIND_STYLE: Record<string, { label: string; cls: string }> = {
   support: { label: "Support", cls: "bg-[#14224d] text-[#9fd0ff]" },
   keystone: { label: "Keystone", cls: "bg-gold-soft text-gold" },
   notable: { label: "Notable", cls: "bg-[#231f2e] text-[#e3cf9f]" },
-  ascendancy: { label: "Ascendancy", cls: "bg-violet-soft text-violet" },
+  ascendancy: { label: "Ascendancy", cls: "bg-[#2a2360] text-[#e6e0ff]" },
   passive: { label: "Passive", cls: "bg-ink-800 text-muted" },
 };
 
@@ -41,10 +42,27 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
         <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider ${kind.cls}`}>{kind.label}</span>
         <h3 className="text-[15px] font-semibold text-text">{entity.name}</h3>
         {entity.effects.map((e) => (
-          <span key={e} className="text-[10px] px-2 py-0.5 rounded-full bg-violet-soft border border-violet/30 text-violet">
+          <span key={e} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#2a2360] border border-[#6a5ad6]/60 text-[#e6e0ff]">
             {EFFECT_LABEL[e]}
           </span>
         ))}
+        <span className="ml-auto flex gap-3 text-[11px]">
+          {[
+            ["poe2db", poe2dbUrl(entity.name)],
+            ["Wiki", wikiUrl(entity.name)],
+          ].map(([site, href]) => (
+            <a
+              key={site}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("outbound_click", { site, id: entity.id })}
+              className="text-faint hover:text-teal underline decoration-ink-700 underline-offset-2"
+            >
+              {site} ↗
+            </a>
+          ))}
+        </span>
       </header>
       {meta.length > 0 && <div className="text-[11px] text-faint mt-1">{meta.join(" · ")}</div>}
       {text && <p className="text-sm text-muted mt-1.5 leading-relaxed">{text}</p>}
