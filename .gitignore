@@ -24,3 +24,6 @@ dist/
 
 # Short video intermediates
 marketing/short/.work/
+
+# Rendered videos (rebuild with npm run short:record && npm run short:build)
+media/video/*.mp4
