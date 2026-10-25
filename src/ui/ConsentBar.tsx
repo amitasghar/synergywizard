@@ -33,7 +33,7 @@ export function ConsentBar({ open, onClose }: Props): React.ReactElement | null 
       </div>
       <div className="window-body">
         <p className="m-0 text-[13px] leading-[1.5] font-prose">
-          We use Google Analytics cookies (the digital kind, sadly not chocolate chip) to see which searches people run. No ads, no names, no selling.{" "}
+          We use Google Analytics cookies (the digital kind, sadly not chocolate chip) to see which searches people run. No names, no selling.{" "}
           <a href="https://90sgamer.com/privacy/" target="_blank" rel="noopener noreferrer">
             Privacy
           </a>
