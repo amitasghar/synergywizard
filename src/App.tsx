@@ -1,11 +1,13 @@
 import React, { useEffect, useMemo, useState } from "react";
 import logoSrc from "./assets/banner-90s.webp";
+import { adConfig } from "./ads/config.ts";
 import { getConsent, track } from "./api/analytics.ts";
 import { useDebouncedValue } from "./hooks/useDebouncedValue.ts";
 import { useEmbedder } from "./hooks/useEmbedder.ts";
 import { emptyFilters, search, type Filters } from "./search/search.ts";
 import { readUrl, writeUrl } from "./search/url.ts";
 import { useDataset } from "./search/useDataset.ts";
+import { AdSlot } from "./ui/AdSlot.tsx";
 import { ConsentBar } from "./ui/ConsentBar.tsx";
 import { FilterPanel } from "./ui/FilterPanel.tsx";
 import { ResultCard } from "./ui/ResultCard.tsx";
@@ -114,6 +116,24 @@ export default function App(): React.ReactElement {
       </header>
 
       <main className="grid gap-4 md:grid-cols-[250px_minmax(0,1fr)] items-start">
+        <aside className="md:order-first md:sticky md:top-4 md:self-start min-w-0">
+          <button type="button" className="md:hidden w-full tap" onClick={() => setShowFilters(!showFilters)} aria-expanded={showFilters}>
+            Filters{activeCount ? ` (${activeCount})` : ""} {showFilters ? "▲" : "▼"}
+          </button>
+          <div className={`${showFilters ? "block mt-3" : "hidden"} md:block md:mt-0 window`}>
+            <div className="title-bar">
+              <div className="title-bar-text">⚙️ Filters</div>
+              <div className="title-bar-controls">
+                <button aria-label="Minimize" tabIndex={-1}></button>
+                <button aria-label="Maximize" tabIndex={-1}></button>
+              </div>
+            </div>
+            <div className="window-body">
+              <FilterPanel filters={filters} onToggle={toggle} onClear={() => setFilters(emptyFilters())} />
+            </div>
+          </div>
+        </aside>
+
         <section className="window min-w-0">
           <div className="title-bar">
             <div className="title-bar-text">🔎 Search.exe</div>
@@ -153,7 +173,15 @@ export default function App(): React.ReactElement {
             </div>
 
             <div className="sunken-panel mt-3 bg-white" style={{ maxHeight: "none", overflow: "visible" }}>
-              {results?.hits.map((h) => <ResultCard key={h.entity.id} entity={h.entity} />)}
+              {results?.hits.flatMap((h, i) => {
+                const card = <ResultCard key={h.entity.id} entity={h.entity} />;
+                return i === 4 && adConfig?.inlineSlot
+                  ? [card, <AdSlot key="ad-inline" slot={adConfig.inlineSlot} config={adConfig} />]
+                  : [card];
+              })}
+              {results && results.hits.length > 0 && adConfig?.bottomSlot && (
+                <AdSlot key="ad-bottom" slot={adConfig.bottomSlot} config={adConfig} />
+              )}
               {data.status !== "ready" && (
                 <p className="px-4 py-8 text-center text-sm font-prose m-0">
                   {data.status === "loading" ? "Loading game data…" : `Couldn't load game data (${data.error})`}
@@ -186,23 +214,6 @@ export default function App(): React.ReactElement {
           </div>
         </section>
 
-        <aside className="md:order-first md:sticky md:top-4 md:self-start min-w-0">
-          <button type="button" className="md:hidden w-full tap" onClick={() => setShowFilters(!showFilters)} aria-expanded={showFilters}>
-            Filters{activeCount ? ` (${activeCount})` : ""} {showFilters ? "▲" : "▼"}
-          </button>
-          <div className={`${showFilters ? "block mt-3" : "hidden"} md:block md:mt-0 window`}>
-            <div className="title-bar">
-              <div className="title-bar-text">⚙️ Filters</div>
-              <div className="title-bar-controls">
-                <button aria-label="Minimize" tabIndex={-1}></button>
-                <button aria-label="Maximize" tabIndex={-1}></button>
-              </div>
-            </div>
-            <div className="window-body">
-              <FilterPanel filters={filters} onToggle={toggle} onClear={() => setFilters(emptyFilters())} />
-            </div>
-          </div>
-        </aside>
       </main>
 
       <footer

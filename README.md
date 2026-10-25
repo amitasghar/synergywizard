@@ -16,6 +16,10 @@ beyond Netlify and there is no database, server function or paid AI.
 | Search | `src/search/search.ts`: keyword hits + plain-English intent + vector similarity, computed in the browser |
 | Updates | `.github/workflows/pipeline.yml` runs every 3 hours, rebuilds when the RePoE version changes, commits to `master`, Netlify deploys |
 
+## Ads
+
+Ads are off unless these build-time env vars are set: `VITE_ADSENSE_CLIENT` (e.g. `ca-pub-1234567890123456`), `VITE_ADSENSE_SLOT_INLINE` and `VITE_ADSENSE_SLOT_BOTTOM` (numeric slot ids). Set them in Netlify, Site configuration, Environment variables, then redeploy. AdSense loads only after the visitor accepts cookies. `ads.txt` lives on the root domain 90sgamer.com (owned by the 90sGamer site), not in this repo.
+
 ## Commands
 
 ```bash

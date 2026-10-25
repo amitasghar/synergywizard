@@ -1,4 +1,6 @@
 import React from "react";
+import { adConfig } from "../ads/config.ts";
+import { loadAdSenseIfAllowed } from "../ads/adsense.ts";
 import { loadAnalytics, setConsent, track } from "../api/analytics.ts";
 
 interface Props {
@@ -12,6 +14,7 @@ export function ConsentBar({ open, onClose }: Props): React.ReactElement | null 
   function accept(): void {
     setConsent("granted");
     loadAnalytics();
+    loadAdSenseIfAllowed();
     track("consent_choice", { choice: "granted" });
     onClose();
   }
@@ -33,7 +36,9 @@ export function ConsentBar({ open, onClose }: Props): React.ReactElement | null 
       </div>
       <div className="window-body">
         <p className="m-0 text-[13px] leading-[1.5] font-prose">
-          We use Google Analytics cookies (the digital kind, sadly not chocolate chip) to see which searches people run. No names, no selling.{" "}
+          {adConfig
+            ? "We use cookies (the digital kind, sadly not chocolate chip) for Google Analytics and Google ads, which keep this tool free. No names, no selling."
+            : "We use Google Analytics cookies (the digital kind, sadly not chocolate chip) to see which searches people run. No names, no selling."}{" "}
           <a href="https://90sgamer.com/privacy/" target="_blank" rel="noopener noreferrer">
             Privacy
           </a>
