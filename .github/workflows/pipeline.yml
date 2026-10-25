@@ -1,7 +1,7 @@
 name: Update PoE2 data
 
 # Every 3 hours: rebuild public/data from RePoE when it publishes a new PoE2 export.
-# A data commit to master triggers the Netlify deploy. Costs nothing: no AI, no database.
+# A data commit to master triggers the Cloudflare Pages deploy. Costs nothing: no AI, no database.
 on:
   schedule:
     - cron: '0 */3 * * *'  # every 3 hours; deploys only when the data changes
@@ -55,7 +55,7 @@ jobs:
             git push
           elif [ $(( $(date +%s) - $(git log -1 --format=%ct) )) -gt 4320000 ]; then
             # GitHub disables scheduled workflows after 60 days without repo activity.
-            git commit --allow-empty -m "chore: keep scheduled data updates alive [skip netlify]"
+            git commit --allow-empty -m "chore: keep scheduled data updates alive [skip ci]"
             git push
           else
             echo "No data change"

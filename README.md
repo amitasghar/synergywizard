@@ -4,7 +4,7 @@ Search every Path of Exile 2 skill gem, support and passive by what it does
 ("protect me for a few seconds"). Live at https://poe2.90sgamer.com (also https://90sgamer.com/poe2).
 
 Everything runs in the browser from two static files, so hosting costs nothing
-beyond Netlify and there is no database, server function or paid AI.
+beyond Cloudflare Pages and there is no database, server function or paid AI.
 
 ## How it works
 
@@ -14,11 +14,16 @@ beyond Netlify and there is no database, server function or paid AI.
 | Build | `datagen/`: fetches RePoE, translates passive stats, tags effects (Defensive, Timed effect, …) by rule, embeds each entry with `Xenova/all-MiniLM-L6-v2` |
 | Output | `public/data/poe2.json` (entries) + `public/data/poe2.vec` (int8 vectors, 384 per entry) |
 | Search | `src/search/search.ts`: keyword hits + plain-English intent + vector similarity, computed in the browser |
-| Updates | `.github/workflows/pipeline.yml` runs every 3 hours, rebuilds when the RePoE version changes, commits to `master`, Netlify deploys |
+| Updates | `.github/workflows/pipeline.yml` runs every 3 hours, rebuilds when the RePoE version changes, commits to `master`, Cloudflare Pages deploys |
+
+## Deploy
+
+Cloudflare Pages builds from Git: build command `npm run build`, output directory `dist`, and the env var `NODE_VERSION=22` set in the Pages project.
+Commits whose message contains `[skip ci]` don't trigger a Cloudflare build.
 
 ## Ads
 
-Ads are off unless these build-time env vars are set: `VITE_ADSENSE_CLIENT` (e.g. `ca-pub-1234567890123456`), `VITE_ADSENSE_SLOT_INLINE` and `VITE_ADSENSE_SLOT_BOTTOM` (numeric slot ids). Set them in Netlify, Site configuration, Environment variables, then redeploy. AdSense loads only after the visitor accepts cookies. `ads.txt` lives on the root domain 90sgamer.com (owned by the 90sGamer site), not in this repo.
+Ads are off unless these build-time env vars are set: `VITE_ADSENSE_CLIENT` (e.g. `ca-pub-1234567890123456`), `VITE_ADSENSE_SLOT_INLINE` and `VITE_ADSENSE_SLOT_BOTTOM` (numeric slot ids). Set them in Cloudflare dashboard → Workers & Pages → synergywizard → Settings → Variables and Secrets (Production), then redeploy. AdSense loads only after the visitor accepts cookies. `ads.txt` lives on the root domain 90sgamer.com (owned by the 90sGamer site), not in this repo.
 
 ## Commands
 
