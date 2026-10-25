@@ -15,7 +15,7 @@ export const EFFECTS: EffectDef[] = [
     id: "defense",
     label: "Defensive",
     text: /\b(block|guard|armour|evasion|evade|energy shield|damage taken|immun\w*|invulnerab\w*|cannot be (?:stunned|frozen|ignited|shocked|hit|damaged)|avoid\w*|resistances?|barrier|ward|parry|deflect\w*|less damage|stun threshold|ailment threshold|fortif\w*)\b/,
-    query: /\b(protect\w*|defen[cs]\w*|surviv\w*|tank\w*|safe\w*|mitigat\w*|shield\w*|block\w*|guard|immun\w*|invuln\w*|tanky|absorb\w*|damage reduction)\b/,
+    query: /\b(protect\w*|defen[cs]\w*|surviv\w*|dying|die|dies|dead|death|squishy|one-?shot\w*|tank\w*|safe\w*|mitigat\w*|shield\w*|block\w*|guard|immun\w*|invuln\w*|tanky|absorb\w*|damage reduction)\b/,
   },
   {
     id: "temporary",

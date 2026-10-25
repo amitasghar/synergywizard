@@ -106,11 +106,25 @@ export default function App(): React.ReactElement {
             <img src={logoSrc} alt="Synergy Wizard - PoE2 Skill Finder" width={2100} height={420} className="block w-full h-auto" />
           </h1>
           <p className="font-prose text-[15px] leading-[1.6] mt-2 mb-0">Search every Path of Exile 2 skill, support and passive by what it does.</p>
+          <p className="mt-0.5 mb-0" style={{ fontFamily: "Tahoma, Verdana, sans-serif", fontSize: 12, color: "#555" }}>
+            Covers skill gems, spirit gems, supports and passives. Not items or uniques.
+          </p>
           {dataset && (
-            <p className="mt-1 mb-0 text-xs text-[#555]">
-              <span className="tag mr-2" style={{ background: "#ffe600" }}>PATCH {dataset.version}</span>
-              Updated {formatDate(dataset.sourceUpdated)} · {dataset.entities.length.toLocaleString()} entries
-            </p>
+            <div className="mt-1 flex flex-wrap items-center justify-between gap-x-2 gap-y-1 text-xs text-[#555]">
+              <span>
+                <span className="tag mr-2" style={{ background: "#ffe600" }}>PATCH {dataset.version}</span>
+                Updated {formatDate(dataset.sourceUpdated)} · {dataset.entities.length.toLocaleString()} entries
+              </span>
+              <a
+                className="ext-btn"
+                href="https://90sgamer.com/games/synergy-wizard/#feedback"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track("outbound_click", { site: "feedback", id: "header" })}
+              >
+                💬 Feedback
+              </a>
+            </div>
           )}
         </div>
       </header>
@@ -230,6 +244,15 @@ export default function App(): React.ReactElement {
             onClick={() => track("outbound_click", { site: "90sgamer", id: "footer_more" })}
           >
             More free games and tools at 90sGamer.com
+          </a>
+          <a
+            className="text-white underline text-[13px]"
+            href="https://90sgamer.com/games/synergy-wizard/#feedback"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => track("outbound_click", { site: "feedback", id: "footer" })}
+          >
+            Send feedback
           </a>
         </div>
         <span>

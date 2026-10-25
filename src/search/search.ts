@@ -38,6 +38,15 @@ const KIND_WORDS: [RegExp, EntityKind[]][] = [
   [/\bascendanc\w*\b/, ["ascendancy"]],
 ];
 
+// Player slang → GGG gem tags.
+const TAG_WORDS: [RegExp, string[]][] = [
+  [/\b(clear\w*|packs?|mapping|aoe|area|screen)\b/, ["aoe", "nova", "chaining"]],
+  [/\b(minion army|army|summon\w*)\b/, ["minion"]],
+];
+
+const MIN_RESULTS = 25;
+const CUTOFF = 0.3;
+
 export function buildIndex(dataset: Dataset, vectors: Int8Array | null): SearchIndex {
   const haystacks = dataset.entities.map((e) =>
     [e.name, e.text, ...e.stats, ...e.tags, ...e.weapons, e.ascendancy ?? ""].join(" \n ").toLowerCase(),
@@ -96,6 +105,7 @@ export function search(index: SearchIndex, { query, filters, queryVector, limit 
   const tokens = tokenize(query);
   const wantEffects = effectsForQuery(query);
   const wantKinds = KIND_WORDS.filter(([re]) => re.test(phrase)).flatMap(([, k]) => k);
+  const wantTags = TAG_WORDS.filter(([re]) => re.test(phrase)).flatMap(([, t]) => t);
   const semantic = !!(queryVector && index.vectors && phrase);
 
   const hits: Hit[] = [];
@@ -110,18 +120,25 @@ export function search(index: SearchIndex, { query, filters, queryVector, limit 
     const matched = wantEffects.filter((x) => e.effects.includes(x)).length;
     const effectBoost = matched * 0.12 + (wantEffects.length > 1 && matched === wantEffects.length ? 0.1 : 0);
     const kindBoost = wantKinds.length && wantKinds.includes(e.kind) ? 0.08 : 0;
+    const tagBoost = wantTags.some((t) => e.tags.includes(t)) ? 0.06 : 0;
+    // Small passives repeat the same stat many times; let gems and notables lead.
+    const kindPenalty = e.kind === "passive" ? 0.04 : 0;
     let score: number;
     if (semantic) {
-      score = cosine(index.vectors!, i, dims, queryVector!) + 0.3 * kw + effectBoost + kindBoost;
+      // Keyword hits are capped so one exact name match can't push every meaning-match below the cutoff;
+      // an exact name still wins outright.
+      const kwPart = 0.3 * Math.min(kw, 1) + (index.names[i] === phrase ? 1 : 0);
+      score = cosine(index.vectors!, i, dims, queryVector!) + kwPart + effectBoost + kindBoost + tagBoost - kindPenalty;
     } else {
       if (kw === 0 && matched === 0) continue;
-      score = kw + effectBoost + kindBoost;
+      score = kw + effectBoost + kindBoost + tagBoost - kindPenalty;
     }
     hits.push({ entity: e, score });
   }
   if (!phrase) return { hits: hits.slice(0, limit), total: hits.length };
   hits.sort((a, b) => b.score - a.score);
-  // Similarity is never zero, so without a cutoff every entity would "match".
-  const relevant = semantic && hits.length ? hits.filter((h) => h.score >= hits[0].score * 0.75) : hits;
+  // Similarity is never zero, so without a cutoff every entity would "match". Keep anything close to
+  // the best score, and always offer a reasonable list.
+  const relevant = semantic && hits.length ? hits.filter((h, n) => n < MIN_RESULTS || h.score >= hits[0].score - CUTOFF) : hits;
   return { hits: relevant.slice(0, limit), total: relevant.length };
 }

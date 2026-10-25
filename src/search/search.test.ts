@@ -65,6 +65,14 @@ describe("search", () => {
     expect(search(index, { query: "", filters: f }).hits.map((h) => h.entity.name)).toEqual(["Shield Wall"]);
   });
 
+  it("keeps other matches when one entry's name matches the query exactly", () => {
+    const vectors = new Int8Array([127, 0, 0, 127, 0, 127]);
+    const idx = buildIndex(dataset, vectors);
+    const names = search(idx, { query: "fireball", filters: emptyFilters(), queryVector: [0, 1] }).hits.map((h) => h.entity.name);
+    expect(names[0]).toBe("Fireball");
+    expect(names).toContain("Shield Wall");
+  });
+
   it("blends in embedding similarity when a query vector is given", () => {
     const vectors = new Int8Array([127, 0, 0, 127, 0, 127]);
     const idx = buildIndex(dataset, vectors);
