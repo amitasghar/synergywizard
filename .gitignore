@@ -27,3 +27,7 @@ marketing/short/.work/
 
 # Rendered videos (rebuild with npm run short:record && npm run short:build)
 media/video/*.mp4
+
+# Local production env (ads IDs for npm run deploy)
+.env.production
+.env

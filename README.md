@@ -18,12 +18,15 @@ beyond Cloudflare Pages and there is no database, server function or paid AI.
 
 ## Deploy
 
-Cloudflare Pages builds from Git: build command `npm run build`, output directory `dist`, and the env var `NODE_VERSION=22` set in the Pages project.
-Commits whose message contains `[skip ci]` don't trigger a Cloudflare build.
+Deploy by running `npm run deploy`. It runs tests and the typecheck, builds pinned to the current commit, and uploads with wrangler. It refuses to run if site changes are uncommitted or the commit isn't pushed, because the data files are served from GitHub at that commit. Wrangler must be logged in first (`npx wrangler login`).
+
+Automatic data deploys come from the GitHub workflow (`.github/workflows/pipeline.yml`), which uses the repo secrets `CLOUDFLARE_API_TOKEN` (an API token with the "Cloudflare Pages: Edit" permission) and `CLOUDFLARE_ACCOUNT_ID`. Pushes don't deploy anything by themselves.
+
+The build runs locally or in CI, not in Cloudflare, so the ads env vars (below) go in a local `.env.production` file (gitignored) and as GitHub repo variables (`VITE_ADSENSE_CLIENT`, `VITE_ADSENSE_SLOT_INLINE`, `VITE_ADSENSE_SLOT_BOTTOM`) that the workflow's deploy step reads.
 
 ## Ads
 
-Ads are off unless these build-time env vars are set: `VITE_ADSENSE_CLIENT` (e.g. `ca-pub-1234567890123456`), `VITE_ADSENSE_SLOT_INLINE` and `VITE_ADSENSE_SLOT_BOTTOM` (numeric slot ids). Set them in Cloudflare dashboard → Workers & Pages → synergywizard → Settings → Variables and Secrets (Production), then redeploy. AdSense loads only after the visitor accepts cookies. `ads.txt` lives on the root domain 90sgamer.com (owned by the 90sGamer site), not in this repo.
+Ads are off unless these build-time env vars are set: `VITE_ADSENSE_CLIENT` (e.g. `ca-pub-1234567890123456`), `VITE_ADSENSE_SLOT_INLINE` and `VITE_ADSENSE_SLOT_BOTTOM` (numeric slot ids). The build runs on your machine (`npm run deploy`) or in the GitHub data job, so set them in a local `.env.production` (gitignored) and as GitHub repo variables (Settings → Secrets and variables → Actions → Variables), then `npm run deploy`. AdSense loads only after the visitor accepts cookies. `ads.txt` lives on the root domain 90sgamer.com (owned by the 90sGamer site), not in this repo.
 
 ## Commands
 

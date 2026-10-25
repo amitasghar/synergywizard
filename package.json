@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "node scripts/deploy.mjs",
     "preview": "vite preview",
     "data": "node datagen/cli.ts",
     "data:force": "node datagen/cli.ts --force",
