@@ -15,7 +15,6 @@ const DAMAGE: [string, string][] = ["fire", "cold", "lightning", "physical", "ch
 const WEAPONS: [string, string][] = [
   "bow", "crossbow", "quarterstaff", "spear", "mace", "sword", "axe", "dagger", "claw", "flail", "wand", "staff", "sceptre", "talisman", "shield", "unarmed",
 ].map((w) => [w, w]);
-const HIDE: [string, string][] = [["es", "Energy Shield (life builds)"]];
 
 interface GroupProps {
   label: string;
@@ -36,7 +35,7 @@ function Group({ label, field, options, filters, onToggle }: GroupProps): React.
           return (
             <div key={value} className="filter-check min-w-0">
               <input type="checkbox" id={id} checked={active.has(value)} onChange={() => onToggle(field, value)} />
-              <label htmlFor={id} className={`min-w-0 ${field === "effects" || field === "hide" ? "" : "capitalize"}`}>
+              <label htmlFor={id} className={`min-w-0 ${field === "effects" ? "" : "capitalize"}`}>
                 {text}
               </label>
             </div>
@@ -50,10 +49,11 @@ function Group({ label, field, options, filters, onToggle }: GroupProps): React.
 interface Props {
   filters: Filters;
   onToggle: (field: keyof Filters, value: string) => void;
+  onHide: (hide: string[]) => void;
   onClear: () => void;
 }
 
-export function FilterPanel({ filters, onToggle, onClear }: Props): React.ReactElement {
+export function FilterPanel({ filters, onToggle, onHide, onClear }: Props): React.ReactElement {
   const any = Object.values(filters).some((v) => v.length > 0);
   return (
     <div className="flex flex-col gap-3">
@@ -61,7 +61,19 @@ export function FilterPanel({ filters, onToggle, onClear }: Props): React.ReactE
       <Group label="Type" field="kinds" options={KINDS} filters={filters} onToggle={onToggle} />
       <Group label="Damage" field="damage" options={DAMAGE} filters={filters} onToggle={onToggle} />
       <Group label="Weapon" field="weapons" options={WEAPONS} filters={filters} onToggle={onToggle} />
-      <Group label="Hide" field="hide" options={HIDE} filters={filters} onToggle={onToggle} />
+      <fieldset>
+        <legend>Hide results that mention</legend>
+        {/* Raw text kept as split pieces so typing a comma or space isn't swallowed. */}
+        <input
+          type="text"
+          className="w-full"
+          aria-label="Hide results that mention"
+          placeholder="e.g. energy shield, minion"
+          value={filters.hide.join(",")}
+          onChange={(ev) => onHide(ev.target.value ? ev.target.value.split(",") : [])}
+        />
+        <p className="text-[11px] text-[#555] mt-1 mb-0 font-ui">Separate with commas. Or type -word in the search box.</p>
+      </fieldset>
       {any && (
         <button type="button" onClick={onClear} className="self-start tap">
           Clear filters

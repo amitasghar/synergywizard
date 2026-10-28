@@ -8,16 +8,39 @@ export interface Filters {
   effects: string[];
   damage: string[];
   weapons: string[];
-  /** Exclusions: "es" hides Energy Shield entries for life builds. */
+  /** Words or phrases; entries that mention any of them are hidden. Raw input, may hold blanks. */
   hide: string[];
 }
 
 export const emptyFilters = (): Filters => ({ kinds: [], effects: [], damage: [], weapons: [], hide: [] });
 
-// Entries that also mention life (Rite of Restoration, Eternal Youth…) still help a life build, so they stay.
-const HIDE: Record<string, (text: string) => boolean> = {
-  es: (t) => /energy shield/i.test(t) && !/\blife\b/i.test(t),
-};
+/** Splits `-word` and `-"a phrase"` out of the search box, like a web search. */
+export function parseQuery(query: string): { text: string; exclude: string[] } {
+  const exclude: string[] = [];
+  const text = query
+    .replace(/(^|\s)-(?:"([^"]*)"?|(\S+))/g, (_, lead: string, phrase?: string, word?: string) => {
+      exclude.push(phrase ?? word ?? "");
+      return lead;
+    })
+    .replace(/\s+/g, " ")
+    .trim();
+  return { text, exclude };
+}
+
+const hideCache = new Map<string, RegExp>();
+
+/** Matches at word starts, so "minion" also hides "minions". */
+function hideRegex(terms: string[]): RegExp | null {
+  const clean = terms.map((t) => t.trim().toLowerCase()).filter(Boolean);
+  if (!clean.length) return null;
+  const key = clean.join("\n");
+  let re = hideCache.get(key);
+  if (!re) {
+    re = new RegExp(`\\b(?:${clean.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "i");
+    hideCache.set(key, re);
+  }
+  return re;
+}
 
 export interface SearchIndex {
   dataset: Dataset;
@@ -74,7 +97,8 @@ export function matchesFilters(e: Entity, f: Filters): boolean {
   if (f.effects.length && !f.effects.some((x) => e.effects.includes(x))) return false;
   if (f.damage.length && !f.damage.some((x) => e.damage.includes(x))) return false;
   if (f.weapons.length && !f.weapons.some((x) => e.weapons.includes(x))) return false;
-  if (f.hide.some((x) => HIDE[x]?.([e.name, e.text, ...e.stats].join(" ")))) return false;
+  const hide = hideRegex(f.hide);
+  if (hide?.test([e.name, e.text, ...e.stats, ...e.tags, ...e.weapons].join("\n"))) return false;
   return true;
 }
 
@@ -102,13 +126,15 @@ export function cosine(vectors: Int8Array, i: number, dims: number, q: ArrayLike
 export interface SearchOptions {
   query: string;
   filters: Filters;
-  /** Normalised query embedding; omit for keyword-only search. */
+  /** Normalised embedding of `parseQuery(query).text`; omit for keyword-only search. */
   queryVector?: ArrayLike<number> | null;
   limit?: number;
 }
 
-export function search(index: SearchIndex, { query, filters, queryVector, limit = 60 }: SearchOptions): { hits: Hit[]; total: number } {
+export function search(index: SearchIndex, { query: raw, filters: f, queryVector, limit = 60 }: SearchOptions): { hits: Hit[]; total: number } {
   const { entities, dims } = index.dataset;
+  const { text: query, exclude } = parseQuery(raw);
+  const filters = exclude.length ? { ...f, hide: [...f.hide, ...exclude] } : f;
   const phrase = query.trim().toLowerCase();
   const tokens = tokenize(query);
   const wantEffects = effectsForQuery(query);

@@ -4,7 +4,7 @@ import { adConfig } from "./ads/config.ts";
 import { getConsent, track } from "./api/analytics.ts";
 import { useDebouncedValue } from "./hooks/useDebouncedValue.ts";
 import { useEmbedder } from "./hooks/useEmbedder.ts";
-import { emptyFilters, search, type Filters } from "./search/search.ts";
+import { emptyFilters, parseQuery, search, type Filters } from "./search/search.ts";
 import { readUrl, writeUrl } from "./search/url.ts";
 import { useDataset } from "./search/useDataset.ts";
 import { AdSlot } from "./ui/AdSlot.tsx";
@@ -43,10 +43,14 @@ export default function App(): React.ReactElement {
     setLimit(PAGE);
   }, [debounced, filters]);
 
+  // `-word` exclusions filter results; they stay out of the embedding.
+  const meaning = useMemo(() => parseQuery(debounced).text, [debounced]);
+
   useEffect(() => {
-    const q = debounced.trim();
+    const raw = debounced.trim();
+    if (raw) track("search", { search_term: raw });
+    const q = meaning;
     if (!q) return;
-    track("search", { search_term: q });
     let cancelled = false;
     embed(q)
       .then((v) => !cancelled && setQueryVector({ q, v }))
@@ -54,14 +58,13 @@ export default function App(): React.ReactElement {
     return () => {
       cancelled = true;
     };
-  }, [debounced, embed]);
+  }, [debounced, meaning, embed]);
 
   const results = useMemo(() => {
     if (data.status !== "ready") return null;
-    const q = debounced.trim();
-    const vec = queryVector && queryVector.q === q ? queryVector.v : null;
-    return search(data.index, { query: q, filters, queryVector: vec, limit });
-  }, [data, debounced, filters, queryVector, limit]);
+    const vec = queryVector && queryVector.q === meaning ? queryVector.v : null;
+    return search(data.index, { query: debounced, filters, queryVector: vec, limit });
+  }, [data, debounced, meaning, filters, queryVector, limit]);
 
   function toggle(field: keyof Filters, value: string): void {
     track("filter_use", { group: field, value });
@@ -71,7 +74,7 @@ export default function App(): React.ReactElement {
     });
   }
 
-  const activeCount = Object.values(filters).reduce((n, v) => n + v.length, 0);
+  const activeCount = Object.values(filters).reduce((n, v) => n + v.filter((x: string) => x.trim()).length, 0);
   const searching = debounced.trim().length > 0;
   const smart =
     modelStatus === "ready" ? "Smart search" : modelStatus === "loading" ? "Loading smart search…" : modelStatus === "error" ? "Keyword search" : "";
@@ -143,7 +146,12 @@ export default function App(): React.ReactElement {
               </div>
             </div>
             <div className="window-body">
-              <FilterPanel filters={filters} onToggle={toggle} onClear={() => setFilters(emptyFilters())} />
+              <FilterPanel
+                filters={filters}
+                onToggle={toggle}
+                onHide={(hide) => setFilters((f) => ({ ...f, hide }))}
+                onClear={() => setFilters(emptyFilters())}
+              />
             </div>
           </div>
         </aside>

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { Dataset, Entity } from "../data/types.ts";
 import { effectsForQuery, effectsForText } from "../data/effects.ts";
-import { buildIndex, emptyFilters, search } from "./search.ts";
+import { buildIndex, emptyFilters, parseQuery, search } from "./search.ts";
 import { readUrl, writeUrl } from "./url.ts";
 
 const entity = (over: Partial<Entity>): Entity => ({
@@ -65,10 +65,20 @@ describe("search", () => {
     expect(search(index, { query: "", filters: f }).hits.map((h) => h.entity.name)).toEqual(["Shield Wall"]);
   });
 
-  it("hides Energy Shield entries for life builds", () => {
+  it("hides entries that mention a hidden word or phrase", () => {
     const withEs = { ...dataset, entities: [...dataset.entities, entity({ name: "Convalescence", text: "Begin Recharging Energy Shield", effects: ["defense"] })] };
-    const f = { ...emptyFilters(), effects: ["defense"], hide: ["es"] };
-    expect(search(buildIndex(withEs, null), { query: "", filters: f }).hits.map((h) => h.entity.name)).toEqual(["Shield Wall", "Iron Skin"]);
+    const idx = buildIndex(withEs, null);
+    const names = (filters: ReturnType<typeof emptyFilters>, query = "") => search(idx, { query, filters }).hits.map((h) => h.entity.name);
+    const defensive = { ...emptyFilters(), effects: ["defense"] };
+    expect(names({ ...defensive, hide: [" Energy Shield", ""] })).toEqual(["Shield Wall", "Iron Skin"]);
+    expect(names({ ...defensive, hide: ["armo"] })).toEqual(["Shield Wall", "Convalescence"]); // word starts: "armo" hides Armour
+    expect(names({ ...defensive, hide: ["hield"] })).toHaveLength(3); // but not mid-word
+    expect(names(defensive, 'wall -"energy shield"')).toEqual(["Shield Wall"]);
+  });
+
+  it("splits -word and -\"phrase\" exclusions out of the search box", () => {
+    expect(parseQuery('protect me -"energy shield" -minion')).toEqual({ text: "protect me", exclude: ["energy shield", "minion"] });
+    expect(parseQuery("one-shot protection")).toEqual({ text: "one-shot protection", exclude: [] });
   });
 
   it("keeps other matches when one entry's name matches the query exactly", () => {
@@ -89,7 +99,7 @@ describe("search", () => {
 
 describe("url state", () => {
   it("round-trips query and filters", () => {
-    const f = { ...emptyFilters(), effects: ["defense", "temporary"], damage: ["cold"], hide: ["es"] };
+    const f = { ...emptyFilters(), effects: ["defense", "temporary"], damage: ["cold"], hide: ["energy shield", "minion"] };
     const qs = writeUrl("protect me", f);
     expect(readUrl(qs)).toEqual({ query: "protect me", filters: f });
   });
