@@ -5,6 +5,7 @@ const KEYS: [keyof Filters, string][] = [
   ["effects", "effect"],
   ["damage", "damage"],
   ["weapons", "weapon"],
+  ["hide", "hide"],
 ];
 
 export function readUrl(search: string): { query: string; filters: Filters } {

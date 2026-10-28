@@ -15,6 +15,7 @@ const DAMAGE: [string, string][] = ["fire", "cold", "lightning", "physical", "ch
 const WEAPONS: [string, string][] = [
   "bow", "crossbow", "quarterstaff", "spear", "mace", "sword", "axe", "dagger", "claw", "flail", "wand", "staff", "sceptre", "talisman", "shield", "unarmed",
 ].map((w) => [w, w]);
+const HIDE: [string, string][] = [["es", "Energy Shield (life builds)"]];
 
 interface GroupProps {
   label: string;
@@ -35,7 +36,7 @@ function Group({ label, field, options, filters, onToggle }: GroupProps): React.
           return (
             <div key={value} className="filter-check min-w-0">
               <input type="checkbox" id={id} checked={active.has(value)} onChange={() => onToggle(field, value)} />
-              <label htmlFor={id} className={`min-w-0 ${field === "effects" ? "" : "capitalize"}`}>
+              <label htmlFor={id} className={`min-w-0 ${field === "effects" || field === "hide" ? "" : "capitalize"}`}>
                 {text}
               </label>
             </div>
@@ -60,6 +61,7 @@ export function FilterPanel({ filters, onToggle, onClear }: Props): React.ReactE
       <Group label="Type" field="kinds" options={KINDS} filters={filters} onToggle={onToggle} />
       <Group label="Damage" field="damage" options={DAMAGE} filters={filters} onToggle={onToggle} />
       <Group label="Weapon" field="weapons" options={WEAPONS} filters={filters} onToggle={onToggle} />
+      <Group label="Hide" field="hide" options={HIDE} filters={filters} onToggle={onToggle} />
       {any && (
         <button type="button" onClick={onClear} className="self-start tap">
           Clear filters

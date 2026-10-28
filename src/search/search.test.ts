@@ -65,6 +65,12 @@ describe("search", () => {
     expect(search(index, { query: "", filters: f }).hits.map((h) => h.entity.name)).toEqual(["Shield Wall"]);
   });
 
+  it("hides Energy Shield entries for life builds", () => {
+    const withEs = { ...dataset, entities: [...dataset.entities, entity({ name: "Convalescence", text: "Begin Recharging Energy Shield", effects: ["defense"] })] };
+    const f = { ...emptyFilters(), effects: ["defense"], hide: ["es"] };
+    expect(search(buildIndex(withEs, null), { query: "", filters: f }).hits.map((h) => h.entity.name)).toEqual(["Shield Wall", "Iron Skin"]);
+  });
+
   it("keeps other matches when one entry's name matches the query exactly", () => {
     const vectors = new Int8Array([127, 0, 0, 127, 0, 127]);
     const idx = buildIndex(dataset, vectors);
@@ -83,7 +89,7 @@ describe("search", () => {
 
 describe("url state", () => {
   it("round-trips query and filters", () => {
-    const f = { ...emptyFilters(), effects: ["defense", "temporary"], damage: ["cold"] };
+    const f = { ...emptyFilters(), effects: ["defense", "temporary"], damage: ["cold"], hide: ["es"] };
     const qs = writeUrl("protect me", f);
     expect(readUrl(qs)).toEqual({ query: "protect me", filters: f });
   });

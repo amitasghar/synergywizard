@@ -8,9 +8,16 @@ export interface Filters {
   effects: string[];
   damage: string[];
   weapons: string[];
+  /** Exclusions: "es" hides Energy Shield entries for life builds. */
+  hide: string[];
 }
 
-export const emptyFilters = (): Filters => ({ kinds: [], effects: [], damage: [], weapons: [] });
+export const emptyFilters = (): Filters => ({ kinds: [], effects: [], damage: [], weapons: [], hide: [] });
+
+// Entries that also mention life (Rite of Restoration, Eternal Youth…) still help a life build, so they stay.
+const HIDE: Record<string, (text: string) => boolean> = {
+  es: (t) => /energy shield/i.test(t) && !/\blife\b/i.test(t),
+};
 
 export interface SearchIndex {
   dataset: Dataset;
@@ -61,12 +68,13 @@ export function tokenize(query: string): string[] {
     .filter((t) => t.length > 1 && !STOPWORDS.has(t));
 }
 
-/** OR within a group, AND across groups. */
+/** OR within a group, AND across groups; `hide` removes matches. */
 export function matchesFilters(e: Entity, f: Filters): boolean {
   if (f.kinds.length && !f.kinds.includes(e.kind)) return false;
   if (f.effects.length && !f.effects.some((x) => e.effects.includes(x))) return false;
   if (f.damage.length && !f.damage.some((x) => e.damage.includes(x))) return false;
   if (f.weapons.length && !f.weapons.some((x) => e.weapons.includes(x))) return false;
+  if (f.hide.some((x) => HIDE[x]?.([e.name, e.text, ...e.stats].join(" ")))) return false;
   return true;
 }
 

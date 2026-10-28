@@ -61,6 +61,11 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
       <header className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
         <span className="tag" style={{ background: kind.bg, color: kind.color }}>{kind.label.toUpperCase()}</span>
         <h3 className="text-[16px] font-bold text-navy m-0">{entity.name}</h3>
+        {entity.weapons.length > 0 && (
+          <span className="font-ui text-[11px] font-bold text-white bg-[#800000] border border-black px-1.5 py-px capitalize" title="Weapon needed">
+            ⚔ {entity.weapons.join(" / ")}
+          </span>
+        )}
         {entity.effects.map((e) => (
           <span key={e} className="font-ui text-[11px] text-black bg-[#ffffe1] border border-black px-1.5 py-px">
             {EFFECT_LABEL[e]}
