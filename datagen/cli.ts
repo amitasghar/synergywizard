@@ -1,4 +1,4 @@
-// Rebuilds public/data/poe2.json + poe2.vec from the RePoE PoE2 export, plus unique items from the PoE2 Wiki.
+// Rebuilds public/data/poe2.json + poe2.vec from the RePoE PoE2 export, plus unique items from Path of Building's data (also via RePoE).
 // Usage: node datagen/cli.ts [--force]
 //        node datagen/cli.ts --set-baseline   (mark today's data as the "before" for New/Changed badges)
 // Exits 0 without writing anything when neither source has changed.
@@ -10,7 +10,7 @@ import { buildEntities, searchText, type RawData } from "./build.ts";
 import { DIMS, embedAll } from "./embed.ts";
 import { buildTranslationIndex, type Translation } from "./text.ts";
 import { checkSanity } from "./sanity.ts";
-import { fetchWikiUniques, uniqueEntities } from "./wiki.ts";
+import { fetchPobUniques, pobUniqueEntities } from "./pob.ts";
 import { makeBaseline, markChanges, type Baseline } from "./changes.ts";
 
 const BASE = "https://repoe-fork.github.io/poe2";
@@ -56,13 +56,13 @@ async function main(): Promise<void> {
     getJson<Translation[]>("stat_translations/passive_skill_stat_descriptions.min.json"),
     getJson<Translation[]>("stat_translations/stat_descriptions.min.json"),
   ]);
-  // A wiki outage shouldn't block game-data updates: keep the uniques we already have.
+  // A failed uniques download shouldn't block game-data updates: keep the uniques we already have.
   let uniques: Entity[];
   try {
-    uniques = uniqueEntities(await fetchWikiUniques());
+    uniques = pobUniqueEntities(await fetchPobUniques());
   } catch (err) {
     uniques = current?.entities.filter((e) => e.kind === "unique") ?? [];
-    console.warn(`Wiki uniques unavailable (${(err as Error).message}); keeping ${uniques.length} from the last build`);
+    console.warn(`PoB uniques unavailable (${(err as Error).message}); keeping ${uniques.length} from the last build`);
   }
   const built = buildEntities(
     { gems, skills, tree, ascendancies, translations: buildTranslationIndex(passiveTr, generalTr) },

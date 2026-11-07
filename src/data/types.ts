@@ -21,8 +21,10 @@ export interface Entity {
   count?: number;
   /** Recommended support gem names (from game data). */
   supports?: string[];
-  /** Uniques: item class ("Body Armour") and the wiki page their stats come from. */
+  /** Uniques: item class ("Body Armour") and base type ("Iron Greaves"). */
   itemClass?: string;
+  base?: string;
+  /** Wiki page name, when it differs from `name`. */
   page?: string;
   /** New or changed since `Dataset.baseline`. */
   change?: "new" | "changed";

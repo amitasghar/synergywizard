@@ -354,11 +354,11 @@ export default function App(): React.ReactElement {
           <a className="text-white underline" href="https://repoe-fork.github.io/poe2/">
             RePoE
           </a>
-          , unique item stats from the{" "}
-          <a className="text-white underline" href="https://www.poe2wiki.net/">
-            PoE2 Wiki
+          {" "}and{" "}
+          <a className="text-white underline" href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2">
+            Path of Building
           </a>{" "}
-          (CC BY-NC-SA 3.0), refreshed automatically. Not affiliated with Grinding Gear Games.
+          (uniques), refreshed automatically. Not affiliated with Grinding Gear Games.
         </span>
         <button type="button" className="link-btn" style={{ color: "#fff" }} onClick={() => setConsentOpen(true)}>
           Cookie settings

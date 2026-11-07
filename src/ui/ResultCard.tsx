@@ -35,7 +35,7 @@ export function ResultCard({ entity, since, saved, onToggleSave }: CardProps): R
   const text = !open && entity.text.length > 220 ? `${entity.text.slice(0, 220).trimEnd()}…` : entity.text;
   const stats = open ? entity.stats : entity.stats.slice(0, PREVIEW_STATS);
   const meta = [
-    entity.itemClass,
+    entity.itemClass && (entity.base ? `${entity.itemClass} · ${entity.base}` : entity.itemClass),
     entity.ascendancy && `${entity.ascendancy} (${entity.className})`,
     entity.attribute && ATTR[entity.attribute],
     entity.count && entity.count > 1 && `${entity.count}× on the tree`,
@@ -135,15 +135,11 @@ export function ResultCard({ entity, since, saved, onToggleSave }: CardProps): R
       ) : null}
       {entity.kind === "unique" && (
         <p className="mt-2 mb-0 text-[11px] text-[#555] font-ui">
-          Stats from the{" "}
-          <a href={wikiUrl(entity.page ?? entity.name)} target="_blank" rel="noopener noreferrer">
-            Path of Exile 2 Wiki
+          Item data from{" "}
+          <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2" target="_blank" rel="noopener noreferrer">
+            Path of Building
           </a>{" "}
-          (
-          <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener noreferrer license">
-            CC BY-NC-SA 3.0
-          </a>
-          )
+          (MIT)
         </p>
       )}
       <div className="mt-1.5 sm:hidden">{compactLinks}</div>
