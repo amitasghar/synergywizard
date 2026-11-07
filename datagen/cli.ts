@@ -1,5 +1,6 @@
 // Rebuilds public/data/poe2.json + poe2.vec from the RePoE PoE2 export, plus unique items from the PoE2 Wiki.
 // Usage: node datagen/cli.ts [--force]
+//        node datagen/cli.ts --set-baseline   (mark today's data as the "before" for New/Changed badges)
 // Exits 0 without writing anything when neither source has changed.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -10,11 +11,13 @@ import { DIMS, embedAll } from "./embed.ts";
 import { buildTranslationIndex, type Translation } from "./text.ts";
 import { checkSanity } from "./sanity.ts";
 import { fetchWikiUniques, uniqueEntities } from "./wiki.ts";
+import { makeBaseline, markChanges, type Baseline } from "./changes.ts";
 
 const BASE = "https://repoe-fork.github.io/poe2";
 const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "public", "data");
 const JSON_PATH = join(OUT_DIR, "poe2.json");
 const VEC_PATH = join(OUT_DIR, "poe2.vec");
+const BASELINE_PATH = join(dirname(fileURLToPath(import.meta.url)), "baseline.json");
 
 async function getJson<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE}/${path}`);
@@ -34,8 +37,15 @@ async function sourceVersion(): Promise<{ version: string; updated: string }> {
 
 async function main(): Promise<void> {
   const force = process.argv.includes("--force");
-  const { version, updated } = await sourceVersion();
   const current = existsSync(JSON_PATH) ? (JSON.parse(readFileSync(JSON_PATH, "utf8")) as Dataset) : null;
+  if (process.argv.includes("--set-baseline")) {
+    if (!current) throw new Error("No dataset to take a baseline from; run a build first");
+    writeFileSync(BASELINE_PATH, JSON.stringify(makeBaseline(current.version, current.entities)));
+    console.log(`Baseline set to PoE2 ${current.version} (${current.entities.length} entries)`);
+    return;
+  }
+  const baseline = existsSync(BASELINE_PATH) ? (JSON.parse(readFileSync(BASELINE_PATH, "utf8")) as Baseline) : null;
+  const { version, updated } = await sourceVersion();
   console.log(`Checking PoE2 ${version} (RePoE updated ${updated})`);
 
   const [gems, skills, tree, ascendancies, passiveTr, generalTr] = await Promise.all([
@@ -54,10 +64,11 @@ async function main(): Promise<void> {
     uniques = current?.entities.filter((e) => e.kind === "unique") ?? [];
     console.warn(`Wiki uniques unavailable (${(err as Error).message}); keeping ${uniques.length} from the last build`);
   }
-  const entities = buildEntities(
+  const built = buildEntities(
     { gems, skills, tree, ascendancies, translations: buildTranslationIndex(passiveTr, generalTr) },
     uniques,
   );
+  const entities = baseline ? markChanges(built, baseline) : built;
   // RePoE's mirrors disagree on Last-Modified, so compare the content itself.
   if (!force && current && current.version === version && JSON.stringify(current.entities) === JSON.stringify(entities)) {
     console.log(`Up to date: PoE2 ${version}, no content changes`);
@@ -75,7 +86,7 @@ async function main(): Promise<void> {
     if (n % 640 === 0 || n === entities.length) console.log(`embedded ${n}/${entities.length}`);
   });
 
-  const dataset: Dataset = { game: "poe2", version, sourceUpdated: updated, builtAt: new Date().toISOString(), dims: DIMS, entities };
+  const dataset: Dataset = { game: "poe2", version, baseline: baseline?.version, sourceUpdated: updated, builtAt: new Date().toISOString(), dims: DIMS, entities };
   mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(JSON_PATH, JSON.stringify(dataset));
   writeFileSync(VEC_PATH, vectors);

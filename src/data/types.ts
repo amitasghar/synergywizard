@@ -24,11 +24,15 @@ export interface Entity {
   /** Uniques: item class ("Body Armour") and the wiki page their stats come from. */
   itemClass?: string;
   page?: string;
+  /** New or changed since `Dataset.baseline`. */
+  change?: "new" | "changed";
 }
 
 export interface Dataset {
   game: "poe2";
   version: string;
+  /** Patch the New/Changed badges compare against. */
+  baseline?: string;
   sourceUpdated: string;
   builtAt: string;
   dims: number;

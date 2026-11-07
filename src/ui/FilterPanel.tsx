@@ -52,12 +52,20 @@ interface Props {
   onToggle: (field: keyof Filters, value: string) => void;
   onHide: (hide: string[]) => void;
   onClear: () => void;
+  /** Baseline patch, when some entries are new or changed since it. */
+  since?: string;
 }
 
-export function FilterPanel({ filters, onToggle, onHide, onClear }: Props): React.ReactElement {
+const CHANGES: [string, string][] = [
+  ["new", "New"],
+  ["changed", "Changed"],
+];
+
+export function FilterPanel({ filters, onToggle, onHide, onClear, since }: Props): React.ReactElement {
   const any = Object.values(filters).some((v) => v.length > 0);
   return (
     <div className="flex flex-col gap-3">
+      {since && <Group label={`Since patch ${since}`} field="changes" options={CHANGES} filters={filters} onToggle={onToggle} />}
       <Group label="What it does" field="effects" options={EFFECTS.map((e) => [e.id, e.label])} filters={filters} onToggle={onToggle} />
       <Group label="Type" field="kinds" options={KINDS} filters={filters} onToggle={onToggle} />
       <Group label="Damage" field="damage" options={DAMAGE} filters={filters} onToggle={onToggle} />
@@ -73,7 +81,9 @@ export function FilterPanel({ filters, onToggle, onHide, onClear }: Props): Reac
           value={filters.hide.join(",")}
           onChange={(ev) => onHide(ev.target.value ? ev.target.value.split(",") : [])}
         />
-        <p className="text-[11px] text-[#555] mt-1 mb-0 font-ui">Separate with commas. Or type -word in the search box.</p>
+        <p className="text-[11px] text-[#555] mt-1 mb-0 font-ui">
+          Separate with commas. Shortcut: put a minus in front of a word in the search box, e.g. <b>protect me -minion</b>.
+        </p>
       </fieldset>
       {any && (
         <button type="button" onClick={onClear} className="self-start tap">

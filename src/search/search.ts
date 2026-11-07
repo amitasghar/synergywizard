@@ -8,11 +8,13 @@ export interface Filters {
   effects: string[];
   damage: string[];
   weapons: string[];
+  /** "new" / "changed" since the dataset's baseline patch. */
+  changes: string[];
   /** Words or phrases; entries that mention any of them are hidden. Raw input, may hold blanks. */
   hide: string[];
 }
 
-export const emptyFilters = (): Filters => ({ kinds: [], effects: [], damage: [], weapons: [], hide: [] });
+export const emptyFilters = (): Filters => ({ kinds: [], effects: [], damage: [], weapons: [], changes: [], hide: [] });
 
 /** Splits `-word` and `-"a phrase"` out of the search box, like a web search. */
 export function parseQuery(query: string): { text: string; exclude: string[] } {
@@ -115,6 +117,7 @@ export function matchesFilters(e: Entity, f: Filters): boolean {
   if (f.effects.length && !f.effects.some((x) => e.effects.includes(x))) return false;
   if (f.damage.length && !f.damage.some((x) => e.damage.includes(x))) return false;
   if (f.weapons.length && !f.weapons.some((x) => e.weapons.includes(x))) return false;
+  if (f.changes.length && !(e.change && f.changes.includes(e.change))) return false;
   const hide = hideRegex(f.hide);
   if (hide?.test([e.name, e.text, ...e.stats, ...e.tags, ...e.weapons].join("\n"))) return false;
   return true;

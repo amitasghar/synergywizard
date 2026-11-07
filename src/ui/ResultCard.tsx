@@ -18,7 +18,9 @@ const KIND_STYLE: Record<string, { label: string; bg: string; color?: string }> 
 const ATTR: Record<string, string> = { str: "Str", dex: "Dex", int: "Int" };
 const PREVIEW_STATS = 3;
 
-export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
+const CHANGE_STYLE = { new: { label: "NEW", bg: "#39ff14" }, changed: { label: "CHANGED", bg: "#ffe600" } };
+
+export function ResultCard({ entity, since }: { entity: Entity; since?: string }): React.ReactElement {
   const [open, setOpen] = useState(false);
   const kind = KIND_STYLE[entity.kind];
   const hiddenStats = entity.stats.length - PREVIEW_STATS;
@@ -38,12 +40,26 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
     setOpen(!open);
   }
 
+  const targets = [
+    ["poe2db", "📖 poe2db", poe2dbUrl(entity.name)],
+    ["Wiki", "🌐 PoE2 Wiki", wikiUrl(entity.page ?? entity.name)],
+  ];
+  // Phones get plain text links so each card stays short.
+  const compactLinks = (
+    <span className="text-[12px] font-ui">
+      {targets.map(([site, label, href], i) => (
+        <React.Fragment key={site}>
+          {i > 0 && " · "}
+          <a href={href} target="_blank" rel="noopener noreferrer" onClick={() => track("outbound_click", { site, id: entity.id })}>
+            {label.replace(/^\S+ /, "")}
+          </a>
+        </React.Fragment>
+      ))}
+    </span>
+  );
   const links = (
     <span className="flex gap-2 flex-wrap">
-      {[
-        ["poe2db", "📖 poe2db", poe2dbUrl(entity.name)],
-        ["Wiki", "🌐 PoE2 Wiki", wikiUrl(entity.page ?? entity.name)],
-      ].map(([site, label, href]) => (
+      {targets.map(([site, label, href]) => (
         <a
           key={site}
           href={href}
@@ -63,6 +79,11 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
       <header className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
         <span className="tag" style={{ background: kind.bg, color: kind.color }}>{kind.label.toUpperCase()}</span>
         <h3 className="text-[16px] font-bold text-navy m-0">{entity.name}</h3>
+        {entity.change && (
+          <span className="tag" style={{ background: CHANGE_STYLE[entity.change].bg }} title={since ? `${entity.change === "new" ? "New" : "Changed"} since patch ${since}` : undefined}>
+            {CHANGE_STYLE[entity.change].label}
+          </span>
+        )}
         {entity.kind !== "unique" && entity.weapons.length > 0 && (
           <span className="font-ui text-[11px] font-bold text-white bg-[#800000] border border-black px-1.5 py-px capitalize" title="Weapon needed">
             ⚔ {entity.weapons.join(" / ")}
@@ -103,7 +124,7 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
           )
         </p>
       )}
-      <div className="mt-2 sm:hidden">{links}</div>
+      <div className="mt-1.5 sm:hidden">{compactLinks}</div>
       {canExpand && (
         <button type="button" onClick={toggle} className="link-btn mt-1 -ml-1">
           {open ? "Show less" : hiddenStats > 0 ? `Show ${hiddenStats} more line${hiddenStats > 1 ? "s" : ""}` : "Show more"}

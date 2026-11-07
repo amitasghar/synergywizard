@@ -32,6 +32,7 @@ export default function App(): React.ReactElement {
   const [filters, setFilters] = useState<Filters>(initial.filters);
   const [limit, setLimit] = useState(PAGE);
   const [showFilters, setShowFilters] = useState(false);
+  const [browse, setBrowse] = useState(false);
   const [consentOpen, setConsentOpen] = useState(() => getConsent() === null);
   const [queryVector, setQueryVector] = useState<{ q: string; v: number[] } | null>(null);
   const data = useDataset();
@@ -76,6 +77,9 @@ export default function App(): React.ReactElement {
 
   const activeCount = Object.values(filters).reduce((n, v) => n + v.filter((x: string) => x.trim()).length, 0);
   const searching = debounced.trim().length > 0;
+  // First visit: explain the tool instead of an alphabetical list nobody asked for.
+  const welcome = data.status === "ready" && !searching && activeCount === 0 && !browse;
+  const since = data.status === "ready" && data.index.dataset.entities.some((e) => e.change) ? data.index.dataset.baseline : undefined;
   const smart =
     modelStatus === "ready" ? "Smart search" : modelStatus === "loading" ? "Loading smart search…" : modelStatus === "error" ? "Keyword search" : "";
   const dataset = data.status === "ready" ? data.index.dataset : null;
@@ -151,6 +155,7 @@ export default function App(): React.ReactElement {
                 onToggle={toggle}
                 onHide={(hide) => setFilters((f) => ({ ...f, hide }))}
                 onClear={() => setFilters(emptyFilters())}
+                since={since}
               />
             </div>
           </div>
@@ -174,12 +179,12 @@ export default function App(): React.ReactElement {
               value={query}
               autoFocus
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Describe what you want, e.g. protect me for a few seconds"
+              placeholder="Describe what your build needs…"
               className="search-input"
             />
             <div className="mt-2 flex flex-wrap items-center gap-1.5">
               <span className="font-bold text-xs">Try:</span>
-              {EXAMPLES.map((ex) => (
+              {EXAMPLES.map((ex, i) => (
                 <button
                   key={ex}
                   type="button"
@@ -187,21 +192,43 @@ export default function App(): React.ReactElement {
                     track("example_click", { example: ex });
                     setQuery(ex);
                   }}
-                  className="tap !min-w-0 !h-auto py-1 px-2 text-left"
+                  className={`tap !min-w-0 !h-auto py-1 px-2 text-left${i >= 3 ? " max-sm:hidden" : ""}`}
                 >
                   {ex}
                 </button>
               ))}
             </div>
+            <p className="mt-2 mb-0 text-[12px] text-[#333] font-ui">
+              <b>Hide what you don't want:</b> put a minus in front of a word, e.g. <code>protect me -minion</code> or{" "}
+              <code>-"energy shield"</code>.
+            </p>
 
             <div className="sunken-panel mt-3 bg-white" style={{ maxHeight: "none", overflow: "visible" }}>
-              {results?.hits.flatMap((h, i) => {
-                const card = <ResultCard key={h.entity.id} entity={h.entity} />;
+              {welcome && (
+                <div className="px-4 py-5 font-prose text-[14px] leading-[1.6]">
+                  <p className="mt-0 mb-2 text-[16px] font-bold text-navy">Describe what your build needs, and get the gems, passives and uniques that do it.</p>
+                  <ul className="m-0 pl-5 space-y-1">
+                    <li>
+                      Type it in plain words, like <i>"heal myself quickly"</i> or <i>"unique boots with movement speed"</i>, or tap an example above.
+                    </li>
+                    <li>Narrow it down with Filters: type, what it does, damage or weapon.</li>
+                    <li>
+                      Hide what doesn't fit your build with a minus: <code>protect me -minion</code>.
+                    </li>
+                    <li>Every result links to poe2db and the PoE2 Wiki for the full details.</li>
+                  </ul>
+                  <button type="button" className="link-btn mt-3 -ml-1" onClick={() => setBrowse(true)}>
+                    Or browse all {dataset?.entities.length.toLocaleString()} entries
+                  </button>
+                </div>
+              )}
+              {!welcome && results?.hits.flatMap((h, i) => {
+                const card = <ResultCard key={h.entity.id} entity={h.entity} since={dataset?.baseline} />;
                 return i === 4 && adConfig?.inlineSlot
                   ? [card, <AdSlot key="ad-inline" slot={adConfig.inlineSlot} config={adConfig} />]
                   : [card];
               })}
-              {results && results.hits.length > 0 && adConfig?.bottomSlot && (
+              {!welcome && results && results.hits.length > 0 && adConfig?.bottomSlot && (
                 <AdSlot key="ad-bottom" slot={adConfig.bottomSlot} config={adConfig} />
               )}
               {data.status !== "ready" && (
@@ -212,7 +239,7 @@ export default function App(): React.ReactElement {
               {results && results.total === 0 && (
                 <p className="px-4 py-10 text-center text-sm font-prose m-0">Nothing matches. Try fewer filters or different words.</p>
               )}
-              {results && results.total > results.hits.length && (
+              {!welcome && results && results.total > results.hits.length && (
                 <button type="button" onClick={() => setLimit(limit + PAGE)} className="link-btn w-full py-3 border-t border-[#c0c0c0]">
                   Show more ({(results.total - results.hits.length).toLocaleString()} left)
                 </button>

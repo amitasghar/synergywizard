@@ -5,6 +5,7 @@ const KEYS: [keyof Filters, string][] = [
   ["effects", "effect"],
   ["damage", "damage"],
   ["weapons", "weapon"],
+  ["changes", "since"],
   ["hide", "hide"],
 ];
 
