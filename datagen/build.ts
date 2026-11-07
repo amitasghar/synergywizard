@@ -241,14 +241,17 @@ function passiveEntities(data: RawData): Entity[] {
   return out;
 }
 
-const KIND_ORDER: EntityKind[] = ["skill", "spirit", "support", "keystone", "ascendancy", "notable", "passive"];
+const KIND_ORDER: EntityKind[] = ["skill", "spirit", "support", "unique", "keystone", "ascendancy", "notable", "passive"];
 
-export function buildEntities(data: RawData): Entity[] {
-  const all = [...gemEntities(data), ...passiveEntities(data)];
+/** `uniques` come from the wiki (see wiki.ts); everything else from RePoE. */
+export function buildEntities(data: RawData, uniques: Entity[] = []): Entity[] {
+  const all = [...gemEntities(data), ...passiveEntities(data), ...uniques];
   return all.sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) || a.name.localeCompare(b.name));
 }
 
 /** The text each entity is embedded from; also what keyword search scans. */
 export function searchText(e: Entity): string {
-  return [e.name, e.text, ...e.stats].filter(Boolean).join(". ");
+  // "Unique Boots" helps "boots with movement speed" find the right items.
+  const kind = e.itemClass ? `Unique ${e.itemClass}` : "";
+  return [e.name, kind, e.text, ...e.stats].filter(Boolean).join(". ");
 }

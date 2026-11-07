@@ -108,9 +108,9 @@ export default function App(): React.ReactElement {
           >
             <img src={logoSrc} alt="Synergy Wizard - PoE2 Skill Finder" width={2100} height={420} className="block w-full h-auto" />
           </h1>
-          <p className="font-prose text-[15px] leading-[1.6] mt-2 mb-0">Search every Path of Exile 2 skill, support and passive by what it does.</p>
+          <p className="font-prose text-[15px] leading-[1.6] mt-2 mb-0">Search every Path of Exile 2 skill, support, passive and unique by what it does.</p>
           <p className="mt-0.5 mb-0" style={{ fontFamily: "Tahoma, Verdana, sans-serif", fontSize: 12, color: "#555" }}>
-            Covers skill gems, spirit gems, supports and passives. Not items or uniques.
+            Covers skill gems, spirit gems, supports, passives and unique items.
           </p>
           {dataset && (
             <div className="mt-1 flex flex-wrap items-center justify-between gap-x-2 gap-y-1 text-xs text-[#555]">
@@ -268,7 +268,11 @@ export default function App(): React.ReactElement {
           <a className="text-white underline" href="https://repoe-fork.github.io/poe2/">
             RePoE
           </a>
-          , refreshed automatically after each patch. Not affiliated with Grinding Gear Games.
+          , unique item stats from the{" "}
+          <a className="text-white underline" href="https://www.poe2wiki.net/">
+            PoE2 Wiki
+          </a>{" "}
+          (CC BY-NC-SA 3.0), refreshed automatically. Not affiliated with Grinding Gear Games.
         </span>
         <button type="button" className="link-btn" style={{ color: "#fff" }} onClick={() => setConsentOpen(true)}>
           Cookie settings

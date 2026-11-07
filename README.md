@@ -11,6 +11,7 @@ beyond Cloudflare Pages and there is no database, server function or paid AI.
 | Piece | Where |
 |---|---|
 | Game data | [RePoE PoE2 export](https://repoe-fork.github.io/poe2/), community JSON regenerated after each patch |
+| Unique items | [PoE2 Wiki](https://www.poe2wiki.net/) Cargo API (`datagen/wiki.ts`, CC BY-NC-SA 3.0, credited on every card). The game data names uniques but not their stats. If the wiki is down, the job keeps the previous uniques |
 | Build | `datagen/`: fetches RePoE, translates passive stats, tags effects (Defensive, Timed effect, …) by rule, embeds each entry with `Xenova/all-MiniLM-L6-v2` |
 | Output | `public/data/poe2.json` (entries) + `public/data/poe2.vec` (int8 vectors, 384 per entry) |
 | Search | `src/search/search.ts`: keyword hits + plain-English intent + vector similarity, computed in the browser |

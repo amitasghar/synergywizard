@@ -12,6 +12,7 @@ const KIND_STYLE: Record<string, { label: string; bg: string; color?: string }> 
   notable: { label: "Notable", bg: "#ffd8a8" },
   ascendancy: { label: "Ascendancy", bg: "#ff2bd6", color: "#fff" },
   passive: { label: "Passive", bg: "#c0c0c0" },
+  unique: { label: "Unique", bg: "#af6025", color: "#fff" },
 };
 
 const ATTR: Record<string, string> = { str: "Str", dex: "Dex", int: "Int" };
@@ -25,10 +26,11 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
   const text = !open && entity.text.length > 220 ? `${entity.text.slice(0, 220).trimEnd()}…` : entity.text;
   const stats = open ? entity.stats : entity.stats.slice(0, PREVIEW_STATS);
   const meta = [
+    entity.itemClass,
     entity.ascendancy && `${entity.ascendancy} (${entity.className})`,
     entity.attribute && ATTR[entity.attribute],
     entity.count && entity.count > 1 && `${entity.count}× on the tree`,
-    ...entity.tags.slice(0, 6),
+    ...(entity.kind === "unique" ? [] : entity.tags.slice(0, 6)),
   ].filter(Boolean);
 
   function toggle(): void {
@@ -40,7 +42,7 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
     <span className="flex gap-2 flex-wrap">
       {[
         ["poe2db", "📖 poe2db", poe2dbUrl(entity.name)],
-        ["Wiki", "🌐 PoE2 Wiki", wikiUrl(entity.name)],
+        ["Wiki", "🌐 PoE2 Wiki", wikiUrl(entity.page ?? entity.name)],
       ].map(([site, label, href]) => (
         <a
           key={site}
@@ -61,7 +63,7 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
       <header className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
         <span className="tag" style={{ background: kind.bg, color: kind.color }}>{kind.label.toUpperCase()}</span>
         <h3 className="text-[16px] font-bold text-navy m-0">{entity.name}</h3>
-        {entity.weapons.length > 0 && (
+        {entity.kind !== "unique" && entity.weapons.length > 0 && (
           <span className="font-ui text-[11px] font-bold text-white bg-[#800000] border border-black px-1.5 py-px capitalize" title="Weapon needed">
             ⚔ {entity.weapons.join(" / ")}
           </span>
@@ -88,6 +90,19 @@ export function ResultCard({ entity }: { entity: Entity }): React.ReactElement {
           {entity.supports.join(", ")}
         </p>
       ) : null}
+      {entity.kind === "unique" && (
+        <p className="mt-2 mb-0 text-[11px] text-[#555] font-ui">
+          Stats from the{" "}
+          <a href={wikiUrl(entity.page ?? entity.name)} target="_blank" rel="noopener noreferrer">
+            Path of Exile 2 Wiki
+          </a>{" "}
+          (
+          <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener noreferrer license">
+            CC BY-NC-SA 3.0
+          </a>
+          )
+        </p>
+      )}
       <div className="mt-2 sm:hidden">{links}</div>
       {canExpand && (
         <button type="button" onClick={toggle} className="link-btn mt-1 -ml-1">

@@ -1,4 +1,4 @@
-export type EntityKind = "skill" | "spirit" | "support" | "notable" | "keystone" | "ascendancy" | "passive";
+export type EntityKind = "skill" | "spirit" | "support" | "notable" | "keystone" | "ascendancy" | "passive" | "unique";
 
 export interface Entity {
   id: string;
@@ -21,6 +21,9 @@ export interface Entity {
   count?: number;
   /** Recommended support gem names (from game data). */
   supports?: string[];
+  /** Uniques: item class ("Body Armour") and the wiki page their stats come from. */
+  itemClass?: string;
+  page?: string;
 }
 
 export interface Dataset {

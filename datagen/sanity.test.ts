@@ -11,6 +11,7 @@ const full = (): Entity[] => [
   ...make("notable", 600),
   ...make("keystone", 20),
   ...make("ascendancy", 120),
+  ...make("unique", 400),
 ];
 
 describe("checkSanity", () => {

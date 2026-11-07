@@ -6,6 +6,7 @@ const KINDS: [string, string][] = [
   ["skill", "Skill gems"],
   ["spirit", "Spirit gems"],
   ["support", "Supports"],
+  ["unique", "Uniques"],
   ["notable", "Notables"],
   ["keystone", "Keystones"],
   ["ascendancy", "Ascendancy"],

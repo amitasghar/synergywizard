@@ -1,14 +1,15 @@
-// Rebuilds public/data/poe2.json + poe2.vec from the RePoE PoE2 export.
+// Rebuilds public/data/poe2.json + poe2.vec from the RePoE PoE2 export, plus unique items from the PoE2 Wiki.
 // Usage: node datagen/cli.ts [--force]
-// Exits 0 without writing anything when RePoE still serves the version we built.
+// Exits 0 without writing anything when neither source has changed.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import type { Dataset } from "../src/data/types.ts";
+import type { Dataset, Entity } from "../src/data/types.ts";
 import { buildEntities, searchText, type RawData } from "./build.ts";
 import { DIMS, embedAll } from "./embed.ts";
 import { buildTranslationIndex, type Translation } from "./text.ts";
 import { checkSanity } from "./sanity.ts";
+import { fetchWikiUniques, uniqueEntities } from "./wiki.ts";
 
 const BASE = "https://repoe-fork.github.io/poe2";
 const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "public", "data");
@@ -45,13 +46,18 @@ async function main(): Promise<void> {
     getJson<Translation[]>("stat_translations/passive_skill_stat_descriptions.min.json"),
     getJson<Translation[]>("stat_translations/stat_descriptions.min.json"),
   ]);
-  const entities = buildEntities({
-    gems,
-    skills,
-    tree,
-    ascendancies,
-    translations: buildTranslationIndex(passiveTr, generalTr),
-  });
+  // A wiki outage shouldn't block game-data updates: keep the uniques we already have.
+  let uniques: Entity[];
+  try {
+    uniques = uniqueEntities(await fetchWikiUniques());
+  } catch (err) {
+    uniques = current?.entities.filter((e) => e.kind === "unique") ?? [];
+    console.warn(`Wiki uniques unavailable (${(err as Error).message}); keeping ${uniques.length} from the last build`);
+  }
+  const entities = buildEntities(
+    { gems, skills, tree, ascendancies, translations: buildTranslationIndex(passiveTr, generalTr) },
+    uniques,
+  );
   // RePoE's mirrors disagree on Last-Modified, so compare the content itself.
   if (!force && current && current.version === version && JSON.stringify(current.entities) === JSON.stringify(entities)) {
     console.log(`Up to date: PoE2 ${version}, no content changes`);

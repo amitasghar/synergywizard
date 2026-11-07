@@ -66,6 +66,24 @@ const KIND_WORDS: [RegExp, EntityKind[]][] = [
   [/\b(passives?|nodes?|notables?|tree)\b/, ["notable", "keystone", "passive"]],
   [/\bkeystones?\b/, ["keystone"]],
   [/\bascendanc\w*\b/, ["ascendancy"]],
+  [/\b(uniques?|items?|gear|equipment)\b/, ["unique"]],
+];
+
+// Item slots a player might name → unique item classes (stored lower-cased in tags).
+const CLASS_WORDS: [RegExp, string[]][] = [
+  [/\b(boots?|shoes)\b/, ["boots"]],
+  [/\b(gloves?|gauntlets?)\b/, ["gloves"]],
+  [/\b(helmets?|helms?|hats?)\b/, ["helmet"]],
+  [/\b(body armou?rs?|chests?|chest pieces?)\b/, ["body armour"]],
+  [/\brings?\b/, ["ring"]],
+  [/\b(amulets?|necklaces?)\b/, ["amulet"]],
+  [/\bbelts?\b/, ["belt"]],
+  [/\bquivers?\b/, ["quiver"]],
+  [/\bjewels?\b/, ["jewel"]],
+  [/\bfoc(us|i)\b/, ["focus"]],
+  [/\bcharms?\b/, ["charm"]],
+  [/\bflasks?\b/, ["life flask", "mana flask"]],
+  [/(?<!energy )\b(shields?|bucklers?)\b/, ["shield", "buckler"]],
 ];
 
 // Player slang → GGG gem tags.
@@ -140,6 +158,7 @@ export function search(index: SearchIndex, { query: raw, filters: f, queryVector
   const wantEffects = effectsForQuery(query);
   const wantKinds = KIND_WORDS.filter(([re]) => re.test(phrase)).flatMap(([, k]) => k);
   const wantTags = TAG_WORDS.filter(([re]) => re.test(phrase)).flatMap(([, t]) => t);
+  const wantClasses = CLASS_WORDS.filter(([re]) => re.test(phrase)).flatMap(([, c]) => c);
   const semantic = !!(queryVector && index.vectors && phrase);
 
   const hits: Hit[] = [];
@@ -155,6 +174,8 @@ export function search(index: SearchIndex, { query: raw, filters: f, queryVector
     const effectBoost = matched * 0.12 + (wantEffects.length > 1 && matched === wantEffects.length ? 0.1 : 0);
     const kindBoost = wantKinds.length && wantKinds.includes(e.kind) ? 0.08 : 0;
     const tagBoost = wantTags.some((t) => e.tags.includes(t)) ? 0.06 : 0;
+    // Naming a slot ("boots") means items, and the right slot leads.
+    const classBoost = e.kind === "unique" && wantClasses.length ? (wantClasses.some((c) => e.tags.includes(c)) ? 0.2 : 0.05) : 0;
     // Small passives repeat the same stat many times; let gems and notables lead.
     const kindPenalty = e.kind === "passive" ? 0.04 : 0;
     let score: number;
@@ -162,10 +183,10 @@ export function search(index: SearchIndex, { query: raw, filters: f, queryVector
       // Keyword hits are capped so one exact name match can't push every meaning-match below the cutoff;
       // an exact name still wins outright.
       const kwPart = 0.3 * Math.min(kw, 1) + (index.names[i] === phrase ? 1 : 0);
-      score = cosine(index.vectors!, i, dims, queryVector!) + kwPart + effectBoost + kindBoost + tagBoost - kindPenalty;
+      score = cosine(index.vectors!, i, dims, queryVector!) + kwPart + effectBoost + kindBoost + tagBoost + classBoost - kindPenalty;
     } else {
       if (kw === 0 && matched === 0) continue;
-      score = kw + effectBoost + kindBoost + tagBoost - kindPenalty;
+      score = kw + effectBoost + kindBoost + tagBoost + classBoost - kindPenalty;
     }
     hits.push({ entity: e, score });
   }

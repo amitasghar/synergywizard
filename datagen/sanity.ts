@@ -1,7 +1,7 @@
 // Refuses a rebuild that looks broken (e.g. RePoE changed its format) so bad data never deploys.
 import type { Entity } from "../src/data/types.ts";
 
-const MINIMUMS: Record<string, number> = { skill: 200, support: 300, notable: 500, keystone: 15, ascendancy: 100 };
+const MINIMUMS: Record<string, number> = { skill: 200, support: 300, notable: 500, keystone: 15, ascendancy: 100, unique: 300 };
 const MAX_DROP = 0.15;
 
 function countKinds(entities: Entity[]): Record<string, number> {
