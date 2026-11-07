@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import logoSrc from "./assets/banner-90s.webp";
 import { adConfig } from "./ads/config.ts";
-import { getConsent, track } from "./api/analytics.ts";
+import { mustAsk, track } from "./api/analytics.ts";
 import { useDebouncedValue } from "./hooks/useDebouncedValue.ts";
 import { useEmbedder } from "./hooks/useEmbedder.ts";
 import { emptyFilters, parseQuery, search, type Filters } from "./search/search.ts";
@@ -38,7 +38,7 @@ export default function App(): React.ReactElement {
   const shared = useMemo(() => readSharedList(window.location.search), []);
   const [view, setView] = useState<"search" | "mine" | "shared">(shared ? "shared" : "search");
   const saved = useSaved();
-  const [consentOpen, setConsentOpen] = useState(() => getConsent() === null);
+  const [consentOpen, setConsentOpen] = useState(mustAsk);
   const [queryVector, setQueryVector] = useState<{ q: string; v: number[] } | null>(null);
   const data = useDataset();
   const { status: modelStatus, embed } = useEmbedder();
