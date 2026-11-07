@@ -74,3 +74,7 @@ body, .window, button, input, textarea, select, option, label, legend, table, .t
 }
 .link-btn { background: none; border: none; box-shadow: none; color: #0000ee; text-decoration: underline; cursor: pointer; min-height: 32px; padding: 0 4px; font-family: var(--ui); font-size: 13px; }
 .link-btn:active { box-shadow: none; }
+/* ☆ / ★ "save to My list" toggle on result cards: a bare glyph, big enough to tap. */
+.save-star { background: none; border: none; box-shadow: none; min-width: 32px; min-height: 32px; padding: 0; margin-left: -6px; font-size: 22px; line-height: 1; color: #b8860b; cursor: pointer; }
+.save-star:active { box-shadow: none; }
+.save-star:focus-visible { outline: 1px dotted #000; }

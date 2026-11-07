@@ -20,7 +20,14 @@ const PREVIEW_STATS = 3;
 
 const CHANGE_STYLE = { new: { label: "NEW", bg: "#39ff14" }, changed: { label: "CHANGED", bg: "#ffe600" } };
 
-export function ResultCard({ entity, since }: { entity: Entity; since?: string }): React.ReactElement {
+interface CardProps {
+  entity: Entity;
+  since?: string;
+  saved?: boolean;
+  onToggleSave?: () => void;
+}
+
+export function ResultCard({ entity, since, saved, onToggleSave }: CardProps): React.ReactElement {
   const [open, setOpen] = useState(false);
   const kind = KIND_STYLE[entity.kind];
   const hiddenStats = entity.stats.length - PREVIEW_STATS;
@@ -77,6 +84,21 @@ export function ResultCard({ entity, since }: { entity: Entity; since?: string }
   return (
     <article className="border-b border-[#c0c0c0] last:border-b-0 px-3 sm:px-4 py-3 font-prose">
       <header className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+        {onToggleSave && (
+          <button
+            type="button"
+            className="save-star"
+            aria-pressed={!!saved}
+            aria-label={saved ? `Remove ${entity.name} from my list` : `Save ${entity.name} to my list`}
+            title={saved ? "Saved. Click to remove from My list" : "Save to My list"}
+            onClick={() => {
+              track(saved ? "list_remove" : "list_add", { id: entity.id });
+              onToggleSave();
+            }}
+          >
+            {saved ? "★" : "☆"}
+          </button>
+        )}
         <span className="tag" style={{ background: kind.bg, color: kind.color }}>{kind.label.toUpperCase()}</span>
         <h3 className="text-[16px] font-bold text-navy m-0">{entity.name}</h3>
         {entity.change && (

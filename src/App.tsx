@@ -11,6 +11,8 @@ import { AdSlot } from "./ui/AdSlot.tsx";
 import { ConsentBar } from "./ui/ConsentBar.tsx";
 import { FilterPanel } from "./ui/FilterPanel.tsx";
 import { ResultCard } from "./ui/ResultCard.tsx";
+import { ListPanel } from "./ui/ListPanel.tsx";
+import { readSharedList, useSaved } from "./saved/saved.ts";
 
 const EXAMPLES = [
   "a skill that protects me for a few seconds",
@@ -33,6 +35,9 @@ export default function App(): React.ReactElement {
   const [limit, setLimit] = useState(PAGE);
   const [showFilters, setShowFilters] = useState(false);
   const [browse, setBrowse] = useState(false);
+  const shared = useMemo(() => readSharedList(window.location.search), []);
+  const [view, setView] = useState<"search" | "mine" | "shared">(shared ? "shared" : "search");
+  const saved = useSaved();
   const [consentOpen, setConsentOpen] = useState(() => getConsent() === null);
   const [queryVector, setQueryVector] = useState<{ q: string; v: number[] } | null>(null);
   const data = useDataset();
@@ -83,6 +88,11 @@ export default function App(): React.ReactElement {
   const smart =
     modelStatus === "ready" ? "Smart search" : modelStatus === "loading" ? "Loading smart search…" : modelStatus === "error" ? "Keyword search" : "";
   const dataset = data.status === "ready" ? data.index.dataset : null;
+  const byId = useMemo(() => new Map((dataset?.entities ?? []).map((e) => [e.id, e])), [dataset]);
+
+  useEffect(() => {
+    if (shared) track("list_open_shared", { count: shared.length });
+  }, [shared]);
 
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-4 sm:py-6 flex flex-col gap-4">
@@ -178,7 +188,10 @@ export default function App(): React.ReactElement {
               type="search"
               value={query}
               autoFocus
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                setView("search");
+              }}
               placeholder="Describe what your build needs…"
               className="search-input"
             />
@@ -191,6 +204,7 @@ export default function App(): React.ReactElement {
                   onClick={() => {
                     track("example_click", { example: ex });
                     setQuery(ex);
+                    setView("search");
                   }}
                   className={`tap !min-w-0 !h-auto py-1 px-2 text-left${i >= 3 ? " max-sm:hidden" : ""}`}
                 >
@@ -203,8 +217,45 @@ export default function App(): React.ReactElement {
               <code>-"energy shield"</code>.
             </p>
 
-            <div className="sunken-panel mt-3 bg-white" style={{ maxHeight: "none", overflow: "visible" }}>
-              {welcome && (
+            <div className="mt-3 flex gap-1" role="tablist" aria-label="Results or saved list">
+              {(
+                [
+                  ["search", "🔎 Results"],
+                  ["mine", `☆ My list (${saved.ids.length})`],
+                  ...(shared ? [["shared", `🔗 Shared list (${shared.length})`]] : []),
+                ] as [typeof view, string][]
+              ).map(([v, label]) => (
+                <button
+                  key={v}
+                  type="button"
+                  role="tab"
+                  aria-selected={view === v}
+                  className={`tap !min-w-0 !h-auto py-1 px-2 ${view === v ? "font-bold" : ""}`}
+                  style={view === v ? { boxShadow: "inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey" } : undefined}
+                  onClick={() => setView(v)}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            <div className="sunken-panel mt-1 bg-white" style={{ maxHeight: "none", overflow: "visible" }}>
+              {view !== "search" && dataset && (
+                <ListPanel
+                  mode={view === "shared" ? "shared" : "mine"}
+                  ids={view === "shared" ? shared ?? [] : saved.ids}
+                  byId={byId}
+                  since={since}
+                  isSaved={saved.has}
+                  onToggleSave={saved.toggle}
+                  onAddAll={(ids) => {
+                    saved.add(ids);
+                    setView("mine");
+                  }}
+                  onClear={saved.clear}
+                />
+              )}
+              {view === "search" && welcome && (
                 <div className="px-4 py-5 font-prose text-[14px] leading-[1.6]">
                   <p className="mt-0 mb-2 text-[16px] font-bold text-navy">Describe what your build needs, and get the gems, passives and uniques that do it.</p>
                   <ul className="m-0 pl-5 space-y-1">
@@ -222,13 +273,21 @@ export default function App(): React.ReactElement {
                   </button>
                 </div>
               )}
-              {!welcome && results?.hits.flatMap((h, i) => {
-                const card = <ResultCard key={h.entity.id} entity={h.entity} since={dataset?.baseline} />;
+              {view === "search" && !welcome && results?.hits.flatMap((h, i) => {
+                const card = (
+                  <ResultCard
+                    key={h.entity.id}
+                    entity={h.entity}
+                    since={dataset?.baseline}
+                    saved={saved.has(h.entity.id)}
+                    onToggleSave={() => saved.toggle(h.entity.id)}
+                  />
+                );
                 return i === 4 && adConfig?.inlineSlot
                   ? [card, <AdSlot key="ad-inline" slot={adConfig.inlineSlot} config={adConfig} />]
                   : [card];
               })}
-              {!welcome && results && results.hits.length > 0 && adConfig?.bottomSlot && (
+              {view === "search" && !welcome && results && results.hits.length > 0 && adConfig?.bottomSlot && (
                 <AdSlot key="ad-bottom" slot={adConfig.bottomSlot} config={adConfig} />
               )}
               {data.status !== "ready" && (
@@ -236,10 +295,10 @@ export default function App(): React.ReactElement {
                   {data.status === "loading" ? "Loading game data…" : `Couldn't load game data (${data.error})`}
                 </p>
               )}
-              {results && results.total === 0 && (
+              {view === "search" && results && results.total === 0 && (
                 <p className="px-4 py-10 text-center text-sm font-prose m-0">Nothing matches. Try fewer filters or different words.</p>
               )}
-              {!welcome && results && results.total > results.hits.length && (
+              {view === "search" && !welcome && results && results.total > results.hits.length && (
                 <button type="button" onClick={() => setLimit(limit + PAGE)} className="link-btn w-full py-3 border-t border-[#c0c0c0]">
                   Show more ({(results.total - results.hits.length).toLocaleString()} left)
                 </button>

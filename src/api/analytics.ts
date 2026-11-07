@@ -2,7 +2,8 @@
 const GA_ID = "G-M6DGHHPX4W";
 const CONSENT_KEY = "sw.consent";
 
-type GA4Event = "search" | "filter_use" | "result_expand" | "example_click" | "share_url_copy" | "outbound_click" | "consent_choice";
+type GA4Event = "search" | "filter_use" | "result_expand" | "example_click" | "share_url_copy" | "outbound_click" | "consent_choice"
+  | "list_add" | "list_remove" | "list_share" | "list_open_shared" | "list_add_shared";
 type Gtag = (...args: unknown[]) => void;
 type GaWindow = Window & { dataLayer?: unknown[]; gtag?: Gtag };
 
