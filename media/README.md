@@ -22,3 +22,22 @@ Need a quick way to find a PoE2 skill that complements your build? Just ask in p
 https://poe2.90sgamer.com/?utm_source=youtube&utm_medium=social&utm_campaign=short_launch
 
 **Hashtags:** #PathOfExile2 #PoE2 #ARPG #GamingTools #Shorts
+
+## How-to tutorial (search, hide words, save and share a list)
+
+Rebuild from the live site: `npm run howto:record -- landscape` then `npm run howto:build -- landscape` (same with `vertical`).
+Captions only, no voiceover; music is `lofi_seville.mp3` (read in place), -16 LUFS. Scripts: `marketing/tutorial/`.
+
+| File | Length | Use |
+|---|---|---|
+| `video/synergy-wizard-howto-landscape.mp4` | ~50 s, 1920x1080 | YouTube video, help link on the site or 90sGamer page |
+| `video/synergy-wizard-howto-vertical.mp4` | ~50 s, 1080x1920 | YouTube Shorts, TikTok, Instagram Reels |
+
+**Title (landscape):** How to use Synergy Wizard: search PoE2 skills and uniques, save and share a list
+**Title (vertical):** Find PoE2 skills and uniques by what they DO, then save and share your list #Shorts
+
+**Description:**
+Describe what your build needs in plain words and Synergy Wizard finds the Path of Exile 2 skill gems, supports, passives and uniques that do it. Hide what doesn't fit with a minus (-"energy shield"), star anything to save it to My list, and share the list with one link. Free, updated every patch.
+https://poe2.90sgamer.com/?utm_source=youtube&utm_medium=social&utm_campaign=howto
+
+**Hashtags:** #PathOfExile2 #PoE2 #ARPG #PoE2Builds

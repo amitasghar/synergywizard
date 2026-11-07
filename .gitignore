@@ -31,3 +31,4 @@ media/video/*.mp4
 # Local production env (ads IDs for npm run deploy)
 .env.production
 .env
+marketing/tutorial/.work/
