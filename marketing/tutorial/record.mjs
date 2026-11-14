@@ -15,7 +15,7 @@ const F =
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const work = path.join(here, ".work", FORMAT);
-const SITE = "https://poe2.90sgamer.com/";
+const SITE = "https://synergywizard.com/";
 fs.rmSync(work, { recursive: true, force: true });
 fs.mkdirSync(work, { recursive: true });
 
@@ -219,7 +219,7 @@ await host.evaluate(
   ({ src, vertical }) => {
     const o = document.createElement("div");
     o.style.cssText = `position:fixed;inset:0;background:#008080;z-index:30000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:${vertical ? 56 : 36}px;font-family:'Press Start 2P',monospace;text-align:center;`;
-    o.innerHTML = `<img src="${src}" style="width:${vertical ? "100%" : "70%"};height:auto;display:block"><div style="color:#fff;font-size:${vertical ? 30 : 34}px;line-height:1.5">Search. Save. Share.<br>Free, updated every patch.</div><div style="color:#39ff14;font-size:${vertical ? 46 : 56}px;text-shadow:6px 6px 0 #000">poe2.90sgamer.com</div><div style="color:#fff;font-size:24px">a 90sGamer.com tool</div>`;
+    o.innerHTML = `<img src="${src}" style="width:${vertical ? "100%" : "70%"};height:auto;display:block"><div style="color:#fff;font-size:${vertical ? 30 : 34}px;line-height:1.5">Search. Save. Share.<br>Free, updated every patch.</div><div style="color:#39ff14;font-size:${vertical ? 46 : 56}px;text-shadow:6px 6px 0 #000">synergywizard.com</div><div style="color:#fff;font-size:24px">a 90sGamer.com tool</div>`;
     document.body.appendChild(o);
   },
   { src: bannerSrc, vertical: FORMAT === "vertical" },

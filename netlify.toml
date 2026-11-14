@@ -14,10 +14,10 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# The official address is poe2.90sgamer.com; send the old one there, keeping path and query.
+# The official address is synergywizard.com; send the old one there, keeping path and query.
 [[redirects]]
   from = "https://synergywizard.netlify.app/*"
-  to = "https://poe2.90sgamer.com/:splat"
+  to = "https://synergywizard.com/:splat"
   status = 301
   force = true
 

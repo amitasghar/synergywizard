@@ -8,7 +8,7 @@ import { cues, named } from "./narration.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const work = path.join(here, ".work");
-const SITE = "https://poe2.90sgamer.com/";
+const SITE = "https://synergywizard.com/";
 const FEEDBACK = "https://90sgamer.com/games/synergy-wizard/#feedback";
 fs.rmSync(work, { recursive: true, force: true });
 fs.mkdirSync(work, { recursive: true });
@@ -257,7 +257,7 @@ await host.evaluate((src) => {
   const o = document.createElement("div");
   o.style.cssText =
     "position:fixed;inset:0;background:#008080;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:56px;font-family:'Press Start 2P',monospace;text-align:center;";
-  o.innerHTML = `<img src="${src}" style="width:100%;height:auto;display:block"><div style="color:#fff;font-size:34px;line-height:1.5">Free. Updated every patch.</div><div style="color:#39ff14;font-size:48px;text-shadow:6px 6px 0 #000">poe2.90sgamer.com</div><div style="color:#fff;font-size:24px">a 90sGamer.com tool</div>`;
+  o.innerHTML = `<img src="${src}" style="width:100%;height:auto;display:block"><div style="color:#fff;font-size:34px;line-height:1.5">Free. Updated every patch.</div><div style="color:#39ff14;font-size:48px;text-shadow:6px 6px 0 #000">synergywizard.com</div><div style="color:#fff;font-size:24px">a 90sGamer.com tool</div>`;
   document.body.insertBefore(o, document.getElementById("sw-cap"));
 }, bannerSrc);
 await subtitles;

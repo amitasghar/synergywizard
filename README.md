@@ -1,7 +1,7 @@
 # Synergy Wizard
 
 Search every Path of Exile 2 skill gem, support and passive by what it does
-("protect me for a few seconds"). Live at https://poe2.90sgamer.com (also https://90sgamer.com/poe2).
+("protect me for a few seconds"). Live at https://synergywizard.com (the old addresses https://poe2.90sgamer.com and https://90sgamer.com/poe2 redirect there).
 
 Everything runs in the browser from two static files, so hosting costs nothing
 beyond Cloudflare Pages and there is no database, server function or paid AI.
@@ -27,7 +27,7 @@ The build runs locally or in CI, not in Cloudflare, so the ads env vars (below) 
 
 ## Ads
 
-Ads are off unless these build-time env vars are set: `VITE_ADSENSE_CLIENT` (e.g. `ca-pub-1234567890123456`), `VITE_ADSENSE_SLOT_INLINE` and `VITE_ADSENSE_SLOT_BOTTOM` (numeric slot ids). The build runs on your machine (`npm run deploy`) or in the GitHub data job, so set them in a local `.env.production` (gitignored) and as GitHub repo variables (Settings → Secrets and variables → Actions → Variables), then `npm run deploy`. AdSense loads only after the visitor accepts cookies. `ads.txt` lives on the root domain 90sgamer.com (owned by the 90sGamer site), not in this repo.
+Ads are off unless these build-time env vars are set: `VITE_ADSENSE_CLIENT` (e.g. `ca-pub-1234567890123456`), `VITE_ADSENSE_SLOT_INLINE` and `VITE_ADSENSE_SLOT_BOTTOM` (numeric slot ids). The build runs on your machine (`npm run deploy`) or in the GitHub data job, so set them in a local `.env.production` (gitignored) and as GitHub repo variables (Settings → Secrets and variables → Actions → Variables), then `npm run deploy`. AdSense loads only after the visitor accepts cookies. `public/ads.txt` serves synergywizard.com/ads.txt, and `index.html` carries the `google-adsense-account` meta tag for the AdSense site check.
 
 ## Commands
 

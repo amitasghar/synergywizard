@@ -1,10 +1,11 @@
-# Redirect-only Worker for the short domain. Custom domains make Cloudflare create the DNS records itself.
+# Redirect-only Worker: www and the old poe2.90sgamer.com address → synergywizard.com (the site is on Cloudflare Pages).
+# The www custom domain makes Cloudflare create its DNS record; the poe2 route sits in front of the old Pages domain.
 # Deploy: cd redirect && npx wrangler deploy
 name = "synergywizard-redirect"
 main = "index.js"
 compatibility_date = "2026-11-01"
 workers_dev = false
 routes = [
-  { pattern = "synergywizard.com", custom_domain = true },
   { pattern = "www.synergywizard.com", custom_domain = true },
+  { pattern = "poe2.90sgamer.com/*", zone_name = "90sgamer.com" },
 ]

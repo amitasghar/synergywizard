@@ -12,7 +12,7 @@ export interface NewsItem {
 export const WHATS_NEW: NewsItem[] = [
   { date: "2026-11-14", text: "Fixed: some Path of Exile 1 uniques had slipped into the search. Uniques are PoE2-only again.", feedback: true },
   { date: "2026-11-14", text: "Better feedback form: pick an idea or a problem, say where you saw it, and leave an email if you'd like to hear when it's done.", feedback: true },
-  { date: "2026-11-14", text: "synergywizard.com now works as a short address." },
+  { date: "2026-11-14", text: "Synergy Wizard has its own address: synergywizard.com. Old links still work." },
   { date: "2026-11-07", text: "Uniques now come from Path of Building's data: more complete, and updated quickly after patches.", feedback: true },
   { date: "2026-11-06", text: "My list: tap ☆ on any result to save it, then share your list with a link." },
   { date: "2026-11-06", text: "Unique items are searchable, and NEW / CHANGED tags show what changed since the last patch." },

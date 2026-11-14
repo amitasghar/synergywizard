@@ -11,7 +11,7 @@ Speech boundaries, transcript and cue times are in `narration.mjs`; edit them th
 
 | File | Length | Spec | Captions |
 |---|---|---|---|
-| `video/synergy-wizard-short.mp4` | ~73.5 s | 1080x1920, 30 fps, H.264 + AAC 192k, -14 LUFS (two-pass loudnorm), real site footage, end card with logo + URL | Burned-in subtitles = the narration, lower part of the frame. End card: Free. Updated every patch. - poe2.90sgamer.com - a 90sGamer.com tool |
+| `video/synergy-wizard-short.mp4` | ~73.5 s | 1080x1920, 30 fps, H.264 + AAC 192k, -14 LUFS (two-pass loudnorm), real site footage, end card with logo + URL | Burned-in subtitles = the narration, lower part of the frame. End card: Free. Updated every patch. - poe2.90sgamer.com - a 90sGamer.com tool (re-render for synergywizard.com) |
 
 ## YouTube
 
@@ -19,7 +19,7 @@ Speech boundaries, transcript and cue times are in `narration.mjs`; edit them th
 
 **Description:**
 Need a quick way to find a PoE2 skill that complements your build? Just ask in plain words. Synergy Wizard searches every gem, support and passive by what it does, and is updated every patch. Free, and in beta - feedback welcome.
-https://poe2.90sgamer.com/?utm_source=youtube&utm_medium=social&utm_campaign=short_launch
+https://synergywizard.com/?utm_source=youtube&utm_medium=social&utm_campaign=short_launch
 
 **Hashtags:** #PathOfExile2 #PoE2 #ARPG #GamingTools #Shorts
 
@@ -38,6 +38,6 @@ Captions only, no voiceover; music is `lofi_seville.mp3` (read in place), -16 LU
 
 **Description:**
 Describe what your build needs in plain words and Synergy Wizard finds the Path of Exile 2 skill gems, supports, passives and uniques that do it. Hide what doesn't fit with a minus (-"energy shield"), star anything to save it to My list, and share the list with one link. Free, updated every patch.
-https://poe2.90sgamer.com/?utm_source=youtube&utm_medium=social&utm_campaign=howto
+https://synergywizard.com/?utm_source=youtube&utm_medium=social&utm_campaign=howto
 
 **Hashtags:** #PathOfExile2 #PoE2 #ARPG #PoE2Builds
