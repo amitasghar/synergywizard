@@ -10,7 +10,7 @@ import { buildEntities, searchText, type RawData } from "./build.ts";
 import { DIMS, embedAll } from "./embed.ts";
 import { buildTranslationIndex, type Translation } from "./text.ts";
 import { checkSanity } from "./sanity.ts";
-import { fetchPobUniques, pobUniqueEntities } from "./pob.ts";
+import { fetchPobUniques, onlyPoe2, pobUniqueEntities } from "./pob.ts";
 import { makeBaseline, markChanges, type Baseline } from "./changes.ts";
 
 const BASE = "https://repoe-fork.github.io/poe2";
@@ -59,7 +59,13 @@ async function main(): Promise<void> {
   // A failed uniques download shouldn't block game-data updates: keep the uniques we already have.
   let uniques: Entity[];
   try {
-    uniques = pobUniqueEntities(await fetchPobUniques());
+    const [rows, gameUniques] = await Promise.all([
+      fetchPobUniques(),
+      getJson<Record<string, { name: string }> | { name: string }[]>("uniques.min.json"),
+    ]);
+    const { kept, dropped } = onlyPoe2(pobUniqueEntities(rows), Object.values(gameUniques).map((u) => u.name));
+    if (dropped.length) console.warn(`Dropped ${dropped.length} uniques the PoE2 game files don't list: ${dropped.slice(0, 10).join(", ")}`);
+    uniques = kept;
   } catch (err) {
     uniques = current?.entities.filter((e) => e.kind === "unique") ?? [];
     console.warn(`PoB uniques unavailable (${(err as Error).message}); keeping ${uniques.length} from the last build`);

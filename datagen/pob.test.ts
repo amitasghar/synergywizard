@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parsePobUnique, pobUniqueEntities } from "./pob.ts";
+import { luaItemBlocks, onlyPoe2, parsePobUnique, pobUniqueEntities } from "./pob.ts";
 
 describe("parsePobUnique", () => {
   it("keeps only the current version's base and stats", () => {
@@ -57,5 +57,19 @@ describe("pobUniqueEntities", () => {
       damage: ["lightning"],
       stats: ["Grants Skill: Level (1-20) Some Skill", "+20 to Lightning Damage"],
     });
+  });
+});
+
+describe("PoE2-only safety net", () => {
+  it("reads one item per Lua [[ ]] block", () => {
+    expect(luaItemBlocks('return {\n[[\nA\nBase\n+1 to X\n]],[[\nB\nBase\n]],\n}')).toEqual(["A\nBase\n+1 to X", "B\nBase"]);
+  });
+
+  it("drops uniques the PoE2 game files don't list", () => {
+    const [a, b] = pobUniqueEntities([
+      { file: "boots", text: "Corpsewade\nIron Greaves\n10% increased Movement Speed" },
+      { file: "shield", text: "Aegis Aurora\nChampion Kite Shield\n+2% to all maximum Resistances" },
+    ]);
+    expect(onlyPoe2([a, b], ["Corpsewade", "Headhunter"])).toEqual({ kept: [a], dropped: ["Aegis Aurora"] });
   });
 });

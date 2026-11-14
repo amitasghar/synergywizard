@@ -1,11 +1,12 @@
-// Unique items from Path of Building's data (MIT licence), as exported by RePoE at
-// https://repoe-fork.github.io/pob-data/poe2/. The game data names uniques but not their stats;
-// PoB keeps them current for build planning, usually on patch day.
+// Unique items from Path of Building PoE2's own data files (MIT licence) on GitHub. The game data names
+// uniques but not their stats; PoB keeps them current for build planning, usually on patch day.
+// (RePoE's pob-data/poe2 copy was replaced by PoE1 uniques on 2026-11-11, so we read PoB directly
+// and cli.ts also drops anything the PoE2 game files don't list.)
 import type { Entity } from "../src/data/types.ts";
 import { effectsForText } from "../src/data/effects.ts";
 import { slugify } from "./build.ts";
 
-const BASE = "https://repoe-fork.github.io/pob-data/poe2/Uniques";
+const BASE = "https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/Data/Uniques";
 /** PoB's file per item type → the class players see. Bucklers, quarterstaves, charms and flasks are split by base below. */
 const FILES: Record<string, string> = {
   amulet: "Amulet", axe: "Axe", belt: "Belt", body: "Body Armour", boots: "Boots", bow: "Bow", claw: "Claw",
@@ -31,14 +32,19 @@ export interface PobUnique {
   text: string;
 }
 
-/** Downloads every unique list; a missing file (PoB has no unique axes yet) counts as empty. */
+/** PoB's Lua files hold one item per `[[ … ]]` block. */
+export function luaItemBlocks(lua: string): string[] {
+  return [...lua.matchAll(/\[\[\r?\n?([\s\S]*?)\]\]/g)].map((m) => m[1].trim()).filter(Boolean);
+}
+
+/** Downloads every unique list; a missing file counts as empty. */
 export async function fetchPobUniques(): Promise<PobUnique[]> {
   const lists = await Promise.all(
     Object.keys(FILES).map(async (file) => {
-      const res = await fetch(`${BASE}/${file}.min.json`);
+      const res = await fetch(`${BASE}/${file}.lua`);
       if (res.status === 404) return [];
       if (!res.ok) throw new Error(`PoB uniques ${file}: ${res.status}`);
-      return ((await res.json()) as string[]).map((text) => ({ file, text }));
+      return luaItemBlocks(await res.text()).map((text) => ({ file, text }));
     }),
   );
   const all = lists.flat();
@@ -120,4 +126,14 @@ export function pobUniqueEntities(rows: PobUnique[]): Entity[] {
     if (!byId.has(entity.id)) byId.set(entity.id, entity);
   }
   return [...byId.values()];
+}
+
+const normName = (s: string) => s.toLowerCase().replace(/[‘’]/g, "'").replace(/\s+/g, " ").trim();
+
+/** Keeps only uniques the PoE2 game files list by name, so a PoE1 item can never slip in. */
+export function onlyPoe2(uniques: Entity[], gameNames: string[]): { kept: Entity[]; dropped: string[] } {
+  const game = new Set(gameNames.map(normName));
+  const kept = uniques.filter((u) => game.has(normName(u.name)));
+  const dropped = uniques.filter((u) => !game.has(normName(u.name))).map((u) => u.name);
+  return { kept, dropped };
 }
