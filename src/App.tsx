@@ -13,12 +13,24 @@ import { FilterPanel } from "./ui/FilterPanel.tsx";
 import { ResultCard } from "./ui/ResultCard.tsx";
 import { ListPanel } from "./ui/ListPanel.tsx";
 
+import { readSharedList, useSaved } from "./saved/saved.ts";
+import { WhatsNew } from "./ui/WhatsNew.tsx";
+import { LATEST_NEWS } from "./data/whatsnew.ts";
+
 const FEEDBACK_URL = "https://90sgamer.com/games/synergy-wizard/#feedback";
 /** The feedback form's "Where?" box starts with the page the visitor was on (their search, filters, list). */
 function withPage(e: { currentTarget: HTMLAnchorElement }) {
   e.currentTarget.href = `https://90sgamer.com/games/synergy-wizard/?ref=${encodeURIComponent(location.href)}#feedback`;
 }
-import { readSharedList, useSaved } from "./saved/saved.ts";
+
+const NEWS_KEY = "sw.newsSeen";
+function readNewsSeen(): string {
+  try {
+    return window.localStorage.getItem(NEWS_KEY) ?? "";
+  } catch {
+    return "";
+  }
+}
 
 const EXAMPLES = [
   "a skill that protects me for a few seconds",
@@ -45,6 +57,10 @@ export default function App(): React.ReactElement {
   const [view, setView] = useState<"search" | "mine" | "shared">(shared ? "shared" : "search");
   const saved = useSaved();
   const [consentOpen, setConsentOpen] = useState(mustAsk);
+  // "#whats-new" (used in "we did it" replies to feedback) opens the list straight away.
+  const [newsOpen, setNewsOpen] = useState(() => window.location.hash === "#whats-new");
+  const [newsSeen, setNewsSeen] = useState(readNewsSeen);
+  const hasNews = newsSeen < LATEST_NEWS;
   const [queryVector, setQueryVector] = useState<{ q: string; v: number[] } | null>(null);
   const data = useDataset();
   const { status: modelStatus, embed } = useEmbedder();
@@ -96,6 +112,29 @@ export default function App(): React.ReactElement {
   const dataset = data.status === "ready" ? data.index.dataset : null;
   const byId = useMemo(() => new Map((dataset?.entities ?? []).map((e) => [e.id, e])), [dataset]);
 
+  function markNewsSeen(): void {
+    setNewsSeen(LATEST_NEWS);
+    try {
+      window.localStorage.setItem(NEWS_KEY, LATEST_NEWS);
+    } catch {
+      /* private mode: the NEW tag just shows again next visit */
+    }
+  }
+
+  function toggleNews(): void {
+    const open = !newsOpen;
+    setNewsOpen(open);
+    if (open) {
+      track("whats_new_open", { unseen: hasNews });
+      markNewsSeen();
+    }
+  }
+
+  useEffect(() => {
+    if (newsOpen) markNewsSeen(); // opened from a #whats-new link
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     if (shared) track("list_open_shared", { count: shared.length });
   }, [shared]);
@@ -138,6 +177,11 @@ export default function App(): React.ReactElement {
                 <span className="tag mr-2" style={{ background: "#ffe600" }}>PATCH {dataset.version}</span>
                 Updated {formatDate(dataset.sourceUpdated)} · {dataset.entities.length.toLocaleString()} entries
               </span>
+              <span className="flex flex-wrap gap-1.5">
+              <button type="button" className="ext-btn" aria-expanded={newsOpen} aria-controls="whats-new" onClick={toggleNews}>
+                📰 What's new
+                {hasNews && <span className="tag ml-1.5" style={{ background: "#ff4d4d", color: "#fff", padding: "0 4px", fontSize: 10 }}>NEW</span>}
+              </button>
               <a
                 className="ext-btn"
                 href={FEEDBACK_URL}
@@ -148,10 +192,28 @@ export default function App(): React.ReactElement {
               >
                 💬 Feedback
               </a>
+              </span>
             </div>
           )}
         </div>
       </header>
+
+      {newsOpen && (
+        <WhatsNew
+          onClose={() => setNewsOpen(false)}
+          feedbackLink={
+            <a
+              href={FEEDBACK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseDown={withPage}
+              onClick={(e) => { withPage(e); track("outbound_click", { site: "feedback", id: "whats_new" }); }}
+            >
+              Send feedback
+            </a>
+          }
+        />
+      )}
 
       <main className="grid gap-4 md:grid-cols-[250px_minmax(0,1fr)] items-start">
         <aside className="md:order-first md:sticky md:top-4 md:self-start min-w-0">
