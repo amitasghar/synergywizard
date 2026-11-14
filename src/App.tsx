@@ -12,6 +12,12 @@ import { ConsentBar } from "./ui/ConsentBar.tsx";
 import { FilterPanel } from "./ui/FilterPanel.tsx";
 import { ResultCard } from "./ui/ResultCard.tsx";
 import { ListPanel } from "./ui/ListPanel.tsx";
+
+const FEEDBACK_URL = "https://90sgamer.com/games/synergy-wizard/#feedback";
+/** The feedback form's "Where?" box starts with the page the visitor was on (their search, filters, list). */
+function withPage(e: { currentTarget: HTMLAnchorElement }) {
+  e.currentTarget.href = `https://90sgamer.com/games/synergy-wizard/?ref=${encodeURIComponent(location.href)}#feedback`;
+}
 import { readSharedList, useSaved } from "./saved/saved.ts";
 
 const EXAMPLES = [
@@ -134,10 +140,11 @@ export default function App(): React.ReactElement {
               </span>
               <a
                 className="ext-btn"
-                href="https://90sgamer.com/games/synergy-wizard/#feedback"
+                href={FEEDBACK_URL}
+                onMouseDown={withPage}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => track("outbound_click", { site: "feedback", id: "header" })}
+                onClick={(e) => { withPage(e); track("outbound_click", { site: "feedback", id: "header" }); }}
               >
                 💬 Feedback
               </a>
@@ -341,10 +348,11 @@ export default function App(): React.ReactElement {
           </a>
           <a
             className="text-white underline text-[13px]"
-            href="https://90sgamer.com/games/synergy-wizard/#feedback"
+            href={FEEDBACK_URL}
+            onMouseDown={withPage}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => track("outbound_click", { site: "feedback", id: "footer" })}
+            onClick={(e) => { withPage(e); track("outbound_click", { site: "feedback", id: "footer" }); }}
           >
             Send feedback
           </a>
