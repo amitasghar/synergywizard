@@ -11,7 +11,7 @@ beyond Cloudflare Pages and there is no database, server function or paid AI.
 | Piece | Where |
 |---|---|
 | Game data | [RePoE PoE2 export](https://repoe-fork.github.io/poe2/), community JSON regenerated after each patch |
-| Unique items | [Path of Building](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)'s unique lists as exported by [RePoE](https://repoe-fork.github.io/pob-data/poe2/) (`datagen/pob.ts`, MIT, credited on every card). The game data names uniques but not their stats. Only the current version of each unique is kept. If the download fails, the job keeps the previous uniques |
+| Unique items | [Path of Building PoE2](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)'s unique lists, read from its `src/Data/Uniques/*.lua` on GitHub (`datagen/pob.ts`, MIT, credited on every card). Any unique the PoE2 game files don't list is dropped, so PoE1 items can't slip in. The game data names uniques but not their stats. Only the current version of each unique is kept. If the download fails, the job keeps the previous uniques |
 | Build | `datagen/`: fetches RePoE, translates passive stats, tags effects (Defensive, Timed effect, …) by rule, embeds each entry with `Xenova/all-MiniLM-L6-v2` |
 | Output | `public/data/poe2.json` (entries) + `public/data/poe2.vec` (int8 vectors, 384 per entry) |
 | Search | `src/search/search.ts`: keyword hits + plain-English intent + vector similarity, computed in the browser |
