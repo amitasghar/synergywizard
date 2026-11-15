@@ -11,7 +11,7 @@ Speech boundaries, transcript and cue times are in `narration.mjs`; edit them th
 
 | File | Length | Spec | Captions |
 |---|---|---|---|
-| `video/synergy-wizard-short.mp4` | ~73.5 s | 1080x1920, 30 fps, H.264 + AAC 192k, -14 LUFS (two-pass loudnorm), real site footage, end card with logo + URL | Burned-in subtitles = the narration, lower part of the frame. End card: Free. Updated every patch. - poe2.90sgamer.com - a 90sGamer.com tool (re-render for synergywizard.com) |
+| `video/synergy-wizard-short.mp4` | ~73.5 s | 1080x1920, 30 fps, H.264 + AAC 192k, -14 LUFS (two-pass loudnorm), real site footage, end card with logo + URL | Burned-in subtitles = the narration, lower part of the frame. End card: Free. Updated every patch. - synergywizard.com - a 90sGamer.com tool |
 
 ## YouTube
 
