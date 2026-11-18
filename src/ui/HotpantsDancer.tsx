@@ -8,16 +8,24 @@ export const hasHotpants = (q: string): boolean => HOTPANTS.test(q);
 // Pops in from the bottom-right corner, dances, pops back out: a quick cameo, not a visit.
 const SHOW_MS = 2600;
 const OUT_MS = 220;
+// His sound (public/sfx/hotpants.mp3, ~20 KB). Only fetched once someone types the word.
+const SOUND_URL = "/sfx/hotpants.mp3";
+const VOLUME = 0.6;
 
 export function HotpantsDancer({ query }: { query: string }): React.ReactElement | null {
   const [phase, setPhase] = useState<"hidden" | "in" | "out">("hidden");
   const was = useRef(false);
+  const sound = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     const now = hasHotpants(query);
     // Pops up when the word first appears, not on every keystroke after it.
     if (now && !was.current) {
       setPhase("in");
+      // Typing counts as a user gesture, so browsers allow this. If they block it anyway, he just dances silently.
+      sound.current ??= Object.assign(new Audio(SOUND_URL), { volume: VOLUME });
+      sound.current.currentTime = 0;
+      sound.current.play().catch(() => {});
       track("easter_egg", { id: "hotpants" });
     }
     was.current = now;
@@ -31,7 +39,7 @@ export function HotpantsDancer({ query }: { query: string }): React.ReactElement
 
   if (phase === "hidden") return null;
   return (
-    <button type="button" className={`hotpants hotpants-${phase}`} onClick={() => setPhase("out")} aria-label="Hotpants dancer. Click to dismiss.">
+    <button type="button" className={`hotpants hotpants-${phase}`} onClick={() => { sound.current?.pause(); setPhase("out"); }} aria-label="Hotpants dancer. Click to dismiss.">
       <span className="hotpants-bubble">♪ Hot pants! ♪</span>
       <svg className="hotpants-guy" viewBox="0 0 32 48" width="96" height="144" shapeRendering="crispEdges" aria-hidden="true">
         {/* arms (behind body) */}
