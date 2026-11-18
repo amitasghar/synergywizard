@@ -82,18 +82,13 @@ body, .window, button, input, textarea, select, option, label, legend, table, .t
 /* Easter egg: the hotpants dancer (src/ui/HotpantsDancer.tsx). Pops in from the corner, leaning in, then pops out. */
 .hotpants {
   position: fixed; right: -18px; bottom: -8px; z-index: 50;
-  display: flex; flex-direction: row; align-items: flex-start; gap: 0;
+  display: block;
   padding: 0; min-width: 0; min-height: 0; border: 0; background: none; box-shadow: none; cursor: pointer;
   transform: rotate(-14deg); transform-origin: 100% 100%;
 }
 .hotpants-in { animation: hp-pop-in 0.16s cubic-bezier(0.2, 0.9, 0.3, 1.3) both; }
 .hotpants-out { animation: hp-pop-out 0.2s ease-in both; }
-.hotpants-in .hotpants-bubble { animation: hp-bubble 0.2s 0.15s ease-out both; }
 .hotpants:focus-visible { outline: 2px dotted #fff; }
-.hotpants-bubble {
-  font-family: "Pixelated MS Sans Serif", Arial, sans-serif; font-size: 13px; font-weight: bold;
-  background: #fff; color: #000; border: 2px solid #000; padding: 3px 8px; box-shadow: 3px 3px 0 #ff2fa8; white-space: nowrap; margin-top: 4px; transform-origin: 100% 100%;
-}
 .hotpants-guy { filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.45)); overflow: visible; animation: hp-bounce 0.25s ease-in-out infinite alternate; }
 .hp-body { animation: hp-wiggle 0.5s ease-in-out infinite alternate; transform-origin: 16px 29px; }
 .hp-arm-l { animation: hp-arm-l 0.5s steps(2) infinite; transform-origin: 6.5px 14px; }
@@ -102,7 +97,6 @@ body, .window, button, input, textarea, select, option, label, legend, table, .t
 .hp-leg-r { animation: hp-leg 0.5s steps(2) infinite reverse; transform-origin: 20px 29px; }
 @keyframes hp-pop-in { from { transform: translate(110%, 110%) rotate(-40deg); } to { transform: rotate(-14deg); } }
 @keyframes hp-pop-out { from { transform: rotate(-14deg); } to { transform: translate(110%, 110%) rotate(-40deg); } }
-@keyframes hp-bubble { from { transform: scale(0); } to { transform: scale(1); } }
 @keyframes hp-bounce { from { transform: translateY(0); } to { transform: translateY(-6px); } }
 @keyframes hp-wiggle { from { transform: rotate(-6deg); } to { transform: rotate(6deg); } }
 @keyframes hp-arm-l { 0% { transform: rotate(160deg); } 100% { transform: rotate(20deg); } }

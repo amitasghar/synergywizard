@@ -40,7 +40,6 @@ export function HotpantsDancer({ query }: { query: string }): React.ReactElement
   if (phase === "hidden") return null;
   return (
     <button type="button" className={`hotpants hotpants-${phase}`} onClick={() => { sound.current?.pause(); setPhase("out"); }} aria-label="Hotpants dancer. Click to dismiss.">
-      <span className="hotpants-bubble">♪ Hot pants! ♪</span>
       <svg className="hotpants-guy" viewBox="0 0 32 48" width="96" height="144" shapeRendering="crispEdges" aria-hidden="true">
         {/* arms (behind body) */}
         <g className="hp-arm hp-arm-l"><rect x="5" y="15" width="3" height="9" fill="#f2c39b" /><rect x="5" y="13" width="3" height="3" fill="#f2c39b" /></g>

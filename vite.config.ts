@@ -13,5 +13,7 @@ export default defineConfig({
     // @xenova/transformers bundles ONNX WASM files that esbuild can't pre-bundle.
     // Exclude it so Vite serves the package directly from node_modules.
     exclude: ["@xenova/transformers"],
+    // ...but its onnxruntime-web dependency is CommonJS and must be pre-bundled, or dev mode can't load the model.
+    include: ["@xenova/transformers > onnxruntime-web"],
   },
 });
