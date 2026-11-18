@@ -5,31 +5,33 @@ import { track } from "../api/analytics.ts";
 export const HOTPANTS = /\bhot ?pants?\b/i;
 export const hasHotpants = (q: string): boolean => HOTPANTS.test(q);
 
-const SHOW_MS = 5000;
+// Pops in from the bottom-right corner, dances, pops back out: a quick cameo, not a visit.
+const SHOW_MS = 2600;
+const OUT_MS = 220;
 
 export function HotpantsDancer({ query }: { query: string }): React.ReactElement | null {
-  const [visible, setVisible] = useState(false);
+  const [phase, setPhase] = useState<"hidden" | "in" | "out">("hidden");
   const was = useRef(false);
 
   useEffect(() => {
     const now = hasHotpants(query);
     // Pops up when the word first appears, not on every keystroke after it.
     if (now && !was.current) {
-      setVisible(true);
+      setPhase("in");
       track("easter_egg", { id: "hotpants" });
     }
     was.current = now;
   }, [query]);
 
   useEffect(() => {
-    if (!visible) return;
-    const t = window.setTimeout(() => setVisible(false), SHOW_MS);
+    if (phase === "hidden") return;
+    const t = window.setTimeout(() => setPhase(phase === "in" ? "out" : "hidden"), phase === "in" ? SHOW_MS : OUT_MS);
     return () => window.clearTimeout(t);
-  }, [visible]);
+  }, [phase]);
 
-  if (!visible) return null;
+  if (phase === "hidden") return null;
   return (
-    <button type="button" className="hotpants" onClick={() => setVisible(false)} aria-label="Hotpants dancer. Click to dismiss.">
+    <button type="button" className={`hotpants hotpants-${phase}`} onClick={() => setPhase("out")} aria-label="Hotpants dancer. Click to dismiss.">
       <span className="hotpants-bubble">♪ Hot pants! ♪</span>
       <svg className="hotpants-guy" viewBox="0 0 32 48" width="96" height="144" shapeRendering="crispEdges" aria-hidden="true">
         {/* arms (behind body) */}
