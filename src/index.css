@@ -78,3 +78,31 @@ body, .window, button, input, textarea, select, option, label, legend, table, .t
 .save-star { background: none; border: none; box-shadow: none; min-width: 32px; min-height: 32px; padding: 0; margin-left: -6px; font-size: 22px; line-height: 1; color: #b8860b; cursor: pointer; }
 .save-star:active { box-shadow: none; }
 .save-star:focus-visible { outline: 1px dotted #000; }
+
+/* Easter egg: the hotpants dancer (src/ui/HotpantsDancer.tsx) */
+.hotpants {
+  position: fixed; right: 16px; bottom: 16px; z-index: 50;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 0; min-width: 0; min-height: 0; border: 0; background: none; box-shadow: none; cursor: pointer;
+  animation: hp-in 0.35s ease-out both;
+}
+.hotpants:focus-visible { outline: 2px dotted #fff; }
+.hotpants-bubble {
+  font-family: "Pixelated MS Sans Serif", Arial, sans-serif; font-size: 13px; font-weight: bold;
+  background: #fff; color: #000; border: 2px solid #000; padding: 3px 8px; box-shadow: 3px 3px 0 #ff2fa8; white-space: nowrap;
+}
+.hotpants-guy { filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.45)); overflow: visible; animation: hp-bounce 0.25s ease-in-out infinite alternate; }
+.hp-body { animation: hp-wiggle 0.5s ease-in-out infinite alternate; transform-origin: 16px 29px; }
+.hp-arm-l { animation: hp-arm-l 0.5s steps(2) infinite; transform-origin: 6.5px 14px; }
+.hp-arm-r { animation: hp-arm-r 0.5s steps(2) infinite; transform-origin: 25.5px 14px; }
+.hp-leg-l { animation: hp-leg 0.5s steps(2) infinite; transform-origin: 12px 29px; }
+.hp-leg-r { animation: hp-leg 0.5s steps(2) infinite reverse; transform-origin: 20px 29px; }
+@keyframes hp-in { from { transform: translateY(120%); } to { transform: none; } }
+@keyframes hp-bounce { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+@keyframes hp-wiggle { from { transform: rotate(-6deg); } to { transform: rotate(6deg); } }
+@keyframes hp-arm-l { 0% { transform: rotate(160deg); } 100% { transform: rotate(20deg); } }
+@keyframes hp-arm-r { 0% { transform: rotate(-20deg); } 100% { transform: rotate(-160deg); } }
+@keyframes hp-leg { 0% { transform: rotate(-12deg); } 100% { transform: rotate(8deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .hotpants, .hotpants * { animation: none !important; }
+}

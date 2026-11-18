@@ -15,6 +15,7 @@ import { ListPanel } from "./ui/ListPanel.tsx";
 
 import { readSharedList, useSaved } from "./saved/saved.ts";
 import { WhatsNew } from "./ui/WhatsNew.tsx";
+import { HotpantsDancer } from "./ui/HotpantsDancer.tsx";
 import { LATEST_NEWS } from "./data/whatsnew.ts";
 
 const FEEDBACK_URL = "https://90sgamer.com/games/synergy-wizard/#feedback";
@@ -434,6 +435,7 @@ export default function App(): React.ReactElement {
           Cookie settings
         </button>
       </footer>
+      <HotpantsDancer query={debounced} />
       <ConsentBar open={consentOpen} onClose={() => setConsentOpen(false)} />
     </div>
   );
