@@ -72,6 +72,14 @@ body, .window, button, input, textarea, select, option, label, legend, table, .t
   background: #fff; color: #000; border: none; border-radius: 0; -webkit-appearance: none; appearance: none;
   box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
 }
+/* ✕ inside the search box. The browser's own clear button is hidden so there's never two. */
+.search-box { position: relative; }
+.search-box .search-input.search-input { padding-right: 44px; }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; display: none; }
+.search-clear.search-clear {
+  position: absolute; top: 4px; right: 4px; width: 32px; min-width: 32px; height: 32px; min-height: 32px; padding: 0;
+  font-size: 14px; font-weight: bold; line-height: 1; font-family: var(--ui); cursor: pointer;
+}
 .link-btn { background: none; border: none; box-shadow: none; color: #0000ee; text-decoration: underline; cursor: pointer; min-height: 32px; padding: 0 4px; font-family: var(--ui); font-size: 13px; }
 .link-btn:active { box-shadow: none; }
 /* ☆ / ★ "save to My list" toggle on result cards: a bare glyph, big enough to tap. */

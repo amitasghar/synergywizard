@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import logoSrc from "./assets/banner-90s.webp";
 import { adConfig } from "./ads/config.ts";
 import { mustAsk, track } from "./api/analytics.ts";
@@ -66,6 +66,15 @@ export default function App(): React.ReactElement {
   const data = useDataset();
   const { status: modelStatus, embed } = useEmbedder();
   const debounced = useDebouncedValue(query, 300);
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  // Clears the typed words (and -word exclusions) but keeps filters, which have their own "Clear filters".
+  function clearSearch(): void {
+    track("search_clear");
+    setQuery("");
+    setView("search");
+    searchRef.current?.focus();
+  }
 
   useEffect(() => {
     window.history.replaceState(null, "", `${window.location.pathname}${writeUrl(debounced, filters)}`);
@@ -253,18 +262,32 @@ export default function App(): React.ReactElement {
             <label htmlFor="q" className="sr-only">
               Describe what you want
             </label>
-            <input
-              id="q"
-              type="search"
-              value={query}
-              autoFocus
-              onChange={(e) => {
-                setQuery(e.target.value);
-                setView("search");
-              }}
-              placeholder="Describe what your build needs…"
-              className="search-input"
-            />
+            <div className="search-box">
+              <input
+                id="q"
+                ref={searchRef}
+                type="search"
+                value={query}
+                autoFocus
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  setView("search");
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Escape" && query) {
+                    e.preventDefault();
+                    clearSearch();
+                  }
+                }}
+                placeholder="Describe what your build needs…"
+                className="search-input"
+              />
+              {query && (
+                <button type="button" className="search-clear" onClick={clearSearch} aria-label="Clear search" title="Clear search (Esc)">
+                  ✕
+                </button>
+              )}
+            </div>
             <div className="mt-2 flex flex-wrap items-center gap-1.5">
               <span className="font-bold text-xs">Try:</span>
               {EXAMPLES.map((ex, i) => (

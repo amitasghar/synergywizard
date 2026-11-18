@@ -10,6 +10,7 @@ export interface NewsItem {
 }
 
 export const WHATS_NEW: NewsItem[] = [
+  { date: "2026-11-18", text: "A ✕ in the search box clears your search in one tap (Esc works too). Your filters stay put.", feedback: true },
   { date: "2026-11-14", text: "Fixed: some Path of Exile 1 uniques had slipped into the search. Uniques are PoE2-only again.", feedback: true },
   { date: "2026-11-14", text: "Better feedback form: pick an idea or a problem, say where you saw it, and leave an email if you'd like to hear when it's done.", feedback: true },
   { date: "2026-11-14", text: "Synergy Wizard has its own address: synergywizard.com. Old links still work." },
